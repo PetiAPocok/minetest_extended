@@ -1,0 +1,3 @@
+# textdomain: item_info
+Damage=
+Defense=

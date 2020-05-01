@@ -1,0 +1,31 @@
+több növény    
+        pumpkin
+        melon
+        
+az ananász az tényleg ilyen magas?
+hemp plant texture jó így?
+A cocoa plant texture jó így? Kell több step? Az inventory image egy kakaóbab legyen.
+strawberry plant új texture-t kér, mennyinek néz ki, mennyit dob.
+Lisztnek új image... Craftba kelljen egy papíz és akor papír zacskós lisz F-el
+Salt új imaget kér... Craftba kelljen egy papíz és akor papír zacskós só S-el
+A sugar lehetne barna kocka cukor...
+A kaja értékeket átnézni...
+World generating with them?
+
+a gelatin az csontliszt + víz = trutyi kemencében kisütve legyen
+
+horgászat?
+
+Armorok védelmi értéke
+
+Virágok és belőlük poti főzés?
+    
+ú ő chat-be
+
+A kocsik átcsúsznak egymáson mert mint entity "physical = false"-nak van definiálva.
+Ha "physical = true" akkor megállítják egymást.
+Valószínűleg a játék motoron kell módosítani...
+Nincs mozdony, és emiatt ^ nem is lehet...
+
+A csónakok ha ütköznek nem mennek sehova. Amelyik áll az mint a cövek. Mert mint entity "physical = true"-nak van definiálva.
+
