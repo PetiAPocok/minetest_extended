@@ -9,11 +9,11 @@ farming.register_plant("farming:carrot", {
 minetest.register_craftitem("farming:carrot_cake", {
 	description = "Carrot Cake",
 	inventory_image = "farming_carrot_cake.png",
-	on_use = minetest.item_eat(20),
+	on_use = minetest.item_eat(7),
 })
 
 minetest.register_craftitem("farming:carrot_cake_dough", {
-	description = "carrot cake dough",
+	description = "Carrot Cake Dough",
 	inventory_image = "farming_carrot_cake_dough.png",
 })
 

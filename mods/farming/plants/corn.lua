@@ -10,7 +10,7 @@ farming.register_plant("farming:corn", {
 minetest.register_craftitem("farming:corn_bread", {
 	description = "Corn Bread",
 	inventory_image = "farming_corn_bread.png",
-	on_use = minetest.item_eat(20),
+	on_use = minetest.item_eat(6),
 })
 
 minetest.register_craftitem("farming:corn_bread_dough", {
@@ -59,7 +59,7 @@ minetest.register_craft({
 })
 
 -- Change visual scale of the corn plants
-for i = 1 , 8 do		
+for i = 1 , 8 do
 	minetest.override_item("farming:corn_"..i, {
 		drawtype = "plantlike",
 		visual_scale = 1.5 ,

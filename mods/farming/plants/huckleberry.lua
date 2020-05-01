@@ -8,7 +8,7 @@ farming.register_plant("farming:huckleberry", {
 })
 
 -- Change Drawtype of the plants
-for i = 3 , 5 do		
+for i = 3 , 5 do
 	minetest.override_item("farming:huckleberry_"..i, {
 		drawtype = "mesh",
 		mesh = "farming_huckleberry_bush.obj",
@@ -29,7 +29,7 @@ minetest.register_craft({
 minetest.register_craftitem("farming:huckleberry_pie", {
 	description = "Huckleberry Pie",
 	inventory_image = "farming_huckleberry_pie.png",
-	on_use = minetest.item_eat(20),
+	on_use = minetest.item_eat(7),
 })
 
 minetest.register_craftitem("farming:huckleberry_pie_dough", {

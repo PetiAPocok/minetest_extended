@@ -9,7 +9,7 @@ farming.register_plant("farming:strawberry", {
 minetest.register_craftitem("farming:strawberry_pie", {
 	description = "Strawberry Pie",
 	inventory_image = "farming_strawberry_pie.png",
-	on_use = minetest.item_eat(20),
+	on_use = minetest.item_eat(7),
 })
 
 minetest.register_craftitem("farming:strawberry_pie_dough", {
@@ -46,7 +46,5 @@ minetest.override_item("farming:strawberry", {
 
 -- Override drop
 minetest.override_item("farming:strawberry_4", {
-    drop = "farming:strawberry 2"
+    drop = "farming:strawberry 6"
 })
-
-

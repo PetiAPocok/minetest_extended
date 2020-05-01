@@ -41,7 +41,7 @@ farming.register_plant("farming:raspberry", {
 
 -- make raspberry eatable
 minetest.override_item("farming:raspberry", {
-    on_use = minetest.item_eat(2),
+    on_use = minetest.item_eat(1),
 })
 
 -- Override drop

@@ -569,6 +569,12 @@ minetest.register_craftitem("bones:bone", {
 	inventory_image = "bonemeal_bone.png"
 })
 
+-- wet bonemeal
+minetest.register_craftitem("bones:wet_bonemeal", {
+	description = S("Wet Bonemeal"),
+	inventory_image = "bonemeal_wet_bonemeal.png",
+})
+
 -- gelatin powder
 minetest.register_craftitem("bones:gelatin_powder", {
 	description = S("Gelatin Powder"),
@@ -582,17 +588,24 @@ minetest.register_craftitem("bones:gelatin_powder", {
 --
 
 
--- gelatin powder
+-- wet bonemeal
 minetest.register_craft({
-	output = "bones:gelatin_powder 4",
+	output = "bones:wet_bonemeal 8",
 	recipe = {
-		{"bones:bone", "bones:bone", "bones:bone"},
-		{"bucket:bucket_water", "bucket:bucket_water", "bucket:bucket_water"},
-		{"bucket:bucket_water", "default:torch", "bucket:bucket_water"},
+		{"bones:bonemeal", "bones:bonemeal", "bones:bonemeal"},
+		{"bones:bonemeal", "bucket:bucket_water", "bones:bonemeal"},
+		{"bones:bonemeal", "bones:bonemeal", "bones:bonemeal"},
 	},
 	replacements = {
-		{"bucket:bucket_water", "bucket:bucket_empty 5"}
+		{"bucket:bucket_water", "bucket:bucket_empty 1"}
 	}
+})
+
+minetest.register_craft({
+	type = "cooking",
+	cooktime = 18,
+	output = "bones:gelatin_powder",
+	recipe = "bones:wet_bonemeal"
 })
 
 -- bonemeal (from bone)

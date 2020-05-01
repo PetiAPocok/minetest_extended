@@ -7,7 +7,7 @@ farming.register_plant("farming:grapes", {
 })
 
 -- Change visual scale of the grape plants
-for i = 1 , 8 do		
+for i = 1 , 8 do
 	minetest.override_item("farming:grapes_"..i, {
 		drawtype = "plantlike",
 		visual_scale = 2,
@@ -49,7 +49,7 @@ minetest.register_craft({
 
 -- make grapes eatable
 minetest.override_item("farming:grapes", {
-    on_use = minetest.item_eat(2),
+    on_use = minetest.item_eat(3),
 })
 
 -- Override drop

@@ -29,7 +29,7 @@ The extended default game bundled in the Minetest engine.
 - Added ts_furniture so I can sit down after all the mod customising... ([Github](https://github.com/minetest-mods/ts_furniture))
 - Merged the default farming with TenPlus1's Farming Redo ([NotABug](https://notabug.org/TenPlus1/Farming)), JBB's Aggriculture ([Github](https://github.com/JBBgameich/agriculture)) and sofar's crops ([Github](https://github.com/minetest-mods/crops))
   Renamed the papyrus to reed.
-  (My friends) Drawn a few new textures.
+  (My friends) Drawn a "few" new textures.
 - Merged the default bones mod with the Bonemeal mod ([NotABug](https://notabug.org/TenPlus1/bonemeal))
   Added more plants' support for the bonemeal mod.
   Added white dye craft to bonemeal.

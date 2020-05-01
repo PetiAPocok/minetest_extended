@@ -38,5 +38,5 @@ dofile(farming.path .. "/plants/tomato.lua")
 dofile(farming.path .. "/plants/wheat.lua")
 
 dofile(farming.path .. "/plants/misc.lua")
-dofile(farming.path .. "/plants/loot.lua")
-dofile(farming.path .. "/plants/fuels.lua")
+dofile(farming.path .. "/loot.lua")
+dofile(farming.path .. "/fuels.lua")

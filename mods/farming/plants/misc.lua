@@ -4,7 +4,6 @@ minetest.register_craftitem("farming:sugar", {
 	inventory_image = "farming_sugar.png",
 })
 
--- crafting
 minetest.register_craft({
 	type = "shapeless",
 	output = "farming:sugar",
