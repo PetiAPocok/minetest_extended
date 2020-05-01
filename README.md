@@ -4,10 +4,10 @@ The extended default game bundled in the Minetest engine.
 
 ## Contained mods
 
-- The Minetest engine for base ([GitHub](https://github.com/minetest/minetest))
+- The Minetest game for base ([GitHub](https://github.com/minetest/minetest_game))
 - Hunger NG to add hunger management (modified) ([Gitlab](https://gitlab.com/4w/hunger_ng))
 - Hbsprint to add sprinting ability (modified) ([Github](https://github.com/minetest-mods/hbsprint))
-- Added max falling speed limitation to the default player_api. 
+- Added max falling speed limitation to the default player_api.
 - Mesecons to add electricity like magic to the game ([Github](https://github.com/minetest-mods/mesecons))   
   Changed the torch's texture
   Changed the switch's effective sides
@@ -52,7 +52,7 @@ master HEAD of the Minetest engine.
 Additionally, when the Minetest engine is tagged to be a certain version (e.g.
 0.4.10), Minetest Game is tagged with the version too.
 
-When stable releases are made, Minetest Game and the Minetest engine is packaged 
+When stable releases are made, Minetest Game and the Minetest engine is packaged
 and made available at [www.minetest.net](https://www.minetest.net/downloads/).
 
 ## Description
