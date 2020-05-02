@@ -6,18 +6,10 @@ farming.register_plant("farming:cucumber", {
 	fertility = {"grassland"},
 })
 
---~ minetest.register_craftitem("farming:cucumber_cake", {
-	--~ description = "cucumber cake",
-	--~ inventory_image = "farming_cucumber_cake.png",
-	--~ on_use = minetest.item_eat(20),
---~ })
-
---~ minetest.register_craftitem("farming:cucumber_cake_dough", {
-	--~ description = "cucumber cake dough",
-	--~ inventory_image = "farming_cucumber_cake_dough.png",
---~ })
-
--- crafting
+-- Override drop
+minetest.override_item("farming:cucumber_4", {
+    drop = "farming:cucumber 5"
+})
 
 minetest.register_craft({
 	type = "shapeless",
@@ -25,26 +17,7 @@ minetest.register_craft({
 	recipe = {"farming:cucumber"}
 })
 
---~ minetest.register_craft({
-	--~ type = "shapeless",
-	--~ output = "farming:cucumber_cake_dough",
-	--~ recipe = {"farming:cucumber", "farming:flour", "farming:sugar"}
---~ })
-
-
---~ minetest.register_craft({
-	--~ type = "cooking",
-	--~ cooktime = 18,
-	--~ output = "farming:cucumber_cake",
-	--~ recipe = "farming:cucumber_cake_dough"
---~ })
-
 -- make cucumber eatable
 minetest.override_item("farming:cucumber", {
-    on_use = minetest.item_eat(1),
-})
-
--- Override drop
-minetest.override_item("farming:cucumber_4", {
-    drop = "farming:cucumber 5"
+    on_use = minetest.item_eat(2),
 })

@@ -2,6 +2,7 @@
 minetest.register_craftitem("farming:sugar", {
 	description = "Sugar",
 	inventory_image = "farming_sugar.png",
+    on_use = minetest.item_eat(-1)
 })
 
 minetest.register_craft({
@@ -15,6 +16,7 @@ minetest.register_craft({
 minetest.register_craftitem("farming:salt", {
 	description = "Salt",
 	inventory_image = "farming_salt.png",
+    on_use = minetest.item_eat(-1)
 })
 
 minetest.register_craft( {

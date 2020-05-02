@@ -24,8 +24,8 @@ minetest.register_craftitem("mobs:leather", {
 })
 
 -- raw meat
-minetest.register_craftitem("mobs:meat_raw", {
-	description = S("Raw Meat"),
+minetest.register_craftitem("mobs:beef_raw", {
+	description = S("Raw Beef"),
 	inventory_image = "mobs_meat_raw.png",
 	on_use = minetest.item_eat(3),
 	groups = {food_meat_raw = 1, flammable = 2}

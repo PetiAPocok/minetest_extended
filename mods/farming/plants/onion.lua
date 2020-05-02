@@ -6,18 +6,10 @@ farming.register_plant("farming:onion", {
 	fertility = {"grassland"},
 })
 
---~ minetest.register_craftitem("farming:onion_cake", {
-	--~ description = "onion cake",
-	--~ inventory_image = "farming_onion_cake.png",
-	--~ on_use = minetest.item_eat(20),
---~ })
-
---~ minetest.register_craftitem("farming:onion_cake_dough", {
-	--~ description = "onion cake dough",
-	--~ inventory_image = "farming_onion_cake_dough.png",
---~ })
-
--- crafting
+-- Override drop
+minetest.override_item("farming:onion_5", {
+    drop = "farming:onion 1"
+})
 
 minetest.register_craft({
 	type = "shapeless",
@@ -25,26 +17,7 @@ minetest.register_craft({
 	recipe = {"farming:onion"}
 })
 
---~ minetest.register_craft({
-	--~ type = "shapeless",
-	--~ output = "farming:onion_cake_dough",
-	--~ recipe = {"farming:onion", "farming:flour", "farming:sugar"}
---~ })
-
-
---~ minetest.register_craft({
-	--~ type = "cooking",
-	--~ cooktime = 18,
-	--~ output = "farming:onion_cake",
-	--~ recipe = "farming:onion_cake_dough"
---~ })
-
 -- make onion eatable
 minetest.override_item("farming:onion", {
-    on_use = minetest.item_eat(1),
-})
-
--- Override drop
-minetest.override_item("farming:onion_5", {
-    drop = "farming:onion 1"
+    on_use = minetest.item_eat(2),
 })

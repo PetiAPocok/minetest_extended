@@ -1,27 +1,21 @@
-több növény
-        pumpkin
-        melon
+kenyér tészába mi kell?
+    Liszt tojás só víz
 
-fájjon a hagyma evés
-fájjon a fokahgyma evés
-fájjon a csili evés
-az ananász az tényleg ilyen magas?
-hemp plant texture jó így?
-A cocoa plant texture jó így? Kell több step?
-strawberry plant texture jó?
-Lisztnek image jó?
-Salt image jó?
+pie tésztába mi kell?
+    Liszt tojás cukor tej vaj
 
-A sugar lehetne barna kocka cukor...
+cake tésztába mi kell?
+    Liszt tojás cukor tej vaj
 
-Az onion az borzasztóan néz ki. Életlen.
-
-World generating with them?
+hemp-ből string
 
 kaják:
-    bandita burger: két szelet kenyérközzötte parizer
-
-
+    cookie
+    bandit burger: kenyér + sült hús (bármilyen)
+    cooked rice
+    bean soup
+    beans with onion
+    sandwich: vaj + kenyér + sült hús (bármilyen)
 
 fire 2.0? Égő entity-k...
 
@@ -29,7 +23,9 @@ horgászat?
 
 Armorok védelmi értéke
 
-Virágok és belőlük poti főzés?
+Poti főzés virágokból?
+
+Enchanting?
 
 ú ő chat-be
 

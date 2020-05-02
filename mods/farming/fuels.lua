@@ -27,3 +27,9 @@ minetest.register_craft({
 	recipe = "farming:hoe_wood",
 	burntime = 5,
 })
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "farming:hemp",
+	burntime = 1,
+})

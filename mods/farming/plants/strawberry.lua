@@ -6,37 +6,15 @@ farming.register_plant("farming:strawberry", {
 	fertility = {"grassland"},
 })
 
-minetest.register_craftitem("farming:strawberry_pie", {
-	description = "Strawberry Pie",
-	inventory_image = "farming_strawberry_pie.png",
-	on_use = minetest.item_eat(7),
-})
-
-minetest.register_craftitem("farming:strawberry_pie_dough", {
-	description = "Strawberry Pie Dough",
-	inventory_image = "farming_strawberry_pie_dough.png",
-})
-
--- crafting
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "farming:seed_strawberry",
-	recipe = {"farming:strawberry"}
+-- Override drop
+minetest.override_item("farming:strawberry_4", {
+    drop = "farming:strawberry 6"
 })
 
 minetest.register_craft({
-	type = "shapeless",
-	output = "farming:strawberry_pie_dough",
-	recipe = {"farming:strawberry", "farming:flour", "farming:sugar"}
-})
-
-
-minetest.register_craft({
-	type = "cooking",
-	cooktime = 18,
-	output = "farming:strawberry_pie",
-	recipe = "farming:strawberry_pie_dough"
+    type = "shapeless",
+    output = "farming:seed_strawberry",
+    recipe = {"farming:strawberry"}
 })
 
 -- make strawberry eatable
@@ -44,7 +22,30 @@ minetest.override_item("farming:strawberry", {
     on_use = minetest.item_eat(1),
 })
 
--- Override drop
-minetest.override_item("farming:strawberry_4", {
-    drop = "farming:strawberry 6"
+minetest.register_craftitem("farming:strawberry_cake_dough", {
+    description = "Strawberry Cake Dough",
+    inventory_image = "farming_strawberry_cake_dough.png",
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "farming:strawberry_cake_dough",
+    recipe = {"farming:strawberry", "farming:strawberry", "farming:flour",
+    "mobs:egg", "farming:sugar", "mobs:bucket_milk", "mobs:butter"},
+	replacements = {
+		{"mobs:bucket_milk", "bucket:bucket_empty"}
+	}
+})
+
+minetest.register_craftitem("farming:strawberry_cake", {
+	description = "Strawberry Cake",
+	inventory_image = "farming_strawberry_cake.png",
+	on_use = minetest.item_eat(7),
+})
+
+minetest.register_craft({
+	type = "cooking",
+	cooktime = 18,
+	output = "farming:strawberry_cake",
+	recipe = "farming:strawberry_cake_dough"
 })

@@ -1,9 +1,3 @@
---[[
-	All textures by
-	(C) Auke Kok <sofar@foo-projects.org>
-	CC-BY-SA-3.0
-]]
-
 farming.register_plant("farming:bean", {
 	description = "Bean Seed",
 	inventory_image = "farming_bean_seed.png",
@@ -13,14 +7,17 @@ farming.register_plant("farming:bean", {
 })
 
 -- Change visual scale of the bean plants
-for i = 1 , 6 do		
+for i = 1 , 6 do
 	minetest.override_item("farming:bean_"..i, {
 		drawtype = "plantlike",
 		visual_scale = 1.5 ,
 	})
 end
 
--- crafting
+-- Override drop
+minetest.override_item("farming:bean_6", {
+    drop = "farming:bean 50"
+})
 
 minetest.register_craft({
 	type = "shapeless",
@@ -29,9 +26,4 @@ minetest.register_craft({
 	replacements = {
 		{"bucket:bucket_water", "bucket:bucket_empty"}
 	}
-})
-
--- Override drop
-minetest.override_item("farming:bean_6", {
-    drop = "farming:bean 50"
 })

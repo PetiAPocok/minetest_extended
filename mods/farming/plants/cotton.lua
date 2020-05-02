@@ -9,6 +9,17 @@ farming.register_plant("farming:cotton", {
 	groups = {flammable = 4},
 })
 
+-- Override drop
+minetest.override_item("farming:cotton_8", {
+	drop = "farming:cotton 3"
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "farming:seed_cotton 2",
+	recipe = {"farming:cotton"}
+})
+
 minetest.register_craftitem("farming:string", {
 	description = "String",
 	inventory_image = "farming_string.png",
@@ -16,17 +27,17 @@ minetest.register_craftitem("farming:string", {
 })
 
 minetest.register_craft({
-	output = "wool:white",
-	recipe = {
-		{"farming:cotton", "farming:cotton"},
-		{"farming:cotton", "farming:cotton"},
-	}
-})
-
-minetest.register_craft({
 	output = "farming:string 2",
 	recipe = {
 		{"farming:cotton"},
 		{"farming:cotton"},
+	}
+})
+
+minetest.register_craft({
+	output = "wool:white",
+	recipe = {
+		{"farming:cotton", "farming:cotton"},
+		{"farming:cotton", "farming:cotton"},
 	}
 })

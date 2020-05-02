@@ -6,13 +6,10 @@ farming.register_plant("farming:beetroot", {
 	fertility = {"grassland"},
 })
 
---~ minetest.register_craftitem("farming:beetroot_soup", {
-	--~ description = "Beetroot soop",
-	--~ inventory_image = "farming_beetroot_soup.png",
-	--~ on_use = minetest.item_eat(8),
---~ })
-
--- crafting
+-- Override drop
+minetest.override_item("farming:beetroot_5", {
+    drop = "farming:beetroot 5"
+})
 
 minetest.register_craft({
 	type = "shapeless",
@@ -20,18 +17,7 @@ minetest.register_craft({
 	recipe = {"farming:beetroot"}
 })
 
---~ minetest.register_craft({
-	--~ type = "shapeless",
-	--~ output = "farming:beetroot_soup",
-	--~ recipe = {"farming:beetroot", "farming:bowl", "farming:sugar"}
---})
-
 -- make beetroot eatable
 minetest.override_item("farming:beetroot", {
     on_use = minetest.item_eat(1),
-})
-
--- Override drop
-minetest.override_item("farming:beetroot_5", {
-    drop = "farming:beetroot 5"
 })

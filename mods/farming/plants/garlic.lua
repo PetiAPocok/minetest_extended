@@ -6,18 +6,10 @@ farming.register_plant("farming:garlic", {
 	fertility = {"grassland"},
 })
 
---~ minetest.register_craftitem("farming:garlic_cake", {
-	--~ description = "garlic cake",
-	--~ inventory_image = "farming_garlic_cake.png",
-	--~ on_use = minetest.item_eat(20),
---~ })
-
---~ minetest.register_craftitem("farming:garlic_cake_dough", {
-	--~ description = "garlic cake dough",
-	--~ inventory_image = "farming_garlic_cake_dough.png",
---~ })
-
--- crafting
+-- Override drop
+minetest.override_item("farming:garlic_5", {
+    drop = "farming:garlic 7"
+})
 
 minetest.register_craft({
 	type = "shapeless",
@@ -28,26 +20,19 @@ minetest.register_craft({
 	}
 })
 
---~ minetest.register_craft({
-	--~ type = "shapeless",
-	--~ output = "farming:garlic_cake_dough",
-	--~ recipe = {"farming:garlic", "farming:flour", "farming:sugar"}
---~ })
-
-
---~ minetest.register_craft({
-	--~ type = "cooking",
-	--~ cooktime = 18,
-	--~ output = "farming:garlic_cake",
-	--~ recipe = "farming:garlic_cake_dough"
---~ })
-
 -- make garlic eatable
 minetest.override_item("farming:garlic", {
     on_use = minetest.item_eat(1),
 })
 
--- Override drop
-minetest.override_item("farming:garlic_5", {
-    drop = "farming:garlic 7"
+minetest.register_craftitem("farming:garlic_bread", {
+	description = "Garlic Bread",
+	inventory_image = "farming_garlic_bread.png",
+	on_use = minetest.item_eat(2),
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "farming:garlic_bread 7",
+	recipe = {"farming:garlic", "farming:bread"}
 })

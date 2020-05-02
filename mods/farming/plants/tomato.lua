@@ -6,7 +6,10 @@ farming.register_plant("farming:tomato", {
 	fertility = {"grassland"},
 })
 
--- crafting
+-- Override drop
+minetest.override_item("farming:tomato_8", {
+    drop = "farming:tomato 5"
+})
 
 minetest.register_craft({
 	type = "shapeless",
@@ -18,9 +21,3 @@ minetest.register_craft({
 minetest.override_item("farming:tomato", {
     on_use = minetest.item_eat(1),
 })
-
--- Override drop
-minetest.override_item("farming:tomato_8", {
-    drop = "farming:tomato 5"
-})
-

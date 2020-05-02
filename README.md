@@ -17,7 +17,7 @@ The extended default game bundled in the Minetest engine.
   The powered rail has been modified to work like in Minecraft
 - Beds: the sipmle bed has been removed
 - Crafting Guide to add, well, crafting guide ([Github](https://github.com/minetest-mods/craftguide))
-- Mobs Redo ([NotABug](https://notabug.org/tenplus1/mobs_redo))
+- Mobs Redo (modified) ([NotABug](https://notabug.org/tenplus1/mobs_redo))
 - Mobs Animal (modified) ([NotABug](https://notabug.org/tenplus1/mobs_animal))   
   Made the honey block a liquid with high viscosity.
 - Mobs Monster ([NotABug](https://notabug.org/tenplus1/mobs_monster))
@@ -25,7 +25,7 @@ The extended default game bundled in the Minetest engine.
 - SkinsDB to add skin management ([Github](https://github.com/minetest-mods/skinsdb))
 - Created item_info to show "weapons" damage (own script)
 - The default weather (if I understand it correctly) mod is basicly just changes the coluds according to the biome (player's position). So renamed it to clouds.
-- Throwing Redo mod to get bows. ([Github](https://github.com/minetest-mods/throwing))-->
+- Throwing Redo mod to get bows. (modified) ([Github](https://github.com/minetest-mods/throwing))-->
 - Added ts_furniture so I can sit down after all the mod customising... ([Github](https://github.com/minetest-mods/ts_furniture))
 - Merged the default farming with TenPlus1's Farming Redo ([NotABug](https://notabug.org/TenPlus1/Farming)), JBB's Aggriculture ([Github](https://github.com/JBBgameich/agriculture)) and sofar's crops ([Github](https://github.com/minetest-mods/crops))
   Renamed the papyrus to reed.

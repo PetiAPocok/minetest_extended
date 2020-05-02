@@ -389,9 +389,9 @@ function throwing.register_bow(name, def)
 		minetest.register_craft({
 			output = output_name,
 			recipe = {
-				{"farming:cotton", def.itemcraft, ""},
-				{"farming:cotton", "", def.itemcraft},
-				{"farming:cotton", def.itemcraft, ""},
+				{"farming:string", def.itemcraft, ""},
+				{"farming:string", "", def.itemcraft},
+				{"farming:string", def.itemcraft, ""},
 			}
 		})
 	end
