@@ -27,3 +27,7 @@ minetest.register_craft({
 		{"bucket:bucket_water", "bucket:bucket_empty"}
 	}
 })
+
+minetest.override_item("farming:bean", {
+    groups = { sackable = 1 }
+})

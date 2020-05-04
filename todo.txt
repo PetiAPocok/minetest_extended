@@ -1,25 +1,63 @@
-kenyér tészába mi kell?
-    Liszt tojás só víz
+Plusz zöldség:
+    saláta                                                                                          texture-t kér
+        honnan lesz mag?
 
-pie tésztába mi kell?
-    Liszt tojás cukor tej vaj
-
-cake tésztába mi kell?
-    Liszt tojás cukor tej vaj
-
-hemp-ből string
+    peanut                                                                                          texture-t kér
+        honnan lesz mag?
 
 kaják:
-    cookie
-    bandit burger: kenyér + sült hús (bármilyen)
-    cooked rice
-    bean soup
-    beans with onion
-    sandwich: vaj + kenyér + sült hús (bármilyen)
+    bag of cocoa?
+    nyers fasírt, kenyér, süti ehető és fáj?
+    lekvár legyen ehető? vigye le az éhséget?                                                                                          KELL
+    Puffin lekvár eperből                                                                           KELL
+    cooked rice Kell bele víz?                                                                      texture-t, receptet kér
+    cooked rice with egg and peas Kell bele víz?                                                    KELL
+    bean soup víz + bag of beans + hús + répa + krumpli + ???                                       KELL
+    potato_salad mi kell bele?                                                                      KELL
+    tört krumpli                                                                                    texture-t, receptet kér
+    tejberizs rizs (főtt?) + tej + gelatin + ???                                                                    texture-t, receptet kér
+    kocsonya/gelatin gyümölcsökből meg gelatinból lekvárból?                                        KELL
+    mogyoró krém mogyoró + cukor + jar + ???                                                        KELL
+
+    darált hús                                                                                      texture-t kér
+    meatloaf                                                                                        texture-t kér
+    milk shake-ek miből? tej + lekvár(eper, málna, kékbogyó)                                        KELL, alapanyagot kér
+    lekváros kenyér                                                                                 KELL, alapanyagot kér
+    peanut butter jelly szendvics                                                                   KELL, alapanyagot kér
+    bandit burger: kenyér + sült hús (group:food_meat)                                              texture-t kér
+    beans with onion                                                                                texture-t kér
+    burger: vaj + kenyér + sült hús (group:food_meat) + sajt + uborka + paradicsom + só + saláta    texture-t kér
+
+    Kész ételek (körett + sült hús)                                                                 KELL
+
+Kikapcsolt sebzésnél is sérülünk és meghalunk
+
+hol a TNT szerveren?
+
+új hang az íjnak
+
+A mob fence és a fence top az minek?
+
+frames?
+
+horgászat?                                                                                          KELL
+
+mobok:
+    körömgomba szörny? ("Heló! Ásóka vagyok!") https://www.youtube.com/watch?v=GF3ygD7LuiM
+    urbán papa (mob)
+    thaitus (monster)
+    feri (mob)?
+
+gems mod (use quartz as base)
+    adds shiton of gems
+
+jevlery mod
+    depends on: 3d_armor, gems
+    adds rings, medals
 
 fire 2.0? Égő entity-k...
 
-horgászat?
+nagy térkép? kézzel fogható. Megrajzolt
 
 Armorok védelmi értéke
 

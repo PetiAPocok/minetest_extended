@@ -16,3 +16,7 @@ minetest.register_craft({
 	output = "farming:seed_rice",
 	recipe = {"farming:rice"}
 })
+
+minetest.override_item("farming:rice", {
+    groups = { sackable = 1 }
+})

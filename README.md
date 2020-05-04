@@ -30,10 +30,15 @@ The extended default game bundled in the Minetest engine.
 - Merged the default farming with TenPlus1's Farming Redo ([NotABug](https://notabug.org/TenPlus1/Farming)), JBB's Aggriculture ([Github](https://github.com/JBBgameich/agriculture)) and sofar's crops ([Github](https://github.com/minetest-mods/crops))
   Renamed the papyrus to reed.
   (My friends) Drawn a "few" new textures.
+  Created the packer.
 - Merged the default bones mod with the Bonemeal mod ([NotABug](https://notabug.org/TenPlus1/bonemeal))
   Added more plants' support for the bonemeal mod.
   Added white dye craft to bonemeal.
-- Created snowball to make "snow" throwable. (own script, used mobs' chicken egg as a template)   
+- Created snowball to make "snow" throwable. (own script, used mobs' chicken egg as a template)
+- Added fire_plus for player burning ([Github](https://github.com/LoneWolfHT/fire_plus))
+- Vessels empty glass's texture changed.
+  Added jar.
+- Worldedit ([Github](https://github.com/Uberi/Minetest-WorldEdit))
 
 ## Installation
 

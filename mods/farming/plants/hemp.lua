@@ -15,3 +15,9 @@ minetest.override_item("farming:hemp_8", {
 		}
 	}
 })
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "farming:string",
+	recipe = {"farming:hemp 5"}
+})

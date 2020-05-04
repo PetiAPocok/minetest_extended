@@ -17,6 +17,10 @@ minetest.register_craft({
 	recipe = {"farming:pea"}
 })
 
+minetest.override_item("farming:pea", {
+    groups = { sackable = 1 }
+})
+
 -- make pea eatable
 minetest.override_item("farming:pea", {
     on_use = minetest.item_eat(0.5),

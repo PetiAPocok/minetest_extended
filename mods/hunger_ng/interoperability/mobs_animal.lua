@@ -12,7 +12,6 @@ local add = hunger_ng.add_hunger_data
 add('mobs:cheese',              { satiates = 2.5 })
 add('mobs:chicked_egg_fried',   { satiates = 2 })
 add('mobs:chicken_cooked',      { satiates = 5 })
-add('mobs:chicken_egg_fried',   { satiates = 2 })
 add('mobs:chicken_raw',         { satiates = 2, heals = -2 })
 add('mobs:honey',               { satiates = 2 })
 add('mobs:meat',                { satiates = 5.5 })

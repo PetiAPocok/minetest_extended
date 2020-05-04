@@ -17,46 +17,6 @@ minetest.register_craft({
     recipe = {"farming:wheat"},
 })
 
-minetest.register_craftitem("farming:flour", {
-	description = "Flour",
-	inventory_image = "farming_flour.png",
-	groups = {food_flour = 1, flammable = 1},
-})
-
-minetest.register_craft({
-    type = "shapeless",
-    output = "farming:flour",
-    recipe = {"farming:wheat", "farming:wheat", "farming:wheat", "default:paper"}
-})
-
-minetest.register_craftitem("farming:bread_dough", {
-	description = "Bread Dough",
-	inventory_image = "farming_bread_dough.png",
-})
-
-minetest.register_craft({
-    type = "shapeless",
-    output = "farming:bread_dough",
-    recipe = {"farming:flour", "mobs:egg", "farming:salt", "bucket:bucket_water"},
-	replacements = {
-		{"bucket:bucket_water", "bucket:bucket_empty"}
-	}
-})
-
-minetest.register_craftitem("farming:bread", {
-	description = "Bread",
-	inventory_image = "farming_bread.png",
-	on_use = minetest.item_eat(5),
-	groups = {food_bread = 1, flammable = 2},
-})
-
-minetest.register_craft({
-	type = "cooking",
-	cooktime = 15,
-	output = "farming:bread",
-	recipe = "farming:bread_dough"
-})
-
 minetest.register_craft({
 	output = "farming:straw 3",
 	recipe = {

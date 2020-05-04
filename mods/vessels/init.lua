@@ -118,7 +118,7 @@ minetest.register_node("vessels:glass_bottle", {
 	walkable = false,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.3, 0.25}
+		fixed = {-0.25, -0.5, -0.25, 0.25, 0.4, 0.25}
 	},
 	groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 	sounds = default.node_sound_glass_defaults(),
@@ -156,6 +156,32 @@ minetest.register_craft( {
 		{"default:glass", "", "default:glass"},
 		{"default:glass", "", "default:glass"},
 		{"default:glass", "default:glass", "default:glass"}
+	}
+})
+
+minetest.register_node("vessels:glass_jar", {
+	description = S("Empty Glass Jar"),
+	drawtype = "plantlike",
+	tiles = {"vessels_glass_jar.png"},
+	inventory_image = "vessels_glass_jar.png",
+	wield_image = "vessels_glass_jar.png",
+	paramtype = "light",
+	is_ground_content = false,
+	walkable = false,
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.25, -0.5, -0.25, 0.25, 0.3, 0.25}
+	},
+	groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
+	sounds = default.node_sound_glass_defaults(),
+})
+
+minetest.register_craft( {
+	output = "vessels:glass_bottle 10",
+	recipe = {
+		{"default:glass", "default:tin_bar", "default:glass"},
+		{"default:glass", "", "default:glass"},
+		{"", "default:glass", ""}
 	}
 })
 

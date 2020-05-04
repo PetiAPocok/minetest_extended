@@ -38,30 +38,3 @@ minetest.register_craft({
 	output = "farming:corn_boiled",
 	recipe = "farming:corn"
 })
-
-minetest.register_craftitem("farming:corn_bread_dough", {
-	description = "Corn Bread Dough",
-	inventory_image = "farming_corn_bread_dough.png",
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "farming:corn_bread_dough",
-    recipe = {"farming:corn", "farming:corn", "farming:flour", "mobs:egg", "farming:salt", "bucket:bucket_water"},
-	replacements = {
-		{"bucket:bucket_water", "bucket:bucket_empty"}
-	}
-})
-
-minetest.register_craftitem("farming:corn_bread", {
-    description = "Corn Bread",
-    inventory_image = "farming_corn_bread.png",
-    on_use = minetest.item_eat(6),
-})
-
-minetest.register_craft({
-	type = "cooking",
-	cooktime = 18,
-	output = "farming:corn_bread",
-	recipe = "farming:corn_bread_dough"
-})

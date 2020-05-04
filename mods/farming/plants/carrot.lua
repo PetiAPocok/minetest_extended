@@ -21,30 +21,3 @@ minetest.register_craft({
 minetest.override_item("farming:carrot", {
     on_use = minetest.item_eat(2),
 })
-
-minetest.register_craftitem("farming:carrot_cake_dough", {
-	description = "Carrot Cake Dough",
-	inventory_image = "farming_carrot_cake_dough.png",
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "farming:carrot_cake_dough",
-    recipe = {"farming:carrot", "farming:flour", "mobs:egg", "farming:sugar", "mobs:bucket_milk", "mobs:butter"},
-   replacements = {
-       {"mobs:bucket_milk", "bucket:bucket_empty"}
-   }
-})
-
-minetest.register_craftitem("farming:carrot_cake", {
-    description = "Carrot Cake",
-    inventory_image = "farming_carrot_cake.png",
-    on_use = minetest.item_eat(7),
-})
-
-minetest.register_craft({
-	type = "cooking",
-	cooktime = 18,
-	output = "farming:carrot_cake",
-	recipe = "farming:carrot_cake_dough"
-})
