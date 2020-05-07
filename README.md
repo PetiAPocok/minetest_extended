@@ -17,6 +17,7 @@ The extended default game bundled in the Minetest engine.
   The powered rail has been modified to work like in Minecraft
 - Beds: the sipmle bed has been removed
 - Crafting Guide to add, well, crafting guide ([Github](https://github.com/minetest-mods/craftguide))
+  Added support for the "packer".
 - Mobs Redo (modified) ([NotABug](https://notabug.org/tenplus1/mobs_redo))
 - Mobs Animal (modified) ([NotABug](https://notabug.org/tenplus1/mobs_animal))   
   Made the honey block a liquid with high viscosity.
@@ -29,7 +30,8 @@ The extended default game bundled in the Minetest engine.
 - Added ts_furniture so I can sit down after all the mod customising... ([Github](https://github.com/minetest-mods/ts_furniture))
 - Merged the default farming with TenPlus1's Farming Redo ([NotABug](https://notabug.org/TenPlus1/Farming)), JBB's Aggriculture ([Github](https://github.com/JBBgameich/agriculture)) and sofar's crops ([Github](https://github.com/minetest-mods/crops))
   Renamed the papyrus to reed.
-  (My friends) Drawn a "few" new textures.
+  Added new plants
+  (My friend(s)) Drawn a "few" new textures.
   Created the packer.
 - Merged the default bones mod with the Bonemeal mod ([NotABug](https://notabug.org/TenPlus1/bonemeal))
   Added more plants' support for the bonemeal mod.
@@ -38,7 +40,10 @@ The extended default game bundled in the Minetest engine.
 - Added fire_plus for player burning ([Github](https://github.com/LoneWolfHT/fire_plus))
 - Vessels empty glass's texture changed.
   Added jar.
-- Worldedit ([Github](https://github.com/Uberi/Minetest-WorldEdit))
+- Added Worldedit ([Github](https://github.com/Uberi/Minetest-WorldEdit))
+- Added fishing ([Github](https://github.com/Mossmanikin/fishing))
+<!-- Quartz https://github.com/minetest-mods/quartz-->
+
 
 ## Installation
 

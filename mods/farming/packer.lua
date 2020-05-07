@@ -101,12 +101,22 @@ minetest.register_node("farming:packer", {
 			" takes stuff from packer at " .. minetest.pos_to_string(pos))
 
         local inv = minetest.get_meta(pos):get_inventory()
+        local stack_size = inv:get_stack("input", 1):get_count()
+        local item_in_output = inv:get_stack("output", 1):get_name()
 
-        if inv:is_empty("output") and has_something_in_output then
-            local stack_to_remove = inv:get_stack("input", 1):get_name() .. " " .. 50
-            inv:remove_item("input", stack_to_remove)
-            inv:remove_item("bags", "farming:bag")
-            has_something_in_output = false
+        if not inv:is_empty("bags") then
+            if not inv:is_empty("input") and stack_size >= 50 then
+                if inv:is_empty("output") and has_something_in_output then
+                    local stack_to_remove = inv:get_stack("input", 1):get_name() .. " " .. 50
+                    inv:remove_item("input", stack_to_remove)
+                    inv:remove_item("bags", "farming:bag")
+                    has_something_in_output = false
+                end
+            else
+                inv:remove_item("output", item_in_output)
+            end
+        else
+            inv:remove_item("output", item_in_output)
         end
 	end,
 
@@ -145,21 +155,21 @@ minetest.register_craft({
 })
 
 -- Bag of beans
-minetest.register_craftitem("farming:bag_of_beans", {
+minetest.register_craftitem("farming:bag_of_bean", {
     description = "Bag of Beans",
-    inventory_image = "farming_bag_of_beans.png"
+    inventory_image = "farming_bag_of_bean.png"
 })
 
 -- Bag of peanuts
-minetest.register_craftitem("farming:bag_of_peanuts", {
+minetest.register_craftitem("farming:bag_of_peanut", {
     description = "Bag of Peanuts",
-    inventory_image = "farming_bag_of_peanuts.png"
+    inventory_image = "farming_bag_of_peanut.png"
 })
 
 -- Bag of peas
-minetest.register_craftitem("farming:bag_of_peas", {
+minetest.register_craftitem("farming:bag_of_pea", {
 	description = "Bag of Peas",
-	inventory_image = "farming_bag_of_peas.png"
+	inventory_image = "farming_bag_of_pea.png"
 })
 
 -- Bag of rice

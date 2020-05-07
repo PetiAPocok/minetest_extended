@@ -177,9 +177,9 @@ minetest.register_node("vessels:glass_jar", {
 })
 
 minetest.register_craft( {
-	output = "vessels:glass_bottle 10",
+	output = "vessels:glass_jar 10",
 	recipe = {
-		{"default:glass", "default:tin_bar", "default:glass"},
+		{"default:glass", "default:tin_ingot", "default:glass"},
 		{"default:glass", "", "default:glass"},
 		{"", "default:glass", ""}
 	}
@@ -235,6 +235,12 @@ minetest.register_craft( {
 		"vessels:drinking_glass",
 		"vessels:drinking_glass",
 	},
+})
+
+minetest.register_craft( {
+	type = "shapeless",
+	output = "vessels:glass_fragments",
+	recipe = { "vessels:glass_jar", "vessels:glass_jar"	},
 })
 
 minetest.register_craft({

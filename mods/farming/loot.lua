@@ -18,6 +18,7 @@ if minetest.global_exists("dungeon_loot") then
         {name = "farming:seed_garlic", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_grape", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_hemp", chance = 0.4, count = {1, 4}},
+        {name = "farming:seed_lettuce", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_onion", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_pea", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_potato", chance = 0.4, count = {1, 4}},
@@ -34,7 +35,8 @@ minetest.override_item("default:dirt_with_grass", {
 	drop = {
 		items = {
 			{ items = {'default:dirt'}},
-			{ items = {'farming:potato'}, rarity = 20 }
+			{ items = {'farming:potato'}, rarity = 20 },
+            { items = {'farming:peanut'}, rarity = 20 }
 		}
 	}
 })
@@ -48,6 +50,7 @@ minetest.override_item("default:grass_1", {
             { items = {'farming:seed_carrot'}, rarity = 20 },
             { items = {'farming:seed_cucumber'}, rarity = 20 },
             { items = {'farming:seed_grape'}, rarity = 20 },
+            { items = {'farming:seed_lettuce'}, rarity = 20 },
             { items = {'farming:seed_strawberry'}, rarity = 20 },
             { items = {'farming:seed_tomato'}, rarity = 20 },
             { items = {'farming:seed_wheat'}, rarity = 20 }
@@ -63,6 +66,7 @@ minetest.override_item("default:grass_2", {
             { items = {'farming:seed_carrot'}, rarity = 20 },
             { items = {'farming:seed_cucumber'}, rarity = 20 },
             { items = {'farming:seed_grape'}, rarity = 20 },
+            { items = {'farming:seed_lettuce'}, rarity = 20 },
             { items = {'farming:seed_strawberry'}, rarity = 20 },
             { items = {'farming:seed_tomato'}, rarity = 20 },
             { items = {'farming:seed_wheat'}, rarity = 20 }
@@ -78,6 +82,7 @@ minetest.override_item("default:grass_3", {
             { items = {'farming:seed_carrot'}, rarity = 20 },
             { items = {'farming:seed_cucumber'}, rarity = 20 },
             { items = {'farming:seed_grape'}, rarity = 20 },
+            { items = {'farming:seed_lettuce'}, rarity = 20 },
             { items = {'farming:seed_strawberry'}, rarity = 20 },
             { items = {'farming:seed_tomato'}, rarity = 20 },
             { items = {'farming:seed_wheat'}, rarity = 20 }
@@ -93,6 +98,7 @@ minetest.override_item("default:grass_4", {
             { items = {'farming:seed_carrot'}, rarity = 20 },
             { items = {'farming:seed_cucumber'}, rarity = 20 },
             { items = {'farming:seed_grape'}, rarity = 20 },
+            { items = {'farming:seed_lettuce'}, rarity = 20 },
             { items = {'farming:seed_strawberry'}, rarity = 20 },
             { items = {'farming:seed_tomato'}, rarity = 20 },
             { items = {'farming:seed_wheat'}, rarity = 20 }
@@ -108,6 +114,7 @@ minetest.override_item("default:grass_5", {
             { items = {'farming:seed_carrot'}, rarity = 20 },
             { items = {'farming:seed_cucumber'}, rarity = 20 },
             { items = {'farming:seed_grape'}, rarity = 20 },
+            { items = {'farming:seed_lettuce'}, rarity = 20 },
             { items = {'farming:seed_strawberry'}, rarity = 20 },
             { items = {'farming:seed_tomato'}, rarity = 20 },
             { items = {'farming:seed_wheat'}, rarity = 20 }

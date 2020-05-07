@@ -9,6 +9,7 @@
 
 local add = hunger_ng.add_hunger_data
 
+add('mobs:glass_milk',          { satiates = 2, returns = "vessels:drinking_glass" })
 add('mobs:cheese',              { satiates = 2.5 })
 add('mobs:chicked_egg_fried',   { satiates = 2 })
 add('mobs:chicken_cooked',      { satiates = 5 })

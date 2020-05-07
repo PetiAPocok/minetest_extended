@@ -1,13 +1,13 @@
 farming.register_plant("farming:lettuce", {
 	description = "Lettuce Seed",
 	inventory_image = "farming_lettuce_seed.png",
-	steps = 6,
+	steps = 4,
 	minlight = 10,
 	fertility = {"grassland"},
 })
 
 -- Override drop
-minetest.override_item("farming:lettuce_6", {
+minetest.override_item("farming:lettuce_4", {
     drop = "farming:lettuce"
 })
 

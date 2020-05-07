@@ -2093,3 +2093,5 @@ register_command("craft", {
 		return true, craftguide.show(name, node_name)
 	end,
 })
+
+dofile(minetest.get_modpath("craftguide") .. "/packer_guide.lua")

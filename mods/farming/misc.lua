@@ -55,6 +55,82 @@ minetest.register_craft({
     recipe = {"farming:wheat", "farming:wheat", "farming:wheat", "default:paper"}
 })
 
+-- Jams
+minetest.register_craftitem("farming:jam_ananas", {
+	description = "Ananas Jam",
+	inventory_image = "farming_jam_ananas.png",
+    on_use = minetest.item_eat(-1)
+})
+
+minetest.register_craft({
+    output = "farming:jam_ananas",
+    recipe = {
+        {"", "", ""},
+        {"", "farming:ananas", ""},
+        {"farming:sugar", "vessels:glass_jar", "farming:sugar"}
+    }
+})
+
+minetest.register_craftitem("farming:jam_blueberry", {
+	description = "Blueberry Jam",
+	inventory_image = "farming_jam_blueberry.png",
+	on_use = minetest.item_eat(-1)
+})
+
+minetest.register_craft({
+    output = "farming:jam_blueberry",
+    recipe = {
+        {"farming:blueberry", "farming:blueberry", "farming:blueberry"},
+        {"farming:blueberry", "farming:blueberry", "farming:blueberry"},
+        {"farming:sugar", "vessels:glass_jar", "farming:sugar"}
+    }
+})
+
+minetest.register_craftitem("farming:jam_huckleberry", {
+	description = "Huckleberry Jam",
+	inventory_image = "farming_jam_huckleberry.png",
+	on_use = minetest.item_eat(-1)
+})
+
+minetest.register_craft({
+    output = "farming:jam_huckleberry",
+    recipe = {
+        {"farming:huckleberry", "farming:huckleberry", "farming:huckleberry"},
+        {"farming:huckleberry", "farming:huckleberry", "farming:huckleberry"},
+        {"farming:sugar", "vessels:glass_jar", "farming:sugar"}
+    }
+})
+
+minetest.register_craftitem("farming:jam_raspberry", {
+	description = "Raspberry Jam",
+	inventory_image = "farming_jam_raspberry.png",
+	on_use = minetest.item_eat(-1)
+})
+
+minetest.register_craft({
+    output = "farming:jam_raspberry",
+    recipe = {
+        {"farming:raspberry", "farming:raspberry", "farming:raspberry"},
+        {"farming:raspberry", "farming:raspberry", "farming:raspberry"},
+        {"farming:sugar", "vessels:glass_jar", "farming:sugar"}
+    }
+})
+
+minetest.register_craftitem("farming:jam_strawberry", {
+	description = "Strawberry Jam",
+	inventory_image = "farming_jam_strawberry.png",
+	on_use = minetest.item_eat(-1)
+})
+
+minetest.register_craft({
+    output = "farming:jam_strawberry",
+    recipe = {
+        {"", "", ""},
+        {"farming:strawberry", "farming:strawberry", "farming:strawberry"},
+        {"farming:sugar", "vessels:glass_jar", "farming:sugar"}
+    }
+})
+
 -- Minced meat
 minetest.register_craftitem("farming:minced_meat", {
     description = "Minced Meat",
@@ -63,9 +139,24 @@ minetest.register_craftitem("farming:minced_meat", {
 })
 
 minetest.register_craft({
+    output = "farming:minced_meat",
+    recipe = {
+        {"", "group:food_meat_raw", ""},
+        {"", "group:food_meat_raw", ""}
+    }
+})
+
+--Peanut butter
+minetest.register_craftitem("farming:peanut_butter", {
+    description = "Peanut Butter",
+    inventory_image = "farming_peanut_butter.png",
+    on_use = minetest.item_eat(-1)
+})
+
+minetest.register_craft( {
     type = "shapeless",
-    output = "farming:sugar",
-    recipe = {"default:reed"}
+    output = "farming:peanut_butter",
+    recipe = {"vessels:glass_jar", "farming:bag_of_peanut", "farming:sugar"},
 })
 
 -- Salt
