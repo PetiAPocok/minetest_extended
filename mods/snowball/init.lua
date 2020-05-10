@@ -23,21 +23,21 @@ minetest.register_entity("snowball:snowball_entity", {
     visual_size = {x=.5, y=.5},
     textures = {"snowball.png"},
     velocity = 6,
-    
+
     hit_player = function(self, player)
         player:punch(minetest.get_player_by_name(self.playername) or self.object, 1.0, {
             full_punch_interval = 1.0,
             damage_groups = {fleshy = 0.1},
         }, nil)
     end,
-    
+
     hit_mob = function(self, player)
         player:punch(minetest.get_player_by_name(self.playername) or self.object, 1.0, {
             full_punch_interval = 1.0,
             damage_groups = {fleshy = 0.1},
         }, nil)
     end,
-    
+
     drop = false, -- drops arrow as registered item when true
     collisionbox = {0, 0, 0, 0, 0, 0},
     timer = 0,
@@ -157,9 +157,9 @@ local shoot_snowball = function (item, player, pointed_thing)
 
     -- take item if not in creative
 	if not is_creative(player:get_player_name()) then
-		itemstack:take_item()
+		item:take_item()
 	end
-    
+
 	--item:take_item()
 
 	return item
