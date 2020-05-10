@@ -57,13 +57,7 @@ https://wiki.minetest.net/Installing_Mods
 
 ## Compatibility
 
-The Minetest Game GitHub master HEAD is generally compatible with the GitHub
-master HEAD of the Minetest engine.  
-Additionally, when the Minetest engine is tagged to be a certain version (e.g.
-0.4.10), Minetest Game is tagged with the version too.
-
-When stable releases are made, Minetest Game and the Minetest engine is packaged
-and made available at [www.minetest.net](https://www.minetest.net/downloads/).
+Made for and tested on Minetest 5.2.0.
 
 ## Description
 
