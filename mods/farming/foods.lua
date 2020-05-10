@@ -64,7 +64,8 @@ minetest.register_craft({
     output = "farming:bread_dough",
     recipe = {"farming:flour", "mobs:egg", "farming:salt", "bucket:bucket_water"},
 	replacements = {
-		{"bucket:bucket_water", "bucket:bucket_empty"}
+		{"bucket:bucket_water", "bucket:bucket_empty"},
+        {"farming:flour", "default:paper"}
 	}
 })
 
@@ -95,7 +96,9 @@ minetest.register_craft({
     recipe = {"farming:blueberry", "farming:blueberry", "farming:flour",
     "mobs:egg", "farming:sugar", "mobs:bucket_milk", "mobs:butter"},
 	replacements = {
-		{"mobs:bucket_milk", "bucket:bucket_empty"}
+		{"mobs:bucket_milk", "bucket:bucket_empty"},
+        {"farming:flour", "default:paper"}
+
 	}
 })
 
@@ -139,7 +142,8 @@ minetest.register_craft({
 	output = "farming:carrot_cake_dough",
     recipe = {"farming:carrot", "farming:flour", "mobs:egg", "farming:sugar", "mobs:bucket_milk", "mobs:butter"},
    replacements = {
-       {"mobs:bucket_milk", "bucket:bucket_empty"}
+       {"mobs:bucket_milk", "bucket:bucket_empty"},
+       {"farming:flour", "default:paper"}
    }
 })
 
@@ -166,7 +170,10 @@ minetest.register_craftitem("farming:cookie_dough", {
 minetest.register_craft( {
 	type = "shapeless",
 	output = "farming:cookie_dough",
-	recipe = {"farming:flour", "farming:sugar", "mobs:egg", "farming:cocoa"}
+	recipe = {"farming:flour", "farming:sugar", "mobs:egg", "farming:cocoa"},
+    replacements = {
+        {"farming:flour", "default:paper"}
+    }
 })
 
 minetest.register_craftitem("farming:cookie", {
@@ -194,7 +201,8 @@ minetest.register_craft({
 	output = "farming:corn_bread_dough",
     recipe = {"farming:corn", "farming:corn", "farming:flour", "mobs:egg", "farming:salt", "bucket:bucket_water"},
 	replacements = {
-		{"bucket:bucket_water", "bucket:bucket_empty"}
+		{"bucket:bucket_water", "bucket:bucket_empty"},
+        {"farming:flour", "default:paper"}
 	}
 })
 
@@ -298,7 +306,8 @@ minetest.register_craft({
     recipe = {"farming:huckleberry", "farming:huckleberry", "farming:flour",
     "mobs:egg", "farming:sugar", "mobs:bucket_milk", "mobs:butter"},
 	replacements = {
-		{"mobs:bucket_milk", "bucket:bucket_empty"}
+		{"mobs:bucket_milk", "bucket:bucket_empty"},
+        {"farming:flour", "default:paper"}
 	}
 })
 
@@ -476,7 +485,8 @@ minetest.register_craft({
     recipe = {"farming:huckleberry", "farming:huckleberry", "farming:flour",
     "mobs:egg", "farming:sugar", "mobs:bucket_milk", "mobs:butter"},
 	replacements = {
-		{"mobs:bucket_milk", "bucket:bucket_empty"}
+		{"mobs:bucket_milk", "bucket:bucket_empty"},
+        {"farming:flour", "default:paper"}
 	}
 })
 
@@ -550,7 +560,8 @@ minetest.register_craft({
     recipe = {"farming:raspberry", "farming:raspberry", "farming:flour",
     "mobs:egg", "farming:sugar", "mobs:bucket_milk", "mobs:butter"},
 	replacements = {
-		{"mobs:bucket_milk", "bucket:bucket_empty"}
+		{"mobs:bucket_milk", "bucket:bucket_empty"},
+        {"farming:flour", "default:paper"}
 	}
 })
 
@@ -666,7 +677,8 @@ minetest.register_craft({
     recipe = {"farming:strawberry", "farming:strawberry", "farming:flour",
     "mobs:egg", "farming:sugar", "mobs:bucket_milk", "mobs:butter"},
 	replacements = {
-		{"mobs:bucket_milk", "bucket:bucket_empty"}
+		{"mobs:bucket_milk", "bucket:bucket_empty"},
+        {"farming:flour", "default:paper"}
 	}
 })
 
