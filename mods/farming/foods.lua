@@ -23,7 +23,7 @@ minetest.register_craft({
     recipe = {"farming:pot", "farming:bag_of_bean", "group:food_meat_raw", "farming:salt", "farming:onion", "farming:tomato_juice"},
 	replacements = {
 		{"farming:tomato_juice", "vessels:glass_bottle"},
-        {"bucket:bag_of_bean", "bucket:bag"}
+        {"farming:bag_of_bean", "farming:bag"}
 	}
 })
 
@@ -579,7 +579,7 @@ minetest.register_craft({
     recipe = {"farming:pot", "farming:bag_of_rice", "bucket:bucket_water"},
 	replacements = {
 		{"bucket:bucket_water", "bucket:bucket_empty"},
-        {"bucket:bag_of_rice", "bucket:bag"}
+        {"farming:bag_of_rice", "farming:bag"}
 	}
 })
 
@@ -622,8 +622,8 @@ minetest.register_craft({
     recipe = {"farming:pot", "farming:bag_of_rice", "farming:carrot", "farming:bag_of_pea", "bucket:bucket_water"},
 	replacements = {
 		{"bucket:bucket_water", "bucket:bucket_empty"},
-        {"bucket:bag_of_rice", "bucket:bag"},
-        {"bucket:bag_of_pea", "bucket:bag"}
+        {"farming:bag_of_rice", "farming:bag"},
+        {"farming:bag_of_pea", "farming:bag"}
 	}
 })
 

@@ -26,7 +26,7 @@ The extended default game bundled in the Minetest engine.
 - SkinsDB to add skin management ([Github](https://github.com/minetest-mods/skinsdb))
 - Created item_info to show "weapons" damage (own script)
 - The default weather (if I understand it correctly) mod is basicly just changes the coluds according to the biome (player's position). So renamed it to clouds.
-- Throwing Redo mod to get bows. (modified) ([Github](https://github.com/minetest-mods/throwing))-->
+- Throwing Redo mod to get bows. (modified) ([Github](https://github.com/minetest-mods/throwing))
 - Added ts_furniture so I can sit down after all the mod customising... ([Github](https://github.com/minetest-mods/ts_furniture))
 - Merged the default farming with TenPlus1's Farming Redo ([NotABug](https://notabug.org/TenPlus1/Farming)), JBB's Aggriculture ([Github](https://github.com/JBBgameich/agriculture)) and sofar's crops ([Github](https://github.com/minetest-mods/crops))
   Renamed the papyrus to reed.
@@ -41,8 +41,8 @@ The extended default game bundled in the Minetest engine.
 - Vessels empty glass's texture changed.
   Added jar.
 - Added Worldedit ([Github](https://github.com/Uberi/Minetest-WorldEdit))
-- Added fishing ([Github](https://github.com/Mossmanikin/fishing))
-<!-- Quartz https://github.com/minetest-mods/quartz-->
+<!-- - Added fishing ([Github](https://github.com/Mossmanikin/fishing))
+<!-- - Quartz https://github.com/minetest-mods/quartz-->
 
 
 ## Installation

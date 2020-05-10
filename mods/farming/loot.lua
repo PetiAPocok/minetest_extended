@@ -206,9 +206,7 @@ minetest.override_item("default:marram_grass_1", { -- Grows on sand (anywhere)
 			{ items = {'default:marram_grass_1'}},
 			{ items = {'farming:seed_bean'}, rarity = 20 },
             { items = {'farming:seed_hemp'}, rarity = 20 },
-            { items = {'farming:seed_huckleberry'}, rarity = 20 },
-            { items = {'farming:seed_melon'}, rarity = 20 },
-            { items = {'farming:seed_pumpkin'}, rarity = 20 }
+            { items = {'farming:seed_huckleberry'}, rarity = 20 }
 		}
 	}
 })
@@ -219,9 +217,7 @@ minetest.override_item("default:marram_grass_2", { -- Grows on sand (anywhere)
 			{ items = {'default:marram_grass_1'}},
 			{ items = {'farming:seed_bean'}, rarity = 20 },
             { items = {'farming:seed_hemp'}, rarity = 20 },
-            { items = {'farming:seed_huckleberry'}, rarity = 20 },
-            { items = {'farming:seed_melon'}, rarity = 20 },
-            { items = {'farming:seed_pumpkin'}, rarity = 20 }
+            { items = {'farming:seed_huckleberry'}, rarity = 20 }
 		}
 	}
 })
@@ -232,9 +228,7 @@ minetest.override_item("default:marram_grass_3", { -- Grows on sand (anywhere)
 			{ items = {'default:marram_grass_1'}},
 			{ items = {'farming:seed_bean'}, rarity = 20 },
             { items = {'farming:seed_hemp'}, rarity = 20 },
-            { items = {'farming:seed_huckleberry'}, rarity = 20 },
-            { items = {'farming:seed_melon'}, rarity = 20 },
-            { items = {'farming:seed_pumpkin'}, rarity = 20 }
+            { items = {'farming:seed_huckleberry'}, rarity = 20 }
 		}
 	}
 })

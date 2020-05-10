@@ -31,7 +31,6 @@ minetest.register_on_player_hpchange(function(player, hp_change)
 
 	for id, string in ipairs(fire_plus.ignition_nodes) do
 		if node.name:find(string) then
-            minetest.chat_send_all("Valaki ég?")
 			fire_plus.burnplayer(player)
 			break
 		end
