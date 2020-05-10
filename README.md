@@ -2,7 +2,7 @@
 
 The extended default game bundled in the Minetest engine.  
 
-## Contained mods
+## Contained mods and modifications
 
 - The Minetest game for base ([GitHub](https://github.com/minetest/minetest_game))
 - Hunger NG to add hunger management (modified) ([Gitlab](https://gitlab.com/4w/hunger_ng))
