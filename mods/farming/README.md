@@ -8,4 +8,5 @@ JBB's Aggriculture ([Github](https://github.com/JBBgameich/agriculture))
 and sofar's crops ([Github](https://github.com/minetest-mods/crops))
 
 ## Licensing
-- LGPLv2.1/CC BY-SA 3.0.
+- LGPLv2.1/CC BY-SA 3.0.  
+The new textures made by PetiAPocok and Maizegod
