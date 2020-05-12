@@ -448,7 +448,17 @@ minetest.register_craft({
 	recipe = "default:desert_cobble",
 })
 
+minetest.register_craft({
+	type = "cooking",
+	output = "default:water_source",
+	recipe = "default:snowblock",
+})
 
+minetest.register_craft({
+	type = "cooking",
+	output = "default:water_source",
+	recipe = "default:ice",
+})
 --
 -- Fuels
 --
