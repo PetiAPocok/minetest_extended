@@ -176,6 +176,13 @@ minetest.register_craft( {
     }
 })
 
+minetest.register_craft({
+	output = "farming:string",
+	recipe = {
+		{"farming:hemp", "farming:hemp", "farming:hemp"}
+	}
+})
+
 -- Sugar
 minetest.register_craftitem("farming:sugar", {
 	description = "Sugar",
@@ -187,4 +194,13 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "farming:sugar",
 	recipe = {"default:reed"}
+})
+
+minetest.register_craft({
+	output = "wool:white",
+	recipe = {
+		{"farming:string", "farming:string", "farming:string"},
+		{"farming:string", "farming:string", "farming:string"},
+        {"farming:string", "farming:string", "farming:string"}
+	}
 })
