@@ -193,12 +193,16 @@ function default.chest.register_chest(name, d)
 			local inv = meta:get_inventory()
 			inv:set_size("main", 8*4)
 		end
-		def.can_dig = function(pos,player)
-			local meta = minetest.get_meta(pos);
-			local inv = meta:get_inventory()
-			return inv:is_empty("main")
-		end
-		def.on_rightclick = function(pos, node, clicker)
+        def.on_destruct = function(pos)
+            local drop = ""
+            local temp = {}
+            default.get_inventory_drops(pos, "main", temp)
+            for i,v in ipairs(temp) do
+                drop = v.name .. " " .. v.count
+                minetest.add_item(pos, drop)
+            end
+        end
+        def.on_rightclick = function(pos, node, clicker)
 			minetest.sound_play(def.sound_open, {gain = 0.3, pos = pos,
 					max_hear_distance = 10}, true)
 			if not default.chest.chest_lid_obstructed(pos) then

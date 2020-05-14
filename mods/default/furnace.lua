@@ -49,10 +49,16 @@ end
 -- Node callback functions that are the same for active and inactive furnace
 --
 
-local function can_dig(pos, player)
-	local meta = minetest.get_meta(pos);
-	local inv = meta:get_inventory()
-	return inv:is_empty("fuel") and inv:is_empty("dst") and inv:is_empty("src")
+local function on_destruct(pos)
+    local drop = ""
+    local temp = {}
+    default.get_inventory_drops(pos, "src", temp)
+    default.get_inventory_drops(pos, "fuel", temp)
+    default.get_inventory_drops(pos, "dst", temp)
+    for i,v in ipairs(temp) do
+        drop = v.name .. " " .. v.count
+        minetest.add_item(pos, drop)
+    end
 end
 
 local function allow_metadata_inventory_put(pos, listname, index, stack, player)
@@ -285,7 +291,7 @@ minetest.register_node("default:furnace", {
 	is_ground_content = false,
 	sounds = default.node_sound_stone_defaults(),
 
-	can_dig = can_dig,
+	on_destruct = on_destruct,
 
 	on_timer = furnace_node_timer,
 
@@ -346,7 +352,7 @@ minetest.register_node("default:furnace_active", {
 	sounds = default.node_sound_stone_defaults(),
 	on_timer = furnace_node_timer,
 
-	can_dig = can_dig,
+	on_destruct = on_destruct,
 
 	allow_metadata_inventory_put = allow_metadata_inventory_put,
 	allow_metadata_inventory_move = allow_metadata_inventory_move,
