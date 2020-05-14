@@ -128,18 +128,8 @@ minetest.register_node("farming:packer", {
         default.get_inventory_drops(pos, "output", temp)
         default.get_inventory_drops(pos, "bags", temp)
 
-        if temp[1] then
-            drop = temp[1].name .. " " .. temp[1].count
-            minetest.add_item(pos, drop)
-        end
-
-        if temp[2] then
-            drop = temp[2].name .. " " .. temp[2].count
-            minetest.add_item(pos, drop)
-        end
-
-        if temp[3] then
-            drop = temp[3].name .. " " .. temp[3].count
+        for i,v in ipairs(temp) do
+            drop = v.name .. " " .. v.count
             minetest.add_item(pos, drop)
         end
     end
