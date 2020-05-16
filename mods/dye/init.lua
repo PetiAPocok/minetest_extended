@@ -68,10 +68,10 @@ minetest.register_craft({
 -- Manually add cactus->green dye
 
 minetest.register_craft({
-    type = "cooking",
-    cooktime = 6,
+	type = "cooking",
+	cooktime = 6,
 	output = "dye:green 2",
-	recipe = { {"default:cactus"} },
+	recipe = "default:cactus"
 })
 
 -- Mix recipes
