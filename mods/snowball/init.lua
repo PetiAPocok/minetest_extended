@@ -38,6 +38,19 @@ minetest.register_entity("snowball:snowball_entity", {
         }, nil)
     end,
 
+    hit_node = function(self, pos, node)
+
+		pos.y = pos.y + 1
+
+		local nod = minetest.get_node_or_nil(pos)
+
+		if not nod
+		or not minetest.registered_nodes[nod.name]
+		or minetest.registered_nodes[nod.name].walkable == true then
+			return
+		end
+	end,
+
     drop = false, -- drops arrow as registered item when true
     collisionbox = {0, 0, 0, 0, 0, 0},
     timer = 0,
