@@ -65,6 +65,13 @@ minetest.register_craft({
 	},
 })
 
+-- Manually add cactus->green dye
+
+minetest.register_craft({
+	output = "dye:green 2",
+	recipe = { {"default:cactus"} },
+})
+
 -- Mix recipes
 
 local dye_recipes = {
