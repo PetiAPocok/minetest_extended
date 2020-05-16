@@ -638,7 +638,8 @@ function tnt.register_tnt(def)
 			mesecons = {effector =
 				{action_on =
 					function(pos)
-						tnt.boom(pos, def)
+                        minetest.swap_node(pos, {name = name .. "_burning"})
+        				minetest.registered_nodes[name .. "_burning"].on_construct(pos)
 					end
 				}
 			},
