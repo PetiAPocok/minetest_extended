@@ -46,13 +46,10 @@ armor = {
 	default_skin = "character",
 	materials = {
 		wood = "group:wood",
-		cactus = "default:cactus",
 		steel = "default:steel_ingot",
 		bronze = "default:bronze_ingot",
 		diamond = "default:diamond",
-		gold = "default:gold_ingot",
 		mithril = "moreores:mithril_ingot",
-		crystal = "ethereal:crystal_ingot",
 	},
 	fire_nodes = {
 		{"default:lava_source",     5, 8},

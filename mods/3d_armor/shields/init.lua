@@ -75,50 +75,6 @@ if armor.materials.wood then
 	})
 end
 
-if armor.materials.cactus then
-	armor:register_armor("shields:shield_cactus", {
-		description = S("Cactus Shield"),
-		inventory_image = "shields_inv_shield_cactus.png",
-		groups = {armor_shield=1, armor_heal=0, armor_use=1000},
-		armor_groups = {fleshy=5},
-		damage_groups = {cracky=3, snappy=3, choppy=2, crumbly=2, level=1},
-		reciprocate_damage = true,
-		on_damage = function(player, index, stack)
-			play_sound_effect(player, "default_wood_footstep")
-		end,
-		on_destroy = function(player, index, stack)
-			play_sound_effect(player, "default_wood_footstep")
-		end,
-	})
-	armor:register_armor("shields:shield_enhanced_cactus", {
-		description = S("Enhanced Cactus Shield"),
-		inventory_image = "shields_inv_shield_enhanced_cactus.png",
-		groups = {armor_shield=1, armor_heal=0, armor_use=1000},
-		armor_groups = {fleshy=8},
-		damage_groups = {cracky=3, snappy=3, choppy=2, crumbly=2, level=2},
-		reciprocate_damage = true,
-		on_damage = function(player, index, stack)
-			play_sound_effect(player, "default_dig_metal")
-		end,
-		on_destroy = function(player, index, stack)
-			play_sound_effect(player, "default_dug_metal")
-		end,
-	})
-	minetest.register_craft({
-		output = "shields:shield_enhanced_cactus",
-		recipe = {
-			{"default:steel_ingot"},
-			{"shields:shield_cactus"},
-			{"default:steel_ingot"},
-		},
-	})
-	minetest.register_craft({
-		type = "fuel",
-		recipe = "shields:shield_cactus",
-		burntime = 16,
-	})
-end
-
 if armor.materials.steel then
 	armor:register_armor("shields:shield_steel", {
 		description = S("Steel Shield"),
@@ -168,24 +124,6 @@ if armor.materials.diamond then
 		end,
 		on_destroy = function(player, index, stack)
 			play_sound_effect(player, "default_break_glass")
-		end,
-	})
-end
-
-if armor.materials.gold then
-	armor:register_armor("shields:shield_gold", {
-		description = S("Gold Shield"),
-		inventory_image = "shields_inv_shield_gold.png",
-		groups = {armor_shield=1, armor_heal=6, armor_use=300,
-			physics_speed=-0.04, physics_gravity=0.04},
-		armor_groups = {fleshy=10},
-		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=3, level=2},
-		reciprocate_damage = true,
-		on_damage = function(player, index, stack)
-			play_sound_effect(player, "default_dig_metal")
-		end,
-		on_destroy = function(player, index, stack)
-			play_sound_effect(player, "default_dug_metal")
 		end,
 	})
 end
