@@ -8,13 +8,10 @@ farming.register_plant("farming:lettuce", {
 
 -- Override drop
 minetest.override_item("farming:lettuce_4", {
-    drop = "farming:lettuce"
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "farming:seed_lettuce",
-	recipe = {"farming:lettuce"}
+    drop = {
+        "farming:lettuce",
+        "farming:seed_lettuce"
+    }
 })
 
 -- make lettuce eatable
