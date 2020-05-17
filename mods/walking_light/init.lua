@@ -91,7 +91,7 @@ minetest.register_globalstep(function(dtime)
 			until minetest.env:get_node_or_nil(rounded_pos) ~= "walking_light:light"
 			local old_pos = {x=player_positions[player_name]["x"], y=player_positions[player_name]["y"], z=player_positions[player_name]["z"]}
 			repeat
-				is_light  = minetest.env:get_node_or_nil(old_pos)
+				local is_light  = minetest.env:get_node_or_nil(old_pos)
 				if is_light ~= nil and is_light.name == "walking_light:light" then
 					-- minetest.env:remove_node(old_pos)
 					-- Erzwinge Neuberechnung des Lichts
