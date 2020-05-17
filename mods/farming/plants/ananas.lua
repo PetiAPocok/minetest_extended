@@ -21,7 +21,7 @@ minetest.override_item("farming:ananas_8", {
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "farming:seed_ananas",
+	output = "farming:seed_ananas 10",
 	recipe = {"farming:ananas"}
 })
 
