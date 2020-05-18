@@ -30,238 +30,115 @@ if minetest.global_exists("dungeon_loot") then
 end
 
 -- Register seeds
--- drop potatoes when digging in dirt
-minetest.override_item("default:dirt_with_grass", {
-	drop = {
-		items = {
-			{ items = {'default:dirt'}},
-			{ items = {'farming:potato'}, rarity = 20 },
-            { items = {'farming:peanut'}, rarity = 20 }
-		}
-	}
-})
+-- seeds from dirt
+table.insert(minetest.registered_items["default:dirt_with_grass"].drop.items, { rarity = 20, items = {"farming:potato"} })
+table.insert(minetest.registered_items["default:dirt_with_grass"].drop.items, { rarity = 20, items = {"farming:peanut"} })
 
 --seeds from grass
-minetest.override_item("default:grass_1", {
-	drop = {
-		items = {
-			{ items = {'default:grass_1'}},
-            { items = {'farming:seed_blueberry'}, rarity = 20 },
-            { items = {'farming:seed_carrot'}, rarity = 20 },
-            { items = {'farming:seed_cucumber'}, rarity = 20 },
-            { items = {'farming:seed_grape'}, rarity = 20 },
-            { items = {'farming:seed_lettuce'}, rarity = 20 },
-            { items = {'farming:seed_strawberry'}, rarity = 20 },
-            { items = {'farming:seed_tomato'}, rarity = 20 },
-            { items = {'farming:seed_wheat'}, rarity = 20 }
-		}
-	}
-})
+table.insert(minetest.registered_items["default:grass_1"].drop.items, { rarity = 20, items = {"farming:seed_blueberry"} })
+table.insert(minetest.registered_items["default:grass_1"].drop.items, { rarity = 20, items = {"farming:seed_carrot"} })
+table.insert(minetest.registered_items["default:grass_1"].drop.items, { rarity = 20, items = {"farming:seed_cucumber"} })
+table.insert(minetest.registered_items["default:grass_1"].drop.items, { rarity = 20, items = {"farming:seed_grape"} })
+table.insert(minetest.registered_items["default:grass_1"].drop.items, { rarity = 20, items = {"farming:seed_lettuce"} })
+table.insert(minetest.registered_items["default:grass_1"].drop.items, { rarity = 20, items = {"farming:seed_strawberry"} })
+table.insert(minetest.registered_items["default:grass_1"].drop.items, { rarity = 20, items = {"farming:seed_tomato"} })
+table.insert(minetest.registered_items["default:grass_1"].drop.items, { rarity = 20, items = {"farming:seed_wheat"} })
 
-minetest.override_item("default:grass_2", {
-	drop = {
-		items = {
-			{ items = {'default:grass_1'}},
-            { items = {'farming:seed_blueberry'}, rarity = 20 },
-            { items = {'farming:seed_carrot'}, rarity = 20 },
-            { items = {'farming:seed_cucumber'}, rarity = 20 },
-            { items = {'farming:seed_grape'}, rarity = 20 },
-            { items = {'farming:seed_lettuce'}, rarity = 20 },
-            { items = {'farming:seed_strawberry'}, rarity = 20 },
-            { items = {'farming:seed_tomato'}, rarity = 20 },
-            { items = {'farming:seed_wheat'}, rarity = 20 }
-		}
-	}
-})
+table.insert(minetest.registered_items["default:grass_2"].drop.items, { rarity = 20, items = {"farming:seed_blueberry"} })
+table.insert(minetest.registered_items["default:grass_2"].drop.items, { rarity = 20, items = {"farming:seed_carrot"} })
+table.insert(minetest.registered_items["default:grass_2"].drop.items, { rarity = 20, items = {"farming:seed_cucumber"} })
+table.insert(minetest.registered_items["default:grass_2"].drop.items, { rarity = 20, items = {"farming:seed_grape"} })
+table.insert(minetest.registered_items["default:grass_2"].drop.items, { rarity = 20, items = {"farming:seed_lettuce"} })
+table.insert(minetest.registered_items["default:grass_2"].drop.items, { rarity = 20, items = {"farming:seed_strawberry"} })
+table.insert(minetest.registered_items["default:grass_2"].drop.items, { rarity = 20, items = {"farming:seed_tomato"} })
+table.insert(minetest.registered_items["default:grass_2"].drop.items, { rarity = 20, items = {"farming:seed_wheat"} })
 
-minetest.override_item("default:grass_3", {
-	drop = {
-		items = {
-			{ items = {'default:grass_1'}},
-            { items = {'farming:seed_blueberry'}, rarity = 20 },
-            { items = {'farming:seed_carrot'}, rarity = 20 },
-            { items = {'farming:seed_cucumber'}, rarity = 20 },
-            { items = {'farming:seed_grape'}, rarity = 20 },
-            { items = {'farming:seed_lettuce'}, rarity = 20 },
-            { items = {'farming:seed_strawberry'}, rarity = 20 },
-            { items = {'farming:seed_tomato'}, rarity = 20 },
-            { items = {'farming:seed_wheat'}, rarity = 20 }
-		}
-	}
-})
+table.insert(minetest.registered_items["default:grass_3"].drop.items, { rarity = 20, items = {"farming:seed_blueberry"} })
+table.insert(minetest.registered_items["default:grass_3"].drop.items, { rarity = 20, items = {"farming:seed_carrot"} })
+table.insert(minetest.registered_items["default:grass_3"].drop.items, { rarity = 20, items = {"farming:seed_cucumber"} })
+table.insert(minetest.registered_items["default:grass_3"].drop.items, { rarity = 20, items = {"farming:seed_grape"} })
+table.insert(minetest.registered_items["default:grass_3"].drop.items, { rarity = 20, items = {"farming:seed_lettuce"} })
+table.insert(minetest.registered_items["default:grass_3"].drop.items, { rarity = 20, items = {"farming:seed_strawberry"} })
+table.insert(minetest.registered_items["default:grass_3"].drop.items, { rarity = 20, items = {"farming:seed_tomato"} })
+table.insert(minetest.registered_items["default:grass_3"].drop.items, { rarity = 20, items = {"farming:seed_wheat"} })
 
-minetest.override_item("default:grass_4", {
-	drop = {
-		items = {
-			{ items = {'default:grass_1'}},
-            { items = {'farming:seed_blueberry'}, rarity = 20 },
-            { items = {'farming:seed_carrot'}, rarity = 20 },
-            { items = {'farming:seed_cucumber'}, rarity = 20 },
-            { items = {'farming:seed_grape'}, rarity = 20 },
-            { items = {'farming:seed_lettuce'}, rarity = 20 },
-            { items = {'farming:seed_strawberry'}, rarity = 20 },
-            { items = {'farming:seed_tomato'}, rarity = 20 },
-            { items = {'farming:seed_wheat'}, rarity = 20 }
-		}
-	}
-})
+table.insert(minetest.registered_items["default:grass_4"].drop.items, { rarity = 20, items = {"farming:seed_blueberry"} })
+table.insert(minetest.registered_items["default:grass_4"].drop.items, { rarity = 20, items = {"farming:seed_carrot"} })
+table.insert(minetest.registered_items["default:grass_4"].drop.items, { rarity = 20, items = {"farming:seed_cucumber"} })
+table.insert(minetest.registered_items["default:grass_4"].drop.items, { rarity = 20, items = {"farming:seed_grape"} })
+table.insert(minetest.registered_items["default:grass_4"].drop.items, { rarity = 20, items = {"farming:seed_lettuce"} })
+table.insert(minetest.registered_items["default:grass_4"].drop.items, { rarity = 20, items = {"farming:seed_strawberry"} })
+table.insert(minetest.registered_items["default:grass_4"].drop.items, { rarity = 20, items = {"farming:seed_tomato"} })
+table.insert(minetest.registered_items["default:grass_4"].drop.items, { rarity = 20, items = {"farming:seed_wheat"} })
 
-minetest.override_item("default:grass_5", {
-	drop = {
-		items = {
-			{ items = {'default:grass_1'}},
-            { items = {'farming:seed_blueberry'}, rarity = 20 },
-            { items = {'farming:seed_carrot'}, rarity = 20 },
-            { items = {'farming:seed_cucumber'}, rarity = 20 },
-            { items = {'farming:seed_grape'}, rarity = 20 },
-            { items = {'farming:seed_lettuce'}, rarity = 20 },
-            { items = {'farming:seed_strawberry'}, rarity = 20 },
-            { items = {'farming:seed_tomato'}, rarity = 20 },
-            { items = {'farming:seed_wheat'}, rarity = 20 }
-		}
-	}
-})
+table.insert(minetest.registered_items["default:grass_5"].drop.items, { rarity = 20, items = {"farming:seed_blueberry"} })
+table.insert(minetest.registered_items["default:grass_5"].drop.items, { rarity = 20, items = {"farming:seed_carrot"} })
+table.insert(minetest.registered_items["default:grass_5"].drop.items, { rarity = 20, items = {"farming:seed_cucumber"} })
+table.insert(minetest.registered_items["default:grass_5"].drop.items, { rarity = 20, items = {"farming:seed_grape"} })
+table.insert(minetest.registered_items["default:grass_5"].drop.items, { rarity = 20, items = {"farming:seed_lettuce"} })
+table.insert(minetest.registered_items["default:grass_5"].drop.items, { rarity = 20, items = {"farming:seed_strawberry"} })
+table.insert(minetest.registered_items["default:grass_5"].drop.items, { rarity = 20, items = {"farming:seed_tomato"} })
+table.insert(minetest.registered_items["default:grass_5"].drop.items, { rarity = 20, items = {"farming:seed_wheat"} })
 
-minetest.override_item("default:dry_grass_1", { -- Grows in the savanna (dry dirt, acatia tree)
-	drop = {
-		items = {
-			{ items = {'default:dry_grass_1'}},
-            { items = {'farming:seed_corn'}, rarity = 20 },
-			{ items = {'farming:seed_potato'}, rarity = 20 },
-            { items = {'farming:seed_garlic'}, rarity = 20 },
-            { items = {'farming:seed_onion'}, rarity = 20 },
-            { items = {'farming:seed_rice'}, rarity = 20 }
-		}
-	}
-})
+-- Grows in the savanna (dry dirt, acatia tree)
+table.insert(minetest.registered_items["default:dry_grass_1"].drop.items, { rarity = 20, items = {"farming:seed_corn"} })
+table.insert(minetest.registered_items["default:dry_grass_1"].drop.items, { rarity = 20, items = {"farming:seed_potato"} })
+table.insert(minetest.registered_items["default:dry_grass_1"].drop.items, { rarity = 20, items = {"farming:seed_garlic"} })
+table.insert(minetest.registered_items["default:dry_grass_1"].drop.items, { rarity = 20, items = {"farming:seed_onion"} })
+table.insert(minetest.registered_items["default:dry_grass_1"].drop.items, { rarity = 20, items = {"farming:seed_rice"} })
 
-minetest.override_item("default:dry_grass_2", { -- Grows in the savanna (dry dirt, acatia tree)
-	drop = {
-		items = {
-			{ items = {'default:dry_grass_1'}},
-            { items = {'farming:seed_corn'}, rarity = 20 },
-			{ items = {'farming:seed_potato'}, rarity = 20 },
-            { items = {'farming:seed_garlic'}, rarity = 20 },
-            { items = {'farming:seed_onion'}, rarity = 20 },
-            { items = {'farming:seed_rice'}, rarity = 20 }
-		}
-	}
-})
+table.insert(minetest.registered_items["default:dry_grass_2"].drop.items, { rarity = 20, items = {"farming:seed_corn"} })
+table.insert(minetest.registered_items["default:dry_grass_2"].drop.items, { rarity = 20, items = {"farming:seed_potato"} })
+table.insert(minetest.registered_items["default:dry_grass_2"].drop.items, { rarity = 20, items = {"farming:seed_garlic"} })
+table.insert(minetest.registered_items["default:dry_grass_2"].drop.items, { rarity = 20, items = {"farming:seed_onion"} })
+table.insert(minetest.registered_items["default:dry_grass_2"].drop.items, { rarity = 20, items = {"farming:seed_rice"} })
 
-minetest.override_item("default:dry_grass_3", { -- Grows in the savanna (dry dirt, acatia tree)
-	drop = {
-		items = {
-			{ items = {'default:dry_grass_1'}},
-            { items = {'farming:seed_corn'}, rarity = 20 },
-			{ items = {'farming:seed_potato'}, rarity = 20 },
-            { items = {'farming:seed_garlic'}, rarity = 20 },
-            { items = {'farming:seed_onion'}, rarity = 20 },
-            { items = {'farming:seed_rice'}, rarity = 20 }
-		}
-	}
-})
+table.insert(minetest.registered_items["default:dry_grass_3"].drop.items, { rarity = 20, items = {"farming:seed_corn"} })
+table.insert(minetest.registered_items["default:dry_grass_3"].drop.items, { rarity = 20, items = {"farming:seed_potato"} })
+table.insert(minetest.registered_items["default:dry_grass_3"].drop.items, { rarity = 20, items = {"farming:seed_garlic"} })
+table.insert(minetest.registered_items["default:dry_grass_3"].drop.items, { rarity = 20, items = {"farming:seed_onion"} })
+table.insert(minetest.registered_items["default:dry_grass_3"].drop.items, { rarity = 20, items = {"farming:seed_rice"} })
 
-minetest.override_item("default:dry_grass_4", { -- Grows in the savanna (dry dirt, acatia tree)
-	drop = {
-		items = {
-			{ items = {'default:dry_grass_1'}},
-            { items = {'farming:seed_corn'}, rarity = 20 },
-			{ items = {'farming:seed_potato'}, rarity = 20 },
-            { items = {'farming:seed_garlic'}, rarity = 20 },
-            { items = {'farming:seed_onion'}, rarity = 20 },
-            { items = {'farming:seed_rice'}, rarity = 20 }
-		}
-	}
-})
+table.insert(minetest.registered_items["default:dry_grass_4"].drop.items, { rarity = 20, items = {"farming:seed_corn"} })
+table.insert(minetest.registered_items["default:dry_grass_4"].drop.items, { rarity = 20, items = {"farming:seed_potato"} })
+table.insert(minetest.registered_items["default:dry_grass_4"].drop.items, { rarity = 20, items = {"farming:seed_garlic"} })
+table.insert(minetest.registered_items["default:dry_grass_4"].drop.items, { rarity = 20, items = {"farming:seed_onion"} })
+table.insert(minetest.registered_items["default:dry_grass_4"].drop.items, { rarity = 20, items = {"farming:seed_rice"} })
 
-minetest.override_item("default:dry_grass_5", { -- Grows in the savanna (dry dirt, acatia tree)
-	drop = {
-		items = {
-			{ items = {'default:dry_grass_1'}},
-            { items = {'farming:seed_corn'}, rarity = 20 },
-			{ items = {'farming:seed_potato'}, rarity = 20 },
-            { items = {'farming:seed_garlic'}, rarity = 20 },
-            { items = {'farming:seed_onion'}, rarity = 20 },
-            { items = {'farming:seed_rice'}, rarity = 20 }
-		}
-	}
-})
+table.insert(minetest.registered_items["default:dry_grass_5"].drop.items, { rarity = 20, items = {"farming:seed_corn"} })
+table.insert(minetest.registered_items["default:dry_grass_5"].drop.items, { rarity = 20, items = {"farming:seed_potato"} })
+table.insert(minetest.registered_items["default:dry_grass_5"].drop.items, { rarity = 20, items = {"farming:seed_garlic"} })
+table.insert(minetest.registered_items["default:dry_grass_5"].drop.items, { rarity = 20, items = {"farming:seed_onion"} })
+table.insert(minetest.registered_items["default:dry_grass_5"].drop.items, { rarity = 20, items = {"farming:seed_rice"} })
 
-minetest.override_item("default:junglegrass", {
-	drop = {
-		items = {
-			{ items = {'default:junglegrass'}},
-			{ items = {'farming:seed_ananas'}, rarity = 20 },
-            { items = {'farming:seed_chili'}, rarity = 20 },
-            { items = {'farming:seed_cotton'}, rarity = 20 },
-            { items = {'farming:seed_cocoa'}, rarity = 20 },
-            { items = {'farming:seed_rice'}, rarity = 20 }
-		}
-	}
-})
+table.insert(minetest.registered_items["default:junglegrass"].drop.items, { rarity = 20, items = {"farming:seed_ananas"} })
+table.insert(minetest.registered_items["default:junglegrass"].drop.items, { rarity = 20, items = {"farming:seed_chili"} })
+table.insert(minetest.registered_items["default:junglegrass"].drop.items, { rarity = 20, items = {"farming:seed_cotton"} })
+table.insert(minetest.registered_items["default:junglegrass"].drop.items, { rarity = 20, items = {"farming:seed_cocoa"} })
+table.insert(minetest.registered_items["default:junglegrass"].drop.items, { rarity = 20, items = {"farming:seed_rice"} })
 
-minetest.override_item("default:marram_grass_1", { -- Grows on sand (anywhere)
-	drop = {
-		items = {
-			{ items = {'default:marram_grass_1'}},
-			{ items = {'farming:seed_bean'}, rarity = 20 },
-            { items = {'farming:seed_hemp'}, rarity = 20 },
-            { items = {'farming:seed_huckleberry'}, rarity = 20 }
-		}
-	}
-})
+ -- Grows on sand (anywhere)
+table.insert(minetest.registered_items["default:marram_grass_1"].drop.items, { rarity = 20, items = {"farming:seed_bean"} })
+table.insert(minetest.registered_items["default:marram_grass_1"].drop.items, { rarity = 20, items = {"farming:seed_hemp"} })
+table.insert(minetest.registered_items["default:marram_grass_1"].drop.items, { rarity = 20, items = {"farming:seed_huckleberry"} })
 
-minetest.override_item("default:marram_grass_2", { -- Grows on sand (anywhere)
-	drop = {
-		items = {
-			{ items = {'default:marram_grass_1'}},
-			{ items = {'farming:seed_bean'}, rarity = 20 },
-            { items = {'farming:seed_hemp'}, rarity = 20 },
-            { items = {'farming:seed_huckleberry'}, rarity = 20 }
-		}
-	}
-})
+table.insert(minetest.registered_items["default:marram_grass_2"].drop.items, { rarity = 20, items = {"farming:seed_bean"} })
+table.insert(minetest.registered_items["default:marram_grass_2"].drop.items, { rarity = 20, items = {"farming:seed_hemp"} })
+table.insert(minetest.registered_items["default:marram_grass_2"].drop.items, { rarity = 20, items = {"farming:seed_huckleberry"} })
 
-minetest.override_item("default:marram_grass_3", { -- Grows on sand (anywhere)
-	drop = {
-		items = {
-			{ items = {'default:marram_grass_1'}},
-			{ items = {'farming:seed_bean'}, rarity = 20 },
-            { items = {'farming:seed_hemp'}, rarity = 20 },
-            { items = {'farming:seed_huckleberry'}, rarity = 20 }
-		}
-	}
-})
+table.insert(minetest.registered_items["default:marram_grass_3"].drop.items, { rarity = 20, items = {"farming:seed_bean"} })
+table.insert(minetest.registered_items["default:marram_grass_3"].drop.items, { rarity = 20, items = {"farming:seed_hemp"} })
+table.insert(minetest.registered_items["default:marram_grass_3"].drop.items, { rarity = 20, items = {"farming:seed_huckleberry"} })
 
-minetest.override_item("default:fern_1", { -- Grows in warm pine forests
-	drop = {
-		items = {
-			{ items = {'default:fern_1'}},
-			{ items = {'farming:seed_beetroot'}, rarity = 20 },
-            { items = {'farming:seed_pea'}, rarity = 20 },
-            { items = {'farming:seed_raspberry'}, rarity = 20 }
-		}
-	}
-})
+-- Grows in warm pine forests
+table.insert(minetest.registered_items["default:fern_1"].drop.items, { rarity = 20, items = {"farming:seed_beetroot"} })
+table.insert(minetest.registered_items["default:fern_1"].drop.items, { rarity = 20, items = {"farming:seed_pea"} })
+table.insert(minetest.registered_items["default:fern_1"].drop.items, { rarity = 20, items = {"farming:seed_raspberry"} })
 
-minetest.override_item("default:fern_2", { -- Grows in warm pine forests
-	drop = {
-		items = {
-			{ items = {'default:fern_1'}},
-			{ items = {'farming:seed_beetroot'}, rarity = 20 },
-            { items = {'farming:seed_pea'}, rarity = 20 },
-            { items = {'farming:seed_raspberry'}, rarity = 20 }
-		}
-	}
-})
+table.insert(minetest.registered_items["default:fern_2"].drop.items, { rarity = 20, items = {"farming:seed_beetroot"} })
+table.insert(minetest.registered_items["default:fern_2"].drop.items, { rarity = 20, items = {"farming:seed_pea"} })
+table.insert(minetest.registered_items["default:fern_2"].drop.items, { rarity = 20, items = {"farming:seed_raspberry"} })
 
-minetest.override_item("default:fern_3", { -- Grows in warm pine forests
-	drop = {
-		items = {
-			{ items = {'default:fern_1'}},
-			{ items = {'farming:seed_beetroot'}, rarity = 20 },
-            { items = {'farming:seed_pea'}, rarity = 20 },
-            { items = {'farming:seed_raspberry'}, rarity = 20 }
-		}
-	}
-})
+table.insert(minetest.registered_items["default:fern_3"].drop.items, { rarity = 20, items = {"farming:seed_beetroot"} })
+table.insert(minetest.registered_items["default:fern_3"].drop.items, { rarity = 20, items = {"farming:seed_pea"} })
+table.insert(minetest.registered_items["default:fern_3"].drop.items, { rarity = 20, items = {"farming:seed_raspberry"} })

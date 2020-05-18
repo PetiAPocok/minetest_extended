@@ -656,20 +656,7 @@ minetest.register_craft({
 
 
 -- add bones to dirt
-minetest.override_item("default:dirt", {
-	drop = {
-		items = {
-			{
-				items = {"bones:bone"},
-				rarity = 30
-			},
-			{
-				items = {"default:dirt"}
-			}
-		}
-	}
-})
-
+table.insert(minetest.registered_items["default:dirt"].drop.items, { rarity = 30, items = {"bones:bone"} })
 
 -- add support for other plants
 dofile(minetest.get_modpath("bones") .. "/bonemealable_plants.lua")
