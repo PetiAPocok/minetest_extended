@@ -658,7 +658,6 @@ minetest.register_craft({
 -- add bones to dirt
 minetest.override_item("default:dirt", {
 	drop = {
-		max_items = 1,
 		items = {
 			{
 				items = {"bones:bone"},
