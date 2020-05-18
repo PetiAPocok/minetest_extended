@@ -440,7 +440,7 @@ minetest.register_node("default:dirt_with_grass", {
 		{name = "default_dirt.png^default_grass_side.png",
 			tileable_vertical = false}},
 	groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1},
-	drop = "default:dirt",
+	drop = { items = { { items = {"default:dirt"} } } },
 	sounds = default.node_sound_dirt_defaults({
 		footstep = {name = "default_grass_footstep", gain = 0.25},
 	}),
@@ -1508,6 +1508,7 @@ minetest.register_node("default:dry_grass_1", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = true,
+    drop = { items = { { items = {"default:dry_grass_1"} } } },
 	groups = {snappy = 3, flammable = 3, flora = 1,
 		attached_node = 1, dry_grass = 1},
 	sounds = default.node_sound_leaves_defaults(),
@@ -1539,7 +1540,7 @@ for i = 2, 5 do
 		buildable_to = true,
 		groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1,
 			not_in_creative_inventory=1, dry_grass = 1},
-		drop = "default:dry_grass_1",
+		drop = { items = { { items = {"default:dry_grass_1"} } } },
 		sounds = default.node_sound_leaves_defaults(),
 		selection_box = {
 			type = "fixed",
@@ -1560,6 +1561,7 @@ minetest.register_node("default:fern_1", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = true,
+    drop = { items = { { items = {"default:fern_1"} } } },
 	groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
@@ -1591,7 +1593,7 @@ for i = 2, 3 do
 		buildable_to = true,
 		groups = {snappy = 3, flammable = 3, flora = 1, attached_node = 1,
 			not_in_creative_inventory=1},
-		drop = "default:fern_1",
+		drop = { items = { { items = {"default:fern_1"} } } },
 		sounds = default.node_sound_leaves_defaults(),
 		selection_box = {
 			type = "fixed",
@@ -1612,6 +1614,7 @@ minetest.register_node("default:marram_grass_1", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = true,
+    drop = { items = { { items = {"default:marram_grass_1"} } } },
 	groups = {snappy = 3, flammable = 3, attached_node = 1},
 	sounds = default.node_sound_leaves_defaults(),
 	selection_box = {
@@ -1642,7 +1645,7 @@ for i = 2, 3 do
 		buildable_to = true,
 		groups = {snappy = 3, flammable = 3, attached_node = 1,
 			not_in_creative_inventory=1},
-		drop = "default:marram_grass_1",
+		drop = { items = { { items = {"default:marram_grass_1"} } } },
 		sounds = default.node_sound_leaves_defaults(),
 		selection_box = {
 			type = "fixed",
