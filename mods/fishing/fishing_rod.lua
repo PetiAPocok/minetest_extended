@@ -1,4 +1,3 @@
--- minetest.chat_send_all(dump())
 local thrown_bobbers = {}
 local catchables = {}
 local baits = {}
