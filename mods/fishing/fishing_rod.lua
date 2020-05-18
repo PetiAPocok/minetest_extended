@@ -1,10 +1,13 @@
 -- minetest.chat_send_all(dump())
 local thrown_bobbers = {}
 local catchables = {}
+local baits = {}
 
 for k,v in pairs(minetest.registered_items) do
     if minetest.get_item_group(k, "fishing_catch") ~= 0 then
         table.insert(catchables, k)
+    elseif minetest.get_item_group(k, "fishing_bait") ~= 0 then
+        table.insert(baits, k)
     end
 end
 
@@ -82,6 +85,16 @@ local function fishing(bobber, elapsed)
     end
 end
 
+local function has_bait_in_inventory(player)
+    local inv = player:get_inventory()
+    for _,v in ipairs(baits) do
+        if inv:contains_item("main", v) then
+            return v
+        end
+    end
+    return false
+end
+
 minetest.register_entity("fishing:bobber_entity", {
     textures = {"fishing_bobber.png"},
     visual_size = {x=0.5, y=0.5},
@@ -129,7 +142,7 @@ minetest.register_entity("fishing:bobber_entity", {
             end
 
             -- the process of fishing
-            if node == "default:water_source" then
+            if node == "default:water_source" and has_bait_in_inventory(owner) then
                 fishing(self.object, elapsed)
             end
         else
@@ -171,9 +184,7 @@ local function cast_fishing_rod(itemstack, player, pointing_at)
     local dir = player:get_look_dir()
 
     -- Bobber starting position correction.
-    -- pos.x = pos.x + (dir.x) + (1 - dir.x)
     pos.y = pos.y + 1.5
-    -- pos.z = pos.z - (dir.z)
 
     if not thrown_bobbers[player_name] then
         thrown_bobbers[player_name] = minetest.add_entity(pos, "fishing:bobber_entity")
@@ -200,12 +211,18 @@ local function cast_fishing_rod(itemstack, player, pointing_at)
             else
                 minetest.add_item(pos, catch)
             end
+
+            -- Pherhaps take bait if not in creative
+            if math.random(1, 5) == 1 and not minetest.settings:get_bool("creative_mode") then
+                player_inv:remove_item("main", has_bait_in_inventory(player))
+            end
         end
 
         thrown_bobbers[player_name]:remove()
         thrown_bobbers[player_name] = nil
 
         if not minetest.settings:get_bool("creative_mode") then
+            -- Wear down fishing_rod
 			local idef = itemstack:get_definition()
 
 			itemstack:add_wear(65536/100)

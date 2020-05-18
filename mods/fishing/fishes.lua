@@ -1,28 +1,29 @@
 -- Fish?
-minetest.register_craftitem("fishing:fish_raw", {
-	description = "Raw Fish",
-	inventory_image = "fishing_fish_raw.png",
+minetest.register_craftitem("fishing:tuna", {
+	description = "Raw Tuna",
+	inventory_image = "fishing_tuna.png",
+    wield_scale = { x = 2, y = 2, z = 1 },
 	on_use = minetest.item_eat(2),
 	groups = { fishing_catch = 1 }
 })
 
-minetest.register_craftitem("fishing:fish_cooked", {
-	description = "Cooked Fish",
-	inventory_image = "fishing_fish_cooked.png",
+minetest.register_craftitem("fishing:tuna_cooked", {
+	description = "Cooked Tuna",
+	inventory_image = "fishing_tuna_cooked.png",
 	on_use = minetest.item_eat(4),
 })
 
 minetest.register_craft({
 	type = "cooking",
 	output = "fishing:fish_cooked",
-	recipe = "fishing:fish_raw",
+	recipe = "fishing:tuna",
 	cooktime = 10,
 })
 
 -- Salmon
-minetest.register_craftitem("fishing:salmon_raw", {
+minetest.register_craftitem("fishing:salmon", {
 	description = "Raw Salmon",
-	inventory_image = "fishing_salmon_raw.png",
+	inventory_image = "fishing_salmon.png",
 	on_use = minetest.item_eat(2),
     groups = { fishing_catch = 1 }
 })
@@ -36,14 +37,14 @@ minetest.register_craftitem("fishing:salmon_cooked", {
 minetest.register_craft({
 	type = "cooking",
 	output = "fishing:salmon_cooked",
-	recipe = "fishing:salmon_raw",
+	recipe = "fishing:salmon",
 	cooktime = 10,
 })
 
 -- Clownfish
-minetest.register_craftitem("fishing:clownfish_raw", {
+minetest.register_craftitem("fishing:clownfish", {
 	description = "Clownfish",
-	inventory_image = "fishing_clownfish_raw.png",
+	inventory_image = "fishing_clownfish.png",
 	on_use = minetest.item_eat(1),
     groups = { fishing_catch = 1 }
 })
