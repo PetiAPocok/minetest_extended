@@ -22,7 +22,7 @@ minetest.override_item("farming:grape_8", {
 minetest.register_craft({
 	type = "shapeless",
 	output = "farming:seed_grape 5",
-	recipe = {"farming:grapes"}
+	recipe = {"farming:grape"}
 })
 
 -- make grapes eatable
