@@ -239,7 +239,7 @@ minetest.register_tool("fishing:fishing_rod", {
 	description = "Fishing Rod",
 	groups = { tool=1 },
 	inventory_image = "fishing_fishing_rod.png",
-	wield_image = "fishing_fishing_rod.png^[transformR270",
+	wield_image = "fishing_fishing_rod_wield.png",
 	wield_scale = { x = 1.5, y = 1.5, z = 1 },
 	stack_max = 1,
     on_use = cast_fishing_rod,
