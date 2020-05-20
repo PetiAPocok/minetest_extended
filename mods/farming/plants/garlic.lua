@@ -13,7 +13,7 @@ minetest.override_item("farming:garlic_5", {
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "farming:seed_garlic",
+	output = "farming:seed_garlic 5",
 	recipe = {"farming:garlic", "bucket:bucket_water"},
 	replacements = {
 		{"bucket:bucket_water", "bucket:bucket_empty"}

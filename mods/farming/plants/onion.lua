@@ -8,13 +8,7 @@ farming.register_plant("farming:onion", {
 
 -- Override drop
 minetest.override_item("farming:onion_5", {
-    drop = "farming:onion 1"
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "farming:seed_onion",
-	recipe = {"farming:onion"}
+    drop = {"farming:onion", "farming:seed_onion"}
 })
 
 -- make onion eatable
