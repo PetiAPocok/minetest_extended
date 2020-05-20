@@ -51,7 +51,7 @@ reach = 1,
 		stoodup_start = 0,
 		stoodup_end = 0,
 	},
-	follow = {"mobs_animal:rat", "ethereal:fish_raw", "mobs_fish:clownfish", "mobs_fish:tropical"},
+	follow = {"mobs_animal:rat", "fishing:tuna", "fishing:clownfish", "fishing:salmon", "mobs_fish:clownfish", "mobs_fish:tropical"},
 	view_range = 8,
 
 	on_rightclick = function(self, clicker)
