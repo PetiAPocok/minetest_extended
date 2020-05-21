@@ -4,7 +4,6 @@
 
 farming = {}
 farming.path = minetest.get_modpath("farming")
-farming.get_translator = S
 
 -- Load files
 
