@@ -131,13 +131,9 @@ mobs:alias_mob("mobs:kitten", "mobs_animal:kitten") -- compatibility
 
 
 local hairball_items = {
-	"default:stick", "default:coal_lump", "default:dry_shrub", "flowers:rose",
-	"mobs_animal:rat", "default:grass_1", "farming:seed_wheat", "dye:green", "",
-	"farming:seed_cotton", "default:flint", "default:sapling", "dye:white", "",
-	"default:clay_lump", "default:paper", "default:dry_grass_1", "dye:red", "",
-	"farming:string", "mobs:chicken_feather", "default:acacia_bush_sapling", "",
-	"default:bush_sapling", "default:copper_lump", "default:iron_lump", "",
-	"dye:black", "dye:brown", "default:obsidian_shard", "default:tin_lump"
+	"default:stick", "default:dry_shrub", "mobs_animal:rat", "default:grass_1", "farming:seed_wheat", "dye:green",
+	"farming:seed_cotton", "dye:white", "default:dry_grass_1", "dye:red", "farming:string", "mobs:chicken_feather",
+	"dye:black", "dye:brown"
 }
 
 minetest.register_craftitem(":mobs:hairball", {
