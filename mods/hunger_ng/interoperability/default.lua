@@ -8,5 +8,3 @@
 local add = hunger_ng.add_hunger_data
 
 add('default:apple',       { satiates = 4, heals = 0 })
-add('default:blueberries', { satiates = 0.5 })
-

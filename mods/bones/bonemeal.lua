@@ -44,7 +44,6 @@ local saplings = {
 	{"default:bush_sapling", default.grow_bush, "soil"},
 	{"default:acacia_bush_sapling", default.grow_acacia_bush, "soil"},
 	{"default:large_cactus_seedling", default.grow_large_cactus, "sand"},
-	{"default:blueberry_bush_sapling", default.grow_blueberry_bush, "soil"},
 	{"default:pine_bush_sapling", default.grow_pine_bush, "soil"}
 }
 
