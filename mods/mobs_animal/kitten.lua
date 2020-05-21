@@ -146,7 +146,7 @@ minetest.register_craftitem(":mobs:hairball", {
 		local newpos = {x = pos.x + dir.x, y = pos.y + dir.y + 1.5, z = pos.z + dir.z}
 		local item = hairball_items[math.random(1, #hairball_items)]
 
-		if item ~= "" then
+		if math.random(1, 3) == 1 then
 			minetest.add_item(newpos, {name = item})
 		end
 
