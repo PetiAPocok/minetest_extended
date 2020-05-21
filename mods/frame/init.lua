@@ -205,7 +205,7 @@ minetest.register_craft({
 	output = "frame:empty",
 	recipe = {
 		{"default:stick", "default:stick", "default:stick"},
-		{"default:stick", "default:paper", "default:stick"},
+		{"default:stick", "mobs:leather", "default:stick"},
 		{"default:stick", "default:stick", "default:stick"},
 	}
 })
