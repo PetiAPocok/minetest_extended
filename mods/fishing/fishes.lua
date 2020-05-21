@@ -1,6 +1,6 @@
 -- Fish?
 minetest.register_craftitem("fishing:tuna", {
-	description = "Raw Tuna",
+	description = "Tuna",
 	inventory_image = "fishing_tuna.png",
     wield_scale = { x = 2, y = 2, z = 1 },
 	on_use = minetest.item_eat(2),
@@ -22,7 +22,7 @@ minetest.register_craft({
 
 -- Salmon
 minetest.register_craftitem("fishing:salmon", {
-	description = "Raw Salmon",
+	description = "Salmon",
 	inventory_image = "fishing_salmon.png",
 	on_use = minetest.item_eat(2),
     groups = { fishing_catch = 1 }
