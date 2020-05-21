@@ -296,13 +296,13 @@ function throwing.register_arrow(name, def)
 		minetest.register_craft({
 			output = name.." "..tostring(def.craft_quantity or 1),
 			recipe = {
-				{def.itemcraft, "default:stick", "default:stick"}
+				{def.itemcraft, "default:stick", "mobs:chicken_feather"}
 			}
 		})
 		minetest.register_craft({
 			output = name.." "..tostring(def.craft_quantity or 1),
 			recipe = {
-				{ "default:stick", "default:stick", def.itemcraft}
+				{ "mobs:chicken_feather", "default:stick", def.itemcraft}
 			}
 		})
 	end
