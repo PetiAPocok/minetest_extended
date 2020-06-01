@@ -38,9 +38,9 @@ armor = {
 		default.gui_bg..
 		default.gui_bg_img..
 		default.gui_slots..
-		default.get_hotbar_bg(0, 4.7)..
-		"list[current_player;main;0,4.7;8,1;]"..
-		"list[current_player;main;0,5.85;8,3;8]",
+		default.get_hotbar_bg(0, 5.2)..
+        "list[current_player;main;0,5.2;8,1;]"..
+        "list[current_player;main;0,6.35;8,3;8]",
 	def = armor_def,
 	textures = armor_textures,
 	default_skin = "character",
