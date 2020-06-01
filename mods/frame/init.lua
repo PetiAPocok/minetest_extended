@@ -115,7 +115,6 @@ function frame.register(name)
 		-- node
 		if def.inventory_image ~= "" then
 			-- custom inventory override image first.
-
 			tiles = {
 				{name = "frame_frame.png"},
 				{name = def.inventory_image or "doors_blank.png"},
@@ -123,15 +122,15 @@ function frame.register(name)
 				{name = "doors_blank.png"},
 				{name = "doors_blank.png"},
 			}
-		elseif def.drawtype ~= "normal" then
-			-- use tiles[1] only, but on frame
-			tiles = {
-				{name = "frame_frame.png"},
-				{name = def.tiles[1] and def.tiles[1].name or def.tiles[1] or "doors_blank.png"},
-				{name = "doors_blank.png"},
-				{name = "doors_blank.png"},
-				{name = "doors_blank.png"},
-			}
+        elseif def.drawtype == "nodebox" then
+            -- The nodebox items looks unacceptable with the "~= normal" case
+            tiles = {
+    			{name = "frame_frame.png"},
+    			{name = def.tiles[1]},
+    			{name = "doors_blank.png"},
+    			{name = "doors_blank.png"},
+    			{name = "doors_blank.png"}
+    		}
 		else -- type(def.tiles[1]) == "table" then
 			-- multiple tiles
 			tiles = {
@@ -213,8 +212,10 @@ minetest.register_craft({
 local items_to_frame = {}
 
 for i, node in pairs(minetest.registered_items) do
-    if minetest.get_item_group(node.name, "not_in_creative_inventory") == 0 and node.drawtype ~= "airlike" then
-            items_to_frame[i] = node.name
+    if minetest.get_item_group(node.name, "not_in_creative_inventory") == 0 and node.drawtype ~= "airlike" and node.drawtype ~= "nodebox" and node.drawtype ~= "mesh" then
+        items_to_frame[i] = node.name
+    elseif (node.drawtype == "nodebox" or node.drawtype == "mesh") and node.inventory_image ~= "" then
+        items_to_frame[i] = node.name
     end
 end
 
