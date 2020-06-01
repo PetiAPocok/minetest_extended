@@ -1,0 +1,3 @@
+Most of the code: PetiAPocok (GNU GPLv3)
+    looked into 3d_armor, sfinv codes
+Backpack texture: cx384 (CC-BY-SA-4.0)

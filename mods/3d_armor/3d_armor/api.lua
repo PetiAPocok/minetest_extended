@@ -31,7 +31,7 @@ local armor_textures = setmetatable({}, {
 
 armor = {
 	timer = 0,
-	elements = {"head", "torso", "legs", "feet"},
+	elements = {"head", "torso", "legs", "feet", "back"},
 	physics = {"jump", "speed", "gravity"},
 	attributes = {"heal", "fire", "water"},
 	formspec = "image[2.5,0;2,4;armor_preview]"..
@@ -84,7 +84,6 @@ armor.config = {
 	level_multiplier = 1,
 	heal_multiplier = 1,
 	material_wood = true,
-	material_cactus = true,
 	material_steel = true,
 	material_bronze = true,
 	material_diamond = true,
