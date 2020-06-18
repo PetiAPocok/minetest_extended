@@ -1,0 +1,176 @@
+-------------------------------------------------1.1--------------------------------------------------------------
+
+Item átnevező station?
+    Táskák?
+    Tool-ok?
+
+A nodebox-os és mesh-es item-eknek inventory image kell...
+És az inventoryban nem létező item-eket  ne regisztrálja
+    mesecon, tnt
+
+mesecon mob detector a mobok érzékelésére
+    
+a stone monster az mitől stone?
+
+interdimensional chest
+    register a deatached inventory and write it into player meta
+        
+fálya wield image lobogjon                           KELL
+
+szőnyeg                         KELL
+
+bútorok                    KELL
+    Szekrény             KELL
+        egy blokk
+        ajtós / fiókos változat
+
+nagy térkép? kézzel fogható. Megrajzolt
+
+A korall az mire jó?
+    Többnyire dekor
+    Lakhatna benne kagyló...?
+
+buffs?
+
+gems mod (use quartz as base)
+    A kvarc mennyire kemény?
+    adds shiton of gems
+    maybe pearls where the clams would came from?
+        from fishing?
+    mese az kemény.
+    From gems you can only made jevlery, maybe staffs, perhaps enchanted swords 
+
+jewelry mod
+    depends on: 3d_armor, gems
+    adds rings, medals
+
+több hely 3d_armor-nak
+
+Plusz fegyverek mod
+    Ötvözni gem-eket a kardokkal
+    katana!!!!
+        Craft:
+            g:fa X steel
+            X steel X
+            g:bot X X
+        Wield imege: a katana
+        inventory image: a katana hüvelyben
+    
+    fire orb kard?
+    
+    war axe?
+    
+    dagger?
+
+paintings
+    New paintings and new craft methods for them
+    Szandi ahogy rajzolgat úgymeglátjuk mennyi marad az eredetiekből.
+
+Új csákány törés hang
+
+A gombákból mit lehet csinálni?
+    Nem éghető. 
+    Nem süthető.
+    Nem lehet belőle semmit craftolni.
+    A pirosat Szandi átrajzolja ehetőre
+    Ehetőek.
+    
+Ha engedélyezve van a növekvő craftguide akkor az új receptek értesítése túl lassú
+    Single-ben nem tapasztalom...
+    Csak szerveren.
+
+mire jó a skeleton key?
+
+a birkának ronda a feje
+
+Új kaják
+    Kész ételek (körett + sült hús)                                                                 KELL
+    butterbrod                                                                                                   KELL
+    vajas mézes kenyér                                                                                  KELL
+    bableves                                                                                                     KELL, texture megvan
+    csilisbab                                                                                                      KELL
+    csoki                                                                                                            KELL, texture megvan
+    kakaó                                                                                                           
+    borsó leves                                                                                                 KELL, texture megvan
+    borsó püré                                                                                                   KELL
+    húsleves                                                                                                      KELL
+    popkorn                                                                                                        KELL
+        baked corn seed
+    sushi                                                                                                             KELL
+        seaweed + fish+coocked rice
+        
+horgászat
+    more bait                   ???
+    A tuna scale az elég nagy-e?
+        nem látszik kívülről...
+    ponty                                  KELL
+    angolna                             KELL
+    gömbhal                            KELL
+    A cooked fish texture-okon dolgozni kéne
+    trash/treasure                                 KELL
+        Ha nincs csali, csak ilyet tudsz fogni. Ha van csali, akkor valami pöti chance-el kapsz ilyet, de amúgy halat.
+        bot
+        string
+        fa kard
+        föld
+        alma facsemete
+        seaweed
+     
+
+mobok:
+    körömgomba szörny? ("Heló! Ásóka vagyok!") https://www.youtube.com/watch?v=GF3ygD7LuiM
+    urbán papa (mob)
+    thaitus (monster)
+    feri (mob)?
+
+hangszerek?
+
+nether?
+
+Poti főzés virágokból?
+
+Enchanting?
+
+
+------------------------ nincs ilyen mod -------------------------
+
+
+fire 2.0? Égő entity-k...
+
+commad auto-completion
+
+Armorok védelmi értéke
+
+
+-------------------------------------------- Túlmutat rajtam -------------------------------------
+
+
+item frames
+    Ha drawtype = nodebox és nincs inventory image-e, akkor fúj mit művel
+
+crafting fül outputja nem shift+click-el
+
+chet nagyobb betűk
+
+Ha kreatív inventoryból veszel valamit és a saját inventory-dba olyan helyre teszed ahol van valami,
+akkor a valamit odébbrakja, lerak a kezedben lévő item-ből egyet de a kezedben hadja, sőtt megszorozza a valami számával.
+    Játékmotor hiba... Nem találtam megoldást... Írtam bug reportot
+
+incremtális keresés kreatív inventoryba
+    el kell küldeni a form-ot a feldolgozáshoz
+    nincs onchange listener
+
+crouch
+    A karakter 3d modelt  kéne értelmezni
+
+A numpaddal mi a fasz van?
+    Nem számoknak veszi, hanem end-nek, home-nak, pgup, pgdw-nak, ha bevan, ha ki van kapcsolva
+    Tudnak róla. Valami depended package hibája.
+
+ú ő chat-be
+
+A kocsik átcsúsznak egymáson mert mint entity "physical = false"-nak van definiálva.
+Ha "physical = true" akkor megállítják egymást.
+Valószínűleg a játék motoron kell módosítani...
+Nincs mozdony, és emiatt ^ nem is lehet...
+A csónakok ha ütköznek nem mennek sehova. Amelyik áll az mint a cövek. Mert mint entity "physical = true"-nak van definiálva.
