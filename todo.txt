@@ -1,23 +1,23 @@
 -------------------------------------------------1.1--------------------------------------------------------------
-
 Item átnevező station?
     Táskák?
     Tool-ok?
 
 A nodebox-os és mesh-es item-eknek inventory image kell...
+A node elejét rakja minden oldalra... inventory image...
 És az inventoryban nem létező item-eket  ne regisztrálja
     mesecon, tnt
 
-mesecon mob detector a mobok érzékelésére
-    
+mesecon mob detector a mobok érzékelésére?
+    craft?
+
 a stone monster az mitől stone?
 
 interdimensional chest
     register a deatached inventory and write it into player meta
-        
-fálya wield image lobogjon                           KELL
+    craft?
 
-szőnyeg                         KELL
+fálya wield image lobogjon                           KELL
 
 bútorok                    KELL
     Szekrény             KELL
@@ -30,7 +30,20 @@ A korall az mire jó?
     Többnyire dekor
     Lakhatna benne kagyló...?
 
+mana?
+    hudbars
+
+magic?
+
+flying carpet?
+
 buffs?
+    defense
+    damage
+    speed
+    mining speed
+
+potions virágokból?
 
 gems mod (use quartz as base)
     A kvarc mennyire kemény?
@@ -38,7 +51,7 @@ gems mod (use quartz as base)
     maybe pearls where the clams would came from?
         from fishing?
     mese az kemény.
-    From gems you can only made jevlery, maybe staffs, perhaps enchanted swords 
+    From gems you can only made jevlery, maybe staffs, perhaps enchanted swords
 
 jewelry mod
     depends on: 3d_armor, gems
@@ -55,11 +68,11 @@ Plusz fegyverek mod
             g:bot X X
         Wield imege: a katana
         inventory image: a katana hüvelyben
-    
+
     fire orb kard?
-    
+
     war axe?
-    
+
     dagger?
 
 paintings
@@ -69,14 +82,14 @@ paintings
 Új csákány törés hang
 
 A gombákból mit lehet csinálni?
-    Nem éghető. 
+    Nem éghető.
     Nem süthető.
     Nem lehet belőle semmit craftolni.
     A pirosat Szandi átrajzolja ehetőre
     Ehetőek.
-    
+
 Ha engedélyezve van a növekvő craftguide akkor az új receptek értesítése túl lassú
-    Single-ben nem tapasztalom...
+    Single-ben nem...
     Csak szerveren.
 
 mire jó a skeleton key?
@@ -90,7 +103,7 @@ a birkának ronda a feje
     bableves                                                                                                     KELL, texture megvan
     csilisbab                                                                                                      KELL
     csoki                                                                                                            KELL, texture megvan
-    kakaó                                                                                                           
+    kakaó
     borsó leves                                                                                                 KELL, texture megvan
     borsó püré                                                                                                   KELL
     húsleves                                                                                                      KELL
@@ -98,7 +111,7 @@ a birkának ronda a feje
         baked corn seed
     sushi                                                                                                             KELL
         seaweed + fish+coocked rice
-        
+
 horgászat
     more bait                   ???
     A tuna scale az elég nagy-e?
@@ -115,7 +128,7 @@ horgászat
         föld
         alma facsemete
         seaweed
-     
+
 
 mobok:
     körömgomba szörny? ("Heló! Ásóka vagyok!") https://www.youtube.com/watch?v=GF3ygD7LuiM
@@ -126,8 +139,6 @@ mobok:
 hangszerek?
 
 nether?
-
-Poti főzés virágokból?
 
 Enchanting?
 
