@@ -17,13 +17,13 @@ local sprint_timer = 0
 local sprinting = {}
 local breath_timer = {}
 
-local food_drain  = 0.02
+local food_drain  = 0.01
 
 -- Functions
 
 local function start_sprint(player)
     local name = player:get_player_name()
-    
+
     if not sprinting[name] then
         player:set_physics_override({speed = speed, jump = jump})
         sprinting[name] = true
@@ -39,7 +39,7 @@ local function stop_sprint(player)
 end
 
 local function drain_hunger(name)
-    hunger_ng.alter_hunger(name, -food_drain, "Sprinting")
+    hbhunger.hunger[name] = hbhunger.hunger[name] - food_drain
 end
 
 local function drain_breath(player)
@@ -64,7 +64,7 @@ local function create_particles(player, name, ground)
     if not tile then
         return
     end
-    
+
     local pos = player:get_pos()
     local rand = function() return math.random(-1,1) * math.random() / 2 end
     for i = 1, particles do
@@ -84,11 +84,11 @@ end
 
 local function sprint_step(player, dtime)
     local name = player:get_player_name()
-    
+
     if breath then
         breath_timer[name] = (breath_timer[name] or 0) + dtime
     end
-    
+
     local ctrl = player:get_player_control()
     local key_press
     if dir then
@@ -96,12 +96,12 @@ local function sprint_step(player, dtime)
     else
         key_press = ctrl.aux1 and (ctrl.up or ctrl.left or ctrl.right or ctrl.down)
     end
-    
+
     if not key_press then
         stop_sprint(player)
         return
     end
-    
+
     local ground_pos = player:get_pos()
     ground_pos.y = math.floor(ground_pos.y)
     -- check if player is reasonably near a walkable node
@@ -114,12 +114,12 @@ local function sprint_step(player, dtime)
             break
         end
     end
-    
+
     local starving = false
     if minetest.is_yes(minetest.settings:get('enable_damage')) then
-        starving = hunger_ng.get_hunger_information(name).effects.starving
+        starving = hbhunger.hunger[name] < 10
     end
-    
+
     if not starving and ground then
         start_sprint(player)
         drain_hunger(name)

@@ -2,6 +2,29 @@
 
 The extended default game bundled in the Minetest engine.  
 
+## Description
+
+This game mod is made to be an upgraded version of the original game, extended with many functions, packed into one complete game mode to be as easy to install as possible.
+
+You can grow plants to make foods to keep you alive.  
+Below 10 Satiation you won't be able to run. ("Special" key (default: E))
+Below 10 Satiation you will start to lose health till you die.
+
+
+## Installation
+
+- Unzip the archive and place it in .. minetest/games/
+
+- GNU/Linux: If you use a system-wide installation place
+    it in ~/.minetest/games/.
+
+    For further information or help, see:  
+https://wiki.minetest.net/Installing_Mods
+
+## Compatibility
+
+Made for and tested on Minetest 5.2.0.
+
 ## Contained mods and modifications
 
 - The Minetest game for base (modified) ([GitHub](https://github.com/minetest/minetest_game))  
@@ -12,9 +35,15 @@ The extended default game bundled in the Minetest engine.
   Removed gold weapon and tools.  
   Added craft for green dye from cactus.  
   On mesecon signal the tnt starts to burn not explodes.
-- Hunger NG to add hunger management (modified) ([Gitlab](https://gitlab.com/4w/hunger_ng))
-- Hbsprint to add sprinting ability (modified) ([Github](https://github.com/minetest-mods/hbsprint))
-- Mesecons to add electricity like magic to the game ([Github](https://github.com/minetest-mods/mesecons))   
+<!-- - Hunger NG to add hunger management (modified) ([Gitlab](https://gitlab.com/4w/hunger_ng)) -->
+- Added Hudbars for unified player stat display. ([repo](https://repo.or.cz/minetest_hudbars.git))
+- Added Mana for magic. ([repo](https://repo.or.cz/minetest_mana.git))
+  Renamed to hbmana.
+- Added Hbhunger for hunger. ([repo](https://repo.or.cz/minetest_hbhunger.git))
+  Added new foods.  
+  "Reconfigured".
+- Added Hbsprint for sprinting ability (modified) ([Github](https://github.com/minetest-mods/hbsprint))
+- Added Mesecons for electricity like magic to the game ([Github](https://github.com/minetest-mods/mesecons))   
   Changed the torch's texture  
   Changed the switch's effective sides  
   Changed the ghostsone's and removesone's inventory icon
@@ -22,20 +51,21 @@ The extended default game bundled in the Minetest engine.
   Kept the original cart   
   The powered rail has been modified to work like in Minecraft
 - Beds: the sipmle bed has been removed
-- Crafting Guide to add, well, crafting guide ([Github](https://github.com/minetest-mods/craftguide))  
+- Added Crafting Guide to add, well, crafting guide ([Github](https://github.com/minetest-mods/craftguide))  
   Added support for the "packer".
-- Mobs Redo (modified) ([NotABug](https://notabug.org/tenplus1/mobs_redo))
-- Mobs Animal (modified) ([NotABug](https://notabug.org/tenplus1/mobs_animal))   
+- Added Mobs Redo (modified) ([NotABug](https://notabug.org/tenplus1/mobs_redo))
+- Added Mobs Animal (modified) ([NotABug](https://notabug.org/tenplus1/mobs_animal))   
   Made the honey block a liquid with high viscosity.  
-  Removed net. Use lasso.
-- Mobs Monster ([NotABug](https://notabug.org/tenplus1/mobs_monster))  
+  Removed net. Use lasso.  
+  Changed sheep's face.
+- Added Mobs Monster ([NotABug](https://notabug.org/tenplus1/mobs_monster))  
   Modified the mese monster's texture.
 - 3D Armor to add armors (modified) ([Github](https://github.com/minetest-mods/3d_armor))  
   Removed gold and cactus armor.
-- SkinsDB to add skin management ([Github](https://github.com/minetest-mods/skinsdb))
+- Added SkinsDB to add skin management ([Github](https://github.com/minetest-mods/skinsdb))
 - Created item_info to show "weapons" damage (own script)
 - The default weather (if I understand it correctly) mod is basicly just changes the coluds according to the biome (player's position). So renamed it to clouds.
-- Throwing Redo mod to get bows. (modified) ([Github](https://github.com/minetest-mods/throwing))  
+- Added Throwing Redo mod to get bows. (modified) ([Github](https://github.com/minetest-mods/throwing))  
   Added new shooting sound.
   Changed arrows craft.
 - Added ts_furniture so I can sit down after all the mod customizing... ([Github](https://github.com/minetest-mods/ts_furniture))
@@ -62,24 +92,6 @@ The extended default game bundled in the Minetest engine.
   Used Mossmanikin's fishing ([Github](https://github.com/Mossmanikin/fishing)) and Wuzzy's mcl_fishing ([Git](https://git.minetest.land/Wuzzy/MineClone2/src/branch/master/mods/ITEMS/mcl_fishing)) as template.
 - Created Backpacks mod.
   <!-- - Created Gems mod based on Quartz ([Github](https://github.com/minetest-mods/quartz))-->
-
-## Installation
-
-- Unzip the archive and place it in .. minetest/games/
-
-- GNU/Linux: If you use a system-wide installation place
-    it in ~/.minetest/games/.
-
-    For further information or help, see:  
-https://wiki.minetest.net/Installing_Mods
-
-## Compatibility
-
-Made for and tested on Minetest 5.2.0.
-
-## Description
-
-This game mod is made to be an upgraded version of the original game, extended with many functions, packed into one complete game mode to be as easy to use as possible.
 
 ## Licensing
 
