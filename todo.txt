@@ -5,9 +5,9 @@ potions virágokból
     Vitality potion - increase max health
     Mana potion - instant mana
     Magic potion - increase max mana
-    Stamina potion - increase max kaja
+    Stamina potion - increase max satiation
 
-
+Armor value in hudbar?
 
 Item átnevező station?
     Táskák?
