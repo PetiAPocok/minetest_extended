@@ -15,7 +15,7 @@ hbmana = {}
 hbmana.playerlist = {}
 
 hbmana.settings = {}
-hbmana.settings.default_max = 200
+hbmana.settings.default_max = 20
 hbmana.settings.default_regen = 1
 hbmana.settings.regen_timer = 0.2
 
