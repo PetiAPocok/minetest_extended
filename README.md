@@ -38,7 +38,8 @@ Made for and tested on Minetest 5.2.0.
 <!-- - Hunger NG to add hunger management (modified) ([Gitlab](https://gitlab.com/4w/hunger_ng)) -->
 - Added Hudbars for unified player stat display. ([repo](https://repo.or.cz/minetest_hudbars.git))
 - Added Mana for magic. ([repo](https://repo.or.cz/minetest_mana.git))
-  Renamed to hbmana.
+  Renamed to hbmana.  
+  Changed the starting mana.
 - Added Hbhunger for hunger. ([repo](https://repo.or.cz/minetest_hbhunger.git))
   Added new foods.  
   "Reconfigured".

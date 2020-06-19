@@ -1,5 +1,13 @@
 -------------------------------------------------1.1--------------------------------------------------------------
-Mintás szőnyegek?
+potions virágokból
+    A piros gombából poision poti
+    Healing potion - instant health
+    Vitality potion - increase max health
+    Mana potion - instant mana
+    Magic potion - increase max mana
+    Stamina potion - increase max kaja
+
+
 
 Item átnevező station?
     Táskák?
@@ -32,8 +40,8 @@ A korall az mire jó?
     Többnyire dekor
     Lakhatna benne kagyló...?
 
-mana?
-    hudbars
+mana
+    something to increase max mana, hp and satiation
 
 magic?
 
@@ -44,27 +52,26 @@ buffs?
     damage
     speed
     mining speed
-
-potions virágokból?
-    A piros gombából poision poti
+    poison damage?
 
 gems mod (use quartz as base)
-    adds shiton of gems
+    adds shitton of gems
         order by hardness
-        amber (2)
+        amber (2) fossilized resin
+        [iron (4)]
         mese (6)
-        quartz (7) harder than metal
+        quartz (7)
         amethyst same hardness as quartz
         emerald (8)
         topaz (8)
-        sapphire (9) (aluminium oxide (corundum))
-        ruby (9) (aluminium oxide (corundum))
+        sapphire (9) (aluminum oxide (corundum))
+        ruby (9) (aluminum oxide (corundum))
         diamond (10)
 
     maybe pearls where the clams would came from?
         from fishing?
 
-    From gems you can only made jevlery, maybe staffs, perhaps enchanted swords
+    From gems you can only made jewelery, maybe staffs, perhaps enchanted swords
 
 jewelry mod
     depends on: 3d_armor, gems
@@ -87,10 +94,6 @@ Plusz fegyverek mod
     war axe?
 
     dagger?
-
-paintings
-    New paintings and new craft methods for them
-    Szandi ahogy rajzolgat úgymeglátjuk mennyi marad az eredetiekből.
 
 Új csákány törés hang
 
@@ -131,7 +134,6 @@ horgászat
         alma facsemete
         seaweed
 
-
 mobok:
     körömgomba szörny? ("Heló! Ásóka vagyok!") https://www.youtube.com/watch?v=GF3ygD7LuiM
     urbán papa (mob)
@@ -144,6 +146,13 @@ nether?
 
 Enchanting?
 
+------------------------ Textúrára vár -------------------------
+
+Mintás szőnyegek
+
+paintings
+    New paintings and new craft methods for them
+    Szandi ahogy rajzolgat úgy meglátjuk mennyi marad az eredetiekből.
 
 ------------------------ nincs ilyen mod -------------------------
 
