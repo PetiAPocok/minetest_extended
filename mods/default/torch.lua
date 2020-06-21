@@ -24,8 +24,7 @@ minetest.register_node("default:torch", {
 	drawtype = "mesh",
 	mesh = "torch_floor.obj",
 	inventory_image = "default_torch_on_floor.png",
-	-- wield_image = "default_torch_on_floor.png",
-    wield_image = "default_torch_wield_image.gif",
+	wield_image = "default_torch_on_floor.png",
 	tiles = {{
 		    name = "default_torch_on_floor_animated.png",
 		    animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 3.3}

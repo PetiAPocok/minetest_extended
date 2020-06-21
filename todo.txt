@@ -1,4 +1,11 @@
 -------------------------------------------------1.1--------------------------------------------------------------
+buffs
+    defense
+    damage
+    speed
+    mining speed
+    poison damage?
+
 potions virágokból
     A piros gombából poision poti
     Healing potion - instant health
@@ -7,15 +14,101 @@ potions virágokból
     Magic potion - increase max mana
     Stamina potion - increase max satiation
 
-Armor value in hudbar?
+több hely 3d_armor-nak
 
-Item átnevező station?
-    Táskák?
-    Tool-ok?
+gems mod (use quartz as base)
+    adds shitton of gems
+        order by hardness
+        amber (2) fossilized resin
+            healing
+        [iron (4)]
+        mese (6)
+            electricity
+        quartz (7)
+            light
+        amethyst same hardness as quartz
+            darkness/shadow
+        emerald (8)
+            nature power (bonemeal like)
+        topaz (8)
+            vampire power (damages enemy, gives you their health)
+        sapphire (9) (aluminum oxide (corundum))
+            ice
+        ruby (9) (aluminum oxide (corundum))
+            fire
+        diamond (10)
+        All combined
+            rainbow
+
+    maybe pearls where the clams would came from?
+        from fishing?
+
+    From gems you can only made jewelery and staffs
+
+magic
+    orbs
+        healing orb
+            X glass X
+            glass amber glass
+            X glass X
+
+        orb of electricity
+            X glass X
+            glass mese chrystal glass
+            X glass X
+
+        orb of light
+            X glass X
+            glass quartz glass
+            X glass X
+
+        orb of shadow
+            X glass X
+            glass amethyst glass
+            X glass X
+
+        orb of nature (bonemeal like)
+            X glass X
+            glass emerald glass
+            X glass X
+
+        orb of vampire power
+            damages enemy, gives you their health
+            X glass X
+            glass topaz glass
+            X glass X
+
+        orb of ice
+            X glass X
+            glass sapphire glass
+            X glass X
+
+        orb of fire
+            X glass X
+            glass ruby glass
+            X glass X
+
+        diamond (10)
+            X glass X
+            glass diamond glass
+            X glass X
+
+        All combined
+            rainbow
+
+    flying carpet
+
+accesories mod
+    depends on: 3d_armor, gems
+    adds rings, necklaces, amulets (at your belt)
+
+Armor value in hudbar kell
+
+Ládák elnevezése
 
 A nodebox-os és mesh-es item-eknek inventory image kell...
 A node elejét rakja minden oldalra... inventory image...
-És az inventoryban nem létező item-eket  ne regisztrálja
+És az inventoryban nem létező item-eket ne regisztrálja
     mesecon, tnt
 
 mesecon mob detector a mobok érzékelésére?
@@ -26,8 +119,6 @@ a stone monster az mitől stone?
 interdimensional chest
     register a deatached inventory and write it into player meta
     craft?
-
-fálya wield image lobogjon                           KELL
 
 bútorok                    KELL
     Szekrény             KELL
@@ -40,47 +131,7 @@ A korall az mire jó?
     Többnyire dekor
     Lakhatna benne kagyló...?
 
-mana
-    something to increase max mana, hp and satiation
-
-magic?
-
-flying carpet?
-
-buffs?
-    defense
-    damage
-    speed
-    mining speed
-    poison damage?
-
-gems mod (use quartz as base)
-    adds shitton of gems
-        order by hardness
-        amber (2) fossilized resin
-        [iron (4)]
-        mese (6)
-        quartz (7)
-        amethyst same hardness as quartz
-        emerald (8)
-        topaz (8)
-        sapphire (9) (aluminum oxide (corundum))
-        ruby (9) (aluminum oxide (corundum))
-        diamond (10)
-
-    maybe pearls where the clams would came from?
-        from fishing?
-
-    From gems you can only made jewelery, maybe staffs, perhaps enchanted swords
-
-jewelry mod
-    depends on: 3d_armor, gems
-    adds rings, medals
-
-több hely 3d_armor-nak
-
 Plusz fegyverek mod
-    Ötvözni gem-eket a kardokkal
     katana!!!!
         Craft:
             g:fa X steel
@@ -88,12 +139,8 @@ Plusz fegyverek mod
             g:bot X X
         Wield imege: a katana
         inventory image: a katana hüvelyben
-
-    fire orb kard?
-
-    war axe?
-
-    dagger?
+    war axe
+    dagger
 
 Új csákány törés hang
 
@@ -142,10 +189,6 @@ mobok:
 
 hangszerek?
 
-nether?
-
-Enchanting?
-
 ------------------------ Textúrára vár -------------------------
 
 Mintás szőnyegek
@@ -166,6 +209,8 @@ Armorok védelmi értéke
 
 -------------------------------------------- Túlmutat rajtam -------------------------------------
 
+fálya wield image lobogjon
+    Nem lehet ilyet
 
 item frames
     Ha drawtype = nodebox és nincs inventory image-e, akkor fúj mit művel
