@@ -32,15 +32,15 @@ minetest.register_chatcommand("skinsdb", {
 		elseif not word then
 			command = 'ui'
 		else
-			return false, S("unknown command").." "..word..", "..S("see /help skinsdb for supported parameters")
+			return false, S("Unknown command").." "..word..", "..S("see /help skinsdb for supported parameters")
 		end
 
 		if command == "set" then
 			local success = skins.set_player_skin(player, parameter)
 			if success then
-				return true, S("skin set to").." "..parameter
+				return true, S("Skin set to").." "..parameter
 			else
-				return false, S("invalid skin").." "..parameter
+				return false, S("Invalid skin").." "..parameter
 			end
 		elseif command == "list" then
 			local list
