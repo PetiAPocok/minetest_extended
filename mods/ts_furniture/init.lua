@@ -82,36 +82,6 @@ local furnitures = {
 			}
 		end
 	},
-	["small_table"] = {
-		description = "Small Table",
-		nodebox = {
-			{ -0.4, -0.5, -0.4, -0.3, 0.1, -0.3 }, -- foot 1
-			{ 0.3, -0.5, -0.4, 0.4, 0.1, -0.3 }, -- foot 2
-			{ -0.4, -0.5, 0.3, -0.3, 0.1, 0.4 }, -- foot 3
-			{ 0.3, -0.5, 0.3, 0.4, 0.1, 0.4 }, -- foot 4
-			{ -0.5, 0.1, -0.5, 0.5, 0.2, 0.5 }, -- table top
-		},
-		craft = function(recipe)
-			return {
-				{ recipe, recipe, recipe },
-				{ "group:stick", "", "group:stick" }
-			}
-		end
-	},
-	["tiny_table"] = {
-		description = "Tiny Table",
-		nodebox = {
-			{ -0.5, -0.1, -0.5, 0.5, 0, 0.5 }, -- table top
-			{ -0.4, -0.5, -0.5, -0.3, -0.1, 0.5 }, -- foot 1
-			{ 0.3, -0.5, -0.5, 0.4, -0.1, 0.5 }, -- foot 2
-		},
-		craft = function(recipe)
-			local bench_name = "ts_furniture:" .. recipe:gsub(":", "_") .. "_bench"
-			return {
-				{ bench_name, bench_name }
-			}
-		end
-	},
 	["bench"] = {
 		description = "Bench",
 		sitting = true,
