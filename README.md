@@ -88,7 +88,7 @@ Made for and tested on Minetest 5.2.0.
 - Added paintings for decoration (modified) ([Forum](https://forum.minetest.net/viewtopic.php?f=11&t=9635))
 - Added frame for decoration ([Github](https://github.com/minetest-mods/frame))
 - Created industrial_furnace based on default furnace.
-- Added walking_light (modified) ([Forum](https://forum.minetest.net/viewtopic.php?f=11&t=2621&hilit=walking+light)  
+- Added walking_light (rewritten) ([Forum](https://forum.minetest.net/viewtopic.php?f=11&t=2621&hilit=walking+light)  
   Removed mese pick
 - Created fishing (own script)  
   Used Mossmanikin's fishing ([Github](https://github.com/Mossmanikin/fishing)) and Wuzzy's mcl_fishing ([Git](https://git.minetest.land/Wuzzy/MineClone2/src/branch/master/mods/ITEMS/mcl_fishing)) as template.
