@@ -34,7 +34,6 @@ Made for and tested on Minetest 5.2.0.
   Furnaces drop the items what are inside of it when broke.  
   Removed gold weapon and tools.  
   Added craft for green dye from cactus.  
-  On mesecon signal the tnt starts to burn not explodes.
 - Created effects_hud for player effect display. Used [hud_timers](https://repo.or.cz/minetest_hudbars.git) as template.
 - Added Mana for magic. ([repo](https://repo.or.cz/minetest_mana.git))
   Renamed to hbmana.  
@@ -48,7 +47,8 @@ Made for and tested on Minetest 5.2.0.
 - Added Mesecons for electricity like magic to the game ([Github](https://github.com/minetest-mods/mesecons))   
   Changed the torch's texture  
   Changed the switch's effective sides  
-  Changed the ghostsone's and removesone's inventory icon
+  Changed the ghostsone's and removesone's inventory icon..
+  On mesecon signal the tnt starts to burn not explodes
 - The default carts mod has been replaced by boost_cart (modified) ([Github](https://github.com/SmallJoker/boost_cart))   
   Kept the original cart   
   The powered rail has been modified to work like in Minecraft
