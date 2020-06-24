@@ -1,0 +1,3 @@
+#The position of the effects_hud
+effects_hud_x_position float 0.88
+effects_hud_y_position float 0.3

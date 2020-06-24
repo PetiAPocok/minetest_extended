@@ -28,22 +28,23 @@ Made for and tested on Minetest 5.2.0.
 ## Contained mods and modifications
 
 - The Minetest game for base (modified) ([GitHub](https://github.com/minetest/minetest_game))  
-  Added ice and snow melting to default.  
+  Added ice and snow melting by furnace .  
   Added max falling speed limitation to the default player_api.  
   Chests drop the items what are inside of it when broke.  
   Furnaces drop the items what are inside of it when broke.  
   Removed gold weapon and tools.  
   Added craft for green dye from cactus.  
   On mesecon signal the tnt starts to burn not explodes.
-<!-- - Hunger NG to add hunger management (modified) ([Gitlab](https://gitlab.com/4w/hunger_ng)) -->
-- Added Hudbars for unified player stat display. ([repo](https://repo.or.cz/minetest_hudbars.git))
+- Created effects_hud for player effect display. Used [hud_timers](https://repo.or.cz/minetest_hudbars.git) as template.
 - Added Mana for magic. ([repo](https://repo.or.cz/minetest_mana.git))
   Renamed to hbmana.  
   Changed the starting mana.
+<!-- - Added Flying carpet. ([repo](https://repo.or.cz/minetest_flying_carpet.git)) -->
 - Added Hbhunger for hunger. ([repo](https://repo.or.cz/minetest_hbhunger.git))
   Added new foods.  
   "Reconfigured".
 - Added Hbsprint for sprinting ability (modified) ([Github](https://github.com/minetest-mods/hbsprint))
+- Added Hbarmor for armor stats ([repo](https://repo.or.cz/minetest_hbarmor.git))
 - Added Mesecons for electricity like magic to the game ([Github](https://github.com/minetest-mods/mesecons))   
   Changed the torch's texture  
   Changed the switch's effective sides  

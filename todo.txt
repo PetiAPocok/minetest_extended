@@ -1,18 +1,25 @@
 -------------------------------------------------1.1--------------------------------------------------------------
-buffs
-    defense
-    damage
-    speed
-    mining speed
-    poison damage?
-
 potions virágokból
-    A piros gombából poision poti
-    Healing potion - instant health
-    Vitality potion - increase max health
-    Mana potion - instant mana
-    Magic potion - increase max mana
-    Stamina potion - increase max satiation
+    Zseblepárlő készlet
+
+    Max mana? 100?
+    Mana regen effect values?
+    Max satiation? 50?
+
+    water_walking potion?
+
+blindness effect?
+    Just create a humoungus hud for the player that covers everithing.
+        local hudid = player:hud_add({
+            hud_elem_type = "image",
+            position = { x=0.5, y=0.5 },
+            scale = { x=-100, y=-100 },
+            text = "playereffects_example_black.png",
+        })
+
+Ha tele vagy ne tudj többet enni.
+
+ha ki van kapcsolva a damage akkor baj van a futással
 
 több hely 3d_armor-nak
 
@@ -44,6 +51,8 @@ gems mod (use quartz as base)
         from fishing?
 
     From gems you can only made jewelery and staffs
+
+Mapgen normalizálása
 
 magic
     orbs
@@ -96,7 +105,10 @@ magic
         All combined
             rainbow
 
-    flying carpet
+    flying carpet (fix it!)
+        Horribble controls
+        Doesn't use mana.
+        Uses own mama and doesn't give feedback about the remaining fuel
 
 accesories mod
     depends on: 3d_armor, gems
@@ -144,6 +156,12 @@ Plusz fegyverek mod
 
 Új csákány törés hang
 
+carpets
+    Make the carpets cover the stair or half blocks.
+    Make the carpet look different with the nodebox when it is on top of a stair node.
+
+    Babushka carpet!
+
 Ha engedélyezve van a növekvő craftguide akkor az új receptek értesítése túl lassú
     Single-ben nem...
     Csak szerveren.
@@ -189,7 +207,12 @@ mobok:
 
 hangszerek?
 
+
 ------------------------ Textúrára vár -------------------------
+
+gem-ek
+
+potions
 
 Mintás szőnyegek
 
