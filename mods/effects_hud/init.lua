@@ -48,14 +48,44 @@ effects.mobility = {
     end
 }
 
-effects.night_vision = {
+effects.shine = {
     name = "Shine",
     color = "ffcc00",
     apply = function(player)
-        -- walking_light:light
+        local playername = player:get_player_name()
+
+        if timers[playername]["shine"]["current_pos"] == nil or timers[playername]["shine"]["old_pos"] == nil then
+            timers[playername]["shine"]["current_pos"] = {}
+            timers[playername]["shine"]["old_pos"] = {}
+        end
+
+        timers[playername]["shine"]["current_pos"] = vector.round(player:get_pos())
+
+        local current_pos = timers[playername]["shine"]["current_pos"]
+        local old_pos = timers[playername]["shine"]["old_pos"]
+
+
+        current_pos["y"] = current_pos["y"] + 2
+
+        if old_pos["x"] ~= current_pos["x"] or
+        old_pos["y"] ~= current_pos["y"] or
+        old_pos["z"] ~= current_pos["z"] then
+
+            if old_pos["y"] ~= nil  then
+                old_pos["y"] = old_pos["y"] - 1 -- For some reason the placed block "placing position" and "removing position" isn't the same...
+                minetest.remove_node(old_pos)
+                old_pos["y"] = old_pos["y"] + 1
+            end
+            minetest.place_node(current_pos, {name="walking_light:light"})
+            timers[playername]["shine"]["old_pos"] = current_pos
+        end
     end,
     remove = function(player)
+        minetest.log("timers table: " .. dump(timers))
+        local old_pos = timers[player:get_player_name()]["shine"]["old_pos"]
 
+        old_pos["y"] = old_pos["y"] - 1 -- For some reason the placed block "placing position" and "removing position" isn't the same...
+        minetest.remove_node(old_pos)
     end
 }
 
@@ -115,7 +145,7 @@ effects.water_breathing = {
     name = "Water Breathing",
     color = "5483ff",
     apply = function(player)
-        player:set_breath(player:get_breath() + 1.1)
+        player:set_breath(player:get_breath() + 1)
     end,
     remove = function(player)
 
@@ -175,7 +205,7 @@ function add_effect(playername, effect, duration)
                     text = "effects_hud_bar.png^[colorize:#" .. (effects[effect].color or "fffff"),
                     number = 160,
                     alignment = {x = 1, y = 1},
-                    offset = {x = 1, y = players_effects *20 + 1}
+                    offset = {x = 1, y = players_effects * 20 + 1}
                 })
 
             local text_id =
@@ -201,7 +231,7 @@ end
 
 minetest.register_chatcommand("effect", {
     params = "<player> <effect> <duration>",
-	description = "Adds <effect> to <player> for <duration> seconds.\nAvailable effects: "..
+    description = "Adds <effect> to <player> for <duration> seconds.\nAvailable effects: "..
     "fireproof, health_regeneration, mana_regeneration, mobility, night_vision, poison, protection, strength, water_breathing.",
     privs = {
         creative = true,
@@ -209,21 +239,25 @@ minetest.register_chatcommand("effect", {
     func = function(name, param)
         local parameters = param:split(" ")
 
-		if not minetest.get_player_by_name(parameters[1]) then
-			return false, "Player not found!"
-		end
+        if parameters[3] ~= nil and parameters[2] ~= nil and parameters[1] ~= nil then
+            if not minetest.get_player_by_name(parameters[1]) then
+                return false, "Player not found!"
+            end
 
-        if not effects[parameters[2]] then
-            return false, "Invalid effect!"
+            if not effects[parameters[2]] then
+                return false, "Invalid effect!"
+            end
+
+            if not tonumber(parameters[3]) then
+                return false, "Invalid duration!"
+            end
+
+            add_effect(parameters[1], parameters[2], parameters[3])
+
+            return true, "Effect applied!"
+        else
+            return false, "Missing parameters!"
         end
-
-        if not tonumber(parameters[3]) then
-            return false, "Invalid duration!"
-        end
-
-        add_effect(parameters[1], parameters[2], parameters[3])
-
-        return true, "Effect applied!"
     end,
 })
 
@@ -231,12 +265,12 @@ local time_count = 0
 minetest.register_globalstep(
     function(dtime)
         time_count = time_count + dtime
-        if time_count > 1 then
+        if time_count > 0.5 then
             for username,effect_table in pairs(timers) do
                 local player = minetest.get_player_by_name(username)
                 for effect,effect_parameters in pairs(effect_table) do
                     if effect_parameters["duration"] > 0 then
-                        effect_parameters["duration"] = effect_parameters["duration"] - 1
+                        effect_parameters["duration"] = effect_parameters["duration"] - 0.5
 
                         player:hud_change(effect_parameters["hud_bar_id"], "number", 160 / effect_parameters["initial_duration"] * effect_parameters["duration"])
                         player:hud_change(effect_parameters["hud_text_id"], "text", effects[effect].name .. ": " .. effect_parameters["duration"])
@@ -245,16 +279,11 @@ minetest.register_globalstep(
                         player:hud_remove(effect_parameters["hud_bg_id"])
                         player:hud_remove(effect_parameters["hud_bar_id"])
                         player:hud_remove(effect_parameters["hud_text_id"])
-                        timers[username][effect] = nil
                         effects[effect].remove(player)
+                        timers[username][effect] = nil
                     end
                 end
             end
-
-            -- `hud_change(id, stat, value)`: change a value of a previously added HUD element.
-            --     * element `stat` values:
-            --         `position`, `name`, `scale`, `text`, `number`, `item`, `dir`
-
             time_count = 0
         end
     end
