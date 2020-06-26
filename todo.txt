@@ -1,12 +1,23 @@
 -------------------------------------------------1.1--------------------------------------------------------------
 potions virágokból
-    Zseblepárlő készlet
-
     Max mana? 100?
     Mana regen effect values?
     Max satiation? 50?
 
-    water_walking potion?
+    water walking effect?
+        detect the block below and make it walakable true
+
+    protection effect
+        how armor works?
+
+    lava álló effect
+        how lava bites
+
+    strength effect
+        how minespeed and damage calculated?
+
+        feather fall effect?
+            Make the player light weighted
 
 blindness effect?
     Just create a humoungus hud for the player that covers everithing.
@@ -17,7 +28,7 @@ blindness effect?
             text = "playereffects_example_black.png",
         })
 
-Ha tele vagy ne tudj többet enni.
+Nincs "globális" max satitation
 
 ha ki van kapcsolva a damage akkor baj van a futással
 
