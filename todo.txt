@@ -6,29 +6,32 @@ potions virágokból
 
     water walking effect?
         detect the block below and make it walakable true
+        detect the block below and replace it with ice or lava
 
     protection effect
         how armor works?
 
     lava álló effect
-        how lava bites
+        how lava bites?
+            Only globally changeable...
 
     strength effect
         how minespeed and damage calculated?
 
-        feather fall effect?
-            Make the player light weighted
+    feather fall effect?
+        Make the player light weighted
 
-blindness effect?
-    Just create a humoungus hud for the player that covers everithing.
-        local hudid = player:hud_add({
-            hud_elem_type = "image",
-            position = { x=0.5, y=0.5 },
-            scale = { x=-100, y=-100 },
-            text = "playereffects_example_black.png",
-        })
 
-Nincs "globális" max satitation
+    blindness effect?
+        Just create a humoungus hud for the player that covers everithing.
+            local hudid = player:hud_add({
+                hud_elem_type = "image",
+                position = { x=0.5, y=0.5 },
+                scale = { x=-100, y=-100 },
+                text = "playereffects_example_black.png",
+            })
+
+Nincs "globális" max satitation limit
 
 ha ki van kapcsolva a damage akkor baj van a futással
 
