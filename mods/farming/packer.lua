@@ -45,10 +45,13 @@ minetest.register_node("farming:packer", {
 
     allow_metadata_inventory_put = function(pos, listname, index, stack)
         if listname == "input" then
-            local item = stack:get_name()
-            local is_sackable = minetest.get_item_group(item, "sackable")
-            if is_sackable ~= 0 then
-                return stack:get_count()
+            local inv = minetest.get_meta(pos):get_inventory()
+            if inv:is_empty("output") then
+                local item = stack:get_name()
+                local is_sackable = minetest.get_item_group(item, "sackable")
+                if is_sackable ~= 0 then
+                    return stack:get_count()
+                end
             end
     	elseif listname == "bags" then
             if stack:get_name() == "farming:bag" then
