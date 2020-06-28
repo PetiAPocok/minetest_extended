@@ -4,16 +4,18 @@ local hud_pos = {}
 hud_pos.x = tonumber(minetest.settings:get("effects_hud_x_position"))
 hud_pos.y = tonumber(minetest.settings:get("effects_hud_y_position"))
 
-effects.fireproof = {
-    name = "Fireproof",
-    color = "ff3300",
-    apply = function(player)
-
-    end,
-    remove = function(player)
-
-    end
-}
+-- effects.fireproof = {
+--     name = "Fireproof",
+--     color = "ff3300",
+--     apply = function(player)
+--         local pos = player:get_pos()
+--         local node = minetest.get_node(pos)
+--         minetest.chat_send_all(dump(node))
+--     end,
+--     remove = function(player)
+--
+--     end
+-- }
 
 effects.health_regeneration = {
     name = "Health Regeneration",
@@ -100,16 +102,16 @@ effects.poison = {
     end
 }
 
-effects.protection = {
-    name = "Protection",
-    color = "490e2e",
-    apply = function(player)
-
-    end,
-    remove = function(player)
-
-    end
-}
+-- effects.protection = {
+--     name = "Protection",
+--     color = "490e2e",
+--     apply = function(player)
+--
+--     end,
+--     remove = function(player)
+--
+--     end
+-- }
 
 effects.purity = {
     name = "Purity",
@@ -130,16 +132,16 @@ effects.purity = {
     end
 }
 
-effects.strength = {
-    name = "Strength",
-    color = "9927ff",
-    apply = function(player)
-
-    end,
-    remove = function(player)
-
-    end
-}
+-- effects.strength = {
+--     name = "Strength",
+--     color = "9927ff",
+--     apply = function(player)
+--
+--     end,
+--     remove = function(player)
+--
+--     end
+-- }
 
 effects.water_breathing = {
     name = "Water Breathing",

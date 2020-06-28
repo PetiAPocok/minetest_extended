@@ -8,12 +8,12 @@ reagents["flowers:geranium"] = "alchemy:mana"
 reagents["flowers:mushroom_red"] = "alchemy:poison"
 reagents["flowers:rose"] = "alchemy:healing"
 -- reagents["flowers:tulip"] = "alchemy:"
-reagents["flowers:tulip_black"] = "alchemy:protection"
-reagents["flowers:viola"] = "alchemy:strength"
+-- reagents["flowers:tulip_black"] = "alchemy:protection"
+-- reagents["flowers:viola"] = "alchemy:strength"
 reagents["flowers:waterlily"] = "alchemy:gills"
 reagents["group:food_meat_raw"] = "alchemy:vitality"
 reagents["mobs:honey"] = "alchemy:stamina"
-reagents["mobs:lava_orb"] = "alchemy:antifire"
+-- reagents["mobs:lava_orb"] = "alchemy:antifire"
 
 
 -- Potions
