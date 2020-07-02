@@ -1,8 +1,9 @@
-timers = {}
+effects_hud ={}
+effects_hud["timers"] = {}
 local effects = {}
 local hud_pos = {}
-hud_pos.x = tonumber(minetest.settings:get("effects_hud_x_position"))
-hud_pos.y = tonumber(minetest.settings:get("effects_hud_y_position"))
+hud_pos.x = tonumber(minetest.settings:get("effects_hud_x_position")) or 0.88
+hud_pos.y = tonumber(minetest.settings:get("effects_hud_y_position")) or 0.3
 
 -- effects.fireproof = {
 --     name = "Fireproof",
@@ -56,15 +57,15 @@ effects.shine = {
     apply = function(player)
         local playername = player:get_player_name()
 
-        if timers[playername]["shine"]["current_pos"] == nil or timers[playername]["shine"]["old_pos"] == nil then
-            timers[playername]["shine"]["current_pos"] = {}
-            timers[playername]["shine"]["old_pos"] = {}
+        if effects_hud["timers"][playername]["shine"]["current_pos"] == nil or effects_hud["timers"][playername]["shine"]["old_pos"] == nil then
+            effects_hud["timers"][playername]["shine"]["current_pos"] = {}
+            effects_hud["timers"][playername]["shine"]["old_pos"] = {}
         end
 
-        timers[playername]["shine"]["current_pos"] = vector.round(player:get_pos())
+        effects_hud["timers"][playername]["shine"]["current_pos"] = vector.round(player:get_pos())
 
-        local current_pos = timers[playername]["shine"]["current_pos"]
-        local old_pos = timers[playername]["shine"]["old_pos"]
+        local current_pos = effects_hud["timers"][playername]["shine"]["current_pos"]
+        local old_pos = effects_hud["timers"][playername]["shine"]["old_pos"]
 
 
         current_pos["y"] = current_pos["y"] + 2
@@ -79,12 +80,11 @@ effects.shine = {
                 old_pos["y"] = old_pos["y"] + 1
             end
             minetest.place_node(current_pos, {name="walking_light:light"})
-            timers[playername]["shine"]["old_pos"] = current_pos
+            effects_hud["timers"][playername]["shine"]["old_pos"] = current_pos
         end
     end,
     remove = function(player)
-        minetest.log("timers table: " .. dump(timers))
-        local old_pos = timers[player:get_player_name()]["shine"]["old_pos"]
+        local old_pos = effects_hud["timers"][player:get_player_name()]["shine"]["old_pos"]
 
         old_pos["y"] = old_pos["y"] - 1 -- For some reason the placed block "placing position" and "removing position" isn't the same...
         minetest.remove_node(old_pos)
@@ -117,13 +117,13 @@ effects.purity = {
     name = "Purity",
     color = "eeeeee",
     apply = function(player)
-        for k,v in pairs(timers[player:get_player_name()]) do
+        for k,v in pairs(effects_hud["timers"][player:get_player_name()]) do
             if k ~= "purity" then
                 player:hud_remove(v["hud_bg_id"])
                 player:hud_remove(v["hud_bar_id"])
                 player:hud_remove(v["hud_text_id"])
                 effects[k].remove(player)
-                timers[player:get_player_name()][k] = null
+                effects_hud["timers"][player:get_player_name()][k] = null
             end
         end
     end,
@@ -156,37 +156,37 @@ effects.water_breathing = {
 
 minetest.register_on_joinplayer(
     function(player)
-        timers[player:get_player_name()] = {}
+        effects_hud["timers"][player:get_player_name()] = {}
     end
 )
 
 minetest.register_on_leaveplayer(
     function(player)
-        timers[player:get_player_name()] = nil
+        effects_hud["timers"][player:get_player_name()] = nil
     end
 )
 
-function add_effect(playername, effect, duration)
+effects_hud["add_effect"] = function(playername, effect, duration)
     local player = minetest.get_player_by_name(playername)
     duration = tonumber(duration)
 
     if not player then
-        minetest.log(error, "effects_hud: Player not found!")
+        minetest.log(warning, "effects_hud: Player not found!")
     elseif not effects[effect] then
-        minetest.log(error, "effects_hud: Invalid effect!")
+        minetest.log(warning, "effects_hud: Invalid effect!")
     elseif not tonumber(duration) then
-        minetest.log(error, "effects_hud: Invalid duration!")
+        minetest.log(warning, "effects_hud: Invalid duration!")
     else
         local players_effects = 0
-        for k,v in pairs(timers[playername]) do
+        for k,v in pairs(effects_hud["timers"][playername]) do
             players_effects = players_effects + 1
         end
 
 
-        if not timers[playername][effect] then
-            timers[playername][effect] = {}
-            timers[playername][effect]["duration"] = duration
-            timers[playername][effect]["initial_duration"] = duration
+        if not effects_hud["timers"][playername][effect] then
+            effects_hud["timers"][playername][effect] = {}
+            effects_hud["timers"][playername][effect]["duration"] = duration
+            effects_hud["timers"][playername][effect]["initial_duration"] = duration
 
             local bg_id =
                 player:hud_add({
@@ -221,12 +221,12 @@ function add_effect(playername, effect, duration)
                     offset = {x = 2, y = players_effects * 20}
                 })
 
-            timers[playername][effect]["hud_bg_id"] = bg_id
-            timers[playername][effect]["hud_bar_id"] = bar_id
-            timers[playername][effect]["hud_text_id"] = text_id
+            effects_hud["timers"][playername][effect]["hud_bg_id"] = bg_id
+            effects_hud["timers"][playername][effect]["hud_bar_id"] = bar_id
+            effects_hud["timers"][playername][effect]["hud_text_id"] = text_id
         else
-            timers[playername][effect]["duration"] = duration
-            timers[playername][effect]["initial_duration"] = duration
+            effects_hud["timers"][playername][effect]["duration"] = duration
+            effects_hud["timers"][playername][effect]["initial_duration"] = duration
         end
     end
 end
@@ -268,7 +268,7 @@ minetest.register_globalstep(
     function(dtime)
         time_count = time_count + dtime
         if time_count > 0.5 then
-            for username,effect_table in pairs(timers) do
+            for username,effect_table in pairs(effects_hud["timers"]) do
                 local player = minetest.get_player_by_name(username)
                 for effect,effect_parameters in pairs(effect_table) do
                     if effect_parameters["duration"] > 0 then
@@ -282,7 +282,7 @@ minetest.register_globalstep(
                         player:hud_remove(effect_parameters["hud_bar_id"])
                         player:hud_remove(effect_parameters["hud_text_id"])
                         effects[effect].remove(player)
-                        timers[username][effect] = nil
+                        effects_hud["timers"][username][effect] = nil
                     end
                 end
             end
@@ -290,13 +290,3 @@ minetest.register_globalstep(
         end
     end
 )
-
-minetest.register_chatcommand("effects", {
-    privs = {
-        interact = true,
-    },
-    func = function(name, param)
-
-        return true, "timers" .. dump(timers)
-    end,
-})

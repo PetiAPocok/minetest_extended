@@ -15,22 +15,28 @@ hbmana = {}
 hbmana.playerlist = {}
 
 hbmana.settings = {}
-hbmana.settings.default_max = 20
+hbmana.settings.default_max = 10
+hbmana.settings.max_reachable = 100
 hbmana.settings.default_regen = 1
 hbmana.settings.regen_timer = 0.2
 
 do
-	local default_max = tonumber(minetest.settings:get("mana_default_max"))
+	local default_max = tonumber(minetest.settings:get("hbmana_default_max"))
 	if default_max ~= nil then
 		hbmana.settings.default_max = default_max
 	end
 
-	local default_regen = tonumber(minetest.settings:get("mana_default_regen"))
+    local max_reachable = tonumber(minetest.settings:get("hbmana_max_mana"))
+	if max_reachable ~= nil then
+		hbmana.settings.max_reachable = max_reachable
+	end
+
+	local default_regen = tonumber(minetest.settings:get("hbmana_default_regen"))
 	if default_regen ~= nil then
 		hbmana.settings.default_regen = default_regen
 	end
 
-	local regen_timer = tonumber(minetest.settings:get("mana_regen_timer"))
+	local regen_timer = tonumber(minetest.settings:get("hbmana_regen_timer"))
 	if regen_timer ~= nil then
 		hbmana.settings.regen_timer = regen_timer
 	end
@@ -62,7 +68,7 @@ function hbmana.setmax(playername, value)
 		minetest.log("info", "[mana] Warning: mana.setmax was called with negative value!")
 	end
 	value = hbmana.round(value)
-	if hbmana.playerlist[playername].maxmana ~= value then
+    if hbmana.playerlist[playername].maxmana ~= value and hbmana.settings.max_reachable >= value then
 		hbmana.playerlist[playername].maxmana = value
 		if(hbmana.playerlist[playername].mana > value) then
 			hbmana.playerlist[playername].mana = value

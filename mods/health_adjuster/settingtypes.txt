@@ -1,0 +1,5 @@
+#The max health of the new players.
+health_adjuster_start_max_health float 20
+
+#The maximum reachable health
+health_adjuster_max_reachable float 50

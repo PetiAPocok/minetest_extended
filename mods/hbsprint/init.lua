@@ -39,7 +39,7 @@ local function stop_sprint(player)
 end
 
 local function drain_hunger(name)
-    hbhunger.hunger[name] = hbhunger.hunger[name] - food_drain
+    hbhunger.players[name].hunger = hbhunger.players[name].hunger - food_drain
 end
 
 local function drain_breath(player)
@@ -117,12 +117,14 @@ local function sprint_step(player, dtime)
 
     local starving = false
     if minetest.is_yes(minetest.settings:get('enable_damage')) then
-        starving = hbhunger.hunger[name] < 10
+        starving = hbhunger.players[name].hunger < 10
     end
 
     if not starving and ground then
         start_sprint(player)
-        drain_hunger(name)
+        if minetest.settings:get_bool("enable_damage") then
+            drain_hunger(name)
+        end
         if breath and breath_timer[name] >= 2 then
             drain_breath(player)
             breath_timer[name] = 0

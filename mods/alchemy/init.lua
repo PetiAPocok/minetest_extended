@@ -11,7 +11,7 @@ reagents["flowers:rose"] = "alchemy:healing"
 -- reagents["flowers:tulip_black"] = "alchemy:protection"
 -- reagents["flowers:viola"] = "alchemy:strength"
 reagents["flowers:waterlily"] = "alchemy:gills"
-reagents["group:food_meat_raw"] = "alchemy:vitality"
+reagents["mobs:pork_raw"] = "alchemy:vitality"
 reagents["mobs:honey"] = "alchemy:stamina"
 -- reagents["mobs:lava_orb"] = "alchemy:antifire"
 
@@ -20,7 +20,16 @@ reagents["mobs:honey"] = "alchemy:stamina"
 minetest.register_craftitem("alchemy:bottled_water", {
     description = "Bottled Water",
     inventory_image = "alchemy_bottled_water.png",
-    on_use = minetest.item_eat(1)
+    -- on_use = minetest.item_eat(1)
+    on_use = function(itemstack, user, pointed_thing)
+        -- minetest.chat_send_all(dump(itemstack))
+        -- minetest.chat_send_all(dump(user))
+        -- minetest.chat_send_all(dump(pointed_thing))
+        -- minetest.chat_send_all("------------------------------------")
+        -- effects_hud.add_effect(user:get_player_name(), "water_breathing", 30)
+        -- itemstack:take_item()
+        -- return itemstack
+    end
 })
 
 minetest.register_craft({
@@ -30,70 +39,116 @@ minetest.register_craft({
     replacements = {{"bucket:bucket_water", "bucket:bucket_empty"}},
 })
 
-
-minetest.register_craftitem("alchemy:antifire", {
-    description = "Fire Resistance Potion\nProtects you from fire for 30 seconds.",
-    inventory_image = "alchemy_bottled_water.png";
-})
-
 minetest.register_craftitem("alchemy:gills", {
     description = "Gills Potion\nAllows breathing underwater for 30 seconds.",
-    inventory_image = "alchemy_bottled_water.png";
+    inventory_image = "alchemy_potion_gills.png";
+    on_use = function(itemstack, user, pointed_thing)
+        effects_hud.add_effect(user:get_player_name(), "water_breathing", 30)
+        itemstack:take_item()
+        return itemstack
+    end
 })
 
 minetest.register_craftitem("alchemy:healing", {
     description = "Healing Potion\nFaster health regeneration for 10 seconds.",
-    inventory_image = "alchemy_bottled_water.png";
+    inventory_image = "alchemy_potion_healing.png";
+    on_use = function(itemstack, user, pointed_thing)
+        effects_hud.add_effect(user:get_player_name(), "health_regeneration", 10)
+        itemstack:take_item()
+        return itemstack
+    end
 })
 
 minetest.register_craftitem("alchemy:holy", {
-    description = "Holy Water\nNullify all effects on the player.",
-    inventory_image = "alchemy_bottled_water.png";
+    description = "Holy Water\nNullify all effects on the player and\nkeeps him 'clean' for 30 second.",
+    inventory_image = "alchemy_potion_holy.png";
+    on_use = function(itemstack, user, pointed_thing)
+        effects_hud.add_effect(user:get_player_name(), "purity", 30)
+        itemstack:take_item()
+        return itemstack
+    end
 })
 
 minetest.register_craftitem("alchemy:magic", {
     description = "Magic potion\nIncrease max mana.",
-    inventory_image = "alchemy_bottled_water.png";
+    inventory_image = "alchemy_potion_magic.png";
+    on_use = function(itemstack, user, pointed_thing)
+        local name = user:get_player_name()
+        local current = hbmana.getmax(name)
+        if current < hbmana.settings.max_reachable then
+            hbmana.setmax(name, current + 5)
+            itemstack:take_item()
+            return itemstack
+        end
+    end
 })
 
 minetest.register_craftitem("alchemy:mana", {
     description = "Mana Potion\nFaster mana regeneration for 10 seconds.",
-    inventory_image = "alchemy_bottled_water.png";
+    inventory_image = "alchemy_potion_mana.png";
+    on_use = function(itemstack, user, pointed_thing)
+        effects_hud.add_effect(user:get_player_name(), "mana_regeneration", 10)
+        itemstack:take_item()
+        return itemstack
+    end
 })
 
 minetest.register_craftitem("alchemy:mobility", {
     description = "Mobility Potion\nIncreases walking speed and jumping height for 60 seconds.",
-    inventory_image = "alchemy_bottled_water.png";
+    inventory_image = "alchemy_potion_mobility.png";
+    on_use = function(itemstack, user, pointed_thing)
+        effects_hud.add_effect(user:get_player_name(), "mobility", 60)
+        itemstack:take_item()
+        return itemstack
+    end
 })
 
 minetest.register_craftitem("alchemy:shine", {
     description = "Shine Potion\nMakes you shine for 60 seconds.",
-    inventory_image = "alchemy_bottled_water.png";
+    inventory_image = "alchemy_potion_shine.png";
+    on_use = function(itemstack, user, pointed_thing)
+        effects_hud.add_effect(user:get_player_name(), "shine", 60)
+        itemstack:take_item()
+        return itemstack
+    end
 })
 
 minetest.register_craftitem("alchemy:poison", {
     description = "Flask of Poison (Throwable)\nHurts the affected for 10 seconds.",
-    inventory_image = "alchemy_bottled_water.png";
-})
-
-minetest.register_craftitem("alchemy:protection", {
-    description = "Potion of Protection\nIncrease defense for 60 seconds.",
-    inventory_image = "alchemy_bottled_water.png";
+    inventory_image = "alchemy_potion_poison.png";
+    on_use = function(itemstack, user, pointed_thing)
+        effects_hud.add_effect(user:get_player_name(), "poison", 10)
+        itemstack:take_item()
+        return itemstack
+    end
 })
 
 minetest.register_craftitem("alchemy:stamina", {
     description = "Stamina Potion\nIncrease max satiation.",
-    inventory_image = "alchemy_bottled_water.png";
-})
-
-minetest.register_craftitem("alchemy:strength", {
-    description = "Strength Potion\nIncrease mining speed and damage for 60 seconds.",
-    inventory_image = "alchemy_bottled_water.png";
+    inventory_image = "alchemy_potion_stamina.png";
+    on_use = function(itemstack, user, pointed_thing)
+        local name = user:get_player_name()
+        if hbhunger.players[name].satiation ~= hbhunger.max_reachable_satiation then
+            hbhunger.players[name].satiation = hbhunger.players[name].satiation + 5
+        end
+        itemstack:take_item()
+        return itemstack
+    end
 })
 
 minetest.register_craftitem("alchemy:vitality", {
     description = "Vitality Potion\nIncrease max health.",
-    inventory_image = "alchemy_bottled_water.png";
+    inventory_image = "alchemy_potion_vitality.png";
+    on_use = function(itemstack, user, pointed_thing)
+        local current_max_hp = user:get_properties().hp_max
+
+        if current_max_hp < (tonumber(minetest.settings:get("health_adjuster_max_reachable")) or 50) then
+            health_adjuster.set_players_max_health(user, current_max_hp + 5)
+
+            itemstack:take_item()
+            return itemstack
+        end
+    end
 })
 
 
@@ -143,9 +198,14 @@ minetest.register_node("alchemy:alchemy_set", {
 
     allow_metadata_inventory_put = function(pos, listname, index, stack)
         if listname == "component" then
-            local item = stack:get_name()
-            if string.find(item, "flowers:") then
-                return stack:get_count()
+            local inv = minetest.get_meta(pos):get_inventory()
+            if inv:is_empty("output") then
+                local item = stack:get_name()
+                for k,v in pairs(reagents) do
+                    if item == k then
+                        return stack:get_count()
+                    end
+                end
             end
         elseif listname == "bottle" then
             if stack:get_name() == "alchemy:bottled_water" then
@@ -182,10 +242,10 @@ minetest.register_node("alchemy:alchemy_set", {
             if not inv:is_empty("component") then
                 if inv:is_empty("output") then
                     local reagent = inv:get_stack("component", 1):get_name()
-                    minetest.chat_send_all(dump(reagent))
-                    --AZONNAL ADJA ODA, NE KELLJEN FŐZÉSRE VÁRNI
+                    inv:add_item("output", reagents[reagent])
+
+                    -- AZONNAL ADJA ODA, NE KELLJEN FŐZÉSRE VÁRNI
                     -- stack_to_pack = string.gsub(stack_to_pack, "farming:", "farming:bag_of_")
-                    -- inv:add_item("output", stack_to_pack)
                     -- has_something_in_output = true
                 end
             end
@@ -197,16 +257,14 @@ minetest.register_node("alchemy:alchemy_set", {
         " takes stuff from alchemy station at " .. minetest.pos_to_string(pos))
 
         local inv = minetest.get_meta(pos):get_inventory()
-        local stack_size = inv:get_stack("component", 1):get_count()
         local item_in_output = inv:get_stack("output", 1):get_name()
 
         if not inv:is_empty("bottle") then
-            if not inv:is_empty("component") and stack_size >= 50 then
-                if inv:is_empty("output") and has_something_in_output then
-                    local stack_to_remove = inv:get_stack("component", 1):get_name() .. " " .. 50
-                    inv:remove_item("component", stack_to_remove)
+            if not inv:is_empty("component") then
+                if inv:is_empty("output") then
+                    local item_to_remove = inv:get_stack("component", 1):get_name()
+                    inv:remove_item("component", item_to_remove)
                     inv:remove_item("bottle", "alchemy:bottled_water")
-                    has_something_in_output = false
                 end
             else
                 inv:remove_item("output", item_in_output)
