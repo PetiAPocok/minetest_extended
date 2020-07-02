@@ -1,8 +1,5 @@
 -------------------------------------------------1.1--------------------------------------------------------------
 potions virágokból
-    Max mana? 100?
-    Mana regen effect values?
-    Max satiation? 50?
 
     water walking effect?
         detect the block below and make it walakable true
@@ -30,10 +27,6 @@ potions virágokból
                 scale = { x=-100, y=-100 },
                 text = "playereffects_example_black.png",
             })
-
-Nincs "globális" max satitation limit
-
-ha ki van kapcsolva a damage akkor baj van a futással
 
 több hely 3d_armor-nak
 
