@@ -2118,4 +2118,5 @@ register_command("craft", {
 	end,
 })
 
-dofile(minetest.get_modpath("craftguide") .. "/packer_guide.lua")
+dofile(minetest.get_modpath("craftguide") .. "/packer_crafts.lua")
+dofile(minetest.get_modpath("craftguide") .. "/alchemy_station_crafts.lua")
