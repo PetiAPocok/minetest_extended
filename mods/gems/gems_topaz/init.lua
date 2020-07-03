@@ -1,10 +1,10 @@
-minetest.register_craftitem("topaz:topaz_crystal", {
+minetest.register_craftitem("gems_topaz:topaz_crystal", {
 	description = "Topaz Crystal",
 	inventory_image = "topaz_crystal.png",
 })
 
 
-minetest.register_node("topaz:topaz_ore", {
+minetest.register_node("gems_topaz:topaz_ore", {
 	description = "Topaz Ore",
 	tiles = {"default_stone.png^topaz_ore.png"},
 	groups = {cracky=3, stone=1},
@@ -12,15 +12,15 @@ minetest.register_node("topaz:topaz_ore", {
         items = {
             {
                 rarity = 1,
-                items = {"topaz:topaz_crystal 2"},
+                items = {"gems_topaz:topaz_crystal 2"},
             },
             {
                 rarity = 2,
-                items = {"topaz:topaz_crystal"},
+                items = {"gems_topaz:topaz_crystal"},
             },
             {
                 rarity = 4,
-                items = {"topaz:topaz_crystal 3"},
+                items = {"gems_topaz:topaz_crystal 3"},
             }
         }
     },
@@ -29,7 +29,7 @@ minetest.register_node("topaz:topaz_ore", {
 
 minetest.register_ore({
 	ore_type = "scatter",
-	ore = "topaz:topaz_ore",
+	ore = "gems_topaz:topaz_ore",
 	wherein = "default:stone",
 	clust_scarcity = 10*10*10,
 	clust_num_ores = 6,
@@ -39,7 +39,7 @@ minetest.register_ore({
 })
 
 
-minetest.register_node("topaz:block", {
+minetest.register_node("gems_topaz:block", {
 	description = "topaz Block",
 	tiles = {"topaz_block.png"},
 	groups = {cracky=3, oddly_breakable_by_hand=1},
@@ -47,15 +47,15 @@ minetest.register_node("topaz:block", {
 })
 
 minetest.register_craft({
-	output = "topaz:block",
+	output = "gems_topaz:block",
 	recipe = {
-		{"topaz:topaz_crystal", "topaz:topaz_crystal"},
-		{"topaz:topaz_crystal", "topaz:topaz_crystal"}
+		{"gems_topaz:topaz_crystal", "gems_topaz:topaz_crystal"},
+		{"gems_topaz:topaz_crystal", "gems_topaz:topaz_crystal"}
 	}
 })
 
 
-stairs.register_stair_and_slab("topazblock", "topaz:block",
+stairs.register_stair_and_slab("topazblock", "gems_topaz:block",
 	{cracky=3, oddly_breakable_by_hand=1},
 	{"topaz_block.png"},
 	"Topaz Stair",

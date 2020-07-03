@@ -1,10 +1,10 @@
-minetest.register_craftitem("amethyst:amethyst_crystal", {
+minetest.register_craftitem("gems_amethyst:amethyst_crystal", {
 	description = "Amethyst Crystal",
 	inventory_image = "amethyst_crystal.png",
 })
 
 
-minetest.register_node("amethyst:amethyst_ore", {
+minetest.register_node("gems_amethyst:amethyst_ore", {
 	description = "Amethyst Ore",
 	tiles = {"default_stone.png^amethyst_ore.png"},
 	groups = {cracky=3, stone=1},
@@ -12,15 +12,15 @@ minetest.register_node("amethyst:amethyst_ore", {
         items = {
             {
                 rarity = 1,
-                items = {"amethyst:amethyst_crystal 2"},
+                items = {"gems_amethyst:amethyst_crystal 2"},
             },
             {
                 rarity = 2,
-                items = {"amethyst:amethyst_crystal"},
+                items = {"gems_amethyst:amethyst_crystal"},
             },
             {
                 rarity = 4,
-                items = {"amethyst:amethyst_crystal 3"},
+                items = {"gems_amethyst:amethyst_crystal 3"},
             }
         }
     },
@@ -29,7 +29,7 @@ minetest.register_node("amethyst:amethyst_ore", {
 
 minetest.register_ore({
 	ore_type = "scatter",
-	ore = "amethyst:amethyst_ore",
+	ore = "gems_amethyst:amethyst_ore",
 	wherein = "default:stone",
 	clust_scarcity = 10*10*10,
 	clust_num_ores = 6,
@@ -39,7 +39,7 @@ minetest.register_ore({
 })
 
 
-minetest.register_node("amethyst:block", {
+minetest.register_node("gems_amethyst:block", {
 	description = "Amethyst Block",
 	tiles = {"amethyst_block.png"},
 	groups = {cracky=3, oddly_breakable_by_hand=1},
@@ -47,7 +47,7 @@ minetest.register_node("amethyst:block", {
 })
 
 minetest.register_craft({
-	output = "amethyst:block",
+	output = "gems_amethyst:block",
 	recipe = {
 		{"amethyst:amethyst_crystal", "amethyst:amethyst_crystal"},
 		{"amethyst:amethyst_crystal", "amethyst:amethyst_crystal"}
@@ -55,7 +55,7 @@ minetest.register_craft({
 })
 
 
-stairs.register_stair_and_slab("amethystblock", "amethyst:block",
+stairs.register_stair_and_slab("amethystblock", "gems_amethyst:block",
 	{cracky=3, oddly_breakable_by_hand=1},
 	{"amethyst_block.png"},
 	"Amethyst Stair",

@@ -1,10 +1,10 @@
-minetest.register_craftitem("emerald:emerald_crystal", {
+minetest.register_craftitem("gems_emerald:emerald_crystal", {
 	description = "Emerald Crystal",
 	inventory_image = "emerald_crystal.png",
 })
 
 
-minetest.register_node("emerald:emerald_ore", {
+minetest.register_node("gems_emerald:emerald_ore", {
 	description = "Emerald Ore",
 	tiles = {"default_stone.png^emerald_ore.png"},
 	groups = {cracky=3, stone=1},
@@ -12,15 +12,15 @@ minetest.register_node("emerald:emerald_ore", {
         items = {
             {
                 rarity = 1,
-                items = {"emerald:emerald_crystal 2"},
+                items = {"gems_emerald:emerald_crystal 2"},
             },
             {
                 rarity = 2,
-                items = {"emerald:emerald_crystal"},
+                items = {"gems_emerald:emerald_crystal"},
             },
             {
                 rarity = 4,
-                items = {"emerald:emerald_crystal 3"},
+                items = {"gems_emerald:emerald_crystal 3"},
             }
         }
     },
@@ -29,7 +29,7 @@ minetest.register_node("emerald:emerald_ore", {
 
 minetest.register_ore({
 	ore_type = "scatter",
-	ore = "emerald:emerald_ore",
+	ore = "gems_emerald:emerald_ore",
 	wherein = "default:stone",
 	clust_scarcity = 10*10*10,
 	clust_num_ores = 6,
@@ -39,7 +39,7 @@ minetest.register_ore({
 })
 
 
-minetest.register_node("emerald:block", {
+minetest.register_node("gems_emerald:block", {
 	description = "Emerald Block",
 	tiles = {"emerald_block.png"},
 	groups = {cracky=3, oddly_breakable_by_hand=1},
@@ -49,13 +49,13 @@ minetest.register_node("emerald:block", {
 minetest.register_craft({
 	output = "emerald:block",
 	recipe = {
-		{"emerald:emerald_crystal", "emerald:emerald_crystal"},
-		{"emerald:emerald_crystal", "emerald:emerald_crystal"}
+		{"gems_emerald:emerald_crystal", "gems_emerald:emerald_crystal"},
+		{"gems_emerald:emerald_crystal", "gems_emerald:emerald_crystal"}
 	}
 })
 
 
-stairs.register_stair_and_slab("emeraldblock", "emerald:block",
+stairs.register_stair_and_slab("emeraldblock", "gems_emerald:block",
 	{cracky=3, oddly_breakable_by_hand=1},
 	{"emerald_block.png"},
 	"Emerald Stair",
