@@ -1,5 +1,6 @@
 -- Licensed under CC0.
 -- Painting textures from Stunt Rally <https://code.google.com/p/vdrift-ogre/>, licensed under CC0.
+-- Painting textures made by Maizegod, licensed under CC0.
 
 local paintings = {}
 paintings.dyes = {
