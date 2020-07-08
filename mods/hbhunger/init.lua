@@ -244,11 +244,15 @@ minetest.register_globalstep(function(dtime)
 end)
 
 minetest.register_on_placenode(function(pos, oldnode, player, ext)
-    take_hunger(player:get_player_name(), hbhunger.exhaust_place)
+    if player then
+        take_hunger(player:get_player_name(), hbhunger.exhaust_place)
+    end
 end)
 
 minetest.register_on_dignode(function(pos, oldnode, player, ext)
-    take_hunger(player:get_player_name(), hbhunger.exhaust_dig)
+    if player then
+        take_hunger(player:get_player_name(), hbhunger.exhaust_dig)
+    end
 end)
 
 end
