@@ -1,5 +1,5 @@
-minetest.register_craftitem("gems_ruby:ruby_crystal", {
-	description = "Ruby Crystal",
+minetest.register_craftitem("gems_ruby:ruby", {
+	description = "Ruby",
 	inventory_image = "ruby_crystal.png",
 })
 
@@ -12,15 +12,15 @@ minetest.register_node("gems_ruby:ruby_ore", {
         items = {
             {
                 rarity = 1,
-                items = {"gems_ruby:ruby_crystal 2"},
+                items = {"gems_ruby:ruby 2"},
             },
             {
                 rarity = 2,
-                items = {"gems_ruby:ruby_crystal"},
+                items = {"gems_ruby:ruby"},
             },
             {
                 rarity = 4,
-                items = {"gems_ruby:ruby_crystal 3"},
+                items = {"gems_ruby:ruby 3"},
             }
         }
     },
@@ -49,8 +49,8 @@ minetest.register_node("gems_ruby:block", {
 minetest.register_craft({
 	output = "gems_ruby:block",
 	recipe = {
-		{"gems_ruby:ruby_crystal", "gems_ruby:ruby_crystal"},
-		{"gems_ruby:ruby_crystal", "gems_ruby:ruby_crystal"}
+		{"gems_ruby:ruby", "gems_ruby:ruby"},
+		{"gems_ruby:ruby", "gems_ruby:ruby"}
 	}
 })
 

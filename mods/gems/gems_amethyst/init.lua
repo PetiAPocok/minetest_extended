@@ -1,5 +1,5 @@
-minetest.register_craftitem("gems_amethyst:amethyst_crystal", {
-	description = "Amethyst Crystal",
+minetest.register_craftitem("gems_amethyst:amethyst", {
+	description = "Amethyst",
 	inventory_image = "amethyst_crystal.png",
 })
 
@@ -12,15 +12,15 @@ minetest.register_node("gems_amethyst:amethyst_ore", {
         items = {
             {
                 rarity = 1,
-                items = {"gems_amethyst:amethyst_crystal 2"},
+                items = {"gems_amethyst:amethyst 2"},
             },
             {
                 rarity = 2,
-                items = {"gems_amethyst:amethyst_crystal"},
+                items = {"gems_amethyst:amethyst"},
             },
             {
                 rarity = 4,
-                items = {"gems_amethyst:amethyst_crystal 3"},
+                items = {"gems_amethyst:amethyst 3"},
             }
         }
     },
@@ -49,8 +49,8 @@ minetest.register_node("gems_amethyst:block", {
 minetest.register_craft({
 	output = "gems_amethyst:block",
 	recipe = {
-		{"amethyst:amethyst_crystal", "amethyst:amethyst_crystal"},
-		{"amethyst:amethyst_crystal", "amethyst:amethyst_crystal"}
+		{"amethyst:amethyst", "amethyst:amethyst"},
+		{"amethyst:amethyst", "amethyst:amethyst"}
 	}
 })
 

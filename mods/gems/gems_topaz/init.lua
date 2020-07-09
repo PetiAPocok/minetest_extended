@@ -1,5 +1,5 @@
-minetest.register_craftitem("gems_topaz:topaz_crystal", {
-	description = "Topaz Crystal",
+minetest.register_craftitem("gems_topaz:topaz", {
+	description = "Topaz",
 	inventory_image = "topaz_crystal.png",
 })
 
@@ -12,15 +12,15 @@ minetest.register_node("gems_topaz:topaz_ore", {
         items = {
             {
                 rarity = 1,
-                items = {"gems_topaz:topaz_crystal 2"},
+                items = {"gems_topaz:topaz 2"},
             },
             {
                 rarity = 2,
-                items = {"gems_topaz:topaz_crystal"},
+                items = {"gems_topaz:topaz"},
             },
             {
                 rarity = 4,
-                items = {"gems_topaz:topaz_crystal 3"},
+                items = {"gems_topaz:topaz 3"},
             }
         }
     },
@@ -49,8 +49,8 @@ minetest.register_node("gems_topaz:block", {
 minetest.register_craft({
 	output = "gems_topaz:block",
 	recipe = {
-		{"gems_topaz:topaz_crystal", "gems_topaz:topaz_crystal"},
-		{"gems_topaz:topaz_crystal", "gems_topaz:topaz_crystal"}
+		{"gems_topaz:topaz", "gems_topaz:topaz"},
+		{"gems_topaz:topaz", "gems_topaz:topaz"}
 	}
 })
 

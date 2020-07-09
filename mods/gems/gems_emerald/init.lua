@@ -1,5 +1,5 @@
-minetest.register_craftitem("gems_emerald:emerald_crystal", {
-	description = "Emerald Crystal",
+minetest.register_craftitem("gems_emerald:emerald", {
+	description = "Emerald",
 	inventory_image = "emerald_crystal.png",
 })
 
@@ -12,15 +12,15 @@ minetest.register_node("gems_emerald:emerald_ore", {
         items = {
             {
                 rarity = 1,
-                items = {"gems_emerald:emerald_crystal 2"},
+                items = {"gems_emerald:emerald 2"},
             },
             {
                 rarity = 2,
-                items = {"gems_emerald:emerald_crystal"},
+                items = {"gems_emerald:emerald"},
             },
             {
                 rarity = 4,
-                items = {"gems_emerald:emerald_crystal 3"},
+                items = {"gems_emerald:emerald 3"},
             }
         }
     },
@@ -49,8 +49,8 @@ minetest.register_node("gems_emerald:block", {
 minetest.register_craft({
 	output = "emerald:block",
 	recipe = {
-		{"gems_emerald:emerald_crystal", "gems_emerald:emerald_crystal"},
-		{"gems_emerald:emerald_crystal", "gems_emerald:emerald_crystal"}
+		{"gems_emerald:emerald", "gems_emerald:emerald"},
+		{"gems_emerald:emerald", "gems_emerald:emerald"}
 	}
 })
 

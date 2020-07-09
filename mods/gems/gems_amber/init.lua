@@ -1,5 +1,5 @@
 minetest.register_craftitem("gems_amber:amber", {
-	description = "Amber Gem",
+	description = "Amber",
 	inventory_image = "amber_gem.png",
 })
 
@@ -12,15 +12,15 @@ minetest.register_node("gems_amber:amber_ore", {
         items = {
             {
                 rarity = 1,
-                items = {"amber:amber_gem 2"},
+                items = {"amber:amber 2"},
             },
             {
                 rarity = 2,
-                items = {"amber:amber_gem"},
+                items = {"amber:amber"},
             },
             {
                 rarity = 4,
-                items = {"amber:amber_gem 3"},
+                items = {"amber:amber 3"},
             }
         }
     },

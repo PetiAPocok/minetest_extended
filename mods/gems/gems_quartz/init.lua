@@ -1,5 +1,5 @@
-minetest.register_craftitem("gems_quartz:quartz_crystal", {
-	description = "Quartz Crystal",
+minetest.register_craftitem("gems_quartz:quartz", {
+	description = "Quartz",
 	inventory_image = "quartz_crystal.png",
 })
 
@@ -12,15 +12,15 @@ minetest.register_node("gems_quartz:quartz_ore", {
         items = {
             {
                 rarity = 1,
-                items = {"gems_quartz:quartz_crystal 2"},
+                items = {"gems_quartz:quartz 2"},
             },
             {
                 rarity = 2,
-                items = {"gems_quartz:quartz_crystal"},
+                items = {"gems_quartz:quartz"},
             },
             {
                 rarity = 4,
-                items = {"gems_quartz:quartz_crystal 3"},
+                items = {"gems_quartz:quartz 3"},
             }
         }
     },
@@ -49,8 +49,8 @@ minetest.register_node("gems_quartz:block", {
 minetest.register_craft({
 	output = "gems_quartz:block",
 	recipe = {
-		{"gems_quartz:quartz_crystal", "gems_quartz:quartz_crystal"},
-		{"gems_quartz:quartz_crystal", "gems_quartz:quartz_crystal"}
+		{"gems_quartz:quartz", "gems_quartz:quartz"},
+		{"gems_quartz:quartz", "gems_quartz:quartz"}
 	}
 })
 

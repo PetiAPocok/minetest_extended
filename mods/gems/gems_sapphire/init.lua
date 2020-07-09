@@ -1,5 +1,5 @@
-minetest.register_craftitem("gems_sapphire:sapphire_crystal", {
-	description = "Sapphire Crystal",
+minetest.register_craftitem("gems_sapphire:sapphire", {
+	description = "Sapphire",
 	inventory_image = "sapphire_crystal.png",
 })
 
@@ -12,15 +12,15 @@ minetest.register_node("gems_sapphire:sapphire_ore", {
         items = {
             {
                 rarity = 1,
-                items = {"gems_sapphire:sapphire_crystal 2"},
+                items = {"gems_sapphire:sapphire 2"},
             },
             {
                 rarity = 2,
-                items = {"gems_sapphire:sapphire_crystal"},
+                items = {"gems_sapphire:sapphire"},
             },
             {
                 rarity = 4,
-                items = {"gems_sapphire:sapphire_crystal 3"},
+                items = {"gems_sapphire:sapphire 3"},
             }
         }
     },
@@ -49,8 +49,8 @@ minetest.register_node("gems_sapphire:block", {
 minetest.register_craft({
 	output = "gems_sapphire:block",
 	recipe = {
-		{"gems_sapphire:sapphire_crystal", "gems_sapphire:sapphire_crystal"},
-		{"gems_sapphire:sapphire_crystal", "gems_sapphire:sapphire_crystal"}
+		{"gems_sapphire:sapphire", "gems_sapphire:sapphire"},
+		{"gems_sapphire:sapphire", "gems_sapphire:sapphire"}
 	}
 })
 
