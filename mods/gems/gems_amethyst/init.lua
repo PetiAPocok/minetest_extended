@@ -42,6 +42,7 @@ minetest.register_ore({
 minetest.register_node("gems_amethyst:block", {
 	description = "Amethyst Block",
 	tiles = {"amethyst_block.png"},
+    use_texture_alpha = false,
 	groups = {cracky=3, oddly_breakable_by_hand=1},
 	sounds = default.node_sound_glass_defaults(),
 })
