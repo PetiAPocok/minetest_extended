@@ -156,7 +156,8 @@ minetest.register_node("alchemy:alchemy_set", {
     description = "Alchemy Set",
     drawtype = "mesh",
     mesh = "alchemy_alchemy_set.obj",
-    tiles = { "alchemy_alchemy_set.png" },
+    tiles = { "alchemy_alchemy_set.png"},
+    use_texture_alpha = true,
     selection_box = {
         type = "fixed",
         fixed = {
