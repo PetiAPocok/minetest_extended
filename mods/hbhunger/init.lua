@@ -206,7 +206,7 @@ end
 local main_timer = 0
 local timer1 = 0
 minetest.register_globalstep(function(dtime)
-    if main_timer > 0.5 then
+    if main_timer > 1 then
         for _,player in ipairs(minetest.get_connected_players()) do
             local name = player:get_player_name()
             local h = hbhunger.players[name].hunger
