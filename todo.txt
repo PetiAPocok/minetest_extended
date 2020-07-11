@@ -1,6 +1,62 @@
 -------------------------------------------------1.1--------------------------------------------------------------
-potions virágokból
 
+hbhunger túl gyorsan sebez és healel?
+
+magic
+    orbs
+
+        orb of vampire power
+            damages enemy, gives you their health
+            X glass X
+            glass topaz glass
+            X glass X
+
+        healing, vampire orbot csinálja az eldobott item-en is a magic-et...
+
+        orb of wind
+            Move the enemy back and cause 1 damage
+            X glass X
+            glass quartz glass
+            X glass X
+
+        All combined
+            rainbow
+
+    flying carpet (fix it!)
+        Horribble controls
+        Doesn't use mana.
+        Uses own mama and doesn't give feedback about the remaining fuel
+
+poison nem eldobható és a mobokkal se csinál semmit.
+    hagyjon egy tócsa entity-t és aki belelép az kap poisoned effektet
+
+-------------------------------------------------1.2--------------------------------------------------------------
+
+Mapgen normalizálása
+
+orb of electricity
+    new projectile
+        build a "lightning" from 3d entities
+
+orb of light
+    new projectile
+        build a "ray" from the entities
+
+Magic hangok?
+
+Mana csak x kaja felett regenerálódjon.
+
+Mesecons powerplant, blinkyplant, luacontroller, microcontroller kuka
+
+Teleport hálózat
+    Teleport obelisk (node)
+        ehhez lehet teleportálni
+
+    Teleport rúna (item)
+        On use a saját rúnájához teleportál
+        50? manáért
+
+potions
     water walking effect?
         detect the block below and make it walakable true
         detect the block below and replace it with ice or lava
@@ -13,14 +69,14 @@ potions virágokból
             Only globally changeable...
 
     strength effect
-        how minespeed and damage calculated?
+        how mine speed and damage calculated?
 
     feather fall effect?
         Make the player light weighted
-
+            player:set_physics_override({gravity = 0.5})
 
     blindness effect?
-        Just create a humoungus hud for the player that covers everithing.
+        Just create a humoungus hud for the player that covers everything.
             local hudid = player:hud_add({
                 hud_elem_type = "image",
                 position = { x=0.5, y=0.5 },
@@ -28,115 +84,36 @@ potions virágokból
                 text = "playereffects_example_black.png",
             })
 
-több hely 3d_armor-nak
+        orb_of_shadow
 
-gems mod (use quartz as base)
-    adds shitton of gems
-        order by hardness
-        amber (2) fossilized resin
-            healing
-        [iron (4)]
-        mese (6)
-            electricity
-        quartz (7)
-            light
-        amethyst same hardness as quartz
-            darkness/shadow
-        emerald (8)
-            nature power (bonemeal like)
-        topaz (8)
-            vampire power (damages enemy, gives you their health)
-        sapphire (9) (aluminum oxide (corundum))
-            ice
-        ruby (9) (aluminum oxide (corundum))
-            fire
-        diamond (10)
-        All combined
-            rainbow
+    slowness effect
+        thwowing potion
+        orb of freezing
 
-    maybe pearls where the clams would came from?
-        from fishing?
-
-    From gems you can only made jewelery and staffs
-
-Mapgen normalizálása
-
-magic
-    orbs
-        healing orb
-            X glass X
-            glass amber glass
-            X glass X
-
-        orb of electricity
-            X glass X
-            glass mese chrystal glass
-            X glass X
-
-        orb of light
-            X glass X
-            glass quartz glass
-            X glass X
-
-        orb of shadow
-            X glass X
-            glass amethyst glass
-            X glass X
-
-        orb of nature (bonemeal like)
-            X glass X
-            glass emerald glass
-            X glass X
-
-        orb of vampire power
-            damages enemy, gives you their health
-            X glass X
-            glass topaz glass
-            X glass X
-
-        orb of ice
-            X glass X
-            glass sapphire glass
-            X glass X
-
-        orb of fire
-            X glass X
-            glass ruby glass
-            X glass X
-
-        diamond (10)
-            X glass X
-            glass diamond glass
-            X glass X
-
-        All combined
-            rainbow
-
-    flying carpet (fix it!)
-        Horribble controls
-        Doesn't use mana.
-        Uses own mama and doesn't give feedback about the remaining fuel
 
 accesories mod
     depends on: 3d_armor, gems
     adds rings, necklaces, amulets (at your belt)
 
-Armor value in hudbar kell
+több hely 3d_armor-nak
 
 Ládák elnevezése
 
-A nodebox-os és mesh-es item-eknek inventory image kell...
-A node elejét rakja minden oldalra... inventory image...
-És az inventoryban nem létező item-eket ne regisztrálja
-    mesecon, tnt
+frame
+    A nodebox-os és mesh-es item-eknek inventory image kell...
+    A node elejét rakja minden oldalra... inventory image...
+    És az inventoryban nem létező item-eket ne regisztrálja
+        mesecon, tnt
 
 mesecon mob detector a mobok érzékelésére?
     craft?
+    a magic attack-ok feltétel figyelése jó lehet.
 
 a stone monster az mitől stone?
 
 interdimensional chest
-    register a deatached inventory and write it into player meta
+    register a deatached inventory and write it mod storage
+    all the interdimensional chests are connected to the same storage
     craft?
 
 bútorok                    KELL
@@ -197,6 +174,9 @@ horgászat
     angolna                             KELL
     gömbhal                            KELL
     A cooked fish texture-okon dolgozni kéne
+    clams
+        craft it and gives clam meat, pearl, shell?
+
     trash/treasure                                 KELL
         Ha nincs csali, csak ilyet tudsz fogni. Ha van csali, akkor valami pöti chance-el kapsz ilyet, de amúgy halat.
         bot
@@ -205,6 +185,7 @@ horgászat
         föld
         alma facsemete
         seaweed
+
 
 mobok:
     körömgomba szörny? ("Heló! Ásóka vagyok!") https://www.youtube.com/watch?v=GF3ygD7LuiM

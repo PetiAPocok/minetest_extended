@@ -1,0 +1,44 @@
+minetest.register_craftitem("orb_of_nature:orb_of_nature", {
+    description = "Orb of Nature\nMana: 10",
+    inventory_image = "orb_of_nature_orb.png",
+    on_use = function(itemstack, player, pointed_thing)
+        local name = player:get_player_name()
+        local players_mana = hbmana.get(name)
+
+        if players_mana > 10 then
+            hbmana.set(name, players_mana - 10)
+
+            if pointed_thing.type == "object" then
+
+                if pointed_thing.ref:is_player() then
+                    effects_hud.add_effect(pointed_thing.ref:get_player_name(), "poison", 3)
+                elseif pointed_thing.ref then
+                    pointed_thing.ref:get_luaentity().object:punch(player, 1.0, {
+                        full_punch_interval = 1.0,
+                        damage_groups = {fleshy = 1},
+                    }, nil)
+                end
+            elseif pointed_thing.type == "node" then
+                bones:on_use(pointed_thing.under, 1)
+            else
+                local pos = player:get_pos()
+
+                pos.x = pos.x + player:get_look_dir().x
+                pos.y = pos.y + 1.5
+                pos.z = pos.z + player:get_look_dir().z
+
+                minetest.set_node(pos, {name="butterflies:butterfly_white"})
+            end
+
+        end
+    end
+})
+
+minetest.register_craft({
+	output = "orb_of_nature:orb_of_nature",
+	recipe = {
+		{"", "default:glass", ""},
+		{"default:glass", "gems_emerald:emerald", "default:glass"},
+		{"", "default:glass", ""},
+	}
+})

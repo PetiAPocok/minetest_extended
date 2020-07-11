@@ -28,7 +28,7 @@ Made for and tested on Minetest 5.2.0.
 ## Contained mods and modifications
 
 - The Minetest game for base (modified) ([GitHub](https://github.com/minetest/minetest_game))  
-  Added ice and snow melting by furnace .  
+  Added ice and snow melting by furnace.  
   Added max falling speed limitation to the default player_api.  
   Chests drop the items what are inside of it when broke.  
   Furnaces drop the items what are inside of it when broke.  
@@ -50,9 +50,10 @@ Made for and tested on Minetest 5.2.0.
 - The default carts mod has been replaced by boost_cart (modified) ([Github](https://github.com/SmallJoker/boost_cart))   
   Kept the original cart   
   The powered rail has been modified to work like in Minecraft
-- Beds: the sipmle bed has been removed
+- Beds: the simple bed has been removed
 - Added Crafting Guide to add, well, crafting guide ([Github](https://github.com/minetest-mods/craftguide))  
-  Added support for the "packer".
+  Added support for the "packer".  
+  Added support for the "alchemy".
 - Added Mobs Redo (modified) ([NotABug](https://notabug.org/tenplus1/mobs_redo))
 - Added Mobs Animal (modified) ([NotABug](https://notabug.org/tenplus1/mobs_animal))   
   Made the honey block a liquid with high viscosity.  
@@ -84,7 +85,7 @@ Made for and tested on Minetest 5.2.0.
 - Added Worldedit ([Github](https://github.com/Uberi/Minetest-WorldEdit))
 - Added flower pot for decoration (modified) ([Github](https://github.com/minetest-mods/flowerpot))
 - Added paintings for decoration (modified) ([Forum](https://forum.minetest.net/viewtopic.php?f=11&t=9635))
-- Added frame for decoration ([Github](https://github.com/minetest-mods/frame))
+- Added frame for decoration (modified) ([Github](https://github.com/minetest-mods/frame))
 - Created industrial_furnace based on default furnace.
 - Added walking_light (rewritten) ([Forum](https://forum.minetest.net/viewtopic.php?f=11&t=2621&hilit=walking+light)  
   Removed mese pick
@@ -93,8 +94,8 @@ Made for and tested on Minetest 5.2.0.
 - Created Backpacks mod.
 - Created health_adjuster mod.
 - Created Alchemy mod.
-  <!-- - Created Gems mod based on Quartz ([Github](https://github.com/minetest-mods/quartz))-->
-
+- Created Gems mod. Used Quartz mod's textures ([Github](https://github.com/minetest-mods/quartz))
+- Created Magic mod. Used some of magic_mod's codes. ([Github](https://github.com/veNext/magic_mod))
 
 ## Licensing
 
