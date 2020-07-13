@@ -11,24 +11,22 @@ minetest.register_craftitem("orb_of_light:orb_of_light", {
             local player_pos = player:get_pos()
             local pointed_pos = pointed_thing.under
             local dir = player:get_look_dir()
+            local objs = {}
 
-            obj = minetest.add_entity({
-                x = player_pos.x,
-                y = player_pos.y + 1.5,
-                z = player_pos.z
-            }, "orb_of_light:ray_of_light")
 
-            obj:set_rotation({
-                x = -player:get_look_vertical(),
-                y = player:get_look_horizontal(),
-                z = 0
-            })
+            for i=3,20 do
+                objs[i] = minetest.add_entity({
+                    x = player_pos.x + i / 10,
+                    y = player_pos.y + 1.5 + i / 10,
+                    z = player_pos.z + i / 10
+                }, "orb_of_light:ray_of_light")
 
-            obj:setvelocity({
-                x = dir.x * 30,
-                y = dir.y * 30,
-                z = dir.z * 30
-            })
+                objs[i]:set_rotation({
+                    x = -player:get_look_vertical(),
+                    y = player:get_look_horizontal(),
+                    z = 0
+                })
+            end
         end
     end
 })
@@ -59,7 +57,9 @@ minetest.register_entity("orb_of_light:ray_of_light", {
         if self.old_pos ~= pos then
             if self.old_pos.x ~= nil then
                 self.old_pos.y = self.old_pos.y - 1
-                minetest.remove_node(self.old_pos)
+                if minetest.get_node(self.old_pos).name == "walking_light:lights" then
+                    minetest.remove_node(self.old_pos)
+                end
             end
 
             if node.name == "air" then
@@ -69,7 +69,9 @@ minetest.register_entity("orb_of_light:ray_of_light", {
         end
 
         if node.name ~= "air" and node.name ~= "walking_light:light" then
-            minetest.remove_node(self.old_pos)
+            if minetest.get_node(self.old_pos).name == "walking_light:lights" then
+                minetest.remove_node(self.old_pos)
+            end
             self.object:remove()
         end
 
@@ -83,7 +85,9 @@ minetest.register_entity("orb_of_light:ray_of_light", {
                             damage_groups = {fleshy = 3},
                         }, nil)
 
-                        minetest.remove_node(self.old_pos)
+                        if minetest.get_node(self.old_pos).name == "walking_light:lights" then
+                            minetest.remove_node(self.old_pos)
+                        end
                         self.object:remove()
                     end
                 elseif obj:is_player() then
@@ -92,7 +96,9 @@ minetest.register_entity("orb_of_light:ray_of_light", {
                         damage_groups = {fleshy = 3},
                     }, nil)
 
-                    minetest.remove_node(self.old_pos)
+                    if minetest.get_node(self.old_pos).name == "walking_light:lights" then
+                        minetest.remove_node(self.old_pos)
+                    end
                     self.object:remove()
                 end
             end

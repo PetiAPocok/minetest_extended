@@ -10,6 +10,7 @@ magic
             X glass X
             glass topaz glass
             X glass X
+            the projectile should only travel the distance between the caster and the enemy, then stop
 
         healing, vampire orbot csinálja az eldobott item-en is a magic-et...
 
@@ -31,6 +32,9 @@ poison nem eldobható és a mobokkal se csinál semmit.
     hagyjon egy tócsa entity-t és aki belelép az kap poisoned effektet
 
 -------------------------------------------------1.2--------------------------------------------------------------
+
+mozdony
+    on_step ha a bármylik mozdony melletti entity vagon akkor increase its velocity
 
 Mapgen normalizálása
 
