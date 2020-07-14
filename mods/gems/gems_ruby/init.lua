@@ -42,7 +42,7 @@ minetest.register_ore({
 minetest.register_node("gems_ruby:block", {
 	description = "Ruby Block",
 	tiles = {"ruby_block.png"},
-	groups = {cracky=3, oddly_breakable_by_hand=1},
+	groups = {cracky=3},
 	sounds = default.node_sound_glass_defaults(),
 })
 
@@ -56,7 +56,7 @@ minetest.register_craft({
 
 
 stairs.register_stair_and_slab("rubyblock", "gems_ruby:block",
-	{cracky=3, oddly_breakable_by_hand=1},
+	{cracky=3},
 	{"ruby_block.png"},
 	"Ruby Stair",
 	"Ruby Slab",

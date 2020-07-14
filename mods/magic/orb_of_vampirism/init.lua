@@ -74,6 +74,15 @@ minetest.register_craftitem("orb_of_vampirism:orb_of_vampirism", {
     end
 })
 
+minetest.register_craft({
+	output = "orb_of_vampirism:orb_of_vampirism",
+	recipe = {
+		{"", "default:glass", ""},
+		{"default:glass", "gems_bloodstone:bloodstone", "default:glass"},
+		{"", "default:glass", ""},
+	}
+})
+
 minetest.register_entity("orb_of_vampirism:health_particles", {
     physical = false,
     visual = "sprite",

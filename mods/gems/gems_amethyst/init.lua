@@ -43,7 +43,7 @@ minetest.register_node("gems_amethyst:block", {
 	description = "Amethyst Block",
 	tiles = {"amethyst_block.png"},
     use_texture_alpha = false,
-	groups = {cracky=3, oddly_breakable_by_hand=1},
+	groups = {cracky=3},
 	sounds = default.node_sound_glass_defaults(),
 })
 
@@ -57,7 +57,7 @@ minetest.register_craft({
 
 
 stairs.register_stair_and_slab("amethystblock", "gems_amethyst:block",
-	{cracky=3, oddly_breakable_by_hand=1},
+	{cracky=3},
 	{"amethyst_block.png"},
 	"Amethyst Stair",
 	"Amethyst Slab",

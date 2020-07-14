@@ -42,7 +42,7 @@ minetest.register_ore({
 minetest.register_node("gems_emerald:block", {
 	description = "Emerald Block",
 	tiles = {"emerald_block.png"},
-	groups = {cracky=3, oddly_breakable_by_hand=1},
+	groups = {cracky=3},
 	sounds = default.node_sound_glass_defaults(),
 })
 
@@ -56,7 +56,7 @@ minetest.register_craft({
 
 
 stairs.register_stair_and_slab("emeraldblock", "gems_emerald:block",
-	{cracky=3, oddly_breakable_by_hand=1},
+	{cracky=3},
 	{"emerald_block.png"},
 	"Emerald Stair",
 	"Emerald Slab",
