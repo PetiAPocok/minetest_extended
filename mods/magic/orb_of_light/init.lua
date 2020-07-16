@@ -122,7 +122,7 @@ minetest.register_entity("orb_of_light:ray_of_light", {
         elseif node.name == "walking_light:light" then
             -- Do nothings
         else
-            remove_ray(self)
+            self.object:remove()
         end
 
         if self._timer > 0.2 then

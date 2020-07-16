@@ -43,10 +43,11 @@ Made for and tested on Minetest 5.2.0.
 - Added Hbsprint for sprinting ability (modified) ([Github](https://github.com/minetest-mods/hbsprint))
 - Added Hbarmor for armor stats ([repo](https://repo.or.cz/minetest_hbarmor.git))
 - Added Mesecons for electricity like magic to the game ([Github](https://github.com/minetest-mods/mesecons))   
-  Changed the torch's texture  
-  Changed the switch's effective sides  
-  Changed the ghostsone's and removesone's inventory icon..
-  On mesecon signal the tnt starts to burn not explodes
+  Changed the torch's texture.  
+  Changed the switch's effective sides.  
+  Changed the ghostsone's and removesone's inventory icon.  
+  On mesecon signal the tnt starts to burn, no longer explodes.  
+  Removed the luacontroller, microcontroller, blinkyplant and the powerplant
 - The default carts mod has been replaced by boost_cart (modified) ([Github](https://github.com/SmallJoker/boost_cart))   
   Kept the original cart   
   The powered rail has been modified to work like in Minecraft
