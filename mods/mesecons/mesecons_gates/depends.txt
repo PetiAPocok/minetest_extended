@@ -1,5 +1,4 @@
 mesecons
-mesecons_microcontroller
 mesecons_delayer
 
 mesecons_torch
