@@ -9,7 +9,6 @@ minetest.register_craftitem("orb_of_freezing:orb_of_freezing", {
             hbmana.set(name, players_mana - 15)
 
             local player_pos = player:get_pos()
-            local pointed_pos = pointed_thing.under
             local dir = player:get_look_dir()
 
             obj = minetest.add_entity({
