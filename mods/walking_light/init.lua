@@ -17,7 +17,7 @@ minetest.register_node("walking_light:light", {
     on_place = function(itemstack, placer, pointed_thing)
         minetest.item_place(itemstack, placer, pointed_thing)
 
-        minetest.get_node_timer(pointed_thing.under):start(60)
+        minetest.get_node_timer(pointed_thing.under):start(3)
     end,
 
     on_timer = function(pos, dtime)
