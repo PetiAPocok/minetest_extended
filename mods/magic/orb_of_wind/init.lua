@@ -39,8 +39,8 @@ minetest.register_craft({
 minetest.register_entity("orb_of_wind:wind_ball", {
     physical = false,
     visual = "sprite",
-    visual_size = {x=0.5, y=0.5},
-    textures = {"orb_of_wind_wind_ball.png"},
+    visual_size = {x=0.1, y=0.1},
+    textures = {"orb_of_wind_particle.png"},
     collisionbox = {-0.1,-0.1,-0.1,0.1,0.1,0.1},
     timer = 0,
     on_step = function(self, dtime)
@@ -48,48 +48,6 @@ minetest.register_entity("orb_of_wind:wind_ball", {
         local pos = self.object:get_pos()
 
         if minetest.get_node(pos).name ~= "air" then
-            local node_above_pos = {
-                x = pos.x,
-                y = pos.y + 1,
-                z = pos.z
-            }
-
-            local node_next_to_pos_1 = {
-                x = pos.x + 1,
-                y = pos.y,
-                z = pos.z
-            }
-
-            local node_next_to_pos_2 = {
-                x = pos.x - 1,
-                y = pos.y,
-                z = pos.z
-            }
-
-            local node_next_to_pos_3 = {
-                x = pos.x,
-                y = pos.y,
-                z = pos.z + 1
-            }
-
-            local node_next_to_pos_4 = {
-                x = pos.x,
-                y = pos.y,
-                z = pos.z - 1
-            }
-
-            if minetest.get_node(node_above_pos).name == "air" then
-                minetest.place_node(node_above_pos, {name="wind:basic_flame"})
-            elseif minetest.get_node(node_next_to_pos_1).name == "air" then
-                minetest.place_node(node_next_to_pos_1, {name="wind:basic_flame"})
-            elseif minetest.get_node(node_next_to_pos_2).name == "air" then
-                minetest.place_node(node_next_to_pos_2, {name="wind:basic_flame"})
-            elseif minetest.get_node(node_next_to_pos_3).name == "air" then
-                minetest.place_node(node_next_to_pos_3, {name="wind:basic_flame"})
-            elseif minetest.get_node(node_next_to_pos_4).name == "air" then
-                minetest.place_node(node_next_to_pos_4, {name="wind:basic_flame"})
-            end
-
             self.object:remove()
         end
 
