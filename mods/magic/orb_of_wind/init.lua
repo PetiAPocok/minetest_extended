@@ -42,6 +42,7 @@ minetest.register_entity("orb_of_wind:wind_ball", {
     visual_size = {x=0.1, y=0.1},
     textures = {"orb_of_wind_particle.png"},
     collisionbox = {-0.1,-0.1,-0.1,0.1,0.1,0.1},
+    pointable = false,
     timer = 0,
     on_step = function(self, dtime)
         self.timer = self.timer + dtime

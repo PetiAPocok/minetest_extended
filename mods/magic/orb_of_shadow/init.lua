@@ -41,6 +41,7 @@ minetest.register_entity("orb_of_shadow:shadow_ball", {
     visual_size = {x=0.5, y=0.5},
     textures = {"orb_of_shadow_shadow_ball.png"},
     collisionbox = {-0.1,-0.1,-0.1,0.1,0.1,0.1},
+    pointable = false,
     timer = 0,
     on_step = function(self, dtime)
         self.timer = self.timer + dtime

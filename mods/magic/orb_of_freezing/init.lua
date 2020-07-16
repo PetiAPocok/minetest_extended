@@ -47,6 +47,7 @@ minetest.register_entity("orb_of_freezing:icicle", {
     mesh = "orb_of_freezing_icicle.obj",
     textures = {"orb_of_freezing_icicle.png"},
     collisionbox = {-0.1,-0.1,-0.1,0.1,0.1,0.1},
+    pointable = false,
     timer = 0,
     on_step = function(self, dtime)
         self.timer = self.timer + dtime

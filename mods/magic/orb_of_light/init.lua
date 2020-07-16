@@ -9,16 +9,16 @@ minetest.register_craftitem("orb_of_light:orb_of_light", {
             hbmana.set(name, players_mana - 30)
 
             local player_pos = player:get_pos()
-            local pointed_pos = pointed_thing.under
             local dir = player:get_look_dir()
             local objs = {}
 
+            minetest.chat_send_all(dump(dir))
 
-            for i=3,20 do
+            for i=1,20 do
                 objs[i] = minetest.add_entity({
-                    x = player_pos.x + i / 10,
-                    y = player_pos.y + 1.5 + i / 10,
-                    z = player_pos.z + i / 10
+                    x = player_pos.x + i * dir.x / 5,
+                    y = player_pos.y + 1.5 + i * dir.y / 5,
+                    z = player_pos.z + i * dir.z / 5
                 }, "orb_of_light:ray_of_light")
 
                 objs[i]:set_rotation({
@@ -45,8 +45,10 @@ minetest.register_entity("orb_of_light:ray_of_light", {
     visual = "mesh",
     mesh = "orb_of_light_ray_of_light.obj",
     textures = {"orb_of_light_ray_of_light.png"},
+    visual_size = {x=1, y=1, z=2},
     use_texture_alpha = true,
     collisionbox = {-0.1,-0.1,-0.1,0.1,0.1,0.1},
+    pointable = false,
     timer = 0,
     old_pos = {};
     on_step = function(self, dtime)
@@ -76,7 +78,7 @@ minetest.register_entity("orb_of_light:ray_of_light", {
         end
 
         if self.timer > 0.2 then
-            local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
+            local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 1)
             for k, obj in pairs(objs) do
                 if obj:get_luaentity() ~= nil then
                     if obj:get_luaentity().name ~= "orb_of_light:ray_of_light" and obj:get_luaentity().name ~= "__builtin:item" then
