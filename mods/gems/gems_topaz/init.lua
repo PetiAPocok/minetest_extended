@@ -7,7 +7,7 @@ minetest.register_craftitem("gems_topaz:topaz", {
 minetest.register_node("gems_topaz:topaz_ore", {
 	description = "Topaz Ore",
 	tiles = {"default_stone.png^topaz_ore.png"},
-	groups = {cracky=3, stone=1},
+	groups = {cracky = 2},
     drop = {
         items = {
             {

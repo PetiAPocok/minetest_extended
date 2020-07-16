@@ -7,7 +7,7 @@ minetest.register_craftitem("gems_ruby:ruby", {
 minetest.register_node("gems_ruby:ruby_ore", {
 	description = "Ruby Ore",
 	tiles = {"default_stone.png^ruby_ore.png"},
-	groups = {cracky=3, stone=1},
+	groups = {cracky = 2},
     drop = {
         items = {
             {

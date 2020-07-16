@@ -7,7 +7,7 @@ minetest.register_craftitem("gems_emerald:emerald", {
 minetest.register_node("gems_emerald:emerald_ore", {
 	description = "Emerald Ore",
 	tiles = {"default_stone.png^emerald_ore.png"},
-	groups = {cracky=3, stone=1},
+	groups = {cracky = 2},
     drop = {
         items = {
             {

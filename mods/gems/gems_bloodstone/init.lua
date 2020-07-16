@@ -7,7 +7,7 @@ minetest.register_craftitem("gems_bloodstone:bloodstone", {
 minetest.register_node("gems_bloodstone:bloodstone_ore", {
 	description = "Bloodstone Ore",
 	tiles = {"default_stone.png^bloodstone_ore.png"},
-	groups = {cracky=3, stone=1},
+	groups = {cracky = 2},
     drop = {
         items = {
             {

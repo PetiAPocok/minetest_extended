@@ -7,7 +7,7 @@ minetest.register_craftitem("gems_amber:amber", {
 minetest.register_node("gems_amber:amber_ore", {
 	description = "Amber Ore",
 	tiles = {"default_stone.png^amber_ore.png"},
-	groups = {cracky=3, stone=1},
+	groups = {cracky = 2},
     drop = {
         items = {
             {

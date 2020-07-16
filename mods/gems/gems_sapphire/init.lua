@@ -7,7 +7,7 @@ minetest.register_craftitem("gems_sapphire:sapphire", {
 minetest.register_node("gems_sapphire:sapphire_ore", {
 	description = "Sapphire Ore",
 	tiles = {"default_stone.png^sapphire_ore.png"},
-	groups = {cracky=3, stone=1},
+	groups = {cracky = 2},
     drop = {
         items = {
             {

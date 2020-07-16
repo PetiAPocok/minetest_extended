@@ -7,7 +7,7 @@ minetest.register_craftitem("gems_quartz:quartz", {
 minetest.register_node("gems_quartz:quartz_ore", {
 	description = "Quartz Ore",
 	tiles = {"default_stone.png^quartz_ore.png"},
-	groups = {cracky=3, stone=1},
+	groups = {cracky = 2},
     drop = {
         items = {
             {

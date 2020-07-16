@@ -7,7 +7,7 @@ minetest.register_craftitem("gems_amethyst:amethyst", {
 minetest.register_node("gems_amethyst:amethyst_ore", {
 	description = "Amethyst Ore",
 	tiles = {"default_stone.png^amethyst_ore.png"},
-	groups = {cracky=3, stone=1},
+	groups = {cracky = 2},
     drop = {
         items = {
             {
