@@ -18,7 +18,7 @@ minetest.register_craftitem("orb_of_healing:orb_of_healing", {
                 elseif pointed_entity.name ~= "__builtin:item" then
                     pointed_thing.ref:punch(player, 1.0, {
                         full_punch_interval = 1.0,
-                        damage_groups = {fleshy = -5},
+                        damage_groups = {fleshy = -3},
                     }, nil)
                 end
             else

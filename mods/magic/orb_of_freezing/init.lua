@@ -1,12 +1,12 @@
 minetest.register_craftitem("orb_of_freezing:orb_of_freezing", {
-    description = "Orb of Freezing\nMana: 10",
+    description = "Orb of Freezing\nMana: 15",
     inventory_image = "orb_of_freezing_orb.png",
     on_use = function(itemstack, player, pointed_thing)
         local name = player:get_player_name()
         local players_mana = hbmana.get(name)
 
-        if players_mana > 10 then
-            hbmana.set(name, players_mana - 10)
+        if players_mana > 15 then
+            hbmana.set(name, players_mana - 15)
 
             local player_pos = player:get_pos()
             local pointed_pos = pointed_thing.under
@@ -61,7 +61,6 @@ minetest.register_entity("orb_of_freezing:icicle", {
             node.name == "default:water_flowing" or
             node.name == "default:river_water_source" or
             node.name == "default:river_water_flowing" then
-                minetest.chat_send_all("Víz!")
                 minetest.place_node(pos, {name="default:ice"})
             end
             self.object:remove()

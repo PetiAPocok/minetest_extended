@@ -1,12 +1,12 @@
 minetest.register_craftitem("orb_of_shadow:orb_of_shadow", {
-    description = "Orb of Shadow\nMana: 10",
+    description = "Orb of Shadow\nMana: 20",
     inventory_image = "orb_of_shadow_orb.png",
     on_use = function(itemstack, player, pointed_thing)
         local name = player:get_player_name()
         local players_mana = hbmana.get(name)
 
-        if players_mana > 10 then
-            hbmana.set(name, players_mana - 10)
+        if players_mana > 20 then
+            hbmana.set(name, players_mana - 20)
 
             local player_pos = player:get_pos()
             local pointed_pos = pointed_thing.under
@@ -89,7 +89,7 @@ minetest.register_entity("orb_of_shadow:shadow_ball", {
                 elseif obj:is_player() then
                     obj:punch(self.object, 1.0, {
                         full_punch_interval = 1.0,
-                        damage_groups = {fleshy = 3},
+                        damage_groups = {fleshy = 5},
                     }, nil)
                     self.object:remove()
                 end

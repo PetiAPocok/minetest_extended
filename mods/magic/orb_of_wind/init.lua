@@ -80,7 +80,7 @@ minetest.register_entity("orb_of_wind:wind_ball", {
                     if obj:get_luaentity().name ~= "orb_of_wind:wind_ball" and obj:get_luaentity().name ~= "__builtin:item" then
                         obj:punch(self.object, 1.0, {
                             full_punch_interval = 1.0,
-                            damage_groups = {fleshy = 3},
+                            damage_groups = {fleshy = 1},
                         }, nil)
 
                         self.object:remove()
@@ -88,7 +88,7 @@ minetest.register_entity("orb_of_wind:wind_ball", {
                 elseif obj:is_player() then
                     obj:punch(self.object, 1.0, {
                         full_punch_interval = 1.0,
-                        damage_groups = {fleshy = 3},
+                        damage_groups = {fleshy = 1},
                     }, nil)
                     self.object:remove()
                 end
