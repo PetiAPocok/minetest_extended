@@ -3,16 +3,15 @@ local players = {}
 minetest.register_node("walking_light:light", {
     drawtype = "glasslike",
     tiles = {"walking_light.png"},
-    inventory_image = minetest.inventorycube("walking_light.png"),
+    -- tiles = {"walking_light_debug.png"},
     paramtype = "light",
     walkable = false,
     is_ground_content = true,
     sunlight_propagates = true,
     light_source = 13,
-    selection_box = {
-        type = "fixed",
-        fixed = {0, 0, 0, 0, 0, 0},
-    },
+    groups = {not_in_creative_inventory = 1},
+    pointable = false,
+    physical = false,
 
     on_place = function(itemstack, placer, pointed_thing)
         minetest.item_place(itemstack, placer, pointed_thing)
