@@ -18,7 +18,7 @@ hbmana.settings = {}
 hbmana.settings.default_max = 10
 hbmana.settings.max_reachable = 100
 hbmana.settings.default_regen = 1
-hbmana.settings.regen_timer = 0.2
+hbmana.settings.regen_timer = 0.4
 
 do
 	local default_max = tonumber(minetest.settings:get("hbmana_default_max"))
