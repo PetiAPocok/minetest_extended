@@ -14,21 +14,30 @@ minetest.register_craftitem("orb_of_light:orb_of_light", {
             local player_pos = player:get_pos()
             local dir = player:get_look_dir()
             local objs = {}
+            local loop_counter = 3
 
-            for i=3,30 do
-                objs[i] = minetest.add_entity({
-                    x = player_pos.x + i * dir.x / 4,
-                    y = player_pos.y + 1.4 + i * dir.y / 4,
-                    z = player_pos.z + i * dir.z / 4
-                }, "orb_of_light:ray_of_light")
+            while loop_counter < 30 do
+                local entity_pos = {
+                    x = player_pos.x + loop_counter * dir.x / 4,
+                    y = player_pos.y + 1.4 + loop_counter * dir.y / 4,
+                    z = player_pos.z + loop_counter * dir.z / 4
+                }
 
-                objs[i]:set_rotation({
-                    x = -player:get_look_vertical(),
-                    y = player:get_look_horizontal(),
-                    z = 0
-                })
+                if minetest.get_node(entity_pos).name == "air" then
+                    objs[loop_counter] = minetest.add_entity(entity_pos, "orb_of_light:ray_of_light")
 
-                objs[i]:get_luaentity()._id = ray_count
+                    objs[loop_counter]:set_rotation({
+                        x = -player:get_look_vertical(),
+                        y = player:get_look_horizontal(),
+                        z = 0
+                    })
+
+                    objs[loop_counter]:get_luaentity()._id = ray_count
+                else
+                    loop_counter = 30
+                end
+
+                loop_counter = loop_counter + 1
             end
 
             rays[ray_count] = objs
@@ -88,7 +97,9 @@ local function remove_ray(obj)
     if rays ~= {} then
         for k,v in pairs(rays[obj._id]) do
             local pos = v:get_pos()
-            remove_light(pos)
+            if pos ~= nil then
+                remove_light(pos)
+            end
 
             v:remove()
         end
