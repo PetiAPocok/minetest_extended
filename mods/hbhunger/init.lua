@@ -196,9 +196,9 @@ end)
 
 local function take_hunger(player_name, amount)
     local h = hbhunger.players[player_name].hunger
-    if h > 0 then
+    if h - amount >= 0 then
         hbhunger.players[player_name].hunger = h - amount
-    elseif h < 0 then
+    else
         hbhunger.players[player_name].hunger = 0
     end
 end
