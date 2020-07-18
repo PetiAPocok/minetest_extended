@@ -4,7 +4,6 @@ if minetest.settings:get_bool("enable_damage") then
 local mod_storage = minetest.get_mod_storage()
 hbhunger = {}
 hbhunger.food = {}
-
 hbhunger.players = {}
 
 -- HUD item ids
@@ -22,7 +21,8 @@ hbhunger.exhaust_move = 0.005 -- how many hunger point is taken if player moveme
 hbhunger.healing_limit = 10 -- how many hunger point is needed to start healing
 
 -- Load palyers' saved data
-if mod_storage:get_string("data") ~= nil and mod_storage:get_string("data") ~= "return nil" then
+minetest.log("Fos->" .. dump(mod_storage:get_string("data")) .. "<-Fos")
+if mod_storage:get_string("data") ~= nil and mod_storage:get_string("data") ~= "return nil" and mod_storage:get_string("data") ~= "" then
     hbhunger.players = minetest.deserialize(mod_storage:get_string("data"))
     minetest.log("info", "hbhunger: Previously saved data loaded.")
 end
