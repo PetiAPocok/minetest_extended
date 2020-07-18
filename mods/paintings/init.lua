@@ -1,54 +1,392 @@
 -- Licensed under CC0.
--- Painting textures from Stunt Rally <https://code.google.com/p/vdrift-ogre/>, licensed under CC0.
+-- Painting textures from Stunt Rally <https://code.google.com/p/vdrift-ogre/>, licensed under CC0. Modified.
 -- Painting textures made by Maizegod, licensed under CC0.
 
-local paintings = {}
-paintings.dyes = {
-	{"white",      "White"},
-	{"grey",       "Grey"},
-	{"black",      "Black"},
-	{"red",        "Red"},
-	{"yellow",     "Yellow"},
-	{"green",      "Green"},
-	{"cyan",       "Cyan"},
-	{"blue",       "Blue"},
-	{"magenta",    "Magenta"},
-	{"orange",     "Orange",},
-	{"violet",     "Violet"},
-	{"brown",      "Brown"},
-	{"pink",       "Pink"},
-	{"dark_grey",  "Dark Grey"},
-	{"dark_green", "Dark Green"},
-}
+minetest.register_node("paintings:canvas", {
+	description = "Painting Canvas",
+	drawtype = "nodebox",
+	tiles = {"paintings_canvas.png"},
+	inventory_image = "paintings_canvas.png",
+	wield_image = "paintings_canvas.png",
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	sunlight_propagates = true,
+	walkable = false,
+	node_box = {
+		type = "wallmounted",
+		wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+		wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+		wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+	},
+	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+	sounds = default.node_sound_wood_defaults(),
+})
 
-for _, row in ipairs(paintings.dyes) do
-	local name = row[1]
-	local desc = row[2]
-	minetest.register_node("paintings:" .. name, {
-		description = desc .. " Painting",
-		drawtype = "nodebox",
-		tiles = {"paintings_" .. name .. ".png"},
-		inventory_image = "paintings_" .. name .. ".png",
-		wield_image = "paintings_" .. name .. ".png",
-		paramtype = "light",
-		paramtype2 = "wallmounted",
-		sunlight_propagates = true,
-		walkable = false,
-		node_box = {
-			type = "wallmounted",
-			wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
-			wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
-			wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
-		},
-		groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
-		sounds = default.node_sound_wood_defaults(),
-	})
-	minetest.register_craft({
-		output = "paintings:" .. name,
-		recipe = {
-			{"group:stick", "group:stick", "group:stick"},
-			{"group:stick", "wool:" .. name, "group:stick"},
-			{"group:stick", "group:stick", "group:stick"},
-		}
-	})
-end
+minetest.register_craft({
+	output = "paintings:canvas",
+	recipe = {
+		{"group:stick", "group:stick", "group:stick"},
+		{"group:stick", "wool:white", "group:stick"},
+		{"group:stick", "group:stick", "group:stick"},
+	}
+})
+
+
+minetest.register_node("paintings:misty_forest", {
+	description = "Painting: Misty Forest",
+	drawtype = "nodebox",
+	tiles = {"paintings_misty_forest.png"},
+	inventory_image = "paintings_misty_forest.png",
+	wield_image = "paintings_misty_forest.png",
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	sunlight_propagates = true,
+	walkable = false,
+	node_box = {
+		type = "wallmounted",
+		wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+		wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+		wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+	},
+	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "paintings:misty_forest",
+	recipe = {
+		{"", "", ""},
+		{"", "paintings:canvas", ""},
+		{"", "", ""},
+	}
+})
+
+
+minetest.register_node("paintings:beach", {
+	description = "Painting: Beach",
+	drawtype = "nodebox",
+	tiles = {"paintings_beach.png"},
+	inventory_image = "paintings_beach.png",
+	wield_image = "paintings_beach.png",
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	sunlight_propagates = true,
+	walkable = false,
+	node_box = {
+		type = "wallmounted",
+		wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+		wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+		wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+	},
+	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "paintings:beach",
+	recipe = {
+		{"", "", ""},
+		{"", "paintings:canvas", ""},
+		{"", "", ""},
+	}
+})
+
+
+minetest.register_node("paintings:autumn_forest", {
+	description = "Painting: Autumn Forest",
+	drawtype = "nodebox",
+	tiles = {"paintings_autumn_forest.png"},
+	inventory_image = "paintings_autumn_forest.png",
+	wield_image = "paintings_autumn_forest.png",
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	sunlight_propagates = true,
+	walkable = false,
+	node_box = {
+		type = "wallmounted",
+		wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+		wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+		wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+	},
+	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "paintings:autumn_forest",
+	recipe = {
+		{"", "", ""},
+		{"", "paintings:canvas", ""},
+		{"", "", ""},
+	}
+})
+
+
+minetest.register_node("paintings:pines", {
+	description = "Painting: Pines",
+	drawtype = "nodebox",
+	tiles = {"paintings_pines.png"},
+	inventory_image = "paintings_pines.png",
+	wield_image = "paintings_pines.png",
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	sunlight_propagates = true,
+	walkable = false,
+	node_box = {
+		type = "wallmounted",
+		wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+		wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+		wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+	},
+	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "paintings:pines",
+	recipe = {
+		{"", "", ""},
+		{"", "paintings:canvas", ""},
+		{"", "", ""},
+	}
+})
+
+
+minetest.register_node("paintings:mountain_top", {
+	description = "Painting: Mountain Top",
+	drawtype = "nodebox",
+	tiles = {"paintings_mountain_top.png"},
+	inventory_image = "paintings_mountain_top.png",
+	wield_image = "paintings_mountain_top.png",
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	sunlight_propagates = true,
+	walkable = false,
+	node_box = {
+		type = "wallmounted",
+		wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+		wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+		wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+	},
+	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "paintings:mountain_top",
+	recipe = {
+		{"", "", ""},
+		{"", "paintings:canvas", ""},
+		{"", "", ""},
+	}
+})
+
+
+minetest.register_node("paintings:desert", {
+	description = "Painting: Desert",
+	drawtype = "nodebox",
+	tiles = {"paintings_desert.png"},
+	inventory_image = "paintings_desert.png",
+	wield_image = "paintings_desert.png",
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	sunlight_propagates = true,
+	walkable = false,
+	node_box = {
+		type = "wallmounted",
+		wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+		wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+		wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+	},
+	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "paintings:desert",
+	recipe = {
+		{"", "", ""},
+		{"", "paintings:canvas", ""},
+		{"", "", ""},
+	}
+})
+
+
+minetest.register_node("paintings:sunset", {
+	description = "Painting: Sunset",
+	drawtype = "nodebox",
+	tiles = {"paintings_sunset.png"},
+    inventory_image = "paintings_sunset.png",
+	wield_image = "paintings_sunset.png",
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	sunlight_propagates = true,
+	walkable = false,
+	node_box = {
+		type = "wallmounted",
+		wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+		wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+		wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+	},
+	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "paintings:sunset",
+	recipe = {
+		{"", "", ""},
+		{"", "paintings:canvas", ""},
+		{"", "", ""},
+	}
+})
+
+
+minetest.register_node("paintings:winter", {
+	description = "Painting: Winter",
+	drawtype = "nodebox",
+	tiles = {"paintings_winter.png"},
+	inventory_image = "paintings_winter.png",
+	wield_image = "paintings_winter.png",
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	sunlight_propagates = true,
+	walkable = false,
+	node_box = {
+		type = "wallmounted",
+		wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+		wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+		wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+	},
+	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "paintings:winter",
+	recipe = {
+		{"", "", ""},
+		{"", "paintings:canvas", ""},
+		{"", "", ""},
+	}
+})
+
+
+minetest.register_node("paintings:shore", {
+	description = "Painting: Shore",
+	drawtype = "nodebox",
+	tiles = {"paintings_shore.png"},
+	inventory_image = "paintings_shore.png",
+	wield_image = "paintings_shore.png",
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	sunlight_propagates = true,
+	walkable = false,
+	node_box = {
+		type = "wallmounted",
+		wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+		wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+		wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+	},
+	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "paintings:shore",
+	recipe = {
+		{"", "", ""},
+		{"", "paintings:canvas", ""},
+		{"", "", ""},
+	}
+})
+
+
+minetest.register_node("paintings:andy_warhol_popart", {
+	description = "Painting: Andy Warhol - Popart",
+	drawtype = "nodebox",
+	tiles = {"paintings_andy_warhol_popart.png"},
+	inventory_image = "paintings_andy_warhol_popart.png",
+	wield_image = "paintings_andy_warhol_popart.png",
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	sunlight_propagates = true,
+	walkable = false,
+	node_box = {
+		type = "wallmounted",
+		wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+		wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+		wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+	},
+	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "paintings:andy_warhol_popart",
+	recipe = {
+		{"", "", ""},
+		{"", "paintings:canvas", ""},
+		{"", "", ""},
+	}
+})
+
+
+minetest.register_node("paintings:cezanne", {
+	description = "Painting: Cezanne",
+	drawtype = "nodebox",
+	tiles = {"paintings_cezanne.png"},
+	inventory_image = "paintings_cezanne.png",
+	wield_image = "paintings_cezanne.png",
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	sunlight_propagates = true,
+	walkable = false,
+	node_box = {
+		type = "wallmounted",
+		wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+		wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+		wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+	},
+	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "paintings:cezanne",
+	recipe = {
+		{"", "", ""},
+		{"", "paintings:canvas", ""},
+		{"", "", ""},
+	}
+})
+
+
+minetest.register_node("paintings:salvador_dali", {
+	description = "Painting: Salvador Dali",
+	drawtype = "nodebox",
+	tiles = {"paintings_salvador_dali.png"},
+	inventory_image = "paintings_salvador_dali.png",
+	wield_image = "paintings_salvador_dali.png",
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	sunlight_propagates = true,
+	walkable = false,
+	node_box = {
+		type = "wallmounted",
+		wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+		wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+		wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+	},
+	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+	output = "paintings:salvador_dali",
+	recipe = {
+		{"", "", ""},
+		{"", "paintings:canvas", ""},
+		{"", "", ""},
+	}
+})
