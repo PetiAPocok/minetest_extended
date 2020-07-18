@@ -2,15 +2,9 @@
 
 magic
     orbs
-        healing, vampire orb csinálja az eldobott item-en is a magic-et...
-
         orb of electricity
             new projectile
                 build a "lightning" from 3d entities
-
-        orb of light
-            new projectile
-                build a "ray" from the entities
 
         orb of wind
             Move the enemy back
@@ -191,15 +185,7 @@ hangszerek?
 
 ------------------------ Textúrára vár -------------------------
 
-gem-ek
-
-potions
-
-Mintás szőnyegek
-
-paintings
-    New paintings and new craft methods for them
-    Szandi ahogy rajzolgat úgy meglátjuk mennyi marad az eredetiekből.
+New paintings
 
 ------------------------ nincs ilyen mod -------------------------
 

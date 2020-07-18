@@ -79,10 +79,21 @@ minetest.register_entity("orb_of_wind:wind_ball", {
             for k, obj in pairs(objs) do
                 if obj:get_luaentity() ~= nil then
                     if obj:get_luaentity().name ~= "orb_of_wind:wind_ball" and obj:get_luaentity().name ~= "__builtin:item" then
+                        local enemy_pos = obj:get_pos()
+                        local vel = {
+                            x = (0 - (pos.x - enemy_pos.x)) * 5,
+                            y = (0 - (pos.y - enemy_pos.y)) * 5,
+                            z = (0 - (pos.z - enemy_pos.z)) * 5
+                        }
+
+                        minetest.chat_send_all(dump(vel))
+
                         obj:punch(self.object, 1.0, {
                             full_punch_interval = 1.0,
                             damage_groups = {fleshy = 1},
                         }, nil)
+
+                        obj:set_velocity(vel)
 
                         self.object:remove()
                     end
@@ -91,6 +102,7 @@ minetest.register_entity("orb_of_wind:wind_ball", {
                         full_punch_interval = 1.0,
                         damage_groups = {fleshy = 1},
                     }, nil)
+
                     self.object:remove()
                 end
             end
