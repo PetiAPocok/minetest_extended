@@ -6,8 +6,6 @@ health_adjuster.players = {}
 local start_max_health = tonumber(minetest.settings:get("health_adjuster_start_max_health")) or 20
 local max_reachable = tonumber(minetest.settings:get("health_adjuster_max_reachable")) or 50
 
-minetest.log(dump(mod_storage:get_string("data")))
-
 -- Load palyers' saved data
 if mod_storage:get_string("data") ~= nil and mod_storage:get_string("data") ~= "return nil" and mod_storage:get_string("data") ~= "" then
     health_adjuster.players = minetest.deserialize(mod_storage:get_string("data"))
