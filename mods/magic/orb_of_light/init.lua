@@ -14,7 +14,7 @@ minetest.register_craftitem("orb_of_light:orb_of_light", {
             local player_pos = player:get_pos()
             local dir = player:get_look_dir()
             local objs = {}
-            local loop_counter = 3
+            local loop_counter = 1
 
             while loop_counter < 30 do
                 local entity_pos = {
@@ -33,6 +33,7 @@ minetest.register_craftitem("orb_of_light:orb_of_light", {
                     })
 
                     objs[loop_counter]:get_luaentity()._id = ray_count
+                    objs[loop_counter]:get_luaentity()._owner = name
                 else
                     loop_counter = 30
                 end
@@ -117,6 +118,7 @@ minetest.register_entity("orb_of_light:ray_of_light", {
     pointable = false,
     _timer = 0,
     _id = 0,
+    _owner = "",
     on_step = function(self, dtime)
         self._timer = self._timer + dtime
         local pos = self.object:get_pos()
@@ -148,7 +150,7 @@ minetest.register_entity("orb_of_light:ray_of_light", {
 
                         remove_ray(self)
                     end
-                elseif obj:is_player() then
+                elseif obj:is_player() and obj:get_player_name() ~= self._owner then
                     obj:punch(self.object, 1.0, {
                         full_punch_interval = 1.0,
                         damage_groups = {fleshy = 3},

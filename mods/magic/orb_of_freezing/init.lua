@@ -28,6 +28,8 @@ minetest.register_craftitem("orb_of_freezing:orb_of_freezing", {
                 y = dir.y * 30,
                 z = dir.z * 30
             })
+
+            obj:get_luaentity()._owner = name
         end
     end
 })
@@ -49,6 +51,7 @@ minetest.register_entity("orb_of_freezing:icicle", {
     collisionbox = {-0.1,-0.1,-0.1,0.1,0.1,0.1},
     pointable = false,
     timer = 0,
+    _owner = "",
     on_step = function(self, dtime)
         self.timer = self.timer + dtime
         local pos = self.object:get_pos()
@@ -100,7 +103,7 @@ minetest.register_entity("orb_of_freezing:icicle", {
 
                         self.object:remove()
                     end
-                elseif obj:is_player() then
+                elseif obj:is_player() and obj:get_player_name() ~= self._owner  then
                     obj:punch(self.object, 1.0, {
                         full_punch_interval = 1.0,
                         damage_groups = {fleshy = 3},
