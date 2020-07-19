@@ -1,5 +1,5 @@
 minetest.register_craftitem("orb_of_rainbow:orb_of_rainbow", {
-    description = "Orb of Rainbow\nMana: 30",
+    description = "Orb of Rainbow\nMana: 40",
     inventory_image = "orb_of_rainbow_orb.png",
     on_use = function(itemstack, player, pointed_thing)
         local name = player:get_player_name()
