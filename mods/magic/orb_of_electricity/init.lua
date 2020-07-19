@@ -29,7 +29,7 @@ minetest.register_craftitem("orb_of_electricity:orb_of_electricity", {
                     objs[loop_counter]:set_rotation({
                         x = -player:get_look_vertical(),
                         y = player:get_look_horizontal(),
-                        z = 0
+                        z = math.random(0, 100)
                     })
 
                     objs[loop_counter]:get_luaentity()._id = ray_count
