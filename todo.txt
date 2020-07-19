@@ -2,31 +2,33 @@
 
 magic
     orbs
-        orb of electricity
-            new projectile
-                build a "lightning" from 3d entities
-
-        orb of wind
-            Move the enemy back
+        lightning
+            rotate lightning parts
+            particles?
 
         All combined
             rainbow
-                projectile: build a "ray" from the entities
-
-    flying carpet (fix it!)
-        Horribble controls
-        Doesn't use mana.
-        Uses own mama and doesn't give feedback about the remaining "fuel"
+                szandi bájos, kedves, aranyos és szarakszik a szinezéssel.
+                particles?
 
 poison nem eldobható és a mobokkal se csinál semmit.
     hagyjon egy tócsa entity-t és aki belelép az kap poisoned effektet
 
 -------------------------------------------------1.2--------------------------------------------------------------
 
+flying carpet (fix it!)
+    Horribble controls
+    Doesn't use mana.
+    Uses own mama and doesn't give feedback about the remaining "fuel"
+
 mozdony
     on_step ha a bármylik mozdony melletti entity vagon akkor increase its velocity
 
 Mapgen normalizálása
+
+orb of wind
+    Move the enemy back
+    if I set or add to its velocity then it gets overwritten by its own movement pattern
 
 
 Magic hangok?
