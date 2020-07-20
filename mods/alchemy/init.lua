@@ -113,11 +113,126 @@ minetest.register_craftitem("alchemy:shine", {
     end
 })
 
+
+minetest.register_entity("alchemy:poison_potion_entity", {
+    physical = false,
+    visual = "sprite",
+    visual_size = {x=0.5, y=0.5},
+    textures = {"alchemy_potion_poison.png"},
+    collisionbox = {-0.1,-0.1,-0.1,0.1,0.1,0.1},
+    pointable = false,
+    _timer = 0,
+    on_step = function(self, dtime)
+        self._timer = self._timer + dtime
+        local pos = vector.round(self.object:get_pos())
+        local node = minetest.get_node(pos)
+
+        if node.name ~= "air" then
+            minetest.sound_play("default_break_glass", {pos=pos})
+            obj = minetest.add_entity({
+                x = pos.x,
+                y = pos.y + 0.51,
+                z = pos.z
+            }, "alchemy:poison_puddle")
+            self.object:remove()
+        end
+    end
+})
+
+
+minetest.register_entity("alchemy:poison_puddle", {
+    physical = false,
+    visual = "mesh",
+    mesh = "alchemy_poison_puddle.obj",
+    visual_size = {x=15, y=1, z=15},
+    textures = {"alchemy_poison_puddle.png"},
+    use_texture_alpha = true,
+    collisionbox = {-1,-0.01,-1,1,0.01,1},
+    pointable = false,
+    _timer_damage = 0,
+    _timer_bubble = 0,
+    _timer_life = 0,
+    on_step = function(self, dtime)
+        self._timer_damage = self._timer_damage + dtime
+        self._timer_bubble = self._timer_bubble + dtime
+        self._timer_life = self._timer_life + dtime
+        local pos = self.object:get_pos()
+
+        if self._timer_bubble > 0.1 then
+            minetest.add_particle({
+                pos = {
+                    x=pos.x + math.random(-1,1) * math.random() / 2,
+                    y=pos.y + 0.1,
+                    z=pos.z + math.random(-1,1) * math.random() / 2
+                },
+                velocity = {
+                    x = 0,
+                    y = 2,
+                    z = 0
+                },
+                acceleration = {
+                    x = 0,
+                    y = -5,
+                    z = 0},
+                expirationtime = math.random(),
+                size = math.random() + 0.5,
+                collisiondetection = true,
+                vertical = false,
+                texture = "particles_bubble.png^[colorize:#005500:250"
+            })
+            self._timer_bubble = 0
+        end
+
+        if self._timer_damage > 0.2 then
+            local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 1)
+            for k, obj in pairs(objs) do
+                if obj:get_luaentity() ~= nil then
+                    if obj:get_luaentity().name ~= "alchemy:poison_puddle" and obj:get_luaentity().name ~= "alchemy:poison_potion_entity" and obj:get_luaentity().name ~= "__builtin:item" then
+                        obj:punch(self.object, 1.0, {
+                            full_punch_interval = 1.0,
+                            damage_groups = {fleshy = 1},
+                        }, nil)
+                    end
+                elseif obj:is_player() then
+                    effects_hud.add_effect(obj:get_player_name(), "poison", 10)
+                end
+            end
+
+            self._timer_damage = 0
+        end
+
+        if self._timer_life > 10 then
+            self.object:remove()
+        end
+
+    end
+})
+
 minetest.register_craftitem("alchemy:poison", {
     description = "Flask of Poison (Throwable)\nHurts the affected for 10 seconds.",
     inventory_image = "alchemy_potion_poison.png";
     on_use = function(itemstack, user, pointed_thing)
-        effects_hud.add_effect(user:get_player_name(), "poison", 10)
+        local player_pos = user:get_pos()
+        local dir = user:get_look_dir()
+
+        obj = minetest.add_entity({
+            x = player_pos.x,
+            y = player_pos.y + 1.5,
+            z = player_pos.z
+        }, "alchemy:poison_potion_entity")
+
+        obj:setvelocity({
+            x = dir.x * 19,
+            y = dir.y * 19,
+            z = dir.z * 19
+        })
+
+        obj:setacceleration({
+    		x = dir.x * -3,
+    		y = -9,
+    		z = dir.z * -3
+    	})
+
         itemstack:take_item()
         return itemstack
     end
