@@ -56,50 +56,12 @@ minetest.register_craft({
 	}
 })
 
-local function remove_light(pos)
-    local area = {
-        {x=pos.x-1,y=pos.y-1,z=pos.z-1},
-        {x=pos.x-1,y=pos.y-1,z=pos.z},
-        {x=pos.x-1,y=pos.y-1,z=pos.z+1},
-        {x=pos.x-1,y=pos.y,z=pos.z-1},
-        {x=pos.x-1,y=pos.y,z=pos.z},
-        {x=pos.x-1,y=pos.y,z=pos.z+1},
-        {x=pos.x-1,y=pos.y+1,z=pos.z-1},
-        {x=pos.x-1,y=pos.y+1,z=pos.z},
-        {x=pos.x-1,y=pos.y+1,z=pos.z+1},
-        {x=pos.x,y=pos.y-1,z=pos.z-1},
-        {x=pos.x,y=pos.y-1,z=pos.z},
-        {x=pos.x,y=pos.y-1,z=pos.z+1},
-        {x=pos.x,y=pos.y,z=pos.z-1},
-        {x=pos.x,y=pos.y,z=pos.z},
-        {x=pos.x,y=pos.y,z=pos.z+1},
-        {x=pos.x,y=pos.y+1,z=pos.z-1},
-        {x=pos.x,y=pos.y+1,z=pos.z},
-        {x=pos.x,y=pos.y+1,z=pos.z+1},
-        {x=pos.x+1,y=pos.y-1,z=pos.z-1},
-        {x=pos.x+1,y=pos.y-1,z=pos.z},
-        {x=pos.x+1,y=pos.y-1,z=pos.z+1},
-        {x=pos.x+1,y=pos.y,z=pos.z-1},
-        {x=pos.x+1,y=pos.y,z=pos.z},
-        {x=pos.x+1,y=pos.y,z=pos.z+1},
-        {x=pos.x+1,y=pos.y+1,z=pos.z-1},
-        {x=pos.x+1,y=pos.y+1,z=pos.z},
-        {x=pos.x+1,y=pos.y+1,z=pos.z+1}
-    }
-
-    for _,v in ipairs(area) do
-        if minetest.get_node(v).name == "walking_light:light" then
-            minetest.remove_node(v)
-        end
-    end
-end
-
 local function remove_ray(obj)
     if rays ~= {} then
         for k,v in pairs(rays[obj._id]) do
             local pos = v:get_pos()
             if pos ~= nil then
-                remove_light(pos)
+                walking_light.remove_light(pos)
             end
 
             v:remove()

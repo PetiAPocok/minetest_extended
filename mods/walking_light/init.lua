@@ -1,9 +1,10 @@
+walking_light = {}
 local players = {}
 
 minetest.register_node("walking_light:light", {
     drawtype = "glasslike",
     tiles = {"walking_light.png"},
-    -- tiles = {"walking_light_debug.png"},
+    tiles = {"walking_light_debug.png"},
     paramtype = "light",
     walkable = false,
     is_ground_content = true,
@@ -12,25 +13,6 @@ minetest.register_node("walking_light:light", {
     groups = {not_in_creative_inventory = 1},
     pointable = false,
     physical = false,
-
-    on_place = function(itemstack, placer, pointed_thing)
-        minetest.item_place(itemstack, placer, pointed_thing)
-
-        minetest.get_node_timer(pointed_thing.under):start(3)
-    end,
-
-    on_timer = function(pos, dtime)
-        local has_owner = false
-        for k,v in pairs(players) do
-            if v["current_pos"] == pos then
-                has_owner = true
-            end
-        end
-
-        if not has_owner then
-            minetest.remove_node(pos)
-        end
-    end
 })
 
 minetest.register_on_joinplayer(
@@ -51,24 +33,62 @@ minetest.register_globalstep(function(dtime)
     for k,v in pairs(players) do
         if minetest.get_player_by_name(k):get_wielded_item():get_definition().name == "default:torch" then
             v["current_pos"] = vector.round(minetest.get_player_by_name(k):get_pos())
-            v["current_pos"]["y"] = v["current_pos"]["y"] + 2
+            v["current_pos"]["y"] = v["current_pos"]["y"] + 1
 
             if v["old_pos"]["x"] ~= v["current_pos"]["x"] or v["old_pos"]["y"] ~= v["current_pos"]["y"] or v["old_pos"]["z"] ~= v["current_pos"]["z"] then
-                if v["old_pos"]["y"] ~= nil  then
-                    v["old_pos"]["y"] = v["old_pos"]["y"] - 1 -- For some reason the placed block "placing position" and "removing position" isn't the same...
-                    minetest.remove_node(v["old_pos"])
-                    v["old_pos"]["y"] = v["old_pos"]["y"] + 1
+                if v["old_pos"]["y"] ~= nil then
+                    walking_light.remove_light(v["old_pos"])
                 end
-                minetest.place_node(v["current_pos"], {name="walking_light:light"})
-                v["old_pos"] = v["current_pos"]
+
+                if minetest.get_node(v["current_pos"]).name == "air" then
+                    minetest.place_node(v["current_pos"], {name="walking_light:light"})
+                    v["old_pos"] = v["current_pos"]
+                end
             end
         else
-            if v["old_pos"]["y"] ~= nil  then
-                v["old_pos"]["y"] = v["old_pos"]["y"] - 1 -- For some reason the placed block "placing position" and "removing position" isn't the same...
-                minetest.remove_node(v["old_pos"])
+            if v["old_pos"]["y"] ~= nil then
+                walking_light.remove_light(v["old_pos"])
             end
             v["current_pos"] = {}
             v["old_pos"] = {}
         end
     end
 end)
+
+walking_light.remove_light = function(pos)
+    local area = {
+        {x=pos.x-1,y=pos.y-1,z=pos.z-1},
+        {x=pos.x-1,y=pos.y-1,z=pos.z},
+        {x=pos.x-1,y=pos.y-1,z=pos.z+1},
+        {x=pos.x-1,y=pos.y,z=pos.z-1},
+        {x=pos.x-1,y=pos.y,z=pos.z},
+        {x=pos.x-1,y=pos.y,z=pos.z+1},
+        {x=pos.x-1,y=pos.y+1,z=pos.z-1},
+        {x=pos.x-1,y=pos.y+1,z=pos.z},
+        {x=pos.x-1,y=pos.y+1,z=pos.z+1},
+        {x=pos.x,y=pos.y-1,z=pos.z-1},
+        {x=pos.x,y=pos.y-1,z=pos.z},
+        {x=pos.x,y=pos.y-1,z=pos.z+1},
+        {x=pos.x,y=pos.y,z=pos.z-1},
+        {x=pos.x,y=pos.y,z=pos.z},
+        {x=pos.x,y=pos.y,z=pos.z+1},
+        {x=pos.x,y=pos.y+1,z=pos.z-1},
+        {x=pos.x,y=pos.y+1,z=pos.z},
+        {x=pos.x,y=pos.y+1,z=pos.z+1},
+        {x=pos.x+1,y=pos.y-1,z=pos.z-1},
+        {x=pos.x+1,y=pos.y-1,z=pos.z},
+        {x=pos.x+1,y=pos.y-1,z=pos.z+1},
+        {x=pos.x+1,y=pos.y,z=pos.z-1},
+        {x=pos.x+1,y=pos.y,z=pos.z},
+        {x=pos.x+1,y=pos.y,z=pos.z+1},
+        {x=pos.x+1,y=pos.y+1,z=pos.z-1},
+        {x=pos.x+1,y=pos.y+1,z=pos.z},
+        {x=pos.x+1,y=pos.y+1,z=pos.z+1}
+    }
+
+    for _,v in ipairs(area) do
+        if minetest.get_node(v).name == "walking_light:light" then
+            minetest.remove_node(v)
+        end
+    end
+end
