@@ -4,7 +4,7 @@ local players = {}
 minetest.register_node("walking_light:light", {
     drawtype = "glasslike",
     tiles = {"walking_light.png"},
-    tiles = {"walking_light_debug.png"},
+    -- tiles = {"walking_light_debug.png"},
     paramtype = "light",
     walkable = false,
     is_ground_content = true,
