@@ -21,7 +21,6 @@ hbhunger.exhaust_move = 0.005 -- how many hunger point is taken if player moveme
 hbhunger.healing_limit = 10 -- how many hunger point is needed to start healing
 
 -- Load palyers' saved data
-minetest.log("Fos->" .. dump(mod_storage:get_string("data")) .. "<-Fos")
 if mod_storage:get_string("data") ~= nil and mod_storage:get_string("data") ~= "return nil" and mod_storage:get_string("data") ~= "" then
     hbhunger.players = minetest.deserialize(mod_storage:get_string("data"))
     minetest.log("info", "hbhunger: Previously saved data loaded.")
@@ -60,7 +59,7 @@ end
 local org_eat = core.do_item_eat
 core.do_item_eat = function(hp_change, replace_with_item, itemstack, user, pointed_thing)
     local name = user:get_player_name()
-    if hbhunger.players[name].hunger < (hbhunger.players[name].satiation - 1) then -- Don't overeat
+    if hbhunger.players[name].hunger < (hbhunger.players[name].satiation - 0.01) then -- Don't overeat
     	local old_itemstack = itemstack
     	itemstack = hbhunger.eat(hp_change, replace_with_item, itemstack, user, pointed_thing)
 
