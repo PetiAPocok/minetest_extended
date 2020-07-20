@@ -69,6 +69,12 @@ minetest.register_craftitem("orb_of_vampirism:orb_of_vampirism", {
                     y = dir.y * 10,
                     z = dir.z * 10
                 })
+
+                obj:setacceleration({
+                    x = dir.x * -3,
+                    y = dir.y * -3,
+                    z = dir.z * -3
+                })
             end
         end
     end
@@ -90,11 +96,10 @@ minetest.register_entity("orb_of_vampirism:health_particles", {
     textures = {"orb_of_vampirism_particle.png"},
     collisionbox = {-0.1,-0.1,-0.1,0.1,0.1,0.1},
     pointable = false,
-    timer = 0,
+    _timer = 0,
     on_step = function(self, dtime)
-        self.timer = self.timer + dtime
+        self._timer = self._timer + dtime
         local pos = self.object:get_pos()
-        local node = minetest.get_node(pos)
 
         minetest.add_particlespawner({
             amount = 10,
@@ -118,14 +123,42 @@ minetest.register_entity("orb_of_vampirism:health_particles", {
             texture = "orb_of_vampirism_particle.png",
         })
 
-        if self.timer > 0.2 then
+        if self._timer > 0.2 then
+            local velocity = self.object:get_velocity()
+            local acceleration = self.object:get_acceleration()
             local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
+
             for k, obj in pairs(objs) do
                 if obj:is_player() then
                     obj:set_hp(obj:get_hp() + 1)
                     self.object:remove()
                 end
             end
+
+            minetest.chat_send_all(dump(velocity))
+            if velocity.x > -0.1 and velocity.x < 0.1 then
+                velocity.x = 0
+                acceleration.x = 0
+                self.object:set_velocity(velocity)
+                self.object:setacceleration(acceleration)
+            end
+
+            if velocity.y > -0.1 and velocity.y < 0.1 then
+                velocity.y = 0
+                acceleration.y = 0
+                self.object:set_velocity(velocity)
+                self.object:setacceleration(acceleration)
+            end
+
+            if velocity.z > -0.1 and velocity.z < 0.1 then
+                velocity.z = 0
+                acceleration.z = 0
+                self.object:set_velocity(velocity)
+                self.object:setacceleration(acceleration)
+            end
+
+
+            self._timer = 0
         end
     end
 })
