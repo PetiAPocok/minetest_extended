@@ -1,20 +1,10 @@
 -------------------------------------------------1.1--------------------------------------------------------------
+TESZT
 
-magic
-    orbs
-        lightning
-            rotate lightning parts
-            particles?
-
-        All combined
-            rainbow
-                szandi bájos, kedves, aranyos és szarakszik a szinezéssel.
-                particles?
-
-poison nem eldobható és a mobokkal se csinál semmit.
-    hagyjon egy tócsa entity-t és aki belelép az kap poisoned effektet
 
 -------------------------------------------------1.2--------------------------------------------------------------
+
+fire orb olvassa a havat meg a jeget.
 
 flying carpet (fix it!)
     Horribble controls
