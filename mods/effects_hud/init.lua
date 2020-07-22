@@ -160,6 +160,18 @@ minetest.register_on_joinplayer(
     end
 )
 
+minetest.register_on_dieplayer(function(player, reason)
+    local username = player:get_player_name()
+    for effect,effect_parameters in pairs(effects_hud.timers[username]) do
+            player:hud_remove(effect_parameters["hud_bg_id"])
+            player:hud_remove(effect_parameters["hud_bar_id"])
+            player:hud_remove(effect_parameters["hud_text_id"])
+            effects[effect].remove(player)
+            effects_hud["timers"][username][effect] = nil
+    end
+    effects_hud["timers"][player:get_player_name()] = {}
+end)
+
 minetest.register_on_leaveplayer(
     function(player)
         effects_hud["timers"][player:get_player_name()] = nil
@@ -254,7 +266,7 @@ minetest.register_chatcommand("effect", {
                 return false, "Invalid duration!"
             end
 
-            add_effect(parameters[1], parameters[2], parameters[3])
+            effects_hud.add_effect(parameters[1], parameters[2], parameters[3])
 
             return true, "Effect applied!"
         else
