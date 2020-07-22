@@ -8,7 +8,7 @@ minetest.register_craftitem("orb_of_light:orb_of_light", {
         local name = player:get_player_name()
         local players_mana = hbmana.get(name)
 
-        if players_mana > 30 then
+        if players_mana >= 30 then
             hbmana.set(name, players_mana - 30)
 
             local player_pos = player:get_pos()

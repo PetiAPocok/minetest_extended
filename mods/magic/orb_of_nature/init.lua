@@ -5,7 +5,7 @@ minetest.register_craftitem("orb_of_nature:orb_of_nature", {
         local name = player:get_player_name()
         local players_mana = hbmana.get(name)
 
-        if players_mana > 5 then
+        if players_mana >= 5 then
             hbmana.set(name, players_mana - 5)
 
             if pointed_thing.type == "object" then

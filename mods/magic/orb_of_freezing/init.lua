@@ -5,7 +5,7 @@ minetest.register_craftitem("orb_of_freezing:orb_of_freezing", {
         local name = player:get_player_name()
         local players_mana = hbmana.get(name)
 
-        if players_mana > 15 then
+        if players_mana >= 15 then
             hbmana.set(name, players_mana - 15)
 
             local player_pos = player:get_pos()

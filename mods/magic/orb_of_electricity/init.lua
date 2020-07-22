@@ -8,7 +8,7 @@ minetest.register_craftitem("orb_of_electricity:orb_of_electricity", {
         local name = player:get_player_name()
         local players_mana = hbmana.get(name)
 
-        if players_mana > 10 then
+        if players_mana >= 10 then
             hbmana.set(name, players_mana - 10)
 
             local player_pos = player:get_pos()
@@ -16,7 +16,7 @@ minetest.register_craftitem("orb_of_electricity:orb_of_electricity", {
             local objs = {}
             local loop_counter = 1
 
-            while loop_counter < 30 do
+            while loop_counter =< 30 do
                 local entity_pos = {
                     x = player_pos.x + loop_counter * dir.x / 14.5,
                     y = player_pos.y + 1.4 + loop_counter * dir.y / 14.5,

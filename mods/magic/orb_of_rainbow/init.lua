@@ -5,7 +5,7 @@ minetest.register_craftitem("orb_of_rainbow:orb_of_rainbow", {
         local name = player:get_player_name()
         local players_mana = hbmana.get(name)
 
-        if players_mana > 40 then
+        if players_mana >= 40 then
             hbmana.set(name, players_mana - 40)
 
             local player_pos = player:get_pos()
