@@ -83,6 +83,18 @@ function hbhunger.register_food(name, hunger_change, replace_with_item, poisen, 
 	food[name].poisen = poisen				-- time its poisening
 	food[name].healing = heal				-- amount of HP
 	food[name].sound = sound				-- special sound that is played when eating
+
+    if poisen ~= nil then
+        minetest.override_item(name, {
+            description = minetest.registered_items[name].description ..
+            "\nSatiates: " .. hunger_change ..
+            "\nPoisons: " .. hunger_change,
+        })
+    else
+        minetest.override_item(name, {
+            description = minetest.registered_items[name].description .. "\nSatiates: " .. hunger_change
+        })
+    end
 end
 
 function hbhunger.eat(hp_change, replace_with_item, itemstack, user, pointed_thing)
@@ -126,8 +138,6 @@ function hbhunger.item_eat(hunger_change, replace_with_item, poisen, heal, sound
 			end
 			-- Poison
 			if poisen then
-				-- Set poison bar
-				hb.change_hudbar(user, "health", nil, nil, "hbhunger_icon_health_poison.png", nil, "hbhunger_bar_health_poison.png")
 				effects_hud.add_effect(name, "poison", poisen)
 			end
 
