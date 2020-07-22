@@ -5,77 +5,75 @@ minetest.register_craftitem("orb_of_vampirism:orb_of_vampirism", {
         local name = player:get_player_name()
         local players_mana = hbmana.get(name)
 
-        if players_mana >= 10 and pointed_thing.ref:get_luaentity().name ~= "__builtin:item" then
+        if players_mana >= 10 and pointed_thing.type == "object" and pointed_thing.ref:get_luaentity().name ~= "__builtin:item" then
             hbmana.set(name, players_mana - 10)
 
             local player_pos = player:get_pos()
             player_pos.y = player_pos.y + 1
 
-            if pointed_thing.type == "object" then
-                pointed_thing.ref:punch(player, 1.0, {
-                    full_punch_interval = 1.0,
-                    damage_groups = {fleshy = 1},
-                }, nil)
+            pointed_thing.ref:punch(player, 1.0, {
+                full_punch_interval = 1.0,
+                damage_groups = {fleshy = 1},
+            }, nil)
 
-                local pointed_pos = pointed_thing.ref:get_pos()
-                local ppfe = { --player's position from entity
-                    x = player_pos.x - pointed_pos.x,
-                    y = player_pos.y - pointed_pos.y,
-                    z = player_pos.z - pointed_pos.z
-                }
+            local pointed_pos = pointed_thing.ref:get_pos()
+            local ppfe = { --player's position from entity
+                x = player_pos.x - pointed_pos.x,
+                y = player_pos.y - pointed_pos.y,
+                z = player_pos.z - pointed_pos.z
+            }
 
-                local dir = {
-                    x = 0,
-                    y = 0,
-                    z = 0
-                }
+            local dir = {
+                x = 0,
+                y = 0,
+                z = 0
+            }
 
-                local pdfe = math.sqrt(math.pow(ppfe.x, 2) + math.pow(ppfe.y, 2) + math.pow(ppfe.z, 2)) --player's distance from entity
+            local pdfe = math.sqrt(math.pow(ppfe.x, 2) + math.pow(ppfe.y, 2) + math.pow(ppfe.z, 2)) --player's distance from entity
 
-                if ppfe.x > 0 and ppfe.z > 0 then
-                    dir.x = math.atan(ppfe.x / ppfe.z) * 180 / math.pi / 90
-                    dir.z = 1 - math.atan(ppfe.x / ppfe.z) * 180 / math.pi / 90
-                elseif ppfe.x > 0 and ppfe.z < 0 then
-                    dir.x = -1 * math.atan(ppfe.x / ppfe.z) * 180 / math.pi / 90
-                    dir.z = -1 * (math.atan(ppfe.x / ppfe.z) * 180 / math.pi + 90) / 90
-                elseif ppfe.x < 0 and ppfe.z > 0 then
-                    dir.x = math.atan(ppfe.x / ppfe.z) * 180 / math.pi / 90
-                    dir.z = (math.atan(ppfe.x / ppfe.z) * 180 / math.pi + 90) / 90
-                elseif ppfe.x < 0 and ppfe.z < 0 then
-                    dir.x = -1 * math.atan(ppfe.x / ppfe.z) * 180 / math.pi / 90
-                    dir.z = -1 * (1 - math.atan(ppfe.x / ppfe.z) * 180 / math.pi / 90)
-                elseif ppfe.x == 0 and ppfe.z < 0 then
-                    dir.z = 1
-                    dir.x = 0
-                elseif ppfe.x == 0 and ppfe.z > 0 then
-                    dir.z = -1
-                    dir.x = 0
-                elseif ppfe.x > 0 and ppfe.z == 0 then
-                    dir.x = 1
-                    dir.z = 0
-                elseif ppfe.x < 0 and ppfe.z == 0 then
-                    dir.x = -1
-                    dir.z = 0
-                end
-
-                dir.y = math.asin(ppfe.y / pdfe) * 180 / math.pi / 90
-                dir.x = dir.x * (1 - math.abs(dir.y))
-                dir.z = dir.z * (1 - math.abs(dir.y))
-
-                obj = minetest.add_entity(pointed_pos, "orb_of_vampirism:health_particles")
-
-                obj:setvelocity({
-                    x = dir.x * 10,
-                    y = dir.y * 10,
-                    z = dir.z * 10
-                })
-
-                obj:setacceleration({
-                    x = dir.x * -3,
-                    y = dir.y * -3,
-                    z = dir.z * -3
-                })
+            if ppfe.x > 0 and ppfe.z > 0 then
+                dir.x = math.atan(ppfe.x / ppfe.z) * 180 / math.pi / 90
+                dir.z = 1 - math.atan(ppfe.x / ppfe.z) * 180 / math.pi / 90
+            elseif ppfe.x > 0 and ppfe.z < 0 then
+                dir.x = -1 * math.atan(ppfe.x / ppfe.z) * 180 / math.pi / 90
+                dir.z = -1 * (math.atan(ppfe.x / ppfe.z) * 180 / math.pi + 90) / 90
+            elseif ppfe.x < 0 and ppfe.z > 0 then
+                dir.x = math.atan(ppfe.x / ppfe.z) * 180 / math.pi / 90
+                dir.z = (math.atan(ppfe.x / ppfe.z) * 180 / math.pi + 90) / 90
+            elseif ppfe.x < 0 and ppfe.z < 0 then
+                dir.x = -1 * math.atan(ppfe.x / ppfe.z) * 180 / math.pi / 90
+                dir.z = -1 * (1 - math.atan(ppfe.x / ppfe.z) * 180 / math.pi / 90)
+            elseif ppfe.x == 0 and ppfe.z < 0 then
+                dir.z = 1
+                dir.x = 0
+            elseif ppfe.x == 0 and ppfe.z > 0 then
+                dir.z = -1
+                dir.x = 0
+            elseif ppfe.x > 0 and ppfe.z == 0 then
+                dir.x = 1
+                dir.z = 0
+            elseif ppfe.x < 0 and ppfe.z == 0 then
+                dir.x = -1
+                dir.z = 0
             end
+
+            dir.y = math.asin(ppfe.y / pdfe) * 180 / math.pi / 90
+            dir.x = dir.x * (1 - math.abs(dir.y))
+            dir.z = dir.z * (1 - math.abs(dir.y))
+
+            obj = minetest.add_entity(pointed_pos, "orb_of_vampirism:health_particles")
+
+            obj:setvelocity({
+                x = dir.x * 10,
+                y = dir.y * 10,
+                z = dir.z * 10
+            })
+
+            obj:setacceleration({
+                x = dir.x * -3,
+                y = dir.y * -3,
+                z = dir.z * -3
+            })
         end
     end
 })
@@ -135,7 +133,6 @@ minetest.register_entity("orb_of_vampirism:health_particles", {
                 end
             end
 
-            minetest.chat_send_all(dump(velocity))
             if velocity.x > -0.1 and velocity.x < 0.1 then
                 velocity.x = 0
                 acceleration.x = 0
