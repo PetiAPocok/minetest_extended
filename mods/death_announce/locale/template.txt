@@ -1,0 +1,4 @@
+# textdomain: death_announce
+were killed by=
+died=
+fell into death=

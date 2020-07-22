@@ -1,10 +1,24 @@
 -------------------------------------------------1.1--------------------------------------------------------------
 TESZT
 
+Ki halt meg üzenet mindenkinek, de legyen cofigba kapcsolható
 
 -------------------------------------------------1.2--------------------------------------------------------------
+The poisoning foods not damaging till the given time
+    de miért...?
 
-fire orb olvassa a havat meg a jeget.
+a stone ásó túl gyorsan törik
+
+mobs pathfinnding, ha a fejeden áll ne csak pörögjön
+
+craftguide
+    marerials fül
+        az összes node listája
+
+    unknown crafts
+        hiányos item-craftok körvonalakkal
+
+fire orb olvassza a havat meg a jeget.
 
 flying carpet (fix it!)
     Horribble controls
@@ -14,11 +28,11 @@ flying carpet (fix it!)
 mozdony
     on_step ha a bármylik mozdony melletti entity vagon akkor increase its velocity
 
-Mapgen normalizálása
+Mapgen ore normalizálása
 
 orb of wind
     Move the enemy back
-    if I set or add to its velocity then it gets overwritten by its own movement pattern
+    if I set or add to its velocity then it gets overwritten by its own movement pattern...
 
 
 Magic hangok?

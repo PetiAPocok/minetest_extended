@@ -1,0 +1,2 @@
+#Disable death announce
+death_announce (Death announce) bool false
