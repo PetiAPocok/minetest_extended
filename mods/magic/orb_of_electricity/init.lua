@@ -16,7 +16,7 @@ minetest.register_craftitem("orb_of_electricity:orb_of_electricity", {
             local objs = {}
             local loop_counter = 1
 
-            while loop_counter =< 30 do
+            while loop_counter <= 30 do
                 local entity_pos = {
                     x = player_pos.x + loop_counter * dir.x / 14.5,
                     y = player_pos.y + 1.4 + loop_counter * dir.y / 14.5,
