@@ -20,6 +20,7 @@ reagents["mobs:honey"] = "alchemy:stamina"
 minetest.register_craftitem("alchemy:bottled_water", {
     description = "Bottled Water",
     inventory_image = "alchemy_bottled_water.png",
+    groups = {vessel = 1},
     -- on_use = minetest.item_eat(1)
     on_use = function(itemstack, user, pointed_thing)
         -- minetest.chat_send_all(dump(itemstack))
@@ -41,7 +42,8 @@ minetest.register_craft({
 
 minetest.register_craftitem("alchemy:gills", {
     description = "Gills Potion\nAllows breathing underwater for 30 seconds.",
-    inventory_image = "alchemy_potion_gills.png";
+    inventory_image = "alchemy_potion_gills.png",
+    groups = {vessel = 1},
     on_use = function(itemstack, user, pointed_thing)
         effects_hud.add_effect(user:get_player_name(), "water_breathing", 30)
         itemstack:take_item()
@@ -51,7 +53,8 @@ minetest.register_craftitem("alchemy:gills", {
 
 minetest.register_craftitem("alchemy:healing", {
     description = "Healing Potion\nFaster health regeneration for 10 seconds.",
-    inventory_image = "alchemy_potion_healing.png";
+    inventory_image = "alchemy_potion_healing.png",
+    groups = {vessel = 1},
     on_use = function(itemstack, user, pointed_thing)
         effects_hud.add_effect(user:get_player_name(), "health_regeneration", 10)
         itemstack:take_item()
@@ -61,7 +64,8 @@ minetest.register_craftitem("alchemy:healing", {
 
 minetest.register_craftitem("alchemy:holy", {
     description = "Holy Water\nNullify all effects on the player and\nkeeps him 'clean' for 30 second.",
-    inventory_image = "alchemy_potion_holy.png";
+    inventory_image = "alchemy_potion_holy.png",
+    groups = {vessel = 1},
     on_use = function(itemstack, user, pointed_thing)
         effects_hud.add_effect(user:get_player_name(), "purity", 30)
         itemstack:take_item()
@@ -71,7 +75,8 @@ minetest.register_craftitem("alchemy:holy", {
 
 minetest.register_craftitem("alchemy:magic", {
     description = "Magic potion\nIncrease max mana.",
-    inventory_image = "alchemy_potion_magic.png";
+    inventory_image = "alchemy_potion_magic.png",
+    groups = {vessel = 1},
     on_use = function(itemstack, user, pointed_thing)
         local name = user:get_player_name()
         local current = hbmana.getmax(name)
@@ -85,7 +90,8 @@ minetest.register_craftitem("alchemy:magic", {
 
 minetest.register_craftitem("alchemy:mana", {
     description = "Mana Potion\nFaster mana regeneration for 10 seconds.",
-    inventory_image = "alchemy_potion_mana.png";
+    inventory_image = "alchemy_potion_mana.png",
+    groups = {vessel = 1},
     on_use = function(itemstack, user, pointed_thing)
         effects_hud.add_effect(user:get_player_name(), "mana_regeneration", 10)
         itemstack:take_item()
@@ -95,7 +101,8 @@ minetest.register_craftitem("alchemy:mana", {
 
 minetest.register_craftitem("alchemy:mobility", {
     description = "Mobility Potion\nIncreases walking speed and jumping height for 60 seconds.",
-    inventory_image = "alchemy_potion_mobility.png";
+    inventory_image = "alchemy_potion_mobility.png",
+    groups = {vessel = 1},
     on_use = function(itemstack, user, pointed_thing)
         effects_hud.add_effect(user:get_player_name(), "mobility", 60)
         itemstack:take_item()
@@ -105,7 +112,8 @@ minetest.register_craftitem("alchemy:mobility", {
 
 minetest.register_craftitem("alchemy:shine", {
     description = "Shine Potion\nMakes you shine for 60 seconds.",
-    inventory_image = "alchemy_potion_shine.png";
+    inventory_image = "alchemy_potion_shine.png",
+    groups = {vessel = 1},
     on_use = function(itemstack, user, pointed_thing)
         effects_hud.add_effect(user:get_player_name(), "shine", 60)
         itemstack:take_item()
@@ -210,7 +218,8 @@ minetest.register_entity("alchemy:poison_puddle", {
 
 minetest.register_craftitem("alchemy:poison", {
     description = "Flask of Poison (Throwable)\nHurts the affected for 10 seconds.",
-    inventory_image = "alchemy_potion_poison.png";
+    inventory_image = "alchemy_potion_poison.png",
+    groups = {vessel = 1},
     on_use = function(itemstack, user, pointed_thing)
         local player_pos = user:get_pos()
         local dir = user:get_look_dir()
@@ -240,7 +249,8 @@ minetest.register_craftitem("alchemy:poison", {
 
 minetest.register_craftitem("alchemy:stamina", {
     description = "Stamina Potion\nIncrease max satiation.",
-    inventory_image = "alchemy_potion_stamina.png";
+    inventory_image = "alchemy_potion_stamina.png",
+    groups = {vessel = 1},
     on_use = function(itemstack, user, pointed_thing)
         local name = user:get_player_name()
         if hbhunger.players[name].satiation ~= hbhunger.max_reachable_satiation then
@@ -253,7 +263,8 @@ minetest.register_craftitem("alchemy:stamina", {
 
 minetest.register_craftitem("alchemy:vitality", {
     description = "Vitality Potion\nIncrease max health.",
-    inventory_image = "alchemy_potion_vitality.png";
+    inventory_image = "alchemy_potion_vitality.png",
+    groups = {vessel = 1},
     on_use = function(itemstack, user, pointed_thing)
         local current_max_hp = user:get_properties().hp_max
 
