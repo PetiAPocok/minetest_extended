@@ -1439,6 +1439,7 @@ minetest.register_node("default:junglegrass", {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16},
 	},
+    drop = { items = { { items = {"default:junglegrass"} } } },
 })
 
 
@@ -1460,6 +1461,7 @@ minetest.register_node("default:grass_1", {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -5 / 16, 6 / 16},
 	},
+    drop = { items = { { items = {"default:grass_1"} } } },
 
 	on_place = function(itemstack, placer, pointed_thing)
 		-- place a random grass node
@@ -1482,7 +1484,7 @@ for i = 2, 5 do
 		sunlight_propagates = true,
 		walkable = false,
 		buildable_to = true,
-		drop = "default:grass_1",
+		drop = { items = { { items = {"default:grass_1"} } } },
 		groups = {snappy = 3, flora = 1, attached_node = 1,
 			not_in_creative_inventory = 1, grass = 1, flammable = 1},
 		sounds = default.node_sound_leaves_defaults(),
