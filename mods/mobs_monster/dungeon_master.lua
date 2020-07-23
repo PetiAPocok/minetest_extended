@@ -72,7 +72,7 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("mobs_monster:dungeon_master", S("Dungeon Master"), "fire_basic_flame.png", 1, true)
+mobs:register_egg("mobs_monster:dungeon_master", S("Dungeon Master"), "fire_basic_flame.png", 1)
 
 
 mobs:alias_mob("mobs:dungeon_master", "mobs_monster:dungeon_master") -- compatibility
