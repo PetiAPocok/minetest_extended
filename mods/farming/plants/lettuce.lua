@@ -9,8 +9,10 @@ farming.register_plant("farming:lettuce", {
 -- Override drop
 minetest.override_item("farming:lettuce_4", {
     drop = {
-        "farming:lettuce",
-        "farming:seed_lettuce"
+        items = {
+            { items = {"farming:seed_lettuce"} },
+            { items = {"farming:lettuce"} }
+        }
     }
 })
 
