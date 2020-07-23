@@ -12,15 +12,15 @@ minetest.register_node("gems_amber:amber_ore", {
         items = {
             {
                 rarity = 1,
-                items = {"amber:amber 2"},
+                items = {"gems_amber:amber 2"},
             },
             {
                 rarity = 2,
-                items = {"amber:amber"},
+                items = {"gems_amber:amber"},
             },
             {
                 rarity = 4,
-                items = {"amber:amber 3"},
+                items = {"gems_amber:amber 3"},
             }
         }
     },
@@ -31,7 +31,7 @@ minetest.register_ore({
 	ore_type = "scatter",
 	ore = "gems_amber:amber_ore",
 	wherein = "default:stone",
-	clust_scarcity = 10*10*10,
+	clust_scarcity = 100*100*100,
 	clust_num_ores = 3,
 	clust_size = 3,
 	y_min = -31000,

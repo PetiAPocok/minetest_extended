@@ -31,7 +31,7 @@ minetest.register_ore({
 	ore_type = "scatter",
 	ore = "gems_quartz:quartz_ore",
 	wherein = "default:stone",
-	clust_scarcity = 10*10*10,
+	clust_scarcity = 100*100*100,
 	clust_num_ores = 6,
 	clust_size = 3,
 	y_min = -31000,
