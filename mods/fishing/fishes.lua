@@ -15,7 +15,7 @@ minetest.register_craftitem("fishing:tuna_cooked", {
 
 minetest.register_craft({
 	type = "cooking",
-	output = "fishing:fish_cooked",
+	output = "fishing:tuna_cooked",
 	recipe = "fishing:tuna",
 	cooktime = 10,
 })
