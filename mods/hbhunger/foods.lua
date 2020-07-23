@@ -1,5 +1,3 @@
-hbhunger.register_food("alchemy:bottled_water", 1)
-
 hbhunger.register_food("default:apple", 2)
 
 hbhunger.register_food('farming:bread', 5)
