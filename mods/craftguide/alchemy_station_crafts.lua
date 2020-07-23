@@ -48,7 +48,7 @@ craftguide.register_craft({
 craftguide.register_craft({
 	type   = "brewing",
 	result = "alchemy:gills",
-	items  = {"alchemy:bottled_water", "flowers:waterlily"}
+	items  = {"alchemy:bottled_water", "fishing:clownfish"}
 })
 
 craftguide.register_craft({
