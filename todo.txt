@@ -1,9 +1,44 @@
 -------------------------------------------------1.1--------------------------------------------------------------
 TESZT
 
-Ki halt meg üzenet mindenkinek, de legyen cofigba kapcsolható
+light orb bántja a vizet
+
+Walking light vibrál...
+    Mert előbb elveszi az előző light-et és utána rakja le az újat.
+
+A powered rail síncsoport két szélső eleme nem vált mesecon state-t... Mesecons hiba?
+
+5.3.0-ra frissíteni
 
 -------------------------------------------------1.2--------------------------------------------------------------
+
+Új mob: Demon
+    Dob: démon [csont? / vér? / fog? / szem?]
+    Shadow orb-ot lő
+
+    ring of demon-t lehet csinálni a demon part-ból,
+    shadow aurát ad és + sebzést a demon orbnak...
+
+Festmény
+    PetiAPocok - Golya és Dali lába (Gege)
+
+Teleport hálózat
+    Teleport obelisk (node)
+        ehhez lehet teleportálni
+    Teleport rúna (item)
+        On use a saját rúnájához teleportál
+        50? manáért
+
+bonemeal mod mindenhol sima füvet növeszt.
+
+Nagy hajó?
+
+az elültetett mag, amíg mag addig legyen kivehető
+
+Az ajtó craft adjon 3 ajtót
+
+Ability to kill butterflies
+
 The poisoning foods not damaging till the given time
     de miért...?
 
@@ -17,6 +52,8 @@ craftguide
 
     unknown crafts
         hiányos item-craftok körvonalakkal
+
+    Esetleg más craft guide?
 
 fire orb olvassza a havat meg a jeget.
 

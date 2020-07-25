@@ -96,7 +96,7 @@ Made for and tested on Minetest 5.2.0.
 - Created health_adjuster mod.
 - Created Alchemy mod.
 - Created Gems mod. Used Quartz mod's textures ([Github](https://github.com/minetest-mods/quartz))
-- Created Magic mod. Used some of magic_mod's codes. ([Github](https://github.com/veNext/magic_mod))
+- Created Magic mod. Used some of veNext's magic_mod's code. ([Github](https://github.com/veNext/magic_mod))
 - Created Death announce.
 
 ## Licensing
