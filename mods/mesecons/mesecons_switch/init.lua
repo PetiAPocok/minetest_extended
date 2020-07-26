@@ -7,9 +7,9 @@ mesecon.register_node("mesecons_switch:mesecon_switch", {
 	sounds = default.node_sound_stone_defaults(),
 	on_rightclick = function (pos, node)
 		if(mesecon.flipstate(pos, node) == "on") then
-			mesecon.receptor_on(pos, mesecon.rules.alldirs)
+			mesecon.receptor_on(pos)
 		else
-			mesecon.receptor_off(pos, mesecon.rules.alldirs)
+			mesecon.receptor_off(pos)
 		end
 		minetest.sound_play("mesecons_switch", {pos=pos})
 	end

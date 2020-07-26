@@ -49,64 +49,8 @@ local torch_selectionbox =
 	wall_side = {-0.5, -0.1, -0.1, -0.5+0.6, 0.1, 0.1},
 }
 
-
-
---~ minetest.register_node("default:mese_post_light", {
-	--~ description = S("Mese Post Light"),
-	--~ tiles = {"default_mese_post_light_top.png", "default_mese_post_light_top.png",
-		--~ "default_mese_post_light_side_dark.png", "default_mese_post_light_side_dark.png",
-		--~ "default_mese_post_light_side.png", "default_mese_post_light_side.png"},
-	--~ wield_image = "default_mese_post_light_side.png",
-	--~ drawtype = "nodebox",
-	--~ node_box = {
-		--~ type = "fixed",
-		--~ fixed = {
-			--~ {-2 / 16, -8 / 16, -2 / 16, 2 / 16, 8 / 16, 2 / 16},
-		--~ },
-	--~ },
-	--~ paramtype = "light",
-	--~ light_source = default.LIGHT_MAX,
-	--~ sunlight_propagates = true,
-	--~ is_ground_content = false,
-	--~ groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	--~ sounds = default.node_sound_wood_defaults(),
---~ })
-
-
-
-
-minetest.register_node("mesecons_torch:mesecon_torch_on", {
-	drawtype = "nodebox",
-    node_box = {
-        type = "fixed",
-        fixed = {
-            {-2 / 16, -8 / 16, -2 / 16, 2 / 16, 8 / 16, 2 / 16},
-        },
-    },
-	tiles = {"mesecon_torch_top_on.png", "mesecon_torch_bottom.png",
-        "mesecon_torch_side_on.png", "mesecon_torch_side_on.png",
-        "mesecon_torch_side_on.png", "mesecon_torch_side_on.png"},
-	inventory_image = "mesecon_torch_side_on.png",
-	wield_image = "mesecon_torch_side_on.png",
-	paramtype = "light",
-	is_ground_content = false,
-	sunlight_propagates = true,
-	walkable = false,
-	paramtype2 = "wallmounted",
-	selection_box = torch_selectionbox,
-	groups = {dig_immediate=3},
-	light_source = minetest.LIGHT_MAX-5,
-	description="Mesecon Torch",
-	sounds = default.node_sound_defaults(),
-	mesecons = {receptor = {
-		state = mesecon.state.on,
-		rules = torch_get_output_rules
-	}},
-	on_blast = mesecon.on_blastnode,
-})
-
 minetest.register_node("mesecons_torch:mesecon_torch_off", {
-	drawtype = "nodebox",
+    drawtype = "nodebox",
     node_box = {
         type = "fixed",
         fixed = {
@@ -128,6 +72,36 @@ minetest.register_node("mesecons_torch:mesecon_torch_off", {
 	sounds = default.node_sound_defaults(),
 	mesecons = {receptor = {
 		state = mesecon.state.off,
+		rules = torch_get_output_rules
+	}},
+	on_blast = mesecon.on_blastnode,
+})
+
+minetest.register_node("mesecons_torch:mesecon_torch_on", {
+    drawtype = "nodebox",
+    node_box = {
+        type = "fixed",
+        fixed = {
+            {-2 / 16, -8 / 16, -2 / 16, 2 / 16, 8 / 16, 2 / 16},
+        },
+    },
+    tiles = {"mesecon_torch_top_on.png", "mesecon_torch_bottom.png",
+        "mesecon_torch_side_on.png", "mesecon_torch_side_on.png",
+        "mesecon_torch_side_on.png", "mesecon_torch_side_on.png"},
+    inventory_image = "mesecon_torch_side_on.png",
+	wield_image = "mesecon_torch_side_on.png",
+	paramtype = "light",
+	is_ground_content = false,
+	sunlight_propagates = true,
+	walkable = false,
+	paramtype2 = "wallmounted",
+	selection_box = torch_selectionbox,
+	groups = {dig_immediate=3},
+	light_source = minetest.LIGHT_MAX-5,
+	description="Mesecon Torch",
+	sounds = default.node_sound_defaults(),
+	mesecons = {receptor = {
+		state = mesecon.state.on,
 		rules = torch_get_output_rules
 	}},
 	on_blast = mesecon.on_blastnode,
