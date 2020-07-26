@@ -412,7 +412,7 @@ if not boost_cart.mtg_compat then
 			"carts_cart_side.png",
 			"carts_cart_side.png"
 		),
-		wield_image = "carts_cart_side.png",
+		wield_image = "carts_cart_front.png",
 		on_place = function(itemstack, placer, pointed_thing)
 			if not pointed_thing.type == "node" then
 				return

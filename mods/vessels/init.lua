@@ -118,7 +118,7 @@ minetest.register_node("vessels:glass_bottle", {
 	walkable = false,
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.25, -0.5, -0.25, 0.25, 0.4, 0.25}
+		fixed = {-0.25, -0.5, -0.25, 0.25, 0.3, 0.25}
 	},
 	groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 	sounds = default.node_sound_glass_defaults(),
