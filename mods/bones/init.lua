@@ -186,6 +186,7 @@ minetest.register_on_dieplayer(function(player)
 	local bones_mode = minetest.settings:get("bones_mode") or "bones"
 	if bones_mode ~= "bones" and bones_mode ~= "drop" and bones_mode ~= "keep" then
 		bones_mode = "bones"
+	end
 
 	local bones_position_message = minetest.settings:get_bool("bones_position_message") == true
 	local player_name = player:get_player_name()
