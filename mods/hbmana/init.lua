@@ -175,7 +175,7 @@ do
 		if(string ~= nil) then
 			local savetable = minetest.deserialize(string)
 			hbmana.playerlist = savetable.playerlist
-			minetest.debug("[mana] mana.mt successfully read.")
+			minetest.log("action", "[mana] mana.mt successfully read.")
 		end
 	end
 end
