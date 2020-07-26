@@ -6,19 +6,11 @@ boost_cart:register_rail("boost_cart:powerrail", {
     },
     groups = boost_cart:get_rail_groups({power_rail = 1}),
     mesecons = {
-        conductor = {
-            state = mesecon.state.off,
-            offstate = "boost_cart:powerrail",
-            onstate = "boost_cart:powerrail_on",
-            rules = mesecon.rules.default,
-        },
         effector = {
             action_on = function(pos, node)
+                minetest.swap_node(pos, {name = "boost_cart:powerrail_on", param2 = node.param2})
                 minetest.get_meta(pos):set_string("cart_acceleration", "1")
-            end,
-            action_off = function(pos, node)
-                minetest.get_meta(pos):set_string("cart_acceleration", "-1")
-            end,
+            end
         },
     },
 })
@@ -42,19 +34,11 @@ boost_cart:register_rail("boost_cart:powerrail_on", {
     groups = boost_cart:get_rail_groups({power_rail = 1, not_in_creative_inventory = 1}),
     drop = "boost_cart:powerrail",
     mesecons = {
-        conductor = {
-            state = mesecon.state.on,
-            offstate = "boost_cart:powerrail",
-            onstate = "boost_cart:powerrail_on",
-            rules = mesecon.rules.default,
-        },
         effector = {
-            action_on = function(pos, node)
-                minetest.get_meta(pos):set_string("cart_acceleration", "1")
-            end,
             action_off = function(pos, node)
+                minetest.swap_node(pos, {name = "boost_cart:powerrail", param2 = node.param2})
                 minetest.get_meta(pos):set_string("cart_acceleration", "-1")
-            end,
+            end
         },
     },
 })

@@ -261,7 +261,6 @@ function cart_entity:on_step(dtime)
 		local acc = nil
 
 		local acc_meta = minetest.get_meta(pos):get_string("cart_acceleration")
-        minetest.chat_send_all(dump(acc_meta))
 		if acc_meta == "halt" and not self.punched then
 			-- Stop rail
 			vel = {x=0, y=0, z=0}

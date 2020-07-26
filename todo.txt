@@ -6,10 +6,6 @@ light orb bántja a vizet
 Walking light vibrál...
     Mert előbb elveszi az előző light-et és utána rakja le az újat.
 
-A powered rail síncsoport két szélső eleme nem vált mesecon state-t... Mesecons hiba?
-
-5.3.0-ra frissíteni
-
 -------------------------------------------------1.2--------------------------------------------------------------
 
 Új mob: Demon
