@@ -103,6 +103,7 @@ mobs:register_mob("mobs_monster:spider", {
 
 		return true -- run only once, false/nil runs every activation
 	end,
+
 	-- custom function to make spiders climb vertical facings
 	do_custom = function(self, dtime)
 
@@ -114,8 +115,8 @@ mobs:register_mob("mobs_monster:spider", {
 		self.spider_timer = 0
 
 		-- need to be stopped to go onwards
-		if get_velocity(self) > 0.2 then
-			self.disable_falling = false
+		if get_velocity(self) > 0.5 then
+			self.disable_falling = nil
 			return
 		end
 
@@ -153,9 +154,26 @@ mobs:register_mob("mobs_monster:spider", {
 		self.disable_falling = true
 
 		-- move up facing
+		v.x = 0 ; v.y = 0
 		v.y = self.jump_height
 		mobs:set_animation(self, "jump")
 		self.object:set_velocity(v)
+	end,
+
+	-- make spiders jump at you on attack
+	custom_attack = function(self, pos)
+
+		local vel = self.object:get_velocity()
+
+		self.object:set_velocity({
+			x = vel.x * self.run_velocity,
+			y = self.jump_height * 1.5,
+			z = vel.z * self.run_velocity
+		})
+
+		self.pausetimer = 0.5
+
+		return true -- continue rest of attack function
 	end
 })
 

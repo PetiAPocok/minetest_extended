@@ -21,4 +21,4 @@ dofile(path .. "/panda.lua") -- AspireMint
 
 dofile(path .. "/lucky_block.lua")
 
-print (S("[MOD] Mobs Redo 'Animals' loaded"))
+print (S("[MOD] Mobs Redo Animals loaded"))

@@ -1,6 +1,7 @@
+
 local S = mobs.intllib
 
--- Bee by KrupnoPavel
+-- Bee by KrupnoPavel (.b3d model by sirrobzeroone)
 
 mobs:register_mob("mobs_animal:bee", {
 	type = "animal",
@@ -10,7 +11,7 @@ mobs:register_mob("mobs_animal:bee", {
 	armor = 200,
 	collisionbox = {-0.2, -0.01, -0.2, 0.2, 0.5, 0.2},
 	visual = "mesh",
-	mesh = "mobs_bee.x",
+	mesh = "mobs_bee.b3d",
 	textures = {
 		{"mobs_bee.png"},
 	},
@@ -50,13 +51,13 @@ mobs:spawn({
 	nodes = {"group:flower"},
 	min_light = 14,
 	interval = 60,
-	chance = 8000,
+	chance = 7000,
 	min_height = 3,
 	max_height = 200,
 	day_toggle = true,
 })
 
-mobs:register_egg("mobs_animal:bee", S("Bee"), "mobs_bee_inv.png", 0)
+mobs:register_egg("mobs_animal:bee", S("Bee"), "mobs_bee_inv.png")
 
 -- compatibility
 mobs:alias_mob("mobs:bee", "mobs_animal:bee")
@@ -78,7 +79,7 @@ minetest.register_node(":mobs:beehive", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = true,
-	groups = {oddly_breakable_by_hand = 3, flammable = 1},
+	groups = {oddly_breakable_by_hand = 3, flammable = 1, disable_suffocation = 1},
 	sounds = default.node_sound_defaults(),
 
 	on_construct = function(pos)

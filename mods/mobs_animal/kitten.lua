@@ -13,6 +13,7 @@ attack_type = "dogfight",
 attack_animals = true, -- so it can attack rat
 attack_players = false,
 reach = 1,
+stepheight = 1.1,
 	passive = false,
 	hp_min = 5,
 	hp_max = 10,
@@ -51,7 +52,7 @@ reach = 1,
 		stoodup_start = 0,
 		stoodup_end = 0,
 	},
-	follow = {"mobs_animal:rat", "fishing:tuna", "fishing:clownfish", "fishing:salmon", "mobs_fish:clownfish", "mobs_fish:tropical"},
+	follow = {"mobs_animal:rat", "ethereal:fish_raw", "mobs_fish:clownfish", "mobs_fish:tropical"},
 	view_range = 8,
 
 	on_rightclick = function(self, clicker)
@@ -131,9 +132,13 @@ mobs:alias_mob("mobs:kitten", "mobs_animal:kitten") -- compatibility
 
 
 local hairball_items = {
-	"default:stick", "default:dry_shrub", "mobs_animal:rat", "default:grass_1", "farming:seed_wheat", "dye:green",
-	"farming:seed_cotton", "dye:white", "default:dry_grass_1", "dye:red", "farming:string", "mobs:chicken_feather",
-	"dye:black", "dye:brown", "mobs:rabbit_hide"
+	"default:stick", "default:coal_lump", "default:dry_shrub", "flowers:rose",
+	"mobs_animal:rat", "default:grass_1", "farming:seed_wheat", "dye:green", "",
+	"farming:seed_cotton", "default:flint", "default:sapling", "dye:white", "",
+	"default:clay_lump", "default:paper", "default:dry_grass_1", "dye:red", "",
+	"farming:string", "mobs:chicken_feather", "default:acacia_bush_sapling", "",
+	"default:bush_sapling", "default:copper_lump", "default:iron_lump", "",
+	"dye:black", "dye:brown", "default:obsidian_shard", "default:tin_lump"
 }
 
 minetest.register_craftitem(":mobs:hairball", {
@@ -146,7 +151,7 @@ minetest.register_craftitem(":mobs:hairball", {
 		local newpos = {x = pos.x + dir.x, y = pos.y + dir.y + 1.5, z = pos.z + dir.z}
 		local item = hairball_items[math.random(1, #hairball_items)]
 
-		if math.random(1, 3) == 1 then
+		if item ~= "" then
 			minetest.add_item(newpos, {name = item})
 		end
 

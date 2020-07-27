@@ -3,7 +3,8 @@ local S = mobs.intllib
 
 
 -- custom particle effects
-local effect = function(pos, amount, texture, min_size, max_size, radius, gravity, glow)
+local effect = function(
+		pos, amount, texture, min_size, max_size, radius, gravity, glow)
 
 	radius = radius or 2
 	min_size = min_size or 0.5
@@ -94,9 +95,9 @@ mobs:register_mob("mobs_monster:sand_monster", {
 ]]
 	on_die = function(self, pos)
 		pos.y = pos.y + 0.5
-		effect(pos, 30, "mobs_sand_particles.png", 0.1, 2, 3, 5)
+		mobs:effect(pos, 30, "mobs_sand_particles.png", .1, 2, 3, 5)
 		pos.y = pos.y + 0.25
-		effect(pos, 30, "mobs_sand_particles.png", 0.1, 2, 3, 5)
+		mobs:effect(pos, 30, "mobs_sand_particles.png", .1, 2, 3, 5)
 	end,
 --[[
 	on_rightclick = function(self, clicker)

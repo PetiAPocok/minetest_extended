@@ -31,13 +31,15 @@ functions needed for the mob to work properly which contains the following:
    'hp_max'        has the maximum health value the mob can spawn with.
    'armor'         holds strength of mob, 100 is normal, lower is more powerful
                    and needs more hits and better weapons to kill.
-   'passive'       when true allows animals to defend themselves when hit,
+   'passive'       when false allows animals to defend themselves when hit,
                    otherwise they amble onwards.
    'walk_velocity' is the speed that your mob can walk around.
    'run_velocity'  is the speed your mob can run with, usually when attacking.
    'stand_chance'  has a 0-100 chance value your mob will stand from walking.
    'walk_chance'   has a 0-100 chance value your mob will walk from standing,
                    set to 0 for jumping mobs only.
+   'randomly_turn' if set to false then mob will not turn to face player or
+                   randomly turn while walking or standing.
    'jump'          when true allows your mob to jump updwards.
    'jump_height'   holds the height your mob can jump, 0 to disable jumping.
    'stepheight'    height of a block that your mob can easily walk up onto,
@@ -45,6 +47,7 @@ functions needed for the mob to work properly which contains the following:
    'fly'           when true allows your mob to fly around instead of walking.
    'fly_in'        holds the node name that the mob flies (or swims) around
                    in e.g. "air" or "default:water_source".
+   'keep_flying'   when true mobs like birds no longer stop and stand.
    'stay_near'     when set allows mobs the chance to stay around certain nodes.
       'nodes'      string or table of nodes to stay nearby e.g. "farming:straw"
       'chance'     chance of searching for above node(s), default is 10.
@@ -67,7 +70,8 @@ functions needed for the mob to work properly which contains the following:
                    level is between the min and max values below
    'light_damage_min' minimum light value when mob is affected (default: 14)
    'light_damage_max' maximum light value when mob is affected (default: 15)
-   'suffocation'   when true causes mobs to suffocate inside solid blocks.
+   'suffocation'   when > 0 mobs will suffocate inside solid blocks and will be
+                   hurt by the value given every second (0 to disable).
    'floats'        when set to 1 mob will float in water, 0 has them sink.
    'follow'        mobs follow player when holding any of the items which appear
                    on this table, the same items can be fed to a mob to tame or
@@ -87,6 +91,9 @@ functions needed for the mob to work properly which contains the following:
                          punches when nearby.
    'group_attack'        when true has same mob type grouping together to attack
                          offender.
+   'group_helper'        string containing mob name that attacks alongside
+                         current mob when group attacking.
+                         mob is attacking in groups.
    'attack_type'         tells the api what a mob does when attacking the player
                          or another mob:
       'dogfight'         is a melee attack when player is within mob reach.
@@ -180,6 +187,8 @@ functions needed for the mob to work properly which contains the following:
    'child_texture'     holds the texture table for when baby mobs are used.
    'gotten_texture'    holds the texture table for when self.gotten value is
                        true, used for milking cows or shearing sheep.
+   'texture_mods'      holds a string which overlays a texture on top of the
+                       mob texture e.g. "^saddle.png"
    'mesh'              holds the name of the external object used for mob model
                        e.g. "mobs_cow.b3d"
    'gotten_mesh"       holds the name of the external object used for when
@@ -284,8 +293,10 @@ enhance mob functionality and have them do many interesting things:
                     time_from_last_punch, tool_capabilities, direction), return
                     false to stop punch damage and knockback from taking place.
    'custom_attack'  when set this function is called instead of the normal mob
-                    melee attack, parameters are (self, to_attack).
-   'on_die'         a function that is called when mob is killed (self, pos)
+                    melee attack, parameters are (self, to_attack) and if true
+                    is returned normal attack function continued.
+   'on_die'         a function that is called when mob is killed (self, pos), also
+                    has access to self.cause_of_death table.
    'do_custom'      a custom function that is called every tick while mob is
                     active and which has access to all of the self.* variables
                     e.g. (self.health for health or self.standing_in for node
@@ -317,6 +328,29 @@ for each mob.
    'self.order'         set to "follow" or "stand" so that npc will follow owner
                         or stand it's ground
    'self.nametag'       contains the name of the mob which it can show above
+
+
+Adding Mobs in World
+--------------------
+
+	mobs:add_mob(pos, {
+		name = "mobs_animal:chicken",
+		child = true,
+		owner = "singleplayer",
+		nametag = "Bessy",
+		ignore_count = true -- ignores mob count per map area
+	})
+
+Returns false if mob could not be added, returns mob object if spawned ok.
+
+
+Removing Mob from World
+-----------------------
+
+	mobs:remove(self, decrease)
+
+Removes mob 'self' from the world and if 'decrease' is true then the mob counter
+will also be decreased by one.
 
 
 Spawning Mobs in World
@@ -379,6 +413,24 @@ true the mob will not spawn.
     'name'   is the name of the animal/monster
 
 
+Particle Effects
+----------------
+
+mobs:effect(pos, amount, texture, min_size, max_size, radius, gravity, glow, fall)
+
+This function provides a quick way to spawn particles as an effect.
+
+    'pos'       center position of particle effect.
+    'amount'    how many particles.
+    'texture'   texture filename to use for effect.
+    'min_size'  smallest particle size.
+    'max_size'  largest particle size.
+    'radius'    how far particles spread outward from center.
+    'gravity'   gravity applied to particles once they spawn.
+    'glow'      number between 1 and 15 for glowing particles.
+    'fall'      when true particles fall, false has them rising, nil has them scatter.
+
+
 Making Arrows
 -------------
 
@@ -399,6 +451,8 @@ This function registers a arrow for mobs with the attack type shoot.
        'hit_mob'      a function that is called when the arrow hits a mob;
                       this function should hurt the mob, the parameters are
                       (self, player)
+       'hit_object'   a function that is called when the arrow hits an object;
+                      this function parameters are (self, player)
        'hit_node'     a function that is called when the arrow hits a node, the
                       parameters are (self, pos, node)
        'tail'         when set to 1 adds a trail or tail to mob arrows
@@ -412,7 +466,9 @@ This function registers a arrow for mobs with the attack type shoot.
        'on_step'      is a custom function when arrow is active, nil for
                       default.
        'on_punch'     is a custom function when arrow is punched, nil by default
-       'collisionbox' is hitbox table for arrow, {0,0,0,0,0,0} by default.
+       'collisionbox' is hitbox table for arrow, {-.1,-.1,-.1,.1,.1,.1} by default.
+       'lifetime'     contains float value for how many seconds arrow exists in
+                      world before being removed (default is 4.5 seconds).
 
 
 Spawn Eggs
@@ -628,6 +684,8 @@ External Settings for "minetest.conf"
    'mobs_griefing'          when false mobs cannot break blocks when using either
                             pathfinding level 2, replace functions or mobs:boom
                             function.
+   'mob_nospawn_range'      Minimum range a mob can spawn near player (def: 12)
+   'mob_active_limit'       Number of active mobs in game, 0 for unlimited
 
 Players can override the spawn chance for each mob registered by adding a line
 to their minetest.conf file with a new value, the lower the value the more each
