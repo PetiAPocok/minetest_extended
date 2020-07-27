@@ -2,6 +2,7 @@
 TESZT
 
 light orb bántja a vizet
+    mert a víz hagyja, hogy építsenek a helyére.
 
 Walking light vibrál...
     Mert előbb elveszi az előző light-et és utána rakja le az újat.
