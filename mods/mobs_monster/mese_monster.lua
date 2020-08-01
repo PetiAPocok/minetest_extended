@@ -99,13 +99,3 @@ mobs:register_arrow("mobs_monster:mese_arrow", {
 	hit_node = function(self, pos, node)
 	end
 })
-
--- 9x mese crystal fragments = 1x mese crystal
-minetest.register_craft({
-	output = "default:mese_crystal",
-	recipe = {
-		{"default:mese_crystal_fragment", "default:mese_crystal_fragment", "default:mese_crystal_fragment"},
-		{"default:mese_crystal_fragment", "default:mese_crystal_fragment", "default:mese_crystal_fragment"},
-		{"default:mese_crystal_fragment", "default:mese_crystal_fragment", "default:mese_crystal_fragment"},
-	}
-})
