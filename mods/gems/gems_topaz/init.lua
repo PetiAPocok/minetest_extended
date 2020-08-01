@@ -31,9 +31,9 @@ minetest.register_ore({
 	ore_type = "scatter",
 	ore = "gems_topaz:topaz_ore",
 	wherein = "default:stone",
-	clust_scarcity = 100*100*100,
-	clust_num_ores = 6,
-	clust_size = 3,
+	clust_scarcity = 40*40*40,
+	clust_num_ores = 27,
+	clust_size = 6,
 	y_min = -31000,
 	y_max = -64,
 })
