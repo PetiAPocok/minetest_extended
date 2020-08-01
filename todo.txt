@@ -7,6 +7,8 @@ light orb bántja a vizet
 Walking light vibrál...
     Mert előbb elveszi az előző light-et és utána rakja le az újat.
 
+dupplán van a mese crystal craft-ja.
+
 -------------------------------------------------1.2--------------------------------------------------------------
 
 Új mob: Demon

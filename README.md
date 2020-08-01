@@ -50,7 +50,7 @@ Made for and tested on Minetest 5.2.0.
   Removed the luacontroller, microcontroller, blinkyplant and the powerplant
 - The default carts mod has been replaced by boost_cart (modified) ([Github](https://github.com/SmallJoker/boost_cart))   
   Kept the original cart   
-  The powered rail has been modified to work like in Minecraft
+  The powered rail has been modified so it needs "mesecon power" to accelerate cart
 - Beds: the simple bed has been removed
 - Added Crafting Guide to add, well, crafting guide ([Github](https://github.com/minetest-mods/craftguide))  
   Added support for the "packer".  
