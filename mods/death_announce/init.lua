@@ -14,9 +14,16 @@ if enabled then
         if reason.type == "punch" and reason.object:is_player() then
             message = player:get_player_name() .. " " .. S("were killed by") .. " " .. reason.object:get_player_name() .. "."
         elseif reason.type == "punch" then
-            local monsters_name = minetest.registered_items[reason.object:get_entity_name()].description
+            local hiters_name = reason.object:get_entity_name()
+            local monsters_egg = minetest.registered_items[hiters_name]
 
-            message = player:get_player_name() .. " " .. S("were killed by") .. " " .. monsters_name .. "."
+            if monsters_egg ~= nil then
+                message = player:get_player_name() .. " " .. S("were killed by") .. " " .. monsters_egg.description .. "."
+            else
+                local projectiles_name = string.gsub (string.sub(hiters_name, string.find(hiters_name, ":") + 1, string.len(hiters_name)), "_", " ")
+                message = player:get_player_name() .. " " .. S("were killed by") .. " " .. projectiles_name .. "."
+            end
+
         elseif reason.type == "fall" then
             message = player:get_player_name() .. " " .. S("fell from too high") .. "."
         else
