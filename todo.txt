@@ -2,12 +2,10 @@
 TESZT
 
 light orb bántja a vizet
-    mert a víz hagyja, hogy építsenek a helyére.
+    mert a víz hagyja, hogy építsenek a helyére... Mint a fű.
 
 Walking light vibrál...
-    Mert előbb elveszi az előző light-et és utána rakja le az újat.
-
-dupplán van a mese crystal craft-ja.
+    Mert előbb elveszi az előző light-et és utána rakja le az újat...
 
 -------------------------------------------------1.2--------------------------------------------------------------
 

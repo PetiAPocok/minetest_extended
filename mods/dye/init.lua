@@ -59,9 +59,9 @@ minetest.register_craft({
 -- Manually add blueberries->violet dye
 
 minetest.register_craft({
-	output = "dye:violet 2",
+	output = "dye:violet 4",
 	recipe = {
-		{"farming:blueberry"}
+		{"farming:blueberry", "farming:blueberry"}
 	},
 })
 
