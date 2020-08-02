@@ -7,15 +7,14 @@ light orb bántja a vizet
 Walking light vibrál...
     Mert előbb elveszi az előző light-et és utána rakja le az újat...
 
-A macska nem követi a halakat
-
 -------------------------------------------------1.2--------------------------------------------------------------
 
 vizi állatok?
     delfin lovaglás?
-
+    polip lovaglás?
 
 ló?
+kutya?
 
 Új mob: Demon
     Dob: démon [csont? / vér? / fog? / szem?]
@@ -23,9 +22,6 @@ ló?
 
     ring of demon-t lehet csinálni a demon part-ból,
     shadow aurát ad és + sebzést a demon orbnak...
-
-Festmény
-    PetiAPocok - Golya és Dali lába (Gege)
 
 Teleport hálózat
     Teleport obelisk (node)
