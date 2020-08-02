@@ -50,6 +50,9 @@ minetest.register_node("paintings:andy_warhol_popart", {
     },
     groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
     sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
 })
 
 minetest.register_craft({
@@ -80,6 +83,9 @@ minetest.register_node("paintings:autumn_forest", {
     },
     groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
     sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
 })
 
 minetest.register_craft({
@@ -110,6 +116,9 @@ minetest.register_node("paintings:beach", {
     },
     groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
     sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
 })
 
 minetest.register_craft({
@@ -140,6 +149,9 @@ minetest.register_node("paintings:cezanne", {
     },
     groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
     sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
 })
 
 minetest.register_craft({
@@ -170,6 +182,9 @@ minetest.register_node("paintings:desert", {
     },
     groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
     sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
 })
 
 minetest.register_craft({
@@ -200,6 +215,9 @@ minetest.register_node("paintings:misty_forest", {
     },
     groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
     sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
 })
 
 minetest.register_craft({
@@ -230,6 +248,9 @@ minetest.register_node("paintings:mountain_top", {
     },
     groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
     sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
 })
 
 minetest.register_craft({
@@ -260,6 +281,9 @@ minetest.register_node("paintings:pines", {
     },
     groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
     sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
 })
 
 minetest.register_craft({
@@ -290,6 +314,9 @@ minetest.register_node("paintings:petiapocok_dali_laba", {
     },
     groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
     sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
 })
 
 minetest.register_craft({
@@ -303,7 +330,7 @@ minetest.register_craft({
 
 
 minetest.register_node("paintings:petiapocok_golya_lab", {
-    description = "Painting: PetiAPocok - Dali Lába",
+    description = "Painting: PetiAPocok - Gólya Láb",
     drawtype = "nodebox",
     tiles = {"paintings_petiapocok_golya_lab.png"},
     inventory_image = "paintings_petiapocok_golya_lab.png",
@@ -320,6 +347,9 @@ minetest.register_node("paintings:petiapocok_golya_lab", {
     },
     groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
     sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
 })
 
 minetest.register_craft({
@@ -350,6 +380,9 @@ minetest.register_node("paintings:salvador_dali", {
     },
     groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
     sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
 })
 
 minetest.register_craft({
@@ -380,6 +413,9 @@ minetest.register_node("paintings:shore", {
     },
     groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
     sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
 })
 
 minetest.register_craft({
@@ -410,6 +446,9 @@ minetest.register_node("paintings:sunset", {
     },
     groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
     sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
 })
 
 minetest.register_craft({
@@ -440,6 +479,9 @@ minetest.register_node("paintings:winter", {
     },
     groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
     sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
 })
 
 minetest.register_craft({
