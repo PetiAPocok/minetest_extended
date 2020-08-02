@@ -272,6 +272,66 @@ minetest.register_craft({
 })
 
 
+minetest.register_node("paintings:petiapocok_dali_laba", {
+    description = "Painting: PetiAPocok - Dali Lába",
+    drawtype = "nodebox",
+    tiles = {"paintings_petiapocok_dali_laba.png"},
+    inventory_image = "paintings_petiapocok_dali_laba.png",
+    wield_image = "paintings_petiapocok_dali_laba.png",
+    paramtype = "light",
+    paramtype2 = "wallmounted",
+    sunlight_propagates = true,
+    walkable = false,
+    node_box = {
+        type = "wallmounted",
+        wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+        wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+        wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+    },
+    groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+    sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+    output = "paintings:petiapocok_dali_laba",
+    recipe = {
+        {"dye:brown", "dye:pink", "dye:brown"},
+        {"dye:brown", "paintings:canvas", "dye:brown"},
+        {"dye:brown", "dye:pink", "dye:brown"},
+    }
+})
+
+
+minetest.register_node("paintings:petiapocok_golya_lab", {
+    description = "Painting: PetiAPocok - Dali Lába",
+    drawtype = "nodebox",
+    tiles = {"paintings_petiapocok_golya_lab.png"},
+    inventory_image = "paintings_petiapocok_golya_lab.png",
+    wield_image = "paintings_petiapocok_golya_lab.png",
+    paramtype = "light",
+    paramtype2 = "wallmounted",
+    sunlight_propagates = true,
+    walkable = false,
+    node_box = {
+        type = "wallmounted",
+        wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+        wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+        wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+    },
+    groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+    sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_craft({
+    output = "paintings:petiapocok_golya_lab",
+    recipe = {
+        {"dye:cyan", "dye:orange", "dye:cyan"},
+        {"dye:cyan", "paintings:canvas", "dye:cyan"},
+        {"dye:green", "dye:orange", "dye:green"},
+    }
+})
+
+
 minetest.register_node("paintings:salvador_dali", {
     description = "Painting: Salvador Dali",
     drawtype = "nodebox",
