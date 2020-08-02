@@ -539,7 +539,7 @@ minetest.register_craftitem("farming:potato_mashed", {
 
 minetest.register_craft({
     type = "shapeless",
-    output = "farming:potato_mashed",
+    output = "farming:potato_mashed 5",
     recipe = {"farming:potato_mashed_pot", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl"},
     replacements = {
 		{"farming:potato_mashed_pot", "farming:pot"}
@@ -614,7 +614,7 @@ minetest.register_craftitem("farming:rice_cooked", {
 
 minetest.register_craft({
     type = "shapeless",
-    output = "farming:rice_cooked",
+    output = "farming:rice_cooked 5",
     recipe = {"farming:rice_cooked_pot", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl"},
 	replacements = {
 		{"farming:rice_cooked_pot", "farming:pot"}
@@ -658,7 +658,7 @@ minetest.register_craftitem("farming:rizibizi", {
 
 minetest.register_craft({
     type = "shapeless",
-    output = "farming:rizibizi",
+    output = "farming:rizibizi 5",
     recipe = {"farming:rizibizi_cooked_pot", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl"},
 	replacements = {
 		{"farming:rizibizi_cooked_pot", "farming:pot"}
