@@ -56,6 +56,7 @@ minetest.register_globalstep(function(dtime)
                     end
 
                     if minetest.get_node(v["current_pos"]).name == "air" then
+                        v["current_pos"]["y"] = v["current_pos"]["y"] + 1
                         minetest.place_node(v["current_pos"], {name="walking_light:light"})
                         v["old_pos"] = v["current_pos"]
                     end
