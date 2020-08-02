@@ -1,11 +1,11 @@
 -------------------------------------------------1.1--------------------------------------------------------------
 TESZT
 
-light orb bántja a vizet
-    mert a víz hagyja, hogy építsenek a helyére... Mint a fű.
-
 Walking light vibrál...
     Mert előbb elveszi az előző light-et és utána rakja le az újat...
+
+nature orb
+    más pillangókat is meg szentjancsit és ritkán méheket.
 
 -------------------------------------------------1.2--------------------------------------------------------------
 
