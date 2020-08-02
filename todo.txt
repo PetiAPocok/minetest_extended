@@ -7,7 +7,15 @@ light orb bántja a vizet
 Walking light vibrál...
     Mert előbb elveszi az előző light-et és utána rakja le az újat...
 
+A macska nem követi a halakat
+
 -------------------------------------------------1.2--------------------------------------------------------------
+
+vizi állatok?
+    delfin lovaglás?
+
+
+ló?
 
 Új mob: Demon
     Dob: démon [csont? / vér? / fog? / szem?]
@@ -28,7 +36,8 @@ Teleport hálózat
 
 bonemeal mod mindenhol sima füvet növeszt.
 
-Nagy hajó?
+Nagy, többszemélyes hajó?
+    inv_image: Ship in a bottle
 
 az elültetett mag, amíg mag addig legyen kivehető
 
