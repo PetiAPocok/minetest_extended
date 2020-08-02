@@ -53,7 +53,7 @@ minetest.register_craftitem("orb_of_healing:orb_of_healing", {
 })
 
 minetest.register_craft({
-	output = "orb_of_freezing:orb_of_freezing",
+	output = "orb_of_healing:orb_of_healing",
 	recipe = {
 		{"", "default:glass", ""},
 		{"default:glass", "gems_amber:amber", "default:glass"},
