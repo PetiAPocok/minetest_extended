@@ -34,6 +34,7 @@ Made for and tested on Minetest 5.2.0.
   Furnaces drop the items what are inside of it when broke.  
   Removed gold weapon and tools.  
   Added craft for green dye from cactus.  
+  If you punch a butterfly/firefly it dies.
 - Created effects_hud for player effect display. Used [hud_timers](https://repo.or.cz/minetest_hudbars.git) as template.
 - Added Mana for magic. ([repo](https://repo.or.cz/minetest_mana.git))
   Renamed to hbmana.  

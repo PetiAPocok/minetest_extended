@@ -4,15 +4,7 @@ TESZT
 Walking light vibrál...
     Mert előbb elveszi az előző light-et és utána rakja le az újat...
 
-nature orb
-    más pillangókat is meg szentjancsit és ritkán méheket.
-
-Az ananász lekvár nem adja vissza az üveget.
-
-két ágy craft
-
 -------------------------------------------------1.2--------------------------------------------------------------
-
 
 Lámpás
     Szabina bavállalta hogy le 3d modellezei
@@ -50,8 +42,6 @@ Nagy, többszemélyes hajó?
 az elültetett mag, amíg mag addig legyen kivehető
 
 Az ajtó craft adjon 3 ajtót
-
-Ability to kill butterflies
 
 The poisoning foods not damaging till the given time
     de miért...?
