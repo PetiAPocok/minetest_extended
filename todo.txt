@@ -7,7 +7,18 @@ Walking light vibrál...
 nature orb
     más pillangókat is meg szentjancsit és ritkán méheket.
 
+Az ananász lekvár nem adja vissza az üveget.
+
+két ágy craft
+
 -------------------------------------------------1.2--------------------------------------------------------------
+
+
+Lámpás
+    Szabina bavállalta hogy le 3d modellezei
+
+chisel
+    sok sok dekoratív blokk
 
 vizi állatok?
     delfin lovaglás?
@@ -33,6 +44,7 @@ Teleport hálózat
 bonemeal mod mindenhol sima füvet növeszt.
 
 Nagy, többszemélyes hajó?
+    Nincs ilyen mod
     inv_image: Ship in a bottle
 
 az elültetett mag, amíg mag addig legyen kivehető
@@ -197,6 +209,9 @@ Ha engedélyezve van a növekvő craftguide akkor az új receptek értesítése 
         baked corn seed
     sushi                                                                                                             KELL
         seaweed + fish+coocked rice
+    grape jam
+
+
 
 horgászat
     more bait                   ???
