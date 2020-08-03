@@ -355,8 +355,8 @@ minetest.register_node("paintings:petiapocok_golya_lab", {
 minetest.register_craft({
     output = "paintings:petiapocok_golya_lab",
     recipe = {
-        {"dye:cyan", "dye:orange", "dye:cyan"},
-        {"dye:cyan", "paintings:canvas", "dye:cyan"},
+        {"dye:grey", "dye:orange", "dye:grey"},
+        {"dye:grey", "paintings:canvas", "dye:grey"},
         {"dye:green", "dye:orange", "dye:green"},
     }
 })
