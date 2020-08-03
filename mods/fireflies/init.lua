@@ -48,7 +48,10 @@ minetest.register_node("fireflies:firefly", {
 			minetest.set_node(pos, {name = "fireflies:hidden_firefly"})
 		end
 		minetest.get_node_timer(pos):start(30)
-	end
+	end,
+    on_punch = function(pos, node, puncher, pointed_thing)
+        minetest.remove_node(pos)
+    end
 })
 
 minetest.register_node("fireflies:hidden_firefly", {
