@@ -22,12 +22,24 @@ minetest.register_craftitem("orb_of_nature:orb_of_nature", {
                 bones:on_use(pointed_thing.under, 1)
             else
                 local pos = player:get_pos()
+                local random_insect = math.random(1, 100)
 
                 pos.x = pos.x + player:get_look_dir().x
                 pos.y = pos.y + 1.5
                 pos.z = pos.z + player:get_look_dir().z
 
-                minetest.set_node(pos, {name="butterflies:butterfly_white"})
+                if random_insect < 25 then
+                    minetest.set_node(pos, {name="butterflies:butterfly_white"})
+                elseif random_insect < 50 then
+                    minetest.set_node(pos, {name="butterflies:butterfly_red"})
+                elseif random_insect < 75 then
+                    minetest.set_node(pos, {name="butterflies:butterfly_violet"})
+                elseif random_insect < 99 then
+                    minetest.set_node(pos, {name="fireflies:firefly"})
+                else
+                    minetest.add_entity(pos, "mobs_animal:bee")
+                end
+
             end
 
         end
