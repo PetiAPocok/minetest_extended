@@ -243,6 +243,9 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "farming:jelly_ananas",
 	recipe = {"farming:jam_ananas", "bones:gelatin_powder"}
+    replacements = {
+		{"farming:jam_ananas", "vessels:glass_jar"}
+	}
 })
 
 minetest.register_craftitem("farming:jelly_blueberry", {
@@ -255,6 +258,9 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "farming:jelly_blueberry",
 	recipe = {"farming:jam_blueberry", "bones:gelatin_powder"}
+    replacements = {
+		{"farming:jam_blueberry", "vessels:glass_jar"}
+	}
 })
 
 minetest.register_craftitem("farming:jelly_huckleberry", {
@@ -267,6 +273,9 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "farming:jelly_huckleberry",
 	recipe = {"farming:jam_huckleberry", "bones:gelatin_powder"}
+    replacements = {
+		{"farming:jam_huckleberry", "vessels:glass_jar"}
+	}
 })
 
 minetest.register_craftitem("farming:jelly_raspberry", {
@@ -279,6 +288,9 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "farming:jelly_raspberry",
 	recipe = {"farming:jam_raspberry", "bones:gelatin_powder"}
+    replacements = {
+		{"farming:jam_raspberry", "vessels:glass_jar"}
+	}
 })
 
 minetest.register_craftitem("farming:jelly_strawberry", {
@@ -291,6 +303,9 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "farming:jelly_strawberry",
 	recipe = {"farming:jam_strawberry", "bones:gelatin_powder"}
+    replacements = {
+		{"farming:jam_strawberry", "vessels:glass_jar"}
+	}
 })
 
 -- Huckleberry Pie
@@ -336,7 +351,7 @@ minetest.register_craft({
     output = "farming:jam_ananas_sandwich 5",
     recipe = {"farming:bread", "farming:jam_ananas"},
     replacements = {
-		{"farming:peanut_butter", "vessels:glass_jar"}
+		{"farming:jam_ananas", "vessels:glass_jar"}
 	}
 })
 
@@ -438,7 +453,8 @@ minetest.register_craft({
 	output = "farming:milkshake_blueberry 2",
 	recipe = {"farming:jam_blueberry", "mobs:bucket_milk"},
     replacements = {
-		{"mobs:bucket_milk", "bucket:bucket_empty"}
+		{"mobs:bucket_milk", "bucket:bucket_empty"},
+    	{"farming:jam_blueberry", "vessels:glass_jar"}
 	}
 })
 
@@ -453,7 +469,8 @@ minetest.register_craft({
 	output = "farming:milkshake_raspberry 2",
 	recipe = {"farming:jam_raspberry", "mobs:bucket_milk"},
     replacements = {
-		{"mobs:bucket_milk", "bucket:bucket_empty"}
+		{"mobs:bucket_milk", "bucket:bucket_empty"},
+        {"farming:jam_raspberry", "vessels:glass_jar"}
 	}
 })
 
@@ -468,7 +485,8 @@ minetest.register_craft({
 	output = "farming:milkshake_strawberry 2",
 	recipe = {"farming:jam_strawberry", "mobs:bucket_milk"},
     replacements = {
-		{"mobs:bucket_milk", "bucket:bucket_empty"}
+		{"mobs:bucket_milk", "bucket:bucket_empty"},
+        {"farming:jam_strawberry", "vessels:glass_jar"}
 	}
 })
 
