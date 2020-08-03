@@ -242,7 +242,7 @@ minetest.register_craftitem("farming:jelly_ananas", {
 minetest.register_craft({
 	type = "shapeless",
 	output = "farming:jelly_ananas",
-	recipe = {"farming:jam_ananas", "bones:gelatin_powder"}
+	recipe = {"farming:jam_ananas", "bones:gelatin_powder"},
     replacements = {
 		{"farming:jam_ananas", "vessels:glass_jar"}
 	}
@@ -257,7 +257,7 @@ minetest.register_craftitem("farming:jelly_blueberry", {
 minetest.register_craft({
 	type = "shapeless",
 	output = "farming:jelly_blueberry",
-	recipe = {"farming:jam_blueberry", "bones:gelatin_powder"}
+	recipe = {"farming:jam_blueberry", "bones:gelatin_powder"},
     replacements = {
 		{"farming:jam_blueberry", "vessels:glass_jar"}
 	}
@@ -272,7 +272,7 @@ minetest.register_craftitem("farming:jelly_huckleberry", {
 minetest.register_craft({
 	type = "shapeless",
 	output = "farming:jelly_huckleberry",
-	recipe = {"farming:jam_huckleberry", "bones:gelatin_powder"}
+	recipe = {"farming:jam_huckleberry", "bones:gelatin_powder"},
     replacements = {
 		{"farming:jam_huckleberry", "vessels:glass_jar"}
 	}
@@ -287,7 +287,7 @@ minetest.register_craftitem("farming:jelly_raspberry", {
 minetest.register_craft({
 	type = "shapeless",
 	output = "farming:jelly_raspberry",
-	recipe = {"farming:jam_raspberry", "bones:gelatin_powder"}
+	recipe = {"farming:jam_raspberry", "bones:gelatin_powder"},
     replacements = {
 		{"farming:jam_raspberry", "vessels:glass_jar"}
 	}
@@ -302,7 +302,7 @@ minetest.register_craftitem("farming:jelly_strawberry", {
 minetest.register_craft({
 	type = "shapeless",
 	output = "farming:jelly_strawberry",
-	recipe = {"farming:jam_strawberry", "bones:gelatin_powder"}
+	recipe = {"farming:jam_strawberry", "bones:gelatin_powder"},
     replacements = {
 		{"farming:jam_strawberry", "vessels:glass_jar"}
 	}
