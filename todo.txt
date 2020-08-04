@@ -200,7 +200,8 @@ Ha engedélyezve van a növekvő craftguide akkor az új receptek értesítése 
     sushi                                                                                                             KELL
         seaweed + fish+coocked rice
     grape jam
-
+    vegetable salad
+    ice cream
 
 
 horgászat
