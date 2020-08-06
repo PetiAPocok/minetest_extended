@@ -1,10 +1,11 @@
 -------------------------------------------------1.1--------------------------------------------------------------
 TESZT
 
-Walking light vibrál...
-    Mert előbb elveszi az előző light-et és utána rakja le az újat...
-
 -------------------------------------------------1.2--------------------------------------------------------------
+
+topaz magic
+    orb of diging
+        digs only dirt (with any on the top of it), stone (cobblestone, and mossy too), gravel, sand, silver sand
 
 Lámpás
     Szabina bavállalta hogy le 3d modellezei

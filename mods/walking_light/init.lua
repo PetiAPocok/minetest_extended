@@ -51,16 +51,20 @@ minetest.register_globalstep(function(dtime)
                 v["current_pos"]["y"] = v["current_pos"]["y"] + 1
 
                 if v["old_pos"]["x"] ~= v["current_pos"]["x"] or v["old_pos"]["y"] ~= v["current_pos"]["y"] or v["old_pos"]["z"] ~= v["current_pos"]["z"] then
-                    if v["old_pos"]["y"] ~= nil then
-                        walking_light.remove_light(v["old_pos"])
-                    end
+                    local new_pos = {}
 
                     if minetest.get_node(v["current_pos"]).name == "air" then
                         v["current_pos"]["y"] = v["current_pos"]["y"] + 1
                         minetest.place_node(v["current_pos"], {name="walking_light:light"})
                         v["current_pos"]["y"] = v["current_pos"]["y"] - 1
-                        v["old_pos"] = v["current_pos"]
+                        new_pos = v["current_pos"]
                     end
+
+                    if v["old_pos"]["y"] ~= nil then
+                        walking_light.remove_light(v["old_pos"])
+                    end
+
+                    v["old_pos"] = new_pos
                 end
             else
                 if v["old_pos"]["y"] ~= nil then
