@@ -32,6 +32,39 @@ minetest.register_craft({
 })
 
 
+minetest.register_node("paintings:aalmeidah_landscape", {
+    description = "Painting: aalmeidah - Landscape",
+    drawtype = "nodebox",
+    tiles = {"paintings_aalmeidah_landscape.png"},
+    inventory_image = "paintings_aalmeidah_landscape.png",
+    wield_image = "paintings_aalmeidah_landscape.png",
+    paramtype = "light",
+    paramtype2 = "wallmounted",
+    sunlight_propagates = true,
+    walkable = false,
+    node_box = {
+        type = "wallmounted",
+        wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+        wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+        wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+    },
+    groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+    sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
+})
+
+minetest.register_craft({
+    output = "paintings:aalmeidah_landscape",
+    recipe = {
+        {"dye:cyan", "dye:cyan", "dye:pink"},
+        {"dye:dark_grey", "paintings:canvas", "dye:pink"},
+        {"dye:dark_grey", "dye:dark_grey", "dye:dark_grey"},
+    }
+})
+
+
 minetest.register_node("paintings:andy_warhol_popart", {
     description = "Painting: Andy Warhol - Popart",
     drawtype = "nodebox",
@@ -160,6 +193,38 @@ minetest.register_craft({
         {"dye:dark_grey", "dye:dark_grey", "dye:dark_grey"},
         {"dye:blue", "paintings:canvas", "dye:pink"},
         {"dye:brown", "dye:brown", "dye:brown"},
+    }
+})
+
+minetest.register_node("paintings:debian_logo", {
+    description = "Painting: Debian logo",
+    drawtype = "nodebox",
+    tiles = {"paintings_debian_logo.png"},
+    inventory_image = "paintings_debian_logo.png",
+    wield_image = "paintings_debian_logo.png",
+    paramtype = "light",
+    paramtype2 = "wallmounted",
+    sunlight_propagates = true,
+    walkable = false,
+    node_box = {
+        type = "wallmounted",
+        wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+        wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+        wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+    },
+    groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+    sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
+})
+
+minetest.register_craft({
+    output = "paintings:debian_logo",
+    recipe = {
+        {"", "dye:magenta", ""},
+        {"dye:magenta", "paintings:canvas", "dye:magenta"},
+        {"", "dye:magenta", ""},
     }
 })
 
@@ -457,6 +522,39 @@ minetest.register_craft({
         {"dye:yellow", "dye:red", "dye:grey"},
         {"dye:yellow", "paintings:canvas", "dye:green"},
         {"dye:green", "dye:brown", "dye:green"},
+    }
+})
+
+
+minetest.register_node("paintings:vectronom_studios_sphynx_cat", {
+    description = "Painting: Vectronom Studios - Sphynx Cat",
+    drawtype = "nodebox",
+    tiles = {"paintings_vectronom_studios_sphynx_cat.png"},
+    inventory_image = "paintings_vectronom_studios_sphynx_cat.png",
+    wield_image = "paintings_vectronom_studios_sphynx_cat.png",
+    paramtype = "light",
+    paramtype2 = "wallmounted",
+    sunlight_propagates = true,
+    walkable = false,
+    node_box = {
+        type = "wallmounted",
+        wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+        wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+        wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+    },
+    groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+    sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
+})
+
+minetest.register_craft({
+    output = "paintings:vectronom_studios_sphynx_cat",
+    recipe = {
+        {"dye:pink", "dye:grey", "dye:pink"},
+        {"dye:grey", "paintings:canvas", "dye:grey"},
+        {"", "dye:grey", ""},
     }
 })
 
