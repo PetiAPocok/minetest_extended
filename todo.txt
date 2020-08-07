@@ -3,6 +3,13 @@ TESZT
 
 -------------------------------------------------1.2--------------------------------------------------------------
 
+A karakterek keze amikor látszódik, az aktuális skin szerint nézzen ki
+
+Kratos balta
+    eldobhatod, vissza hívhatod
+    exkluzívan csak az akármi dobja...
+    Gyémánt kelljen bele.
+
 topaz magic
     orb of diging
         digs only dirt (with any on the top of it), stone (cobblestone, and mossy too), gravel, sand, silver sand
@@ -24,8 +31,10 @@ kutya?
     Dob: démon [csont? / vér? / fog? / szem?]
     Shadow orb-ot lő
 
-    ring of demon-t lehet csinálni a demon part-ból,
-    shadow aurát ad és + sebzést a demon orbnak...
+    ring of darkness-t lehet csinálni a demon part-ból, shadow aurát ad és + sebzést a demon orbnak...
+        Darkling minion?
+
+Minions?
 
 Teleport hálózat
     Teleport obelisk (node)
