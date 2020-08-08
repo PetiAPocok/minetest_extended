@@ -1,7 +1,18 @@
 -------------------------------------------------1.1--------------------------------------------------------------
 TESZT
 
+Ha AZ ALCHEMYc set ből kivesed a potit és van még benne alapanyag akkor nem jelenik meg az új.
+
+végtelen max stamina poti ivás?
+
+lettuce hagyma mag sokszorozás
 -------------------------------------------------1.2--------------------------------------------------------------
+
+iron -64 tól legyen
+gold, mese −128-tól
+diamond, mese block −256
+
+Glass pane-ből glass block
 
 A karakterek keze amikor látszódik, az aktuális skin szerint nézzen ki
 
@@ -208,11 +219,12 @@ Ha engedélyezve van a növekvő craftguide akkor az új receptek értesítése 
     popkorn                                                                                                        KELL
         baked corn seed
     sushi                                                                                                             KELL
-        seaweed + fish+coocked rice
+        seaweed + raw fish + coocked rice
     grape jam
     vegetable salad
     ice cream
-
+    borsch
+    vajas-mézes kenyér
 
 horgászat
     more bait                   ???
