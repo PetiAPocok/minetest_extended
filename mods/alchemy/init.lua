@@ -371,10 +371,6 @@ minetest.register_node("alchemy:alchemy_set", {
                 if inv:is_empty("output") then
                     local reagent = inv:get_stack("component", 1):get_name()
                     inv:add_item("output", reagents[reagent])
-
-                    -- AZONNAL ADJA ODA, NE KELLJEN FŐZÉSRE VÁRNI
-                    -- stack_to_pack = string.gsub(stack_to_pack, "farming:", "farming:bag_of_")
-                    -- has_something_in_output = true
                 end
             end
         end
@@ -393,6 +389,12 @@ minetest.register_node("alchemy:alchemy_set", {
                     local item_to_remove = inv:get_stack("component", 1):get_name()
                     inv:remove_item("component", item_to_remove)
                     inv:remove_item("bottle", "alchemy:bottled_water")
+
+                    --Add a new potion
+                    if not inv:is_empty("bottle") and not inv:is_empty("component") then
+                        local reagent = inv:get_stack("component", 1):get_name()
+                        inv:add_item("output", reagents[reagent])
+                    end
                 end
             else
                 inv:remove_item("output", item_in_output)
