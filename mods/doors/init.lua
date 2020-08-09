@@ -344,7 +344,7 @@ function doors.register(name, def)
 
 	if def.recipe then
 		minetest.register_craft({
-			output = name,
+			output = name .. " 3",
 			recipe = def.recipe,
 		})
 	end
