@@ -140,5 +140,12 @@ minetest.register_globalstep(function()
 				player_set_animation(player, "stand", animation_speed_mod)
 			end
 		end
+
+        -- Limit the gravity acceleration (max falling speed)
+        if player.get_player_velocity(player).y < -50 then
+            player:set_physics_override({gravity = -1})
+        elseif player.get_player_velocity(player).y > -50 then
+            player:set_physics_override({gravity = 1})
+        end
 	end
 end)
