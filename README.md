@@ -60,7 +60,8 @@ Made for and tested on Minetest 5.2.0.
 - Added Mobs Animal (modified) ([NotABug](https://notabug.org/tenplus1/mobs_animal))   
   Made the honey block a liquid with high viscosity.  
   Removed net. Use lasso.  
-  Changed sheep's face.
+  Changed sheep's face.  
+  Milk bucket no longer drinkable.
 - Added Mobs Monster ([NotABug](https://notabug.org/tenplus1/mobs_monster))  
   Modified the mese monster's texture.
 - 3D Armor to add armors (modified) ([Github](https://github.com/minetest-mods/3d_armor))  
@@ -99,6 +100,7 @@ Made for and tested on Minetest 5.2.0.
 - Created Gems mod. Used Quartz mod's textures ([Github](https://github.com/minetest-mods/quartz))
 - Created Magic mod. Used some of veNext's magic_mod's code. ([Github](https://github.com/veNext/magic_mod))
 - Created Death announce.
+- Xpanes: added reverse craft,
 
 ## Licensing
 

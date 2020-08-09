@@ -158,9 +158,16 @@ function xpanes.register_pane(name, def)
 	})
 
 	minetest.register_craft({
-		output = "xpanes:" .. name .. "_flat 16",
+		output = "xpanes:" .. name .. "_flat 18",
 		recipe = def.recipe
 	})
+
+    minetest.register_craft({
+        output = def.recipe[1][1],
+        recipe = {
+    		{"xpanes:" .. name .. "_flat", "xpanes:" .. name .. "_flat", "xpanes:" .. name .. "_flat"}
+        }
+    })
 end
 
 xpanes.register_pane("pane", {
