@@ -156,7 +156,6 @@ minetest.register_craftitem(":mobs:bucket_milk", {
 	description = S("Bucket of Milk"),
 	inventory_image = "mobs_bucket_milk.png",
 	stack_max = 1,
-	on_use = minetest.item_eat(8, "bucket:bucket_empty"),
 	groups = {food_milk = 1, flammable = 3, drink = 1},
 })
 
