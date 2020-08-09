@@ -1,18 +1,15 @@
 -------------------------------------------------1.1--------------------------------------------------------------
 TESZT
 
-Ha AZ ALCHEMYc set ből kivesed a potit és van még benne alapanyag akkor nem jelenik meg az új.
-
-végtelen max stamina poti ivás?
-
-lettuce hagyma mag sokszorozás
 -------------------------------------------------1.2--------------------------------------------------------------
+
+A sötétben terjeszkedjen a gomba
+
+Az industrial furnace van hogy lustálkodik
 
 iron -64 tól legyen
 gold, mese −128-tól
 diamond, mese block −256
-
-Glass pane-ből glass block
 
 A karakterek keze amikor látszódik, az aktuális skin szerint nézzen ki
 
@@ -62,23 +59,10 @@ Nagy, többszemélyes hajó?
 
 az elültetett mag, amíg mag addig legyen kivehető
 
-Az ajtó craft adjon 3 ajtót
-
 The poisoning foods not damaging till the given time
     de miért...?
 
-a stone ásó túl gyorsan törik
-
 mobs pathfinnding, ha a fejeden áll ne csak pörögjön
-
-craftguide
-    marerials fül
-        az összes node listája
-
-    unknown crafts
-        hiányos item-craftok körvonalakkal
-
-    Esetleg más craft guide?
 
 fire orb olvassza a havat meg a jeget.
 
