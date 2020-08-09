@@ -254,10 +254,10 @@ minetest.register_craftitem("alchemy:stamina", {
     groups = {vessel = 1},
     on_use = function(itemstack, user, pointed_thing)
         local name = user:get_player_name()
-        if hbhunger.players[name].satiation ~= hbhunger.max_reachable_satiation then
+        if hbhunger.players[name].satiation < hbhunger.max_reachable_satiation then
             hbhunger.players[name].satiation = hbhunger.players[name].satiation + 5
+            itemstack:take_item()
         end
-        itemstack:take_item()
         return itemstack
     end
 })
