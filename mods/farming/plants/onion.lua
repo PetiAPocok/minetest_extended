@@ -16,6 +16,15 @@ minetest.override_item("farming:onion_5", {
     }
 })
 
+minetest.register_craft({
+	type = "shapeless",
+	output = "farming:seed_onion",
+	recipe = {"farming:onion", "bucket:bucket_water"},
+    replacements = {
+		{"bucket:bucket_water", "bucket:bucket_empty"}
+	}
+})
+
 -- make onion eatable
 minetest.override_item("farming:onion", {
     on_use = minetest.item_eat(2),

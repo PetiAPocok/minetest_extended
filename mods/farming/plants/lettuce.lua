@@ -16,6 +16,15 @@ minetest.override_item("farming:lettuce_4", {
     }
 })
 
+minetest.register_craft({
+	type = "shapeless",
+	output = "farming:seed_lettuce",
+	recipe = {"farming:lettuce", "bucket:bucket_water"},
+    replacements = {
+		{"bucket:bucket_water", "bucket:bucket_empty"}
+	}
+})
+
 -- make lettuce eatable
 minetest.override_item("farming:lettuce", {
     on_use = minetest.item_eat(2),
