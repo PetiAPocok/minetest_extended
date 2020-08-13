@@ -122,7 +122,8 @@ minetest.register_entity("orb_of_fire:fire_ball", {
             local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
             for k, obj in pairs(objs) do
                 if obj:get_luaentity() ~= nil then
-                    if obj:get_luaentity().name ~= "orb_of_fire:fire_ball" and obj:get_luaentity().name ~= "__builtin:item" then
+                    local obj_name = obj:get_luaentity().name
+                    if obj_name ~= "orb_of_fire:fire_ball" and obj_name ~= "__builtin:item" and obj_name ~= "mobs_monster:mese_arrow" and obj_name ~= "mobs_monster:fireball" then
                         obj:punch(self.object, 1.0, {
                             full_punch_interval = 1.0,
                             damage_groups = {fleshy = 3},

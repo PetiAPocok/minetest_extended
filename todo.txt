@@ -8,7 +8,9 @@ player detektor duplicate craft
 walking light vertikálíis mozgásnál sötétet csinál.
 
 Az orb-ok célzódásását átnézni! (ice)
-lightning orb rövid.
+
+beragadó mana regen buff kilépés visszalépésnél!
+
 -------------------------------------------------1.2--------------------------------------------------------------
 Csúzli
     flint-et lő
@@ -29,8 +31,7 @@ A karakterek keze amikor látszódik, az aktuális skin szerint nézzen ki
 
 Kratos balta
     eldobhatod, vissza hívhatod
-    exkluzívan csak az akármi dobja...
-    Gyémánt kelljen bele.
+    exkluzívan csak az akármi dobja... Vagy gyémánt kelljen bele.
 
 topaz magic
     orb of diging
