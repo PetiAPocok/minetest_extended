@@ -23,7 +23,7 @@ minetest.register_craftitem("orb_of_light:orb_of_light", {
                     z = player_pos.z + loop_counter * dir.z / 4
                 }
 
-                if minetest.get_node(entity_pos).name == "air" then
+                if minetest.get_node(entity_pos).name == "air" or minetest.get_node(entity_pos).name == "walking_light:light" then
                     objs[loop_counter] = minetest.add_entity(entity_pos, "orb_of_light:ray_of_light")
 
                     objs[loop_counter]:set_rotation({
