@@ -184,6 +184,16 @@ minetest.register_on_leaveplayer(function(player)
     effects_hud["timers"][player:get_player_name()] = {}
 end)
 
+minetest.register_on_shutdown(function()
+    for player_name, player_effects in pairs(effects_hud["timers"]) do
+        if player_effects["shine"] then
+            local old_pos = player_effects["shine"]["old_pos"]
+            old_pos["y"] = old_pos["y"] - 1 -- For some reason the placed block "placing position" and "removing position" isn't the same...
+            minetest.remove_node(old_pos)
+        end
+    end
+end)
+
 effects_hud["add_effect"] = function(playername, effect, duration)
     local player = minetest.get_player_by_name(playername)
     duration = tonumber(duration)
