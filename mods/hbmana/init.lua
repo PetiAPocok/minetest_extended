@@ -156,9 +156,6 @@ function hbmana.subtract_up_to(playername, value)
 end
 
 
-
-
-
 --[===[
 	File handling, loading data, saving data, setting up stuff for players.
 ]===]
@@ -207,13 +204,15 @@ end)
 
 minetest.register_on_leaveplayer(function(player)
 	local playername = player:get_player_name()
-	if not minetest.get_modpath("hudbars") ~= nil then
-		hbmana.hud_remove(playername)
-	end
 	hbmana.save_to_file()
 end)
 
 minetest.register_on_shutdown(function()
+    -- reset regeneration rate
+    for k,v in pairs(hbmana.playerlist) do
+        v.regen = hbmana.settings.default_regen
+    end
+
 	minetest.log("action", "[mana] Server shuts down. Rescuing data into mana.mt")
 	hbmana.save_to_file()
 end)
@@ -229,11 +228,7 @@ minetest.register_on_joinplayer(function(player)
 		hbmana.playerlist[playername].remainder = 0
 	end
 
-	if minetest.get_modpath("hudbars") ~= nil then
-		hb.init_hudbar(player, "mana", hbmana.get(playername), hbmana.getmax(playername))
-	else
-		hbmana.hud_add(playername)
-	end
+	hb.init_hudbar(player, "mana", hbmana.get(playername), hbmana.getmax(playername))
 end)
 
 
@@ -276,50 +271,15 @@ end)
 	HUD functions
 ]===]
 
-if minetest.get_modpath("hudbars") ~= nil then
-	hb.register_hudbar("mana", 0xFFFFFF, S("Mana"), { bar = "mana_bar.png", icon = "mana_icon.png", bgicon = "mana_bgicon.png" }, 0, hbmana.settings.default_max, false)
+hb.register_hudbar("mana", 0xFFFFFF, S("Mana"), { bar = "mana_bar.png", icon = "mana_icon.png", bgicon = "mana_bgicon.png" }, 0, hbmana.settings.default_max, false)
 
-	function hbmana.hud_update(playername)
-		local player = minetest.get_player_by_name(playername)
-		if player ~= nil then
-			hb.change_hudbar(player, "mana", hbmana.get(playername), hbmana.getmax(playername))
-		end
-	end
-
-	function hbmana.hud_remove(playername)
-	end
-
-else
-	function hbmana.manastring(playername)
-		return S("Mana: @1/@2", hbmana.get(playername), hbmana.getmax(playername))
-	end
-
-	function hbmana.hud_add(playername)
-		local player = minetest.get_player_by_name(playername)
-		local id = player:hud_add({
-			hud_elem_type = "text",
-			position = { x = 0.5, y=1 },
-			text = hbmana.manastring(playername),
-			scale = { x = 0, y = 0 },
-			alignment = { x = 1, y = 0},
-			direction = 1,
-			number = 0xFFFFFF,
-			offset = { x = -262, y = -103}
-		})
-		hbmana.playerlist[playername].hudid = id
-		return id
-	end
-
-	function hbmana.hud_update(playername)
-		local player = minetest.get_player_by_name(playername)
-		player:hud_change(hbmana.playerlist[playername].hudid, "text", hbmana.manastring(playername))
-	end
-
-	function hbmana.hud_remove(playername)
-		local player = minetest.get_player_by_name(playername)
-		player:hud_remove(hbmana.playerlist[playername].hudid)
+function hbmana.hud_update(playername)
+	local player = minetest.get_player_by_name(playername)
+	if player ~= nil then
+		hb.change_hudbar(player, "mana", hbmana.get(playername), hbmana.getmax(playername))
 	end
 end
+
 
 --[===[
 	Helper functions
