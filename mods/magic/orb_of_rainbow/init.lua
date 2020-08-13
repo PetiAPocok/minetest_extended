@@ -1,12 +1,12 @@
 minetest.register_craftitem("orb_of_rainbow:orb_of_rainbow", {
-    description = "Orb of Rainbow\nMana: 40",
+    description = "Orb of Rainbow\nMana: 70",
     inventory_image = "orb_of_rainbow_orb.png",
     on_use = function(itemstack, player, pointed_thing)
         local name = player:get_player_name()
         local players_mana = hbmana.get(name)
 
-        if players_mana >= 40 then
-            hbmana.set(name, players_mana - 40)
+        if players_mana >= 70 then
+            hbmana.set(name, players_mana - 70)
 
             local player_pos = player:get_pos()
             local dir = player:get_look_dir()
