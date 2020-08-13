@@ -5,11 +5,11 @@ minetest.register_craftitem("orb_of_healing:orb_of_healing", {
         local name = player:get_player_name()
         local players_mana = hbmana.get(name)
 
-        if players_mana >= 10 and pointed_thing.ref:get_luaentity().name ~= "__builtin:item" then
+        if players_mana >= 10 then
             hbmana.set(name, players_mana - 10)
             local pos = {}
 
-            if pointed_thing.type == "object" then
+            if pointed_thing.type == "object" and pointed_thing.ref:get_luaentity().name ~= "__builtin:item" then
                 local pointed_entity = pointed_thing.ref:get_luaentity()
                 pos = pointed_thing.ref:get_pos()
 
