@@ -1,7 +1,21 @@
 -------------------------------------------------1.1--------------------------------------------------------------
 TESZT
 
+node detektor missing craft item
+player detektor missing craft item
+player detektor duplicate craft
+
+walking light vertikálíis mozgásnál sötétet csinál.
+
+Az orb-ok célzódásását átnézni! (ice)
+lightning orb rövid.
 -------------------------------------------------1.2--------------------------------------------------------------
+Csúzli
+    flint-et lő
+
+pulőverek
+
+firefly lerakással van valami szarság
 
 A sötétben terjeszkedjen a gomba
 
@@ -209,6 +223,7 @@ Ha engedélyezve van a növekvő craftguide akkor az új receptek értesítése 
     ice cream
     borsch
     vajas-mézes kenyér
+    apple pie
 
 horgászat
     more bait                   ???

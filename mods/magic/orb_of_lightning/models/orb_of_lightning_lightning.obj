@@ -1,6 +1,6 @@
-# Blender v2.82 (sub 7) OBJ File: 'orb_of_electricity_lightning.blend'
+# Blender v2.82 (sub 7) OBJ File: 'orb_of_lightning_lightning.blend'
 # www.blender.org
-mtllib orb_of_electricity_lightning.mtl
+mtllib orb_of_lightning_lightning.mtl
 o Cylinder
 v 0.000000 0.010000 0.050000
 v -0.000000 0.010000 -0.050000
