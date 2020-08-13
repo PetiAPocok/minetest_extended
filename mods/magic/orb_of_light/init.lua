@@ -86,13 +86,13 @@ minetest.register_entity("orb_of_light:ray_of_light", {
         local pos = self.object:get_pos()
         local node = minetest.get_node(pos)
 
+        if rays[self._id] == nil then
+            -- delete the vagabond rays
+            walking_light.remove_light(pos)
+            self.object:remove()
+        end
 
         if self._timer > 0.2 then
-            if rays[self._id] == nil then
-                -- delete the vagabond rays
-                remove_light(pos)
-                self.object:remove()
-            end
 
             if node.name == "air" then
                 minetest.place_node(pos, {name="walking_light:light"})
