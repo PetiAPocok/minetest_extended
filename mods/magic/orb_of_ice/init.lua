@@ -1,6 +1,6 @@
-minetest.register_craftitem("orb_of_freezing:orb_of_freezing", {
-    description = "Orb of Freezing\nMana: 15",
-    inventory_image = "orb_of_freezing_orb.png",
+minetest.register_craftitem("orb_of_ice:orb_of_ice", {
+    description = "Orb of Ice\nMana: 15",
+    inventory_image = "orb_of_ice_orb.png",
     on_use = function(itemstack, player, pointed_thing)
         local name = player:get_player_name()
         local players_mana = hbmana.get(name)
@@ -15,7 +15,7 @@ minetest.register_craftitem("orb_of_freezing:orb_of_freezing", {
                 x = player_pos.x,
                 y = player_pos.y + 1.5,
                 z = player_pos.z
-            }, "orb_of_freezing:icicle")
+            }, "orb_of_ice:icicle")
 
             obj:set_rotation({
                 x = -player:get_look_vertical(),
@@ -35,7 +35,7 @@ minetest.register_craftitem("orb_of_freezing:orb_of_freezing", {
 })
 
 minetest.register_craft({
-	output = "orb_of_freezing:orb_of_freezing",
+	output = "orb_of_ice:orb_of_ice",
 	recipe = {
 		{"", "default:glass", ""},
 		{"default:glass", "gems_sapphire:sapphire", "default:glass"},
@@ -43,11 +43,11 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_entity("orb_of_freezing:icicle", {
+minetest.register_entity("orb_of_ice:icicle", {
     physical = false,
     visual = "mesh",
-    mesh = "orb_of_freezing_icicle.obj",
-    textures = {"orb_of_freezing_icicle.png"},
+    mesh = "orb_of_ice_icicle.obj",
+    textures = {"orb_of_ice_icicle.png"},
     collisionbox = {-0.1,-0.1,-0.1,0.1,0.1,0.1},
     pointable = false,
     timer = 0,
@@ -88,7 +88,7 @@ minetest.register_entity("orb_of_freezing:icicle", {
             maxsize = 0.50,
             collisiondetection = false,
             vertical = false,
-            texture = "orb_of_freezing_particle.png",
+            texture = "orb_of_ice_particle.png",
         })
 
         if self.timer > 0.01 then
@@ -96,7 +96,7 @@ minetest.register_entity("orb_of_freezing:icicle", {
             for k, obj in pairs(objs) do
                 if obj:get_luaentity() ~= nil then
                     local obj_name = obj:get_luaentity().name
-                    if obj_name ~= "orb_of_freezing:icicle" and obj_name ~= "__builtin:item" and obj_name ~= "mobs_monster:mese_arrow" and obj_name ~= "mobs_monster:fireball" then
+                    if obj_name ~= "orb_of_ice:icicle" and obj_name ~= "__builtin:item" and obj_name ~= "mobs_monster:mese_arrow" and obj_name ~= "mobs_monster:fireball" then
                         obj:punch(self.object, 1.0, {
                             full_punch_interval = 1.0,
                             damage_groups = {fleshy = 3},

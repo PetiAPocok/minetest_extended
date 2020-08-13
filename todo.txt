@@ -7,8 +7,6 @@ player detektor duplicate craft
 
 walking light vertikálíis mozgásnál sötétet csinál.
 
-Az orb-ok célzódásását átnézni! (ice)
-
 beragadó mana regen buff kilépés visszalépésnél!
 
 -------------------------------------------------1.2--------------------------------------------------------------
@@ -142,7 +140,7 @@ potions
 
     slowness effect
         thwowing potion
-        orb of freezing
+        orb of ice
 
 
 accesories mod
