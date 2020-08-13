@@ -80,13 +80,16 @@ minetest.register_globalstep(function(dtime)
 end)
 
 walking_light.remove_light = function(pos)
+    local done = false
+
     if minetest.get_node(pos).name == "walking_light:light" then
         minetest.remove_node(pos)
+        done = true
     end
 
     pos.y = pos.y - 1
 
-    if minetest.get_node(pos).name == "walking_light:light" then
+    if not done and minetest.get_node(pos).name == "walking_light:light" then
         minetest.remove_node(pos)
     end
 end
