@@ -172,11 +172,17 @@ minetest.register_on_dieplayer(function(player, reason)
     effects_hud["timers"][player:get_player_name()] = {}
 end)
 
-minetest.register_on_leaveplayer(
-    function(player)
-        effects_hud["timers"][player:get_player_name()] = nil
+minetest.register_on_leaveplayer(function(player)
+    local username = player:get_player_name()
+    for effect,effect_parameters in pairs(effects_hud.timers[username]) do
+            player:hud_remove(effect_parameters["hud_bg_id"])
+            player:hud_remove(effect_parameters["hud_bar_id"])
+            player:hud_remove(effect_parameters["hud_text_id"])
+            effects[effect].remove(player)
+            effects_hud["timers"][username][effect] = nil
     end
-)
+    effects_hud["timers"][player:get_player_name()] = {}
+end)
 
 effects_hud["add_effect"] = function(playername, effect, duration)
     local player = minetest.get_player_by_name(playername)
