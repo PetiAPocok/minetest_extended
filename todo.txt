@@ -1,17 +1,11 @@
 -------------------------------------------------1.1--------------------------------------------------------------
 TESZT
-
-Orb of ice furán lő... Túl gyors?
-    Test map-on single-ben semmi baj vele...
-
-A clown fish-ből sok jön
-
 -------------------------------------------------1.2--------------------------------------------------------------
 
-
 új mob: gekkó
+    mint a patkány
 
-terrárium?
+terrárium + akvárium
 
 Csúzli
     flint-et lő
@@ -286,8 +280,6 @@ item frames
 
 crafting fül outputja nem shift+click-el
 
-chet nagyobb betűk
-
 Ha kreatív inventoryból veszel valamit és a saját inventory-dba olyan helyre teszed ahol van valami,
 akkor a valamit odébbrakja, lerak a kezedben lévő item-ből egyet de a kezedben hadja, sőtt megszorozza a valami számával.
     Játékmotor hiba... Nem találtam megoldást... Írtam bug reportot
@@ -297,7 +289,7 @@ incremtális keresés kreatív inventoryba
     nincs onchange listener
 
 crouch
-    A karakter 3d modelt  kéne értelmezni
+    A karakter 3d modelt kéne átalakítani
 
 A numpaddal mi a fasz van?
     Nem számoknak veszi, hanem end-nek, home-nak, pgup, pgdw-nak, ha bevan, ha ki van kapcsolva
