@@ -45,10 +45,8 @@ minetest.register_entity("orb_of_wind:wind_ball", {
     textures = {"orb_of_wind_particle.png"},
     collisionbox = {-0.1,-0.1,-0.1,0.1,0.1,0.1},
     pointable = false,
-    timer = 0,
     _owner = "",
     on_step = function(self, dtime)
-        self.timer = self.timer + dtime
         local pos = self.object:get_pos()
 
         if minetest.get_node(pos).name ~= "air" then
@@ -77,19 +75,10 @@ minetest.register_entity("orb_of_wind:wind_ball", {
             texture = "orb_of_wind_particle.png",
         })
 
-        if self.timer > 0.2 then
-            local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
-            for k, obj in pairs(objs) do
-                if obj:get_luaentity() ~= nil then
-                    if obj:get_luaentity().name ~= "orb_of_wind:wind_ball" and obj:get_luaentity().name ~= "__builtin:item" then
-                        obj:punch(self.object, 1.0, {
-                            full_punch_interval = 1.0,
-                            damage_groups = {fleshy = 1},
-                        }, nil)
-
-                        self.object:remove()
-                    end
-                elseif obj:is_player() and obj:get_player_name() ~= self._owner  then
+        local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 2)
+        for k, obj in pairs(objs) do
+            if obj:get_luaentity() ~= nil then
+                if obj:get_luaentity().name ~= "orb_of_wind:wind_ball" and obj:get_luaentity().name ~= "__builtin:item" then
                     obj:punch(self.object, 1.0, {
                         full_punch_interval = 1.0,
                         damage_groups = {fleshy = 1},
@@ -97,8 +86,14 @@ minetest.register_entity("orb_of_wind:wind_ball", {
 
                     self.object:remove()
                 end
+            elseif obj:is_player() and obj:get_player_name() ~= self._owner  then
+                obj:punch(self.object, 1.0, {
+                    full_punch_interval = 1.0,
+                    damage_groups = {fleshy = 1},
+                }, nil)
+
+                self.object:remove()
             end
-            self.timer = 0
         end
     end
 })

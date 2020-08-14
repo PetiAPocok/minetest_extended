@@ -44,10 +44,8 @@ minetest.register_entity("orb_of_shadow:shadow_ball", {
     textures = {"orb_of_shadow_shadow_ball.png"},
     collisionbox = {-0.1,-0.1,-0.1,0.1,0.1,0.1},
     pointable = false,
-    timer = 0,
     _owner = "",
     on_step = function(self, dtime)
-        self.timer = self.timer + dtime
         local pos = self.object:get_pos()
         local node = minetest.get_node(pos)
 
@@ -77,28 +75,25 @@ minetest.register_entity("orb_of_shadow:shadow_ball", {
             texture = "orb_of_shadow_particle.png",
         })
 
-        if self.timer > 0.1 then
-            local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 1.5)
-            for k, obj in pairs(objs) do
-                if obj:get_luaentity() ~= nil then
-                    local obj_name = obj:get_luaentity().name
-                    if obj_name ~= "orb_of_shadow:shadow_ball" and obj_name ~= "__builtin:item" and obj_name ~= "mobs_monster:mese_arrow" and obj_name ~= "mobs_monster:fireball" then
-                        obj:punch(self.object, 1.0, {
-                            full_punch_interval = 1.0,
-                            damage_groups = {fleshy = 3},
-                        }, nil)
-
-                        self.object:remove()
-                    end
-                elseif obj:is_player() and obj:get_player_name() ~= self._owner  then
+        local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 1.5)
+        for k, obj in pairs(objs) do
+            if obj:get_luaentity() ~= nil then
+                local obj_name = obj:get_luaentity().name
+                if obj_name ~= "orb_of_shadow:shadow_ball" and obj_name ~= "__builtin:item" and obj_name ~= "mobs_monster:mese_arrow" and obj_name ~= "mobs_monster:fireball" then
                     obj:punch(self.object, 1.0, {
                         full_punch_interval = 1.0,
-                        damage_groups = {fleshy = 5},
+                        damage_groups = {fleshy = 3},
                     }, nil)
+
                     self.object:remove()
                 end
+            elseif obj:is_player() and obj:get_player_name() ~= self._owner  then
+                obj:punch(self.object, 1.0, {
+                    full_punch_interval = 1.0,
+                    damage_groups = {fleshy = 5},
+                }, nil)
+                self.object:remove()
             end
-            self.timer = 0
         end
     end
 })
