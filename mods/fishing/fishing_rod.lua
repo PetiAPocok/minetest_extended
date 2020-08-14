@@ -71,7 +71,7 @@ local function fishing(bobber, elapsed)
             if bobber:get_luaentity()._bob_travel_time >= 0.4 and bobber:get_luaentity()._bob_travel_time <= 0.5 then
                 minetest.sound_play("default_water_footstep", {
                     pos,
-                    max_hear_distance = 100,
+                    max_hear_distance = 20,
                     gain = 10.0,
                 })
             end
