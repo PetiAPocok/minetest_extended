@@ -48,6 +48,11 @@ minetest.register_craftitem("alchemy:gills", {
     on_use = function(itemstack, user, pointed_thing)
         effects_hud.add_effect(user:get_player_name(), "water_breathing", 30)
         itemstack:take_item()
+        if user:get_inventory():room_for_item("main", {name = "vessels:glass_bottle"}) then
+            user:get_inventory():add_item("main", {name = "vessels:glass_bottle"})
+        else
+            minetest.add_item(user:get_pos(), {name = "vessels:glass_bottle"})
+        end
         return itemstack
     end
 })
@@ -59,6 +64,11 @@ minetest.register_craftitem("alchemy:healing", {
     on_use = function(itemstack, user, pointed_thing)
         effects_hud.add_effect(user:get_player_name(), "health_regeneration", 10)
         itemstack:take_item()
+        if user:get_inventory():room_for_item("main", {name = "vessels:glass_bottle"}) then
+            user:get_inventory():add_item("main", {name = "vessels:glass_bottle"})
+        else
+            minetest.add_item(user:get_pos(), {name = "vessels:glass_bottle"})
+        end
         return itemstack
     end
 })
@@ -70,6 +80,11 @@ minetest.register_craftitem("alchemy:holy", {
     on_use = function(itemstack, user, pointed_thing)
         effects_hud.add_effect(user:get_player_name(), "purity", 30)
         itemstack:take_item()
+        if user:get_inventory():room_for_item("main", {name = "vessels:glass_bottle"}) then
+            user:get_inventory():add_item("main", {name = "vessels:glass_bottle"})
+        else
+            minetest.add_item(user:get_pos(), {name = "vessels:glass_bottle"})
+        end
         return itemstack
     end
 })
@@ -84,6 +99,11 @@ minetest.register_craftitem("alchemy:magic", {
         if current < hbmana.settings.max_reachable then
             hbmana.setmax(name, current + 5)
             itemstack:take_item()
+            if user:get_inventory():room_for_item("main", {name = "vessels:glass_bottle"}) then
+                user:get_inventory():add_item("main", {name = "vessels:glass_bottle"})
+            else
+                minetest.add_item(user:get_pos(), {name = "vessels:glass_bottle"})
+            end
             return itemstack
         end
     end
@@ -96,6 +116,11 @@ minetest.register_craftitem("alchemy:mana", {
     on_use = function(itemstack, user, pointed_thing)
         effects_hud.add_effect(user:get_player_name(), "mana_regeneration", 10)
         itemstack:take_item()
+        if user:get_inventory():room_for_item("main", {name = "vessels:glass_bottle"}) then
+            user:get_inventory():add_item("main", {name = "vessels:glass_bottle"})
+        else
+            minetest.add_item(user:get_pos(), {name = "vessels:glass_bottle"})
+        end
         return itemstack
     end
 })
@@ -107,6 +132,11 @@ minetest.register_craftitem("alchemy:mobility", {
     on_use = function(itemstack, user, pointed_thing)
         effects_hud.add_effect(user:get_player_name(), "mobility", 60)
         itemstack:take_item()
+        if user:get_inventory():room_for_item("main", {name = "vessels:glass_bottle"}) then
+            user:get_inventory():add_item("main", {name = "vessels:glass_bottle"})
+        else
+            minetest.add_item(user:get_pos(), {name = "vessels:glass_bottle"})
+        end
         return itemstack
     end
 })
@@ -118,6 +148,11 @@ minetest.register_craftitem("alchemy:shine", {
     on_use = function(itemstack, user, pointed_thing)
         effects_hud.add_effect(user:get_player_name(), "shine", 60)
         itemstack:take_item()
+        if user:get_inventory():room_for_item("main", {name = "vessels:glass_bottle"}) then
+            user:get_inventory():add_item("main", {name = "vessels:glass_bottle"})
+        else
+            minetest.add_item(user:get_pos(), {name = "vessels:glass_bottle"})
+        end
         return itemstack
     end
 })
@@ -257,6 +292,11 @@ minetest.register_craftitem("alchemy:stamina", {
         if hbhunger.players[name].satiation < hbhunger.max_reachable_satiation then
             hbhunger.players[name].satiation = hbhunger.players[name].satiation + 5
             itemstack:take_item()
+            if user:get_inventory():room_for_item("main", {name = "vessels:glass_bottle"}) then
+                user:get_inventory():add_item("main", {name = "vessels:glass_bottle"})
+            else
+                minetest.add_item(user:get_pos(), {name = "vessels:glass_bottle"})
+            end
         end
         return itemstack
     end
@@ -271,8 +311,12 @@ minetest.register_craftitem("alchemy:vitality", {
 
         if current_max_hp < (tonumber(minetest.settings:get("health_adjuster_max_reachable")) or 50) then
             health_adjuster.set_players_max_health(user, current_max_hp + 5)
-
             itemstack:take_item()
+            if user:get_inventory():room_for_item("main", {name = "vessels:glass_bottle"}) then
+                user:get_inventory():add_item("main", {name = "vessels:glass_bottle"})
+            else
+                minetest.add_item(user:get_pos(), {name = "vessels:glass_bottle"})
+            end
             return itemstack
         end
     end
