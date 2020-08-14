@@ -33,7 +33,7 @@ mobs:register_mob("mobs_animal:pumba", {
 	jump = true,
 	jump_height = 6,
 	pushable = true,
-	follow = {"default:apple", "farming:potato"},
+	follow = {"default:apple", "farming:potato", "farming:carrot"},
 	view_range = 10,
 	drops = {
 		{name = "mobs:pork_raw", chance = 1, min = 1, max = 3},
