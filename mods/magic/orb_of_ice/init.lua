@@ -24,9 +24,9 @@ minetest.register_craftitem("orb_of_ice:orb_of_ice", {
             })
 
             obj:setvelocity({
-                x = dir.x * 30,
-                y = dir.y * 30,
-                z = dir.z * 30
+                x = dir.x * 20,
+                y = dir.y * 20,
+                z = dir.z * 20
             })
 
             obj:get_luaentity()._owner = name
