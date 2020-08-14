@@ -1,19 +1,22 @@
 -------------------------------------------------1.1--------------------------------------------------------------
 TESZT
 
-node detektor missing craft item
-player detektor missing craft item
-player detektor duplicate craft
+Orb of ice furán lő... Túl gyors?
+    Test map-on single-ben semmi baj vele...
 
-walking light vertikálíis mozgásnál sötétet csinál.
-
-beragadó mana regen buff kilépés visszalépésnél!
+A clown fish-ből sok jön
 
 -------------------------------------------------1.2--------------------------------------------------------------
+
+
+új mob: gekkó
+
+terrárium?
+
 Csúzli
     flint-et lő
 
-pulőverek
+pulóverek, pólók, gatyák
 
 firefly lerakással van valami szarság
 
@@ -69,6 +72,7 @@ bonemeal mod mindenhol sima füvet növeszt.
 Nagy, többszemélyes hajó?
     Nincs ilyen mod
     inv_image: Ship in a bottle
+    vigyen le kaját
 
 az elültetett mag, amíg mag addig legyen kivehető
 
@@ -85,7 +89,12 @@ flying carpet (fix it!)
     Uses own mama and doesn't give feedback about the remaining "fuel"
 
 mozdony
+    szenet/fát eszik
     on_step ha a bármylik mozdony melletti entity vagon akkor increase its velocity
+A minecart belülről ne legyen üthető
+legyen hajtány
+    2 személyes (ha ketten vannak rajta gyorsabban megy)
+    vigyen le kaját
 
 Mapgen ore normalizálása
 
@@ -93,12 +102,9 @@ orb of wind
     Move the enemy back
     if I set or add to its velocity then it gets overwritten by its own movement pattern...
 
-
 Magic hangok?
 
 Mana csak x kaja felett regenerálódjon.
-
-Mesecons powerplant, blinkyplant, luacontroller, microcontroller kuka
 
 Teleport hálózat
     Teleport obelisk (node)
@@ -223,6 +229,8 @@ Ha engedélyezve van a növekvő craftguide akkor az új receptek értesítése 
     borsch
     vajas-mézes kenyér
     apple pie
+    cukorból karamell
+    alma + karamell
 
 horgászat
     more bait                   ???
