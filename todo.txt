@@ -1,32 +1,38 @@
 -------------------------------------------------1.1--------------------------------------------------------------
+
 TESZT
+
+ne legyenek "privát" skin-ek
+ági, öcsi kuka
+
 -------------------------------------------------1.2--------------------------------------------------------------
 
-új mob: gekkó
-    mint a patkány
 
 terrárium + akvárium
+    jobbkattra berakja az állatot, megint jobbal kiveszi
+    egérnek, gekkónak, halaknak
 
 Csúzli
     flint-et lő
 
 pulóverek, pólók, gatyák
 
-firefly lerakással van valami szarság
-
 A sötétben terjeszkedjen a gomba
 
 Az industrial furnace van hogy lustálkodik
 
-iron -64 tól legyen
-gold, mese −128-tól
-diamond, mese block −256
+Mapgen ore normalizálása
+    iron -64 tól legyen
+    gold, mese −128-tól
+    diamond, mese block −256 (a lava is ott van)
+
+    Elhagyatott házak
+
+    izgalmasabb dungeon-ok
+
+    npc falu
 
 A karakterek keze amikor látszódik, az aktuális skin szerint nézzen ki
-
-Kratos balta
-    eldobhatod, vissza hívhatod
-    exkluzívan csak az akármi dobja... Vagy gyémánt kelljen bele.
 
 topaz magic
     orb of diging
@@ -38,21 +44,8 @@ Lámpás
 chisel
     sok sok dekoratív blokk
 
-vizi állatok?
-    delfin lovaglás?
-    polip lovaglás?
 
-ló?
-kutya?
-
-Új mob: Demon
-    Dob: démon [csont? / vér? / fog? / szem?]
-    Shadow orb-ot lő
-
-    ring of darkness-t lehet csinálni a demon part-ból, shadow aurát ad és + sebzést a demon orbnak...
-        Darkling minion?
-
-Minions?
+Minions
 
 Teleport hálózat
     Teleport obelisk (node)
@@ -90,8 +83,6 @@ legyen hajtány
     2 személyes (ha ketten vannak rajta gyorsabban megy)
     vigyen le kaját
 
-Mapgen ore normalizálása
-
 orb of wind
     Move the enemy back
     if I set or add to its velocity then it gets overwritten by its own movement pattern...
@@ -99,14 +90,6 @@ orb of wind
 Magic hangok?
 
 Mana csak x kaja felett regenerálódjon.
-
-Teleport hálózat
-    Teleport obelisk (node)
-        ehhez lehet teleportálni
-
-    Teleport rúna (item)
-        On use a saját rúnájához teleportál
-        50? manáért
 
 potions
     water walking effect?
@@ -171,7 +154,10 @@ interdimensional chest
 bútorok                    KELL
     Szekrény             KELL
         egy blokk
+        kevesebb hely
         ajtós / fiókos változat
+
+    A könves és üveges polc-ot leegyszerűsíteni polcra.
 
 nagy térkép? kézzel fogható. Megrajzolt
 
@@ -190,6 +176,17 @@ Plusz fegyverek mod
     war axe
     dagger
 
+    Kratos balta
+        eldobhatod, vissza hívhatod
+        exkluzívan csak az akármi dobja... Vagy gyémánt kelljen bele.
+
+    Lőfegyverek
+        van puskapor...
+        Puska
+        pisztoly
+        ágyú
+            tolhatod, ugrani nem lehet vele
+
 Új csákány törés hang
 
 carpets
@@ -198,9 +195,6 @@ carpets
 
     Babushka carpet!
 
-Ha engedélyezve van a növekvő craftguide akkor az új receptek értesítése túl lassú
-    Single-ben nem...
-    Csak szerveren.
 
 Új kaják
     Kész ételek (körett + sült hús)                                                                 KELL
@@ -252,8 +246,27 @@ mobok:
     urbán papa (mob)
     thaitus (monster)
     feri (mob)?
+    bill (enemy)
+    agavblagba (Rick and Morty) (enemy)
+    új mob: gekkó
+        mint a patkány
 
-hangszerek?
+    vizi állatok?
+        delfin lovaglás?
+        polip lovaglás?
+
+    ló?
+    kutya?
+
+    Új mob: Demon
+        Dob: démon [csont? / vér? / fog? / szem?]
+        Shadow orb-ot lő
+
+        ring of darkness-t lehet csinálni a demon part-ból, shadow aurát ad és + sebzést a demon orbnak...
+            Darkling minion?
+
+    npc-k
+
 
 
 ------------------------ Textúrára vár -------------------------
