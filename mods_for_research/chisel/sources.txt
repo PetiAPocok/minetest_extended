@@ -1,0 +1,2 @@
+mychisel fork: https://github.com/berengma/mychisel/archive/master.zip
+facade fork: https://github.com/berengma/facade/archive/master.zip

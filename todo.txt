@@ -1,0 +1,310 @@
+-------------------------------------------------1.2--------------------------------------------------------------
+
+
+terrárium + akvárium
+    jobbkattra berakja az állatot, megint jobbal kiveszi
+    egérnek, gekkónak, halaknak
+
+Csúzli
+    flint-et lő
+
+pulóverek, pólók, gatyák
+
+A sötétben terjeszkedjen a gomba
+
+Az industrial furnace van hogy lustálkodik
+
+Mapgen ore normalizálása
+    iron -64 tól legyen
+    gold, mese −128-tól
+    diamond, mese block −256 (a lava is ott van)
+
+    Elhagyatott házak
+
+    izgalmasabb dungeon-ok
+
+    npc falu
+
+A karakterek keze amikor látszódik, az aktuális skin szerint nézzen ki
+
+topaz magic
+    orb of diging
+        digs only dirt (with any on the top of it), stone (cobblestone, and mossy too), gravel, sand, silver sand
+
+Lámpás
+    Szabina bavállalta hogy le 3d modellezei
+
+chisel
+    sok sok dekoratív blokk
+
+
+Minions
+
+Teleport hálózat
+    Teleport obelisk (node)
+        ehhez lehet teleportálni
+    Teleport rúna (item)
+        On use a saját rúnájához teleportál
+        50? manáért
+
+bonemeal mod mindenhol sima füvet növeszt.
+
+Nagy, többszemélyes hajó?
+    Nincs ilyen mod
+    inv_image: Ship in a bottle
+    vigyen le kaját
+
+az elültetett mag, amíg mag addig legyen kivehető
+
+The poisoning foods not damaging till the given time
+    de miért...?
+
+mobs pathfinnding, ha a fejeden áll ne csak pörögjön
+
+fire orb olvassza a havat meg a jeget.
+
+flying carpet (fix it!)
+    Horribble controls
+    Doesn't use mana.
+    Uses own mama and doesn't give feedback about the remaining "fuel"
+
+mozdony
+    szenet/fát eszik
+    on_step ha a bármylik mozdony melletti entity vagon akkor increase its velocity
+A minecart belülről ne legyen üthető
+legyen hajtány
+    2 személyes (ha ketten vannak rajta gyorsabban megy)
+    vigyen le kaját
+
+orb of wind
+    Move the enemy back
+    if I set or add to its velocity then it gets overwritten by its own movement pattern...
+
+Magic hangok?
+
+Mana csak x kaja felett regenerálódjon.
+
+potions
+    water walking effect?
+        detect the block below and make it walakable true
+        detect the block below and replace it with ice or lava
+
+    protection effect
+        how armor works?
+
+    lava álló effect
+        how lava bites?
+            Only globally changeable...
+
+    strength effect
+        how mine speed and damage calculated?
+
+    feather fall effect?
+        Make the player light weighted
+            player:set_physics_override({gravity = 0.5})
+
+    blindness effect?
+        Just create a humoungus hud for the player that covers everything.
+            local hudid = player:hud_add({
+                hud_elem_type = "image",
+                position = { x=0.5, y=0.5 },
+                scale = { x=-100, y=-100 },
+                text = "playereffects_example_black.png",
+            })
+
+        orb_of_shadow
+
+    slowness effect
+        thwowing potion
+        orb of ice
+
+
+accesories mod
+    depends on: 3d_armor, gems
+    adds rings, necklaces, amulets (at your belt)
+
+több hely 3d_armor-nak
+
+Ládák elnevezése
+
+frame
+    A nodebox-os és mesh-es item-eknek inventory image kell...
+    A node elejét rakja minden oldalra... inventory image...
+    És az inventoryban nem létező item-eket ne regisztrálja
+        mesecon, tnt
+
+mesecon mob detector a mobok érzékelésére?
+    craft?
+    a magic attack-ok feltétel figyelése jó lehet.
+
+a stone monster az mitől stone?
+
+interdimensional chest
+    register a deatached inventory and write it mod storage
+    all the interdimensional chests are connected to the same storage
+    craft?
+
+bútorok                    KELL
+    Szekrény             KELL
+        egy blokk
+        kevesebb hely
+        ajtós / fiókos változat
+
+    A könves és üveges polc-ot leegyszerűsíteni polcra.
+
+nagy térkép? kézzel fogható. Megrajzolt
+
+A korall az mire jó?
+    Többnyire dekor
+    Lakhatna benne kagyló...?
+
+Plusz fegyverek mod
+    katana!!!!
+        Craft:
+            g:fa X steel
+            X steel X
+            g:bot X X
+        Wield imege: a katana
+        inventory image: a katana hüvelyben
+    war axe
+    dagger
+
+    Kratos balta
+        eldobhatod, vissza hívhatod
+        exkluzívan csak az akármi dobja... Vagy gyémánt kelljen bele.
+
+    Lőfegyverek
+        van puskapor...
+        Puska
+        pisztoly
+        ágyú
+            tolhatod, ugrani nem lehet vele
+
+Új csákány törés hang
+
+carpets
+    Make the carpets cover the stair or half blocks.
+    Make the carpet look different with the nodebox when it is on top of a stair node.
+
+    Babushka carpet!
+
+
+Új kaják
+    Kész ételek (körett + sült hús)                                                                 KELL
+    butterbrod                                                                                                   KELL
+    vajas mézes kenyér                                                                                  KELL
+    bableves                                                                                                     KELL, texture megvan
+    csilisbab                                                                                                      KELL
+    csoki                                                                                                            KELL, texture megvan
+    kakaó
+    borsó leves                                                                                                 KELL, texture megvan
+    borsó püré                                                                                                   KELL
+    húsleves                                                                                                      KELL
+    popkorn                                                                                                        KELL
+        baked corn seed
+    sushi                                                                                                             KELL
+        seaweed + raw fish + coocked rice
+    grape jam
+    vegetable salad
+    ice cream
+    borsch
+    vajas-mézes kenyér
+    apple pie
+    cukorból karamell
+    alma + karamell
+
+horgászat
+    more bait                   ???
+    A tuna scale az elég nagy-e?
+        nem látszik kívülről...
+    ponty                                  KELL
+    angolna                             KELL
+    gömbhal                            KELL
+    A cooked fish texture-okon dolgozni kéne
+    clams
+        craft it and gives clam meat, pearl, shell?
+
+    trash/treasure                                 KELL
+        Ha nincs csali, csak ilyet tudsz fogni. Ha van csali, akkor valami pöti chance-el kapsz ilyet, de amúgy halat.
+        bot
+        string
+        fa kard
+        föld
+        alma facsemete
+        seaweed
+
+
+mobok:
+    körömgomba szörny? ("Heló! Ásóka vagyok!") https://www.youtube.com/watch?v=GF3ygD7LuiM
+    urbán papa (mob)
+    thaitus (monster)
+    feri (mob)?
+    bill (enemy)
+    agavblagba (Rick and Morty) (enemy)
+    új mob: gekkó
+        mint a patkány
+
+    vizi állatok?
+        delfin lovaglás?
+        polip lovaglás?
+
+    ló?
+    kutya?
+
+    Új mob: Demon
+        Dob: démon [csont? / vér? / fog? / szem?]
+        Shadow orb-ot lő
+
+        ring of darkness-t lehet csinálni a demon part-ból, shadow aurát ad és + sebzést a demon orbnak...
+            Darkling minion?
+
+    npc-k
+
+
+
+------------------------ Textúrára vár -------------------------
+
+New paintings
+
+------------------------ nincs ilyen mod -------------------------
+
+
+fire 2.0? Égő entity-k...
+
+commad auto-completion
+
+Armorok védelmi értéke
+
+
+-------------------------------------------- Túlmutat rajtam -------------------------------------
+
+fálya wield image lobogjon
+    Nem lehet ilyet
+
+item frames
+    Ha drawtype = nodebox és nincs inventory image-e, akkor fúj mit művel
+
+crafting fül outputja nem shift+click-el
+
+Ha kreatív inventoryból veszel valamit és a saját inventory-dba olyan helyre teszed ahol van valami,
+akkor a valamit odébbrakja, lerak a kezedben lévő item-ből egyet de a kezedben hadja, sőtt megszorozza a valami számával.
+    Játékmotor hiba... Nem találtam megoldást... Írtam bug reportot
+
+incremtális keresés kreatív inventoryba
+    el kell küldeni a form-ot a feldolgozáshoz
+    nincs onchange listener
+
+crouch
+    A karakter 3d modelt kéne átalakítani
+
+A numpaddal mi a fasz van?
+    Nem számoknak veszi, hanem end-nek, home-nak, pgup, pgdw-nak, ha bevan, ha ki van kapcsolva
+    Tudnak róla. Valami depended package hibája.
+
+ú ő chat-be
+
+A kocsik átcsúsznak egymáson mert mint entity "physical = false"-nak van definiálva.
+Ha "physical = true" akkor megállítják egymást.
+Valószínűleg a játék motoron kell módosítani...
+Nincs mozdony, és emiatt ^ nem is lehet...
+A csónakok ha ütköznek nem mennek sehova. Amelyik áll az mint a cövek. Mert mint entity "physical = true"-nak van definiálva.

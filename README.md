@@ -23,7 +23,7 @@ https://wiki.minetest.net/Installing_Mods
 
 ## Compatibility
 
-Made for and tested on Minetest 5.2.0.
+Made for and tested on Minetest 5.3.0.
 
 ## Contained mods and modifications
 
