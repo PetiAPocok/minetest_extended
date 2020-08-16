@@ -49,7 +49,10 @@ minetest.register_craftitem("farming:beans_with_onion", {
 minetest.register_craft({
 	type = "shapeless",
 	output = "farming:beans_with_onion 5",
-	recipe = {"farming:beans_with_onion_pot", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl"}
+	recipe = {"farming:beans_with_onion_pot", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl"},
+    replacements = {
+		{"farming:beans_with_onion_pot", "farming:pot"}
+	}
 })
 
 -- Bread
