@@ -28,7 +28,7 @@ minetest.register_craftitem("orb_of_lightning:orb_of_lightning", {
                 local objs = minetest.get_objects_inside_radius(entity_pos, 1.5)
 
                 for k, obj in pairs(objs) do
-                    if obj:get_luaentity().name ~= "orb_of_lightning:lightning" and obj:get_luaentity().name ~= "__builtin:item" then
+                    if obj:get_luaentity() and obj:get_luaentity().name ~= "orb_of_lightning:lightning" and obj:get_luaentity().name ~= "__builtin:item" then
                         clear = false
                     end
                 end
