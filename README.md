@@ -15,8 +15,14 @@ Below 10 Satiation you will start to lose health till you die.
 
 - Unzip the archive and place it in .. minetest/games/
 
-- GNU/Linux: If you use a system-wide installation place
-    it in ~/.minetest/games/.
+- GNU/Linux:
+    If you use a system-wide installation place it in ~/.minetest/games/.
+
+- macOS:
+    ~/Library/Application Support/minetest/games/
+
+- Windows:
+    In your unzipped minetest[version]/games/ folder.
 
     For further information or help, see:  
 https://wiki.minetest.net/Installing_Mods
@@ -34,7 +40,10 @@ Made for and tested on Minetest 5.3.0.
   Furnaces drop the items what are inside of it when broke.  
   Removed gold weapon and tools.  
   Added craft for green dye from cactus.  
-  If you punch a butterfly/firefly it dies.
+  If you punch a butterfly/firefly it dies.  
+  You can't hit the cart from inside.  
+  Created handcar.  
+  Added detector rail from [boost_cart](https://github.com/SmallJoker/boost_cart)
 - Created effects_hud for player effect display. Used [hud_timers](https://repo.or.cz/minetest_hudbars.git) as template.
 - Added Mana for magic. ([repo](https://repo.or.cz/minetest_mana.git))
   Renamed to hbmana.  
@@ -49,9 +58,6 @@ Made for and tested on Minetest 5.3.0.
   Changed the ghostsone's and removesone's inventory icon.  
   On mesecon signal the tnt starts to burn, no longer explodes.  
   Removed the luacontroller, microcontroller, blinkyplant and the powerplant
-- The default carts mod has been replaced by boost_cart (modified) ([Github](https://github.com/SmallJoker/boost_cart))   
-  Kept the original cart   
-  The powered rail has been modified so it needs "mesecon power" to accelerate cart
 - Beds: the simple bed has been removed
 - Added Crafting Guide to add, well, crafting guide ([Github](https://github.com/minetest-mods/craftguide))  
   Added support for the "packer".  

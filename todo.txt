@@ -1,5 +1,31 @@
 -------------------------------------------------1.2--------------------------------------------------------------
 
+horgászat túl hangos...
+
+backpack ad armor-t?
+A backpack-omba raktam cuccot. SZandi belépett és az ő táskája tartalmát láttam.
+Ha szandi kilép nem kapom vissza a táskám.
+Ha én lépek ki és vissza tönkremegy az inventorym...
+
+Backpack-ek okozzák a segmentation fault-ot?
+
+handcar emelkedőn rángat
+    két utassal nincs tesztelve...
+
+a füves földről nem tűnik el a fű ha ráépítesz?
+
+magic lövedékeket ki lehet ütni?
+    on_activate = function(self, staticdata, dtime_s)
+        self.object:set_armor_groups({immortal=1})
+    end,
+
+óra
+    magic hajtja
+    x réz x
+    réz mese crystal réz
+    x réz x
+
+nagy térkép? kézzel fogható. Megrajzolt
 
 terrárium + akvárium
     jobbkattra berakja az állatot, megint jobbal kiveszi
@@ -152,8 +178,6 @@ bútorok                    KELL
 
     A könves és üveges polc-ot leegyszerűsíteni polcra.
 
-nagy térkép? kézzel fogható. Megrajzolt
-
 A korall az mire jó?
     Többnyire dekor
     Lakhatna benne kagyló...?
@@ -205,6 +229,8 @@ carpets
     sushi                                                                                                             KELL
         seaweed + raw fish + coocked rice
     grape jam
+        grape jelly
+        grape milkshake
     vegetable salad
     ice cream
     borsch
@@ -212,6 +238,7 @@ carpets
     apple pie
     cukorból karamell
     alma + karamell
+    huckleberry milkshake
 
 horgászat
     more bait                   ???
@@ -248,7 +275,10 @@ mobok:
         delfin lovaglás?
         polip lovaglás?
 
-    ló?
+    ló
+
+    világító ló ami bogarakat szarik
+
     kutya?
 
     Új mob: Demon
