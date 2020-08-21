@@ -77,6 +77,8 @@ function flowers.register_mgv6_decorations()
 
 	register_mgv6_mushroom("mushroom_brown")
 	register_mgv6_mushroom("mushroom_red")
+    register_mgv6_mushroom("flowers:puffball")
+    register_mgv6_mushroom("flowers:shaggy_inkcap")
 
 	register_mgv6_waterlily()
 end
@@ -164,6 +166,8 @@ function flowers.register_decorations()
 
 	register_mushroom("mushroom_brown")
 	register_mushroom("mushroom_red")
+    register_mushroom("shaggy_inkcap")
+    register_mushroom("puffball")
 
 	register_waterlily()
 end

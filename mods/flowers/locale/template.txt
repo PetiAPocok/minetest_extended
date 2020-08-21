@@ -10,3 +10,5 @@ Black Tulip=
 Red Mushroom=
 Brown Mushroom=
 Waterlily=
+Shaggy Inkcap=
+Puffball=

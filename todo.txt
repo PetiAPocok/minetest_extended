@@ -217,11 +217,10 @@ carpets
     Kész ételek (körett + sült hús)                                                                 KELL
     butterbrod                                                                                                   KELL
     vajas mézes kenyér                                                                                  KELL
-    bableves                                                                                                     KELL, texture megvan
     csilisbab                                                                                                      KELL
-    csoki                                                                                                            KELL, texture megvan
+    csoki                                                                                                            KELL
     kakaó
-    borsó leves                                                                                                 KELL, texture megvan
+    borsó leves                                                                                                 KELL
     borsó püré                                                                                                   KELL
     húsleves                                                                                                      KELL
     popkorn                                                                                                        KELL
@@ -239,6 +238,7 @@ carpets
     cukorból karamell
     alma + karamell
     huckleberry milkshake
+    kakaós csiga
 
 horgászat
     more bait                   ???
@@ -248,6 +248,7 @@ horgászat
     angolna                             KELL
     gömbhal                            KELL
     A cooked fish texture-okon dolgozni kéne
+        fej, farok nélküli sült hal filé
     clams
         craft it and gives clam meat, pearl, shell?
 

@@ -221,6 +221,43 @@ minetest.register_node("flowers:mushroom_brown", {
 	}
 })
 
+minetest.register_node("flowers:puffball", {
+	description = S("Puffball"),
+	tiles = {"flowers_puffball.png"},
+	inventory_image = "flowers_puffball.png",
+	wield_image = "flowers_puffball.png",
+	drawtype = "plantlike",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	groups = {mushroom = 1, food_mushroom = 1, snappy = 3, attached_node = 1, flammable = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	on_use = minetest.item_eat(1),
+	selection_box = {
+		type = "fixed",
+		fixed = {-3 / 16, -0.5, -3 / 16, 3 / 16, -2 / 16, 3 / 16},
+	}
+})
+
+minetest.register_node("flowers:shaggy_inkcap", {
+	description = S("Shaggy Inkcap"),
+	tiles = {"flowers_shaggy_inkcap.png"},
+	inventory_image = "flowers_shaggy_inkcap.png",
+	wield_image = "flowers_shaggy_inkcap.png",
+	drawtype = "plantlike",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	groups = {mushroom = 1, food_mushroom = 1, snappy = 3, attached_node = 1, flammable = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	on_use = minetest.item_eat(1),
+	selection_box = {
+		type = "fixed",
+		fixed = {-3 / 16, -0.5, -3 / 16, 3 / 16, -2 / 16, 3 / 16},
+	}
+})
 
 -- Mushroom spread and death
 
@@ -247,7 +284,7 @@ end
 
 minetest.register_abm({
 	label = "Mushroom spread",
-	nodenames = {"flowers:mushroom_brown", "flowers:mushroom_red"},
+	nodenames = {"flowers:mushroom_brown", "flowers:mushroom_red", "flowers:puffball", "flowers:shaggy_inkcap"},
 	interval = 11,
 	chance = 150,
 	action = function(...)
