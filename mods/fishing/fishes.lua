@@ -61,7 +61,7 @@ minetest.register_craftitem("fishing:shusi", {
 
 minetest.register_craft({
     type = "shapeless",
-    output = "fishing:shusi",
+    output = "fishing:shusi 3",
     recipe = {"default:sand_with_kelp", "farming:rice_cooked", "group:fish_raw"},
 	replacements = {
 		{"farming:rice_cooked", "farming:bowl"}
