@@ -83,7 +83,7 @@ minetest.register_craft({
   output = "lanterns:lantern_f",
   recipe = {
     {"", "default:steel_ingot", ""},
-    {"", "morelights:bulb", ""},
-    {"default:stick", "default:steel_ingot", "default:stick"}
+    {"xpanes:pane_flat", "default:torch", "xpanes:pane_flat"},
+    {"", "default:steel_ingot", ""}
   }
 })
