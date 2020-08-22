@@ -160,19 +160,19 @@ minetest.register_craftitem(":mobs:bucket_milk", {
 })
 
 -- glass of milk
-minetest.register_craftitem(":mobs:glass_milk", {
-	description = S("Glass of Milk"),
-	inventory_image = "mobs_glass_milk.png",
-	on_use = minetest.item_eat(2, "vessels:drinking_glass"),
+minetest.register_craftitem(":mobs:jar_milk", {
+	description = S("Jar of Milk"),
+	inventory_image = "mobs_jar_milk.png",
+	on_use = minetest.item_eat(2, "vessels:glass_jar"),
 	groups = {food_milk_glass = 1, flammable = 3, vessel = 1, drink = 1},
 })
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "mobs:glass_milk 4",
+	output = "mobs:jar_milk 4",
 	recipe = {
-		"vessels:drinking_glass", "vessels:drinking_glass",
-		"vessels:drinking_glass", "vessels:drinking_glass",
+		"vessels:glass_jar", "vessels:glass_jar",
+		"vessels:glass_jar", "vessels:glass_jar",
 		"mobs:bucket_milk"
 	},
 	replacements = { {"mobs:bucket_milk", "bucket:bucket_empty"} }
@@ -182,11 +182,11 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "mobs:bucket_milk",
 	recipe = {
-		"mobs:glass_milk", "mobs:glass_milk",
-		"mobs:glass_milk", "mobs:glass_milk",
+		"mobs:jar_milk", "mobs:jar_milk",
+		"mobs:jar_milk", "mobs:jar_milk",
 		"bucket:bucket_empty"
 	},
-	replacements = { {"mobs:glass_milk", "vessels:drinking_glass 4"} }
+	replacements = { {"mobs:jar_milk", "vessels:glass_jar"} }
 })
 
 
