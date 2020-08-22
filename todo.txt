@@ -1,4 +1,7 @@
 -------------------------------------------------1.2--------------------------------------------------------------
+petróleum lámpa
+
+sok színes ajtó
 
 horgászat túl hangos...
 
@@ -214,27 +217,19 @@ carpets
 
 
 Új kaják
+    blueberry_muffin és tészta texture
+    pörkölt földimogyoró
+    kell a glass of milk? jar of milk..
+
     Kész ételek (körett + sült hús)                                                                 KELL
-    butterbrod                                                                                                   KELL
-    vajas mézes kenyér                                                                                  KELL
     csilisbab                                                                                                      KELL
-    csoki                                                                                                            KELL
-    kakaó
-    borsó leves                                                                                                 KELL
-    borsó püré                                                                                                   KELL
-    húsleves                                                                                                      KELL
-    popkorn                                                                                                        KELL
-        baked corn seed
     sushi                                                                                                             KELL
         seaweed + raw fish + coocked rice
-    grape jam
-        grape jelly
-        grape milkshake
+    grape milkshake
     vegetable salad
     ice cream
-    borsch
-    vajas-mézes kenyér
     apple pie
+    apple jam?s
     cukorból karamell
     alma + karamell
     huckleberry milkshake

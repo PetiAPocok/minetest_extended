@@ -160,9 +160,9 @@ minetest.register_craftitem("farming:bag_of_peanut", {
 })
 
 -- Bag of peas
-minetest.register_craftitem("farming:bag_of_pea", {
+minetest.register_craftitem("farming:bag_of_peas", {
 	description = "Bag of Peas",
-	inventory_image = "farming_bag_of_pea.png"
+	inventory_image = "farming_bag_of_peas.png"
 })
 
 -- Bag of rice

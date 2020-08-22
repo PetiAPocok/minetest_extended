@@ -30,7 +30,6 @@ minetest.register_craft({
 minetest.register_craftitem("farming:beans_with_onion_pot", {
 	description = "Pot of Beans With Onion",
 	inventory_image = "farming_beans_with_onion_pot.png",
-	on_use = minetest.item_eat(15)
 })
 
 minetest.register_craft({
@@ -52,6 +51,49 @@ minetest.register_craft({
 	recipe = {"farming:beans_with_onion_pot", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl"},
     replacements = {
 		{"farming:beans_with_onion_pot", "farming:pot"}
+	}
+})
+
+-- Borsch
+minetest.register_craftitem("farming:borsch_uncooked", {
+	description = "Uncooked Borsch",
+	inventory_image = "farming_borsch_uncooked.png",
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "farming:borsch_uncooked",
+    recipe = {"farming:pot", "farming:bag_of_peas", "farming:salt", "farming:lettuce", "bucket:bucket_water", "farming:beetroot", "farming:beetroot", "farming:beetroot", "farming:beetroot"},
+	replacements = {
+		{"bucket:bucket_water", "bucket:empty"},
+        {"farming:bag_of_peas", "farming:bag"}
+	}
+})
+
+minetest.register_craftitem("farming:borsch_pot", {
+	description = "Pot of Borsch",
+	inventory_image = "farming_borsch_pot.png",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	cooktime = 30,
+	output = "farming:borsch_pot",
+	recipe = "farming:borsch_uncooked"
+})
+
+minetest.register_craftitem("farming:borsch", {
+	description = "Bowl of Borsch",
+	inventory_image = "farming_borsch.png",
+	on_use = minetest.item_eat(10)
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "farming:borsch 5",
+	recipe = {"farming:borsch_pot", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl"},
+    replacements = {
+		{"farming:borsch_pot", "farming:pot"}
 	}
 })
 
@@ -132,6 +174,31 @@ minetest.register_craft({
     "mobs:cheese", "farming:cucumber", "farming:tomato", "farming:lettuce"}
 })
 
+-- Buterbrod
+minetest.register_craftitem("farming:buterbrod", {
+    description = "Buterbrod",
+    inventory_image = "farming_buterbrod.png",
+    on_use = minetest.item_eat(5),
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "farming:buterbrod",
+    recipe = {"farming:bread", "mobs_animal:butter", "group:food_meat", "mobs_animal:cheese"}
+})
+
+-- Buttered bread with honey
+minetest.register_craftitem("farming:buttered_bread_with_honey", {
+    description = "Buttered Bread with Honey",
+    inventory_image = "farming_buttered_bread_with_honey.png",
+    on_use = minetest.item_eat(5),
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "farming:buttered_bread_with_honey",
+    recipe = {"farming:bread", "mobs_animal:butter", "mobs_animal:honey"}
+})
 
 -- Carrot Cake
 minetest.register_craftitem("farming:carrot_cake_dough", {
@@ -161,6 +228,64 @@ minetest.register_craft({
 	cooktime = 18,
 	output = "farming:carrot_cake",
 	recipe = "farming:carrot_cake_dough"
+})
+
+-- Chicken soup
+minetest.register_craftitem("farming:chicken_soup_uncooked", {
+    description = "Uncooked Chicken Soup",
+	inventory_image = "farming_chicken_soup_uncooked.png",
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "farming:chicken_soup",
+    recipe = {"farming:pot", "farming:bag_of_peas", "farming:salt", "bucket:bucket_water", "mobs_animal:chicken_raw", "farming:potato", "farming:carrot"},
+	replacements = {
+		{"bucket:bucket_water", "bucket:empty"},
+        {"farming:bag_of_peas", "farming:bag"}
+	}
+})
+
+minetest.register_craftitem("farming:chicken_soup_pot", {
+	description = "Pot of Chicken Soup",
+	inventory_image = "farming_chicken_soup_pot.png",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	cooktime = 30,
+	output = "farming:chicken_soup_pot",
+	recipe = "farming:chicken_soup_uncooked"
+})
+
+minetest.register_craftitem("farming:chicken_soup", {
+	description = "Bowl of Chicken Soup",
+	inventory_image = "farming_chicken_soup.png",
+	on_use = minetest.item_eat(15)
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "farming:chicken_soup 5",
+	recipe = {"farming:chicken_soup_pot", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl"},
+    replacements = {
+		{"farming:chicken_soup_pot", "farming:pot"}
+	}
+})
+
+-- Chocolate
+minetest.register_craftitem("farming:chocolate", {
+    description = "Chocolate",
+    inventory_image = "farming_chocolate.png",
+    on_use = minetest.item_eat(2),
+})
+
+minetest.register_craft({
+    output = "farming:chocolate",
+    recipe = {
+        {"farming:cocoa", "farming:cocoa", "farming:cocoa"},
+        {"farming:cocoa", "farming:cocoa", "farming:cocoa"}
+    }
 })
 
 -- Cookie
@@ -263,6 +388,21 @@ minetest.register_craft({
 	recipe = {"farming:jam_blueberry", "bones:gelatin_powder"},
     replacements = {
 		{"farming:jam_blueberry", "vessels:glass_jar"}
+	}
+})
+
+minetest.register_craftitem("farming:jelly_grape", {
+	description = "Grape Jelly",
+	inventory_image = "farming_jelly_grape.png",
+	on_use = minetest.item_eat(4),
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "farming:jelly_grape",
+	recipe = {"farming:jam_grape", "bones:gelatin_powder"},
+    replacements = {
+		{"farming:jam_grape", "vessels:glass_jar"}
 	}
 })
 
@@ -373,6 +513,21 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craftitem("farming:jam_grape_sandwich", {
+    description = "Grape Jam Sandwich",
+    inventory_image = "farming_jam_grape_sandwich.png",
+    on_use = minetest.item_eat(4),
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "farming:jam_grape_sandwich 5",
+    recipe = {"farming:bread", "farming:jam_grape"},
+    replacements = {
+		{"farming:jam_grape", "vessels:glass_jar"}
+	}
+})
+
 minetest.register_craftitem("farming:jam_huckleberry_sandwich", {
     description = "Huckleberry Jam Sandwich",
     inventory_image = "farming_jam_huckleberry_sandwich.png",
@@ -460,10 +615,25 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craftitem("farming:cocoa_drink", {
+    description = "Cocoa Drink",
+    inventory_image = "farming_cocoa_drink.png",
+    on_use = minetest.item_eat(2, "vessels:glass_jar"),
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "farming:cocoa_drink 3",
+    recipe = {"mobs:bucket_milk", "vessels:glass_jar", "vessels:glass_jar", "vessels:glass_jar", "farming:chocolate"},
+    replacements = {
+        {"mobs:bucket_milk", "bucket:bucket_empty"}
+    }
+})
+
 minetest.register_craftitem("farming:milkshake_raspberry", {
 	description = "Raspberry Milkshake",
 	inventory_image = "farming_milkshake_raspberry.png",
-	on_use = minetest.item_eat(4, "vessels:glass_jar"),
+	on_use = minetest.item_eat(2, "vessels:glass_jar"),
 })
 
 minetest.register_craft({
@@ -478,7 +648,7 @@ minetest.register_craft({
 minetest.register_craftitem("farming:milkshake_strawberry", {
 	description = "Strawberry Milkshake",
 	inventory_image = "farming_milkshake_strawberry.png",
-	on_use = minetest.item_eat(4, "vessels:glass_jar"),
+	on_use = minetest.item_eat(2, "vessels:glass_jar"),
 })
 
 minetest.register_craft({
@@ -488,6 +658,36 @@ minetest.register_craft({
     replacements = {
 		{"mobs:bucket_milk", "bucket:bucket_empty"}
 	}
+})
+
+--Muffins
+minetest.register_craftitem("farming:muffin_blueberry_dough", {
+	description = "Blueberry Muffin Dough",
+	inventory_image = "farming_muffin_blueberry_dough.png",
+    on_use = minetest.item_eat(-1)
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "farming:muffin_blueberry_dough",
+    recipe = {"farming:flour", "mobs:egg", "farming:sugar", "mobs_animal:bucket_milk", "farming:blueberry"},
+	replacements = {
+		{"mobs_animal:bucket_milk", "bucket:bucket_empty"},
+        {"farming:flour", "default:paper"}
+	}
+})
+
+minetest.register_craftitem("farming:muffin_blueberry", {
+	description = "Blueberry Muffin",
+	inventory_image = "farming_muffin_blueberry.png",
+	on_use = minetest.item_eat(4),
+})
+
+minetest.register_craft({
+	type = "cooking",
+	cooktime = 15,
+	output = "farming:muffin_blueberry",
+	recipe = "farming:muffin_blueberry_dough"
 })
 
 -- Huckleberry Pie
@@ -521,6 +721,50 @@ minetest.register_craft({
 	recipe = "farming:huckleberry_pie_dough"
 })
 
+
+-- Peas mashed
+minetest.register_craftitem("farming:peas_mashed_uncooked", {
+    description = "Uncooked Mashed Peas",
+	inventory_image = "farming_peas_mashed_uncooked.png",
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "farming:peas_mashed_uncooked",
+    recipe = {"farming:pot", "farming:bag_of_peas", "mobs_animal:bucket_milk"},
+	replacements = {
+		{"mobs_animal:bucket_milk", "bucket:empty"},
+        {"farming:bag_of_peas", "farming:bag"}
+	}
+})
+
+minetest.register_craftitem("farming:peas_mashed_pot", {
+	description = "Pot of Mashed Peas",
+	inventory_image = "farming_peas_mashed_pot.png",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	cooktime = 30,
+	output = "farming:peas_mashed_pot",
+	recipe = "farming:peas_mashed_uncooked"
+})
+
+minetest.register_craftitem("farming:peas_mashed", {
+	description = "Bowl of Mashed Peas",
+	inventory_image = "farming_peas_mashed.png",
+	on_use = minetest.item_eat(15)
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "farming:peas_mashed 5",
+	recipe = {"farming:peas_mashed_pot", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl", "farming:bowl"},
+    replacements = {
+		{"farming:peas_mashed_pot", "farming:pot"}
+	}
+})
+
 --Peanut Butter sandwich
 minetest.register_craftitem("farming:peanut_butter_sandwich", {
     description = "Peanut Butter Sandwich",
@@ -535,6 +779,32 @@ minetest.register_craft({
     replacements = {
 		{"farming:peanut_butter", "vessels:glass_jar"}
 	}
+})
+
+-- Popcorn
+minetest.register_craftitem("farming:popcorn_uncooked", {
+	description = "Uncooked Popcorn",
+	inventory_image = "farming_popcorn_uncooked.png",
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "farming:popcorn_uncooked",
+	recipe = {"farming:paper_bag", "farming:seed_corn", "farming:seed_corn", "farming:seed_corn", "farming:seed_corn",
+              "farming:seed_corn", "farming:seed_corn", "farming:seed_corn", "farming:seed_corn"}
+})
+
+minetest.register_craftitem("farming:popcorn", {
+	description = "Popcorn",
+	inventory_image = "farming_popcorn.png",
+	on_use = minetest.item_eat(3, "farming:paper_bag"),
+})
+
+minetest.register_craft({
+	type = "cooking",
+	cooktime = 18,
+	output = "farming:popcorn",
+	recipe = "farming:popcorn_uncooked"
 })
 
 -- Potato mashed

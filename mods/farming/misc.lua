@@ -86,6 +86,21 @@ minetest.register_craft({
     }
 })
 
+minetest.register_craftitem("farming:jam_grape", {
+	description = "Grape Jam",
+	inventory_image = "farming_jam_grape.png",
+	on_use = minetest.item_eat(-1)
+})
+
+minetest.register_craft({
+    output = "farming:jam_grape",
+    recipe = {
+        {"", "", ""},
+        {"farming:grape", "farming:grape", "farming:grape"},
+        {"farming:sugar", "vessels:glass_jar", "farming:sugar"}
+    }
+})
+
 minetest.register_craftitem("farming:jam_huckleberry", {
 	description = "Huckleberry Jam",
 	inventory_image = "farming_jam_huckleberry.png",
@@ -143,6 +158,20 @@ minetest.register_craft({
     recipe = {
         {"", "group:food_meat_raw", ""},
         {"", "group:food_meat_raw", ""}
+    }
+})
+
+-- Paper Bag
+minetest.register_craftitem("farming:paper_bag", {
+    description = "Paper Bag",
+    inventory_image = "farming_paper_bag.png",
+})
+
+minetest.register_craft( {
+    output = "farming:paper_bag",
+    recipe = {
+        {"default:paper", "", "default:paper"},
+        {"", "default:paper", ""},
     }
 })
 
