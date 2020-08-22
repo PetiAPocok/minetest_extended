@@ -72,7 +72,7 @@ local function fishing(bobber, elapsed)
                 minetest.sound_play("default_water_footstep", {
                     pos,
                     max_hear_distance = 10,
-                    gain = 10.0,
+                    gain = 1.0,
                 })
             end
 
