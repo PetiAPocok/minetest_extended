@@ -1,4 +1,6 @@
 -------------------------------------------------1.2--------------------------------------------------------------
+A kelp-nek fura a neve, egy egész kelp szál az 1 block
+
 petróleum lámpa
 
 sok színes ajtó
