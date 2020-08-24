@@ -140,7 +140,7 @@ minetest.register_craftitem("farming:jam_strawberry", {
 minetest.register_craft({
     output = "farming:jam_strawberry",
     recipe = {
-        {"", "", ""},
+        {"farming:strawberry", "farming:strawberry", "farming:strawberry"},
         {"farming:strawberry", "farming:strawberry", "farming:strawberry"},
         {"farming:sugar", "vessels:glass_jar", "farming:sugar"}
     }
@@ -186,6 +186,7 @@ minetest.register_craft( {
     type = "shapeless",
     output = "farming:peanut_butter",
     recipe = {"vessels:glass_jar", "farming:bag_of_peanut", "farming:sugar"},
+    replacements = {{"farming:bag_of_peanut", "farming:bag"}}
 })
 
 -- Salt

@@ -34,7 +34,7 @@ nagy térkép? kézzel fogható. Megrajzolt
 
 terrárium + akvárium
     jobbkattra berakja az állatot, megint jobbal kiveszi
-    egérnek, gekkónak, halaknak
+    egérnek, gekkónak, halaknak, gekkó
 
 Csúzli
     flint-et lő

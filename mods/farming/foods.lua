@@ -196,7 +196,7 @@ minetest.register_craftitem("farming:buttered_bread_with_honey", {
 
 minetest.register_craft({
     type = "shapeless",
-    output = "farming:buttered_bread_with_honey",
+    output = "farming:buttered_bread_with_honey 5",
     recipe = {"farming:bread", "mobs:butter", "mobs:honey"}
 })
 
@@ -653,7 +653,7 @@ minetest.register_craftitem("farming:milkshake_strawberry", {
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "farming:milkshake_strawberry 2",
+	output = "farming:milkshake_strawberry 3",
 	recipe = {"farming:jam_strawberry", "mobs:bucket_milk", "vessels:glass_jar", "vessels:glass_jar"},
     replacements = {
 		{"mobs:bucket_milk", "bucket:bucket_empty"}

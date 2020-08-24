@@ -70,7 +70,7 @@ local function fishing(bobber, elapsed)
             -- Play sound
             if bobber:get_luaentity()._bob_travel_time >= 0.4 and bobber:get_luaentity()._bob_travel_time <= 0.5 then
                 minetest.sound_play("default_water_footstep", {
-                    pos,
+                    object = bobber,
                     max_hear_distance = 10,
                     gain = 1.0,
                 })

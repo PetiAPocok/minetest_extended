@@ -11,8 +11,8 @@ craftguide.register_craft({
 
 craftguide.register_craft({
 	type   = "bagging",
-	result = "farming:bag_of_pea",
-	items  = {"farming:pea 50", "farming:bag"}
+	result = "farming:bag_of_peas",
+	items  = {"farming:peas 50", "farming:bag"}
 })
 
 craftguide.register_craft({
