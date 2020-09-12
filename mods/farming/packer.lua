@@ -64,7 +64,9 @@ minetest.register_node("farming:packer", {
         return 0
     end,
 
-    allow_metadata_inventory_move = 0,
+    allow_metadata_inventory_move = function()
+        return 0
+    end,
 
     allow_metadata_inventory_take = function(pos, listname, index, stack, player)
     	if minetest.is_protected(pos, player:get_player_name()) then
@@ -146,6 +148,22 @@ minetest.register_craft({
 		{"group:stick", "", "group:stick"},
 	}
 })
+
+-- Bag
+minetest.register_craftitem("farming:bag", {
+	description = "Bag\n(Use it with packer to bag 50 of the small produces)",
+	inventory_image = "farming_bag.png"
+})
+
+minetest.register_craft({
+    output = "farming:bag",
+    recipe = {
+        {"farming:string", "", "farming:string"},
+        {"farming:string", "", "farming:string"},
+        {"farming:string", "farming:string", "farming:string"}
+    }
+})
+
 
 -- Bag of beans
 minetest.register_craftitem("farming:bag_of_bean", {

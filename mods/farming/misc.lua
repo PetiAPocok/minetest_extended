@@ -1,18 +1,3 @@
--- Bag
-minetest.register_craftitem("farming:bag", {
-	description = "Bag",
-	inventory_image = "farming_bag.png"
-})
-
-minetest.register_craft({
-    output = "farming:bag",
-    recipe = {
-        {"farming:string", "", "farming:string"},
-        {"farming:string", "", "farming:string"},
-        {"farming:string", "farming:string", "farming:string"}
-    }
-})
-
 -- Bowl
 minetest.register_craftitem("farming:bowl", {
 	description = "Bowl",
