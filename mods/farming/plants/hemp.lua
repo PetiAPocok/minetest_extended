@@ -10,8 +10,8 @@ farming.register_plant("farming:hemp", {
 minetest.override_item("farming:hemp_8", {
 	drop = {
 		items = {
-			{ items = {"farming:seed_hemp"} },
-            { items = {"farming:hemp 5"} }
+			{ items = {"farming:seed_hemp 14"} },
+            { items = {"farming:hemp 7"} }
 		}
 	}
 })
