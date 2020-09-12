@@ -63,10 +63,9 @@ minetest.register_craftitem("farming:borsch_uncooked", {
 minetest.register_craft({
     type = "shapeless",
     output = "farming:borsch_uncooked",
-    recipe = {"farming:pot", "farming:bag_of_peas", "farming:salt", "farming:lettuce", "bucket:bucket_water", "farming:beetroot", "farming:beetroot", "farming:beetroot", "farming:beetroot"},
+    recipe = {"farming:pot", "farming:salt", "farming:carrot", "farming:lettuce", "bucket:bucket_water", "group:food_meat_raw", "farming:potato", "farming:beetroot", "farming:beetroot"},
 	replacements = {
-		{"bucket:bucket_water", "bucket:empty"},
-        {"farming:bag_of_peas", "farming:bag"}
+		{"bucket:bucket_water", "bucket:bucket_empty"}
 	}
 })
 
@@ -183,7 +182,7 @@ minetest.register_craftitem("farming:buterbrod", {
 
 minetest.register_craft({
     type = "shapeless",
-    output = "farming:buterbrod",
+    output = "farming:buterbrod 5",
     recipe = {"farming:bread", "mobs:butter", "group:food_meat", "mobs:cheese"}
 })
 
@@ -238,10 +237,10 @@ minetest.register_craftitem("farming:chicken_soup_uncooked", {
 
 minetest.register_craft({
     type = "shapeless",
-    output = "farming:chicken_soup",
+    output = "farming:chicken_soup_uncooked",
     recipe = {"farming:pot", "farming:bag_of_peas", "farming:salt", "bucket:bucket_water", "mobs:chicken_raw", "farming:potato", "farming:carrot"},
 	replacements = {
-		{"bucket:bucket_water", "bucket:empty"},
+		{"bucket:bucket_water", "bucket:bucket_empty"},
         {"farming:bag_of_peas", "farming:bag"}
 	}
 })
@@ -298,9 +297,10 @@ minetest.register_craftitem("farming:cookie_dough", {
 minetest.register_craft( {
 	type = "shapeless",
 	output = "farming:cookie_dough",
-	recipe = {"farming:flour", "farming:sugar", "mobs:egg", "farming:cocoa"},
+	recipe = {"farming:flour", "farming:sugar", "mobs:egg", "farming:cocoa", "mobs:bucket_milk", "mobs:butter"},
     replacements = {
-        {"farming:flour", "default:paper"}
+        {"farming:flour", "default:paper"},
+        {"mobs:bucket_milk", "bucket:bucket_empty"}
     }
 })
 
@@ -356,7 +356,7 @@ minetest.register_craftitem("farming:garlic_bread", {
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "farming:garlic_bread 7",
+	output = "farming:garlic_bread 5",
 	recipe = {"farming:garlic", "farming:bread"}
 })
 
@@ -733,7 +733,7 @@ minetest.register_craft({
     output = "farming:peas_mashed_uncooked",
     recipe = {"farming:pot", "farming:bag_of_peas", "mobs:bucket_milk"},
 	replacements = {
-		{"mobs:bucket_milk", "bucket:empty"},
+		{"mobs:bucket_milk", "bucket:bucket_empty"},
         {"farming:bag_of_peas", "farming:bag"}
 	}
 })
