@@ -22,7 +22,7 @@ minetest.override_item("farming:corn_8", {
 
 minetest.register_craft({
     type = "shapeless",
-    output = "farming:seed_corn",
+    output = "farming:seed_corn 10",
     recipe = {"farming:corn"}
 })
 
