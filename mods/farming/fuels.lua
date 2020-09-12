@@ -33,3 +33,9 @@ minetest.register_craft({
 	recipe = "farming:hemp",
 	burntime = 1,
 })
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "farming:seed_hemp",
+	burntime = 1,
+})
