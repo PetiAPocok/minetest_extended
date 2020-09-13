@@ -1,0 +1,1 @@
+Used the slingshot texture and sound from Noodlemire's projectile mod (https://github.com/Noodlemire/projectile).
