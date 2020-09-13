@@ -18,7 +18,7 @@ end
 
 minetest.register_entity("flying_carpet:carpet", {
     physical = true,
-    collisionbox = {-0.5, -0.35, -0.5, 0.5, 0.3, 0.5},
+    collisionbox = {-0.5, -0.35, -0.5, 0.5, 0.1, 0.5},
     visual = "mesh",
     mesh = "flying_carpet_carpet.obj",
     textures = {"flying_carpet_surface.png"},
@@ -233,7 +233,7 @@ minetest.register_entity("flying_carpet:carpet", {
 
 
 minetest.register_craftitem("flying_carpet:carpet", {
-    description = S("carpet"),
+    description = S("Flying Carpet"),
     inventory_image = "flying_carpet_inventory.png",
     wield_scale = {x = 2, y = 2, z = 1},
     liquids_pointable = true,
@@ -262,9 +262,8 @@ minetest.register_craftitem("flying_carpet:carpet", {
 minetest.register_craft({
     output = "flying_carpet:carpet",
     recipe = {
-        {"",           "",           ""          },
-        {"group:wood", "",           "group:wood"},
-        {"group:wood", "group:wood", "group:wood"},
+        {"wool:violet", "wool:yellow", "wool:violet"},
+        {"default:mese_crystal_fragment", "default:mese_crystal_fragment", "default:mese_crystal_fragment"},
     },
 })
 

@@ -1,2 +1,2 @@
 # textdomain: flying_carpet
-Flying carpet=
+Flying Carpet=
