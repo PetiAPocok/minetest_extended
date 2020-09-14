@@ -1,7 +1,7 @@
 local ray_count = 0
 local rays = {}
 
-minetest.register_craftitem("orb_of_lightning:orb_of_lightning", {
+minetest.register_tool("orb_of_lightning:orb_of_lightning", {
     description = "Orb of Lightning\nMana: 10",
     inventory_image = "orb_of_lightning_orb.png",
     on_use = function(itemstack, player, pointed_thing)

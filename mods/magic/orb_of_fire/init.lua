@@ -1,4 +1,4 @@
-minetest.register_craftitem("orb_of_fire:orb_of_fire", {
+minetest.register_tool("orb_of_fire:orb_of_fire", {
     description = "Orb of Fire\nMana: 15",
     inventory_image = "orb_of_fire_orb.png",
     on_use = function(itemstack, player, pointed_thing)

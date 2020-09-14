@@ -37,7 +37,7 @@ minetest.register_entity("slingshot:projectile", {
     end
 })
 
-minetest.register_craftitem("slingshot:slingshot", {
+minetest.register_tool("slingshot:slingshot", {
     description = "Slingshot\nUses flint as projectile.",
     inventory_image = "slingshot_slingshot.png",
     on_use = function(itemstack, player, pointed_thing)

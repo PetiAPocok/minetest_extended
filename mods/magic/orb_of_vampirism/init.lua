@@ -1,4 +1,4 @@
-minetest.register_craftitem("orb_of_vampirism:orb_of_vampirism", {
+minetest.register_tool("orb_of_vampirism:orb_of_vampirism", {
     description = "Orb of Vampirism\nMana: 10",
     inventory_image = "orb_of_vampirism_orb.png",
     on_use = function(itemstack, player, pointed_thing)
