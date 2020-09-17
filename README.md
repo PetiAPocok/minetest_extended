@@ -107,7 +107,14 @@ Made for and tested on Minetest 5.3.0.
 - Xpanes: added reverse craft
 ### 1.2
 - "Created" lantern from random_geek's Morelights ([Github](https://github.com/random-geek/morelights))
-<!-- - Added Flying carpet. ([repo](https://repo.or.cz/minetest_flying_carpet.git)) -->
+- Renamed and redo Backpacks mod as Void Bags
+- Added Hangglider (modified texture)([NotABug](https://notabug.org/Piezo_/minetest-hangglider))
+- Added Mobs Water ([NotABug](https://notabug.org/TenPlus1/mobs_water))
+- Added Mobs Horse ([NotABug](https://notabug.org/TenPlus1/mob_horse))
+- Created slingshot.
+- Created Flying carpet. Used the Minetest Game's boats as template.
+- Created hungry mana.
+
 
 ## Licensing
 

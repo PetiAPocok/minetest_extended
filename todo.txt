@@ -1,31 +1,71 @@
 -------------------------------------------------1.2--------------------------------------------------------------
-A kelp-nek fura a neve, egy egész kelp szál az 1 block
 
-petróleum lámpa
+A bakedclay-ből maradjanak a virágok? De akkor költözenek a virágok modba...
+A cement színezése az... Jó az úgy? És ha így lenne üveg is? Csiszolt cement kuka. Lépcsőket belőle.
+A moreblocks-ból, a darkage-ből és a gloopblocks-ból csináljunk egy pp_moreblock-ot és csak a gusutsos block-ok maradnak.
+
+
+
+Túl hangos a krokodil?
+A cápa neked veti vamát a parton...
+A halak kimásznak a vízből...
+
+A kajákat külön mod-ba
+
+Gyertya, gyertyatartóban
+    x x x
+    x x x
+    x x x
+    Világít, kézben is, lerakható
+
+bell
+    kiírja a lerakójának, hogy kopkopp
+    meg hangos
+
+Márvány, gránit, andezit, diorit
+
+topaz magic
+    orb of diging
+        digs only dirt (with any on the top of it), stone (cobblestone, and mossy too), gravel, sand, silver sand
+
+fire orb olvassza a havat meg a jeget.
+
+bútorok                    KELL
+    Szekrény             KELL
+        egy blokk
+        kevesebb hely
+        ajtós / fiókos változat
+
+    A könyves és üveges polc-ot leegyszerűsíteni polcra.
+
+Magic hangok?
 
 sok színes ajtó
 
+bonemeal mod mindenhol sima füvet növeszt.
+
+Ruhák
+    pulóverek, pólók, gatyák
+    bőr csizma, bőr mellény
+
+
+
+
+colored glass?
+
+nether?
+
+A crafting guide-ba kategorizálni a cuccokat
+
+petróleum lámpa
+
 horgászat túl hangos...
-
-backpack ad armor-t?
-A backpack-omba raktam cuccot. SZandi belépett és az ő táskája tartalmát láttam.
-Ha szandi kilép nem kapom vissza a táskám.
-Ha én lépek ki és vissza tönkremegy az inventorym...
-
-Backpack-ek okozzák a segmentation fault-ot?
 
 handcar emelkedőn rángat
     két utassal nincs tesztelve...
 
-a füves földről nem tűnik el a fű ha ráépítesz?
-
-magic lövedékeket ki lehet ütni?
-    on_activate = function(self, staticdata, dtime_s)
-        self.object:set_armor_groups({immortal=1})
-    end,
-
 óra
-    magic hajtja
+    magic hajtja...
     x réz x
     réz mese crystal réz
     x réz x
@@ -35,11 +75,6 @@ nagy térkép? kézzel fogható. Megrajzolt
 terrárium + akvárium
     jobbkattra berakja az állatot, megint jobbal kiveszi
     egérnek, gekkónak, halaknak, gekkó
-
-Csúzli
-    flint-et lő
-
-pulóverek, pólók, gatyák
 
 A sötétben terjeszkedjen a gomba
 
@@ -58,46 +93,30 @@ Mapgen ore normalizálása
 
 A karakterek keze amikor látszódik, az aktuális skin szerint nézzen ki
 
-topaz magic
-    orb of diging
-        digs only dirt (with any on the top of it), stone (cobblestone, and mossy too), gravel, sand, silver sand
-
-Lámpás
-    Szabina bavállalta hogy le 3d modellezei
-
 chisel
     sok sok dekoratív blokk
 
+több hely 3d_armor-nak
+
+accesories mod
+    depends on: 3d_armor, gems
+    adds rings, necklaces, amulets (at your belt)
 
 Minions
-
-Teleport hálózat
-    Teleport obelisk (node)
-        ehhez lehet teleportálni
-    Teleport rúna (item)
-        On use a saját rúnájához teleportál
-        50? manáért
-
-bonemeal mod mindenhol sima füvet növeszt.
+    depends on: 3d_armor
+    Ha nálad van a toteme akkor követ és harcol veled
+    Wolf spirit
+    Darkling
 
 Nagy, többszemélyes hajó?
     Nincs ilyen mod
     inv_image: Ship in a bottle
-    vigyen le kaját
-
-az elültetett mag, amíg mag addig legyen kivehető
+    vigyen le kaját az evezés
 
 The poisoning foods not damaging till the given time
     de miért...?
 
 mobs pathfinnding, ha a fejeden áll ne csak pörögjön
-
-fire orb olvassza a havat meg a jeget.
-
-flying carpet (fix it!)
-    Horribble controls
-    Doesn't use mana.
-    Uses own mama and doesn't give feedback about the remaining "fuel"
 
 mozdony
     szenet/fát eszik
@@ -111,14 +130,11 @@ orb of wind
     Move the enemy back
     if I set or add to its velocity then it gets overwritten by its own movement pattern...
 
-Magic hangok?
-
-Mana csak x kaja felett regenerálódjon.
-
 potions
     water walking effect?
         detect the block below and make it walakable true
-        detect the block below and replace it with ice or lava
+            csak globális lehet walkable
+        detect the block below and replace it with ice or obsidian és utána vissza
 
     protection effect
         how armor works?
@@ -150,11 +166,6 @@ potions
         orb of ice
 
 
-accesories mod
-    depends on: 3d_armor, gems
-    adds rings, necklaces, amulets (at your belt)
-
-több hely 3d_armor-nak
 
 Ládák elnevezése
 
@@ -174,14 +185,6 @@ interdimensional chest
     register a deatached inventory and write it mod storage
     all the interdimensional chests are connected to the same storage
     craft?
-
-bútorok                    KELL
-    Szekrény             KELL
-        egy blokk
-        kevesebb hely
-        ajtós / fiókos változat
-
-    A könves és üveges polc-ot leegyszerűsíteni polcra.
 
 A korall az mire jó?
     Többnyire dekor
@@ -221,12 +224,9 @@ carpets
 Új kaják
     blueberry_muffin és tészta texture
     pörkölt földimogyoró
-    kell a glass of milk? jar of milk..
 
     Kész ételek (körett + sült hús)                                                                 KELL
     csilisbab                                                                                                      KELL
-    sushi                                                                                                             KELL
-        seaweed + raw fish + coocked rice
     grape milkshake
     vegetable salad
     ice cream
@@ -273,11 +273,7 @@ mobok:
         delfin lovaglás?
         polip lovaglás?
 
-    ló
-
     világító ló ami bogarakat szarik
-
-    kutya?
 
     Új mob: Demon
         Dob: démon [csont? / vér? / fog? / szem?]
@@ -288,11 +284,15 @@ mobok:
 
     npc-k
 
-
+    A kelp-nek fura a neve, egy egész kelp szál az 1 block
 
 ------------------------ Textúrára vár -------------------------
 
 New paintings
+A vizi állatoknak túl nagy a felbontásuk, vagy egyhangúak
+A lava flan-nak túl nagy a felbontása
+a repülő szőnyeg modelnek túl nagy a felbontása
+blueberry muffin
 
 ------------------------ nincs ilyen mod -------------------------
 
