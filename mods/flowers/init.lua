@@ -108,6 +108,30 @@ flowers.datas = {
 		{-2 / 16, -0.5, -2 / 16, 2 / 16, 3 / 16, 2 / 16},
 		{color_black = 1, flammable = 1}
 	},
+    {
+        "delphinium",
+        "Blue Delphinium",
+        {-0.15, -0.5, -0.15, 0.15, 0.3, 0.15},
+        {color_cyan = 1}
+    },
+    {
+        "thistle",
+        "Thistle",
+        {-0.15, -0.5, -0.15, 0.15, 0.2, 0.15},
+        {color_magenta = 1}
+    },
+    {
+        "lazarus",
+        "Lazarus Bell",
+        {-0.15, -0.5, -0.15, 0.15, 0.2, 0.15},
+        {color_pink = 1}
+    },
+    {
+        "mannagrass",
+        "Reed Mannagrass",
+        {-0.15, -0.5, -0.15, 0.15, 0.2, 0.15},
+        {color_dark_green = 1}
+    },
 }
 
 for _,item in pairs(flowers.datas) do
