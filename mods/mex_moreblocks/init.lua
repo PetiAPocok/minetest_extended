@@ -1,3 +1,482 @@
+
+--
+-- Naturally spawning blocks
+--
+
+minetest.register_node("darkage:chalk", {
+	description = "Chalk",
+	tiles = {"darkage_chalk.png"},
+	is_ground_content = true,
+	drop = "darkage:chalk_powder 4",
+	groups = {crumbly=2,cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:marble", {
+	description = "Marble",
+	tiles = {"darkage_marble.png"},
+	is_ground_content = true,
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:serpentine", {
+	description = "Serpentine",
+	tiles = {"darkage_serpentine.png"},
+	is_ground_content = true,
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:mud", {
+	description = "Mud",
+	tiles = {"darkage_mud_top.png", "darkage_mud.png"},
+	is_ground_content = true,
+	groups = {crumbly=3},
+	drop = "darkage:mud_lump 4",
+	sounds = default.node_sound_dirt_defaults({
+		footstep = "",
+	}),
+})
+
+minetest.register_node("darkage:schist", {
+	description = "Schist",
+	tiles = {"darkage_schist.png"},
+	is_ground_content = true,
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:shale", {
+	description = "Shale",
+	tiles = {"darkage_shale.png","darkage_shale.png","darkage_shale_side.png"},
+	is_ground_content = true,
+	groups = {crumbly=2,cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:silt", {
+	description = "Silt",
+	tiles = {"darkage_silt.png"},
+	is_ground_content = true,
+	groups = {crumbly=3},
+	drop = "darkage:silt_lump 4",
+	sounds = default.node_sound_dirt_defaults({
+		footstep = "",
+	}),
+})
+
+minetest.register_node("darkage:slate", {
+	description = "Slate",
+	tiles = {"darkage_slate.png","darkage_slate.png","darkage_slate_side.png"},
+	is_ground_content = true,
+	drop = "darkage:slate_cobble",
+	groups = {cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:ors", {
+	description = "Old Red Sandstone",
+	tiles = {"darkage_ors.png"},
+	is_ground_content = true,
+	drop = "darkage:ors_cobble",
+	groups = {crumbly=2,cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:gneiss", {
+	description = "Gneiss",
+	tiles = {"darkage_gneiss.png"},
+	is_ground_content = true,
+	groups = {cracky=3},
+	drop = "darkage:gneiss_cobble",
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:basalt", {
+	description = "Basalt",
+	tiles = {"darkage_basalt.png"},
+	is_ground_content = true,
+	drop = "darkage:basalt_cobble",
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
+--
+-- Cobble
+--
+
+minetest.register_node("darkage:slate_cobble", {
+	description = "Slate Cobble",
+	tiles = {"darkage_slate_cobble.png"},
+	groups = {cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:ors_cobble", {
+	description = "Old Red Sandstone Cobble",
+	tiles = {"darkage_ors_cobble.png"},
+	groups = {crumbly=2,cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:gneiss_cobble", {
+	description = "Gneiss Cobble",
+	tiles = {"darkage_gneiss_cobble.png"},
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:basalt_cobble", {
+	description = "Basalt Cobble",
+	tiles = {"darkage_basalt_cobble.png"},
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
+--
+-- Brick
+--
+
+minetest.register_node("darkage:slate_brick", {
+	description = "Slate Brick",
+	tiles = {"darkage_slate_brick.png"},
+	groups = {cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:ors_brick", {
+	description = "Old Red Sandstone Brick",
+	tiles = {"darkage_ors_brick.png"},
+	groups = {crumbly=2,cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:gneiss_brick", {
+	description = "Gneiss Brick",
+	tiles = {"darkage_gneiss_brick.png"},
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:basalt_brick", {
+	description = "Basalt Brick",
+	tiles = {"darkage_basalt_brick.png"},
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:stone_brick", {
+	description = "Stone Brick",
+	tiles = {"darkage_stone_brick.png"},
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
+--
+-- Other Blocks
+--
+
+minetest.register_node("darkage:straw", {
+	description = "Straw",
+	tiles = {"darkage_straw.png"},
+	groups = {snappy=3, flammable=2},
+	sounds = default.node_sound_leaves_defaults(),
+})
+
+minetest.register_node("darkage:straw_bale", {
+	description = "Straw Bale",
+	tiles = {"darkage_straw_bale.png"},
+	drop = "darkage:straw 4",
+	groups = {snappy=2, flammable=2},
+	sounds = default.node_sound_leaves_defaults(),
+})
+
+minetest.register_node("darkage:slate_tile", {
+	description = "Slate Tile",
+	tiles = {"darkage_slate_tile.png"},
+	groups = {cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:marble_tile", {
+	description = "Marble Tile",
+	tiles = {"darkage_marble_tile.png"},
+	groups = {cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:reinforced_chalk", {
+	description = "Reinforced Chalk",
+	tiles = {"darkage_chalk.png^darkage_reinforce.png"},
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:adobe", {
+	description = "Adobe",
+	tiles = {"darkage_adobe.png"},
+	groups = {crumbly=3},
+	sounds = default.node_sound_sand_defaults(),
+})
+
+minetest.register_node("darkage:lamp", {
+	description = "Lamp",
+	tiles = {"darkage_lamp.png"},
+	paramtype = "light",
+	light_source = 14,
+	groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3,flammable=1},
+	sounds = default.node_sound_glass_defaults(),
+})
+
+minetest.register_node("darkage:cobble_with_plaster", {
+	description = "Cobblestone With Plaster",
+	tiles = {"darkage_cobble_with_plaster_D.png", "darkage_cobble_with_plaster_B.png", "darkage_cobble_with_plaster_C.png",
+		"darkage_cobble_with_plaster_A.png", "default_cobble.png", "darkage_chalk.png"},
+	paramtype2 = "facedir",
+	drop = "default:cobble",
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("darkage:darkdirt", {
+	description = "Dark Dirt",
+	tiles = {"darkage_darkdirt.png"},
+	groups = {crumbly=2},
+	sounds = default.node_sound_dirt_defaults(),
+})
+
+minetest.register_node("darkage:dry_leaves", {
+	description = "Dry Leaves",
+	tiles = {"darkage_dry_leaves.png"},
+	paramtype = "light",
+	groups = {snappy=3, flammable=2},
+	sounds = default.node_sound_leaves_defaults()
+})
+
+--
+-- Storage blocks (boxes, shelves, ect.)
+--
+
+minetest.register_node("darkage:box", {
+	description = "Box",
+	tiles = { "darkage_box_top.png","darkage_box_top.png","darkage_box.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	walkable = true,
+	groups = { snappy = 3 },
+	sounds = default.node_sound_wood_defaults(),
+	on_construct = function(pos)
+		local meta = minetest.get_meta(pos)
+		meta:set_string("formspec",
+				"size[8,8]"..
+				"list[current_name;main;0,0;8,3;]"..
+				"list[current_player;main;0,4;8,4;]")
+		meta:set_string("infotext", "Box")
+		local inv = meta:get_inventory()
+		inv:set_size("main", 16)
+	end,
+	can_dig = function(pos,player)
+		local meta = minetest.get_meta(pos);
+		local inv = meta:get_inventory()
+		return inv:is_empty("main")
+	end,
+	on_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff in box at "..minetest.pos_to_string(pos))
+	end,
+	on_metadata_inventory_put = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff to box at "..minetest.pos_to_string(pos))
+	end,
+	on_metadata_inventory_take = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" takes stuff from box at "..minetest.pos_to_string(pos))
+	end,
+})
+
+minetest.register_node("darkage:wood_shelves", {
+	description = "Wooden Shelves",
+	tiles = { "darkage_shelves.png","darkage_shelves.png","darkage_shelves.png",
+			"darkage_shelves.png","darkage_shelves.png","darkage_shelves_front.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	walkable = true,
+	groups = {snappy = 3},
+	sounds = default.node_sound_wood_defaults(),
+	on_construct = function(pos)
+		local meta = minetest.get_meta(pos)
+		meta:set_string("formspec",
+				"size[8,10]"..
+				"list[context;up;0,0;8,3;]"..
+				"list[context;down;0,3;8,3;]"..
+				"list[current_player;main;0,6;8,4;]")
+		meta:set_string("infotext", "Wooden Shelves")
+		local inv = meta:get_inventory()
+		inv:set_size("up", 16)
+		inv:set_size("down", 16)
+	end,
+	can_dig = function(pos,player)
+		local meta = minetest.get_meta(pos);
+		local inv = meta:get_inventory()
+		return inv:is_empty("shape") and inv:is_empty("out") and inv:is_empty("water")
+	end,
+	on_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff in shelves at "..minetest.pos_to_string(pos))
+	end,
+	on_metadata_inventory_put = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff to shelves at "..minetest.pos_to_string(pos))
+	end,
+	on_metadata_inventory_take = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" takes stuff from shelves at "..minetest.pos_to_string(pos))
+	end,
+})
+
+--
+-- Glass / Glow Glass
+--
+
+minetest.register_node("darkage:glass", {
+	description = "Medieval Glass",
+	drawtype = "glasslike",
+	tiles = {"darkage_glass.png"},
+	paramtype = "light",
+	sunlight_propagates = true,
+	groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3},
+	sounds = default.node_sound_glass_defaults(),
+})
+
+minetest.register_node("darkage:glow_glass", {
+	description = "Medieval Glow Glass",
+	drawtype = "glasslike",
+	tiles = {"darkage_glass.png"},
+	paramtype = "light",
+	light_source = 14,
+	sunlight_propagates = true,
+	groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3},
+	sounds = default.node_sound_glass_defaults(),
+})
+
+--
+-- Reinforced Wood
+--
+
+minetest.register_node("darkage:reinforced_wood", {
+	description = "Reinforced Wood",
+	tiles = {"default_wood.png^darkage_reinforce.png"},
+	groups = {snappy=2,choppy=3,oddly_breakable_by_hand=3,flammable=3},
+	sounds = default.node_sound_wood_defaults()
+})
+
+minetest.register_node("darkage:reinforced_wood_left", {
+	description = "Reinforced Wood Left",
+	tiles = {"darkage_reinforced_wood_left.png"},
+	groups = {snappy=2,choppy=3,oddly_breakable_by_hand=3,flammable=3},
+	sounds = default.node_sound_wood_defaults()
+})
+
+minetest.register_node("darkage:reinforced_wood_right", {
+	description = "Reinforced Wood Right",
+	tiles = {"darkage_reinforced_wood_right.png"},
+	groups = {snappy=2,choppy=3,oddly_breakable_by_hand=3,flammable=3},
+	sounds = default.node_sound_wood_defaults()
+})
+
+--
+-- Wood based decoration items
+--
+
+minetest.register_node("darkage:wood_bars", {
+	description = "Wooden Bars",
+	drawtype = "glasslike",
+	tiles = {"darkage_wood_bars.png"},
+	inventory_image = "darkage_wood_bars.png",
+	wield_image = "darkage_wood_bars.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	groups = {snappy=1,choppy=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:wood_grille", {
+	description = "Wooden Grille",
+	drawtype = "glasslike",
+	tiles = {"darkage_wood_grille.png"},
+	inventory_image = "darkage_wood_grille.png",
+	wield_image = "darkage_wood_grille.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	groups = {snappy=1,choppy=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:wood_frame", {
+	description = "Wooden Frame",
+	drawtype = "glasslike",
+	tiles = {"darkage_wood_frame.png"},
+	inventory_image = "darkage_wood_frame.png",
+	wield_image = "darkage_wood_frame.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	groups = {snappy=1,choppy=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+--
+-- Metal based decoration items
+--
+
+minetest.register_node("darkage:chain", {
+	description = "Chain",
+	drawtype = "signlike",
+	tiles = {"darkage_chain.png"},
+	inventory_image = "darkage_chain.png",
+	wield_image = "darkage_chain.png",
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	walkable = false,
+	climbable = true,
+	selection_box = {
+		type = "wallmounted",
+	},
+	groups = {snappy=1,cracky=2,oddly_breakable_by_hand=2},
+	legacy_wallmounted = true
+})
+
+minetest.register_node("darkage:iron_bars", {
+	description = "Iron Bars",
+	drawtype = "glasslike",
+	tiles = {"darkage_iron_bars.png"},
+	inventory_image = "darkage_iron_bars.png",
+	wield_image = "darkage_iron_bars.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:iron_grille", {
+	description = "Iron Grille",
+	drawtype = "glasslike",
+	tiles = {"darkage_iron_grille.png"},
+	inventory_image = "darkage_iron_grille.png",
+	wield_image = "darkage_iron_grille.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
+
+
+
+
+
+
+
 --[[
 GloopBlocks
 Originally written by GloopMaster
@@ -951,3 +1430,906 @@ minetest.register_alias("nyancat:nyancat_rainbow", "gloopblocks:rainbow_block_ho
 minetest.register_alias("default:nyancat_rainbow", "gloopblocks:rainbow_block_horizontal")
 
 print(S("Gloopblocks Loaded!"))
+
+
+
+stairs.register_stair_and_slab("basalt", "darkage:basalt",
+    {cracky=3},
+    {"darkage_basalt.png"},
+    "Basalt Stair",
+    "Basalt Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("marble", "darkage:marble",
+    {cracky=3},
+    {"darkage_marble.png"},
+    "Marble Stair",
+    "Marble Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("marble", "darkage:serpentine",
+    {cracky=3},
+    {"darkage_serpentine.png"},
+    "Serpentine Stair",
+    "Serpentine Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("ors", "darkage:ors",
+    {crumbly=2,cracky=2},
+    {"darkage_ors.png"},
+    "Old Red Sandstone Stair",
+    "Old Red Sandstone Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("schist", "darkage:schist",
+    {cracky=3},
+    {"darkage_schist.png"},
+    "Schist Stair",
+    "Schist Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("slate", "darkage:slate",
+    {cracky=2},
+    {"darkage_slate.png"},
+    "Slate Stair",
+    "Slate Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("gneiss", "darkage:gneiss",
+    {cracky=3},
+    {"darkage_gneiss.png"},
+    "Gneiss Stair",
+    "Gneiss Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("chalk", "darkage:chalk",
+    {crumbly=2,cracky=2},
+    {"darkage_chalk.png"},
+    "Chalk Stair",
+    "Chalk Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("slate_cobble", "darkage:slate_cobble",
+    {cracky=2},
+    {"darkage_slate_cobble.png"},
+    "Slate Cobble Stair",
+    "Slate Cobble Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("slate_brick", "darkage:slate_brick",
+    {cracky=2},
+    {"darkage_slate_brick.png"},
+    "Slate Brick Stair",
+    "Slate Brick Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("ors_cobble", "darkage:ors_cobble",
+    {crumbly=2,cracky=2},
+    {"darkage_ors_cobble.png"},
+    "Old Red Sandstone Cobble Stair",
+    "Old Red Sandstone Cobble Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("ors_brick", "darkage:ors_brick",
+    {crumbly=2,cracky=2},
+    {"darkage_ors_brick.png"},
+    "Old Red Sandstone Brick Stair",
+    "Old Red Sandstone Brick Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("gneiss_cobble", "darkage:gneiss_cobble",
+    {crumbly=2,cracky=2},
+    {"darkage_gneiss_cobble.png"},
+    "Gneiss Cobble Stair",
+    "Gneiss Cobble Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("gneiss_brick", "darkage:gneiss_brick",
+    {crumbly=2,cracky=2},
+    {"darkage_gneiss_brick.png"},
+    "Gneiss Brick Stair",
+    "Gneiss Brick Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("basalt_cobble", "darkage:basalt_cobble",
+    {cracky=3},
+    {"darkage_basalt_cobble.png"},
+    "Basalt Cobble Stair",
+    "Basalt Cobble Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("basalt_brick", "darkage:basalt_brick",
+    {cracky=3},
+    {"darkage_basalt_brick.png"},
+    "Basalt Brick Stair",
+    "Basalt Brick Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("straw", "darkage:straw",
+    {snappy=3, flammable=2},
+    {"darkage_straw.png"},
+    "Straw Stair",
+    "Straw Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("straw_bale", "darkage:straw_bale",
+    {snappy=2, flammable=2},
+    {"darkage_straw_bale.png"},
+    "Straw Bale Stair",
+    "Straw Bale Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("slate_tile", "darkage:slate_tile",
+    {cracky=2},
+    {"darkage_slate_tile.png"},
+    "Slate Tile Stair",
+    "Slate Tile Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("marble_tile", "darkage:marble_tile",
+    {cracky=2},
+    {"darkage_marble_tile.png"},
+    "Marble Tile Stair",
+    "Marble Tile Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("stone_brick", "darkage:stone_brick",
+    {cracky=3},
+    {"darkage_stone_brick.png"},
+    "Stone Brick Stair",
+    "Stone Brick Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("reinforced_chalk", "darkage:reinforced_chalk",
+    {cracky=3},
+    {"darkage_chalk.png^darkage_reinforce.png"},
+    "Reinforced Chalk Stair",
+    "Reinforced Chalk Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("glass", "darkage:glass",
+    {snappy=2,cracky=3,oddly_breakable_by_hand=3},
+    {"darkage_glass.png"},
+    "Medieval Glass Stair",
+    "Medieval Glass Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("glow_glass", "darkage:glow_glass",
+    {snappy=2,cracky=3,oddly_breakable_by_hand=3},
+    {"darkage_glass.png"},
+    "Medieval Glow Glass Stair",
+    "Medieval Glow Glass Slab",
+    default.node_sound_stone_defaults()
+)
+
+stairs.register_stair_and_slab("reinforced_wood", "darkage:reinforced_wood",
+    {snappy=2,choppy=3,oddly_breakable_by_hand=3,flammable=3},
+    {"default_wood.png^darkage_reinforce.png"},
+    "Reinforced Wood Stair",
+    "Reinforced Wood Slab",
+    default.node_sound_stone_defaults()
+)
+
+
+
+-- Various crafts
+
+minetest.register_craft( {
+	type = "shapeless",
+	output = "gloopblocks:rainbow_block",
+	recipe = {
+		"group:dye,color_red",
+		"group:dye,color_orange",
+		"group:dye,color_yellow",
+		"group:dye,color_green",
+		"group:dye,color_blue",
+		"group:dye,color_violet",
+		"default:stone",
+		"default:mese_crystal",
+	},
+})
+
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "default:nyancat_rainbow",
+	recipe = {
+		"gloopblocks:rainbow_block",
+		"default:diamondblock",
+		"default:steelblock",
+		"default:copperblock",
+		"default:bronzeblock",
+		"default:goldblock",
+		"default:mese",
+		"moreores:silver_block",
+		"moreores:mithril_block"
+	}
+})
+
+minetest.register_craft({
+	output = "default:nyancat",
+	recipe = {
+		{"gloopblocks:rainbow_block", "gloopblocks:rainbow_block", "gloopblocks:rainbow_block"},
+		{"gloopblocks:rainbow_block", "gloopblocks:rainbow_block", "gloopblocks:rainbow_block"},
+		{"gloopblocks:rainbow_block", "gloopblocks:rainbow_block", "gloopblocks:rainbow_block"},
+	}
+})
+
+if minetest.get_modpath("glooptest") then
+
+	minetest.register_craft({
+		type = "shapeless",
+		output = "gloopblocks:evil_stick",
+		recipe = {
+			"glooptest:kalite_lump",
+			"default:gold_ingot",
+			"default:coal_lump",
+			"group:stick"
+		}
+	})
+
+	minetest.register_craft({
+		output = "gloopblocks:evil_block",
+		recipe = {
+			{"gloopblocks:evil_stick", "gloopblocks:evil_stick"},
+			{"gloopblocks:evil_stick", "gloopblocks:evil_stick"},
+		}
+	})
+
+	minetest.register_craft({
+		output = "gloopblocks:evil_stick 4",
+		recipe = {
+			{"gloopblocks:evil_block"}
+		}
+	})
+
+	minetest.register_craft({
+		output = "gloopblocks:pick_evil",
+		recipe = {
+			{"gloopblocks:evil_block", "gloopblocks:evil_block", "gloopblocks:evil_block"},
+			{"", "gloopblocks:evil_stick", ""},
+			{"", "gloopblocks:evil_stick", ""},
+		}
+	})
+
+	minetest.register_craft({
+		output = "gloopblocks:axe_evil",
+		recipe = {
+			{"gloopblocks:evil_block", "gloopblocks:evil_block"},
+			{"gloopblocks:evil_block", "gloopblocks:evil_stick"},
+			{"", "gloopblocks:evil_stick"},
+		}
+	})
+
+	minetest.register_craft({
+		output = "gloopblocks:axe_evil",
+		recipe = {
+			{"gloopblocks:evil_block", "gloopblocks:evil_block"},
+			{"gloopblocks:evil_stick", "gloopblocks:evil_block"},
+			{"gloopblocks:evil_stick", ""},
+		}
+	})
+
+	minetest.register_craft({
+		output = "gloopblocks:shovel_evil",
+		recipe = {
+			{"gloopblocks:evil_block"},
+			{"gloopblocks:evil_stick"},
+			{"gloopblocks:evil_stick"},
+		}
+	})
+
+	minetest.register_craft({
+		output = "gloopblocks:sword_evil",
+		recipe = {
+			{"gloopblocks:evil_block"},
+			{"gloopblocks:evil_block"},
+			{"gloopblocks:evil_stick"},
+		}
+	})
+end
+
+minetest.register_craft({
+	output = "gloopblocks:scaffolding 12",
+		recipe = {
+		{"group:stick", "group:wood", "group:stick"},
+		{"", "group:stick", ""},
+		{"group:stick", "group:wood", "group:stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "gloopblocks:pick_cement",
+	recipe = {
+		{"gloopblocks:cement", "gloopblocks:cement", "gloopblocks:cement"},
+		{"", "group:stick", ""},
+		{"", "group:stick", ""},
+	}
+})
+
+minetest.register_craft({
+	output = "gloopblocks:axe_cement",
+	recipe = {
+		{"gloopblocks:cement", "gloopblocks:cement"},
+		{"gloopblocks:cement", "group:stick"},
+		{"", "group:stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "gloopblocks:axe_cement",
+	recipe = {
+		{"gloopblocks:cement", "gloopblocks:cement"},
+		{"group:stick", "gloopblocks:cement"},
+		{"group:stick", ""},
+	}
+})
+
+minetest.register_craft({
+	output = "gloopblocks:shovel_cement",
+	recipe = {
+		{"gloopblocks:cement"},
+		{"group:stick"},
+		{"group:stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "gloopblocks:sword_cement",
+	recipe = {
+		{"gloopblocks:cement"},
+		{"gloopblocks:cement"},
+		{"group:stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "gloopblocks:pavement 5",
+	recipe = {
+		{"gloopblocks:basalt",    "gloopblocks:wet_cement","gloopblocks:basalt"},
+		{"gloopblocks:wet_cement","gloopblocks:basalt",    "gloopblocks:wet_cement"},
+		{"gloopblocks:basalt",    "gloopblocks:wet_cement","gloopblocks:basalt"},
+	}
+})
+
+minetest.register_craft({
+	output = "gloopblocks:pavement 5",
+	recipe = {
+		{"gloopblocks:wet_cement","gloopblocks:basalt",    "gloopblocks:wet_cement"},
+		{"gloopblocks:basalt",    "gloopblocks:wet_cement","gloopblocks:basalt"},
+		{"gloopblocks:wet_cement","gloopblocks:basalt",    "gloopblocks:wet_cement"},
+	}
+})
+
+minetest.register_craft({
+	output = "gloopblocks:oerkki_block 2",
+	recipe = {
+		{"default:iron_lump", "default:coal_lump", "default:iron_lump"},
+		{"default:coal_lump", "default:bookshelf", "default:coal_lump"},
+		{"default:iron_lump", "default:coal_lump", "default:iron_lump"},
+	},
+	replacements = { { "default:bookshelf", "default:book 3" } }
+})
+
+minetest.register_craft({
+	output = "gloopblocks:oerkki_block 2",
+	recipe = {
+		{"default:coal_lump", "default:iron_lump", "default:coal_lump"},
+		{"default:iron_lump", "default:bookshelf", "default:iron_lump"},
+		{"default:coal_lump", "default:iron_lump", "default:coal_lump"},
+	},
+	replacements = { { "default:bookshelf", "default:book 3" } }
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "gloopblocks:stone_brick_mossy 2",
+	recipe = {
+		"default:stonebrick",
+		"default:stonebrick",
+		"default:junglegrass",
+		"default:junglegrass"
+	}
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "gloopblocks:stone_brick_mossy 2",
+	recipe = {
+		"default:stonebrick",
+		"default:stonebrick",
+		"default:grass_1",
+		"default:grass_1",
+		"default:grass_1",
+		"default:grass_1"
+	}
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "gloopblocks:stonebrick",
+	recipe = "default:stone_brick_mossy",
+	cooktime = 6
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "gloopblocks:cobble_road 5",
+	recipe = {
+		"default:cobble",
+		"default:cobble",
+		"default:cobble",
+		"default:cobble",
+		"gloopblocks:pavement"
+	}
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "gloopblocks:cobble_road_mossy 2",
+	recipe = {
+		"gloopblocks:cobble_road",
+		"gloopblocks:cobble_road",
+		"default:junglegrass",
+		"default:junglegrass"
+	}
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "gloopblocks:cobble_road_mossy 2",
+	recipe = {
+		"gloopblocks:cobble_road",
+		"gloopblocks:cobble_road",
+		"default:grass_1",
+		"default:grass_1",
+		"default:grass_1",
+		"default:grass_1"
+	}
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "gloopblocks:stone_mossy 2",
+	recipe = {
+		"default:stone",
+		"default:stone",
+		"default:junglegrass",
+		"default:junglegrass"
+	}
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "gloopblocks:stone_mossy 2",
+	recipe = {
+		"default:stone",
+		"default:stone",
+		"default:grass_1",
+		"default:grass_1",
+		"default:grass_1",
+		"default:grass_1"
+	}
+})
+
+minetest.register_craft({
+	output = "gloopblocks:fence_steel 1",
+	recipe = {
+		{"xpanes:bar", "xpanes:bar", "xpanes:bar"},
+		{"xpanes:bar", "xpanes:bar", "xpanes:bar"},
+	},
+})
+
+if minetest.get_modpath("technic") then
+	technic.register_grinder_recipe({input={"gloopblocks:pumice"},output="default:sand"})
+	technic.register_grinder_recipe({input={"gloopblocks:basalt"},output="default:cobble"})
+	minetest.register_craft({
+		type = "shapeless",
+		output = "technic:concrete 3",
+		recipe = {
+			"gloopblocks:wet_cement",
+			"group:sand",
+			"default:gravel",
+		}
+	})
+end
+
+--
+-- Naturally spawning blocks
+--
+minetest.register_craft({
+	output = "darkage:chalk",
+	recipe = {
+		{"darkage:chalk_powder","darkage:chalk_powder"},
+		{"darkage:chalk_powder","darkage:chalk_powder"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:mud",
+	recipe = {
+		{"darkage:mud_lump","darkage:mud_lump"},
+		{"darkage:mud_lump","darkage:mud_lump"},
+	}
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "darkage:shale",
+	recipe = "darkage:mud",
+})
+
+minetest.register_craft({
+	output = "darkage:silt 3",
+	recipe = {
+		{"default:sand","default:sand"},
+		{"default:clay_lump","default:clay_lump"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:silt",
+	recipe = {
+		{"darkage:silt_lump","darkage:silt_lump"},
+		{"darkage:silt_lump","darkage:silt_lump"},
+	}
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "darkage:gneiss",
+	recipe = "darkage:schist",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "darkage:slate",
+	recipe = "darkage:shale",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "darkage:mud 5",
+	recipe = "darkage:silt",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "darkage:slate",
+	recipe = "darkage:slate_cobble",
+})
+
+minetest.register_craft({
+	output = "darkage:ors 4",
+	recipe = {
+		{"default:sandstone","default:sandstone"},
+		{"default:iron_lump","default:sandstone"},
+	}
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "darkage:ors",
+	recipe = "darkage:ors_cobble",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "darkage:gneiss",
+	recipe = "darkage:gneiss_cobble",
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "darkage:basalt",
+	recipe = "darkage:basalt_cobble",
+})
+
+--
+-- Cobble
+--
+
+--
+-- Other Blocks
+--
+
+minetest.register_craft({
+	output = "darkage:straw 2",
+	recipe = {
+	{"default:dry_shrub","default:dry_shrub"},
+		{"default:dry_shrub","default:dry_shrub"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:straw 2",
+	recipe = {
+		{"darkage:dry_leaves","darkage:dry_leaves"},
+		{"darkage:dry_leaves","darkage:dry_leaves"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:straw_bale",
+	recipe = {
+		{"darkage:straw","darkage:straw"},
+		{"darkage:straw","darkage:straw"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:slate_tile 4",
+	recipe = {
+		{"darkage:slate","darkage:slate"},
+		{"darkage:slate","darkage:slate"},
+		{"darkage:adobe","darkage:adobe"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:marble_tile 4",
+	recipe = {
+		{"darkage:marble","darkage:marble"},
+		{"darkage:marble","darkage:marble"},
+		{"darkage:adobe","darkage:adobe"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:stone_brick 9",
+	recipe = {
+		{"default:cobble","default:cobble","default:cobble"},
+		{"default:cobble","default:cobble","default:cobble"},
+		{"default:cobble","default:cobble","default:cobble"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:reinforced_chalk",
+	recipe = {
+		{"group:stick","","group:stick"},
+		{"","darkage:chalk",""},
+		{"group:stick","","group:stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:adobe 4",
+	recipe = {
+		{"default:sand","default:sand"},
+		{"default:clay_lump","darkage:straw"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:lamp",
+	recipe = {
+		{"group:stick","","group:stick"},
+		{"","default:torch",""},
+		{"group:stick","","group:stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:cobble_with_plaster 2",
+	recipe = {
+		{"default:cobble","darkage:chalk_powder"},
+		{"default:cobble","darkage:chalk_powder"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:cobble_with_plaster 2",
+	recipe = {
+		{"darkage:chalk_powder","default:cobble"},
+		{"darkage:chalk_powder","default:cobble"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:darkdirt 4",
+	recipe = {
+		{"default:dirt","default:dirt"},
+		{"default:gravel","default:gravel"},
+	}
+})
+
+minetest.register_craft({
+	type = "cooking",
+	output = "darkage:dry_leaves",
+	recipe = "default:leaves",
+})
+
+--
+-- Storage blocks (boxes, shelves, ect.)
+--
+
+minetest.register_craft({
+	output = "darkage:box",
+	recipe = {
+		{"default:wood","","default:wood"},
+		{"","",""},
+		{"default:wood","","default:wood"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:wood_shelves 2",
+	recipe = {
+		{"darkage:box"},
+		{"darkage:box"},
+	}
+})
+
+--
+-- Glass / Glow Glass
+--
+
+minetest.register_craft({
+	output = "darkage:glass",
+		recipe = {
+		{"darkage:glow_glass"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:glass 8",
+	recipe = {
+		{"default:glass", "default:steel_ingot", "default:glass"},
+		{"default:steel_ingot", "default:glass", "default:steel_ingot"},
+		{"default:glass", "default:steel_ingot", "default:glass"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:glow_glass",
+	recipe = {
+		{"darkage:glass"},
+		{"default:torch"},
+	}
+})
+
+--
+-- Reinforced Wood
+--
+
+minetest.register_craft({
+	output = "darkage:reinforced_wood",
+	recipe = {
+		{"group:stick","","group:stick"},
+		{"","default:wood",""},
+		{"group:stick","","group:stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:reinforced_wood_left",
+	recipe = {
+		{"default:stick","darkage:reinforced_wood",""},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:reinforced_wood_right",
+	recipe = {
+		{"","darkage:reinforced_wood","default:stick"},
+	}
+})
+
+--
+-- Wood based decoration items
+--
+minetest.register_craft({
+	output = "darkage:wood_bars 2",
+	recipe = {
+		{"default:stick","","default:stick"},
+		{"default:stick","","default:stick"},
+		{"default:stick","","default:stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:wood_grille 2",
+	recipe = {
+		{"","darkage:wood_bars",""},
+		{"darkage:wood_bars","","darkage:wood_bars"},
+		{"","darkage:wood_bars",""},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:wood_frame",
+	recipe = {
+		{"group:stick","","group:stick"},
+		{"","group:wood",""},
+		{"group:stick","","group:stick"},
+	}
+})
+
+--
+-- Metal based decoration items
+--
+
+minetest.register_craft({
+	output = "darkage:chain 2",
+	recipe = {
+		{"darkage:iron_stick"},
+		{"darkage:iron_stick"},
+		{"darkage:iron_stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:iron_bars 2",
+	recipe = {
+		{"darkage:iron_stick","","darkage:iron_stick"},
+		{"darkage:iron_stick","","darkage:iron_stick"},
+		{"darkage:iron_stick","","darkage:iron_stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:iron_grille 2",
+	recipe = {
+		{"","darkage:iron_bars",""},
+		{"darkage:iron_bars","","darkage:iron_bars"},
+		{"","darkage:iron_bars",""},
+	}
+})
+
+--
+-- Craft items
+--
+
+minetest.register_craft({
+	output = "darkage:chalk_powder 4",
+	recipe = {
+		{"darkage:chalk"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:mud_lump 4",
+	recipe = {
+		{"darkage:mud"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:silt_lump 4",
+		recipe = {
+		{"darkage:silt"},
+	}
+})
+
+minetest.register_craft({
+	output = "darkage:iron_stick 3",
+	recipe = {
+		{"default:steel_ingot"},
+		{"default:steel_ingot"},
+		{"default:steel_ingot"},
+	}
+})

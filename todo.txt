@@ -1,9 +1,11 @@
 -------------------------------------------------1.2--------------------------------------------------------------
 
-A bakedclay-ből maradjanak a virágok? De akkor költözenek a virágok modba...
-A cement színezése az... Jó az úgy? És ha így lenne üveg is? Csiszolt cement kuka. Lépcsőket belőle.
+A bakedclay-ből maradjanak a virágok?
+    Igen, de akkor költözenek a virágok modba...
+A cement színezése az... Jó az úgy?
+    NO
+    Csiszolt cement kuka. Lépcsőket belőle.
 A moreblocks-ból, a darkage-ből és a gloopblocks-ból csináljunk egy pp_moreblock-ot és csak a gusutsos block-ok maradnak.
-
 
 
 Túl hangos a krokodil?
@@ -51,7 +53,9 @@ Ruhák
 
 
 
-colored glass?
+A mossy_cobbelstone kuka, helyette lehetne moss mint növény és az nőhetne rá mindenre...
+
+colored glass               KELL
 
 nether?
 
