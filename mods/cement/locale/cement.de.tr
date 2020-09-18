@@ -1,10 +1,6 @@
 # textdomain: cement
 
-# Tools
-Sanding Tool=Handschleifmaschine
-
 # Cement Types
 Dry Cement=Trockener Zement
 Wet Cement=Feuchter Zement
 Hard Cement=Ausgehärteter Zement
-Sanded Cement=Abgeschliffener Zement
