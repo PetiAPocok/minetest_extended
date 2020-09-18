@@ -39,6 +39,13 @@ minetest.register_craft({
     replacements = {{ 'bucket:bucket_water', 'bucket:bucket_empty' }}
 })
 
+minetest.register_craft({
+    output = 'cement:wet',
+    type = 'shapeless',
+    recipe = { "cement:dry", 'bucket:bucket_water' },
+    replacements = {{ 'bucket:bucket_water', 'bucket:bucket_empty' }}
+})
+
 -- Register hard cement
 
 minetest.register_node('cement:hard', {
