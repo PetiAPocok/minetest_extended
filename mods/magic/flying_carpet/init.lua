@@ -152,7 +152,7 @@ minetest.register_entity("flying_carpet:carpet", {
                 local mana = hbmana.get(self._driver)
 
                 if (ctrl.up or ctrl.down) and mana >= 1 then
-                    if self._timer_mana > 0.3 then
+                    if self._timer_mana > 0.2 then
                         local mana_to_substract = 1
                         if ctrl.aux1 then
                             mana_to_substract = mana_to_substract + 1
