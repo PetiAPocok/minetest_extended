@@ -113,8 +113,12 @@ Made for and tested on Minetest 5.3.0.
 - Added Mobs Horse ([NotABug](https://notabug.org/TenPlus1/mob_horse))
 - Created slingshot.
 - Created Flying carpet. Used the Minetest Game's boats as template.
+- Created void_bags. Used [inventorybags] (https://github.com/cx384/inventorybags) as base.
 - Created hungry mana.
-
+- Created teleports.
+- Added bakedclay ([notabug](https://notabug.org/tenplus1/bakedclay))
+- Added cement mod (modified) ([gitlab](https://gitlab.com/4w/cement))
+- Created mex_moreblocks from a bunch of mods. See license.txt
 
 ## Licensing
 

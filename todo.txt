@@ -1,12 +1,12 @@
 -------------------------------------------------1.2--------------------------------------------------------------
+mex_moreblocks
+    A moreblocks-ból, a darkage-ből és a gloopblocks-ból csináljunk egy pp_moreblock-ot és csak a gusutsos block-ok maradnak.
+    Szandi új marble texture-t szeretne.
+    Lépcsőket belőle.
+    slate tiles texture az jó úgy?
+    a doboz nem kiüthető ha van benne valami
 
-A bakedclay-ből maradjanak a virágok?
-    Igen, de akkor költözenek a virágok modba...
-A cement színezése az... Jó az úgy?
-    NO
-    Csiszolt cement kuka. Lépcsőket belőle.
-A moreblocks-ból, a darkage-ből és a gloopblocks-ból csináljunk egy pp_moreblock-ot és csak a gusutsos block-ok maradnak.
-
+a láda nem kiüthető ha van benne valami
 
 Túl hangos a krokodil?
 A cápa neked veti vamát a parton...
@@ -52,6 +52,9 @@ Ruhák
 
 
 
+
+
+Chalk-ból kréta, meg blackboard...
 
 A mossy_cobbelstone kuka, helyette lehetne moss mint növény és az nőhetne rá mindenre...
 

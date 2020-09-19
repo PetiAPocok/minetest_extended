@@ -1,0 +1,17 @@
+lantern form morelights(https://github.com/random-geek/morelights) by random_geek. Code: LGPL v3.0 media and assets: CC BY-SA 4.0
+
+From darkage(https://github.com/davisonio/darkage) by davisonio ([WTFPL](http://www.wtfpl.net/txt/copying/)):
+    adobe
+    basalts
+    box (changed texture and code)
+    shelves (changed texture and code)
+    chalk
+    lamp
+    marbles (changed texture)
+    serpentines
+    slates
+
+From moreblocks(https://github.com/minetest-mods/moreblocks):
+
+
+From: gloopblocks(https://gitlab.com/VanessaE/gloopblocks) by VanessaE:
