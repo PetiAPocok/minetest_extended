@@ -12,8 +12,21 @@ local function get_velocity(v, yaw, y)
     return {x = x, y = y, z = z}
 end
 
-local function get_v(v)
-    return math.sqrt(v.x ^ 2 + v.z ^ 2)
+function free_to_go(self)
+    local heading_direction = get_velocity(1, self.object:get_yaw(), 0)
+    local pos = self.object:get_pos()
+    local pos_to_check = {}
+    if self._speed < 0 then
+        pos_to_check = vector.add(pos, vector.multiply(heading_direction, -1.5))
+    else
+        pos_to_check = vector.add(pos, vector.multiply(heading_direction, 1.5))
+    end
+
+    if minetest.get_node(pos_to_check).name == "air" then
+        return true
+    else
+        return false
+    end
 end
 
 minetest.register_entity("flying_carpet:carpet", {
@@ -104,6 +117,7 @@ minetest.register_entity("flying_carpet:carpet", {
     on_step = function(self, dtime)
         self._timer_mana = self._timer_mana + dtime
         self._timer_sound = self._timer_sound + dtime
+        local elevation = 0
 
         if self._speed > 0 or self._speed < 0 then
             if self._timer_sound > 0.5 then
@@ -181,39 +195,29 @@ minetest.register_entity("flying_carpet:carpet", {
     			end
 
     			if ctrl.left then
-    				if self._speed < -0.001 then
-    					self.object:set_yaw(self.object:get_yaw() - dtime * 0.9)
-    				else
-    					self.object:set_yaw(self.object:get_yaw() + dtime * 0.9)
-    				end
+					self.object:set_yaw(self.object:get_yaw() + dtime * 0.9)
     			elseif ctrl.right then
-    				if self._speed < -0.001 then
-    					self.object:set_yaw(self.object:get_yaw() + dtime * 0.9)
-    				else
-    					self.object:set_yaw(self.object:get_yaw() - dtime * 0.9)
-    				end
+					self.object:set_yaw(self.object:get_yaw() - dtime * 0.9)
     			end
 
                 if ctrl.jump or ctrl.sneak then
-                    local pos = self.object:get_pos()
                     local future_pos = self.object:get_pos()
 
                     if ctrl.jump then
                         future_pos.y = future_pos.y + 2
 
                         if minetest.get_node(future_pos).name == "air" then
-                            pos.y = pos.y + 0.05
+                            elevation = 1
                         end
                     elseif ctrl.sneak then
                         future_pos.y = future_pos.y - 0.5
 
                         if minetest.get_node(future_pos).name == "air" then
-                            pos.y = pos.y - 0.05
+                            elevation = -1
                         end
                     end
-
-
-                    self.object:set_pos(pos)
+                else
+                    elevation = 0
                 end
     		end
         else
@@ -226,9 +230,11 @@ minetest.register_entity("flying_carpet:carpet", {
             end
         end
 
-        if self._speed ~= 0 then
-            self.object:set_velocity(get_velocity(self._speed, self.object:get_yaw(), 0))
+        if not free_to_go(self) then
+            self._speed = 0
         end
+
+        self.object:set_velocity(get_velocity(self._speed, self.object:get_yaw(), elevation))
     end})
 
 
