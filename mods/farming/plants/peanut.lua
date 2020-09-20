@@ -13,7 +13,7 @@ minetest.override_item("farming:peanut_4", {
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "farming:seed_peanut",
+	output = "farming:seed_peanut 2",
     recipe = {"farming:peanut", "bucket:bucket_water"},
     replacements = {
         {"bucket:bucket_water", "bucket:bucket_empty"}
