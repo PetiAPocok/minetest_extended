@@ -2,16 +2,16 @@ lantern form morelights(https://github.com/random-geek/morelights) by random_gee
 
 From darkage(https://github.com/davisonio/darkage) by davisonio ([WTFPL](http://www.wtfpl.net/txt/copying/)):
     adobe
-    basalts
+    basalt brick and tile
     box (changed texture and code)
     shelves (changed texture and code)
     chalk
     lamp
     marbles (changed texture)
     serpentines
+    silt
     slates
 
-From moreblocks(https://github.com/minetest-mods/moreblocks):
-
-
-From: gloopblocks(https://gitlab.com/VanessaE/gloopblocks) by VanessaE:
+From: gloopblocks(https://gitlab.com/VanessaE/gloopblocks) by VanessaE (code: LGPL 3.0, media and assets: CC-by-SA 4.0):
+    basalt
+    pumice
