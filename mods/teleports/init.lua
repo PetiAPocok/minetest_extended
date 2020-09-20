@@ -49,7 +49,7 @@ local function get_formspec(pos)
     strings_to_concat = {
         "size[6,6]",
         "field[1,0.3;4.5,0.5;obelisk_name;;", meta:get_string("_name"), "]",
-        "tooltip[obelisk_name;This will be the obelisk's name after exit.;#666666;#FFFFFF]",
+        "tooltip[obelisk_name;This will be the obelisk's name after exit.(Hit enter.);#666666;#FFFFFF]",
         "field_close_on_enter[obelisk_name;false]",
 
         -- "set_focus[other_obelisks;true]", -- Doesn't work...
@@ -121,8 +121,6 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
     local obelisk_pos = currently_used_obelisks[name]
 
     if formname == "teleport:menu" then
-        -- minetest.log(dump(fields))
-
         if fields.obelisk_name then
             local safe_string = string.gsub(fields.obelisk_name, "%c", "")
             local meta = minetest.get_meta(obelisk_pos)
