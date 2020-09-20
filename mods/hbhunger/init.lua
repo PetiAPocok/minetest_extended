@@ -259,7 +259,7 @@ minetest.register_on_placenode(function(pos, oldnode, player, ext)
 end)
 
 minetest.register_on_dignode(function(pos, oldnode, player, ext)
-    if player then
+    if player and player:is_player() then
         take_hunger(player:get_player_name(), hbhunger.exhaust_dig)
     end
 end)
