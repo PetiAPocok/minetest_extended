@@ -68,15 +68,6 @@ for node, def in pairs(minetest.registered_nodes) do
 	end
 end
 
--- add additional bakedclay flowers if enabled
-if minetest.get_modpath("bakedclay") then
-	flowers[#flowers + 1] = "bakedclay:delphinium"
-	flowers[#flowers + 1] = "bakedclay:thistle"
-	flowers[#flowers + 1] = "bakedclay:lazarus"
-	flowers[#flowers + 1] = "bakedclay:mannagrass"
-	flowers[#flowers + 1] = ""
-end
-
 -- default biomes deco
 local deco = {
 	{"default:dirt_with_dry_grass", dry_grass, flowers},
