@@ -181,8 +181,8 @@ minetest.register_craftitem("void_bags:bag", {
 minetest.register_craft({
 	output = "void_bags:bag",
 	recipe = {
-		{"gems_topaz:topaz", "gems_topaz:topaz", "gems_topaz:topaz"},
-		{"gems_topaz:topaz", "default:mese_crystal", "gems_topaz:topaz"},
-		{"gems_topaz:topaz", "gems_topaz:topaz", "gems_topaz:topaz"},
+		{"gems_amethyst:amethyst", "gems_amethyst:amethyst", "gems_amethyst:amethyst"},
+		{"gems_amethyst:amethyst", "default:mese_crystal", "gems_amethyst:amethyst"},
+		{"gems_amethyst:amethyst", "gems_amethyst:amethyst", "gems_amethyst:amethyst"},
 	}
 })
