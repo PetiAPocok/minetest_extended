@@ -126,9 +126,9 @@ minetest.register_node("mex_moreblocks:box", {
 minetest.register_craft({
     output = "mex_moreblocks:box",
     recipe = {
-        {"default:wood","","default:wood"},
+        {"group:wood","","group:wood"},
         {"","",""},
-        {"default:wood","","default:wood"},
+        {"group:wood","","group:wood"},
     }
 })
 
