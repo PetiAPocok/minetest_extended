@@ -523,7 +523,7 @@ minetest.register_node("mex_moreblocks:wood_shelves", {
 })
 
 minetest.register_craft({
-    output = "mex_moreblocks:wood_shelves 2",
+    output = "mex_moreblocks:wood_shelves",
     recipe = {
         {"group:wood", "group:wood", "group:wood"},
         {"", "", ""},
