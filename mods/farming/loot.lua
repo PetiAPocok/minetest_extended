@@ -72,6 +72,6 @@ end
 -- Grows in warm pine forests
 for i=1,3 do
     table.insert(minetest.registered_items["default:fern_" .. i].drop.items, { rarity = 20, items = {"farming:seed_beetroot"} })
-    table.insert(minetest.registered_items["default:fern_" .. i].drop.items, { rarity = 20, items = {"farming:seed_pea"} })
+    table.insert(minetest.registered_items["default:fern_" .. i].drop.items, { rarity = 20, items = {"farming:seed_peas"} })
     table.insert(minetest.registered_items["default:fern_" .. i].drop.items, { rarity = 20, items = {"farming:seed_raspberry"} })
 end
