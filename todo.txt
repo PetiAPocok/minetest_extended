@@ -1,15 +1,12 @@
--------------------------------------------------1.2--------------------------------------------------------------
-mex_moreblocks
-    A moreblocks-ból, a darkage-ből és a gloopblocks-ból csináljunk egy pp_moreblock-ot és csak a gusutsos block-ok maradnak.
-    Szandi új marble texture-t szeretne.
-    Lépcsőket belőle.
-    slate tiles texture az jó úgy?
-    a doboz nem kiüthető ha van benne valami
+--------------------------------------------------------------------------------------
+bell
+    https://github.com/Sokomine/bell <-- kaka, textúra jó lehet.
+        3D harangot. fali, lógó, földre rakott változattal
 
-a láda nem kiüthető ha van benne valami
+    kiírja a lerakójának, hogy kopkopp
+    meg hangos
 
-Túl hangos a krokodil?
-A cápa neked veti vamát a parton...
+A cápa neked veti magát a parton...
 A halak kimásznak a vízből...
 
 A kajákat külön mod-ba
@@ -20,20 +17,9 @@ Gyertya, gyertyatartóban
     x x x
     Világít, kézben is, lerakható
 
-bell
-    kiírja a lerakójának, hogy kopkopp
-    meg hangos
-
-Márvány, gránit, andezit, diorit
-
-topaz magic
-    orb of diging
-        digs only dirt (with any on the top of it), stone (cobblestone, and mossy too), gravel, sand, silver sand
-
-fire orb olvassza a havat meg a jeget.
 
 bútorok                    KELL
-    Szekrény             KELL
+    Szekrény               KELL
         egy blokk
         kevesebb hely
         ajtós / fiókos változat
@@ -43,30 +29,30 @@ bútorok                    KELL
 Magic hangok?
 
 sok színes ajtó
-
-bonemeal mod mindenhol sima füvet növeszt.
+    https://github.com/minetest-mods/mydoors
+    https://bitbucket.org/sorcerykid/extra_doors/src/master/
 
 Ruhák
     pulóverek, pólók, gatyák
     bőr csizma, bőr mellény
 
-
-
-
+Ore detector
+    x topaz x
+    topaz gold_ingot topaz
+    x topaz x
 
 Chalk-ból kréta, meg blackboard...
 
 A mossy_cobbelstone kuka, helyette lehetne moss mint növény és az nőhetne rá mindenre...
 
 colored glass               KELL
+    Gondokat okoz az áttetszőséges irrlicit probléma miatt
 
 nether?
 
 A crafting guide-ba kategorizálni a cuccokat
 
 petróleum lámpa
-
-horgászat túl hangos...
 
 handcar emelkedőn rángat
     két utassal nincs tesztelve...
@@ -176,12 +162,6 @@ potions
 
 Ládák elnevezése
 
-frame
-    A nodebox-os és mesh-es item-eknek inventory image kell...
-    A node elejét rakja minden oldalra... inventory image...
-    És az inventoryban nem létező item-eket ne regisztrálja
-        mesecon, tnt
-
 mesecon mob detector a mobok érzékelésére?
     craft?
     a magic attack-ok feltétel figyelése jó lehet.
@@ -227,6 +207,8 @@ carpets
 
     Babushka carpet!
 
+Világító tengeti növények
+    tengeri ugorka?
 
 Új kaják
     blueberry_muffin és tészta texture
@@ -278,6 +260,7 @@ mobok:
 
     vizi állatok?
         delfin lovaglás?
+            ronda a delfin... És a kódja is szar.
         polip lovaglás?
 
     világító ló ami bogarakat szarik
@@ -295,11 +278,29 @@ mobok:
 
 ------------------------ Textúrára vár -------------------------
 
+mex_moreblocks
+    láda (Effy)
+    polc
+    márvány (Szandi)
+    gránit
+    andezit
+    diorit
+    pala cserép
+
 New paintings
-A vizi állatoknak túl nagy a felbontásuk, vagy egyhangúak
-A lava flan-nak túl nagy a felbontása
-a repülő szőnyeg modelnek túl nagy a felbontása
-blueberry muffin
+
+A vizi állatos halaknak túl nagy a felbontásuk
+    A modellel is szarakodni kell
+a teknős egyhangú
+    A modellel is szarakodni kell
+
+blueberry muffin (Szandi)
+
+frame
+    A nodebox-os és mesh-es item-eknek inventory image kell...
+    A node elejét rakja minden oldalra... inventory image...
+    És az inventoryban nem létező item-eket ne regisztrálja
+        mesecon, tnt
 
 ------------------------ nincs ilyen mod -------------------------
 

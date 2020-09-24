@@ -119,6 +119,8 @@ Made for and tested on Minetest 5.3.0.
 - Added bakedclay ([notabug](https://notabug.org/tenplus1/bakedclay))
 - Added cement mod (modified) ([gitlab](https://gitlab.com/4w/cement))
 - Created mex_moreblocks from a bunch of mods. See license.txt
+- Created orb of digging.
+- Added Beacon (modified) ([notabug](https://notabug.org/SpaghettiToastBook/beacons))
 
 ## Licensing
 
