@@ -121,13 +121,13 @@ minetest.register_entity("flying_carpet:carpet", {
 
         if self._speed > 0 or self._speed < 0 then
             if self._timer_sound > 0.5 then
-                minetest.sound_play("flying_carpet_flight", {pos = pos, gain = 0.2}, true)
                 local pos = self.object:get_pos()
                 local pos_a = self.object:get_pos()
                 pos_a.y = pos_a.y + 2
-
                 local pos_u = self.object:get_pos()
                 pos_u.y = pos_u.y - 0.5
+
+                minetest.sound_play("flying_carpet_flight", {pos = pos, gain = 0.2, max_hear_distance = 10}, true)
 
                 if minetest.get_node(pos_a).name ~= "air" or minetest.get_node(pos_u).name ~= "air" then
                     minetest.sound_play("flying_carpet_slide", {pos = pos, gain = 0.5}, true)
