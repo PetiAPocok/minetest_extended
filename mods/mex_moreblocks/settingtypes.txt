@@ -1,0 +1,1 @@
+mex_moreblocks_gong_chat_message (Hitting the gong sends message to its owner) bool true

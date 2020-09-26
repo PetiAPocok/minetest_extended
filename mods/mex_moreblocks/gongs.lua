@@ -17,10 +17,13 @@ minetest.register_node("mex_moreblocks:gong", {
         local owner = minetest.get_meta(pos):get_string("owner")
         minetest.sound_play( "mex_moreblocks_gong",
             {pos = pos, gain = 1.5, max_hear_distance = 50})
-        if owner then
-            minetest.chat_send_player(owner, puncher:get_player_name() .. " has rung your gong!")
-        else
-            minetest.chat_send_all(puncher:get_player_name() .. " has rung the gong at " .. dump(pos) .. "!")
+
+        if minetest.settings:get_bool("mex_moreblocks_gong_chat_message") then
+            if owner then
+                minetest.chat_send_player(owner, puncher:get_player_name() .. " has rung your gong!")
+            else
+                minetest.chat_send_all(puncher:get_player_name() .. " has rung the gong at " .. dump(pos) .. "!")
+            end
         end
 	end,
 
