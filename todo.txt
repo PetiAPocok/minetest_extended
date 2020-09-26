@@ -1,11 +1,4 @@
 --------------------------------------------------------------------------------------
-bell
-    https://github.com/Sokomine/bell <-- kaka, textúra jó lehet.
-        3D harangot. fali, lógó, földre rakott változattal
-
-    kiírja a lerakójának, hogy kopkopp
-    meg hangos
-
 A cápa neked veti magát a parton...
 A halak kimásznak a vízből...
 
@@ -279,12 +272,10 @@ mobok:
 ------------------------ Textúrára vár -------------------------
 
 mex_moreblocks
-    láda (Effy)
     polc
-    márvány (Szandi)
-    gránit
-    andezit
-    diorit
+    gránit (Effy)
+    andezit (Effy)
+    diorit (Effy)
     pala cserép
 
 New paintings
