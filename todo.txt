@@ -21,10 +21,6 @@ bútorok                    KELL
 
 Magic hangok?
 
-sok színes ajtó
-    https://github.com/minetest-mods/mydoors
-    https://bitbucket.org/sorcerykid/extra_doors/src/master/
-
 Ruhák
     pulóverek, pólók, gatyák
     bőr csizma, bőr mellény

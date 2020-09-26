@@ -106,7 +106,6 @@ Made for and tested on Minetest 5.3.0.
 - Created Death announce.
 - Xpanes: added reverse craft
 ### 1.2
-- "Created" lantern from random_geek's Morelights ([Github](https://github.com/random-geek/morelights))
 - Renamed and redo Backpacks mod as Void Bags
 - Added Hangglider (modified texture)([NotABug](https://notabug.org/Piezo_/minetest-hangglider))
 - Added Mobs Water ([NotABug](https://notabug.org/TenPlus1/mobs_water))
@@ -121,6 +120,7 @@ Made for and tested on Minetest 5.3.0.
 - Created mex_moreblocks from a bunch of mods. See license.txt
 - Created orb of digging.
 - Added Beacon (modified) ([notabug](https://notabug.org/SpaghettiToastBook/beacons))
+- Created mex_moredoors from a bunch of mods. See license.txt
 
 ## Licensing
 
