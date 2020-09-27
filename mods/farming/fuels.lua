@@ -12,6 +12,12 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = "fuel",
+	recipe = "farming:seed_wheat",
+	burntime = 1,
+})
+
+minetest.register_craft({
+	type = "fuel",
 	recipe = "farming:cotton",
 	burntime = 1,
 })

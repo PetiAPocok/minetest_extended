@@ -37,7 +37,6 @@ dofile(farming.path .. "/plants/tomato.lua")
 dofile(farming.path .. "/plants/wheat.lua")
 
 dofile(farming.path .. "/misc.lua")
-dofile(farming.path .. "/foods.lua")
 dofile(farming.path .. "/packer.lua")
 dofile(farming.path .. "/loot.lua")
 dofile(farming.path .. "/fuels.lua")
