@@ -23,9 +23,7 @@ mobs:register_mob("mobs_animal:bee", {
 	},
 	walk_velocity = 1,
 	jump = true,
-	drops = {
-		{name = "mobs:honey", chance = 2, min = 1, max = 2},
-	},
+	drops = {},
 	water_damage = 1,
 	lava_damage = 2,
 	light_damage = 0,
@@ -63,10 +61,10 @@ mobs:register_egg("mobs_animal:bee", S("Bee"), "mobs_bee_inv.png")
 mobs:alias_mob("mobs:bee", "mobs_animal:bee")
 
 -- honey
-minetest.register_craftitem(":mobs:honey", {
-	description = S("Honey"),
-	inventory_image = "mobs_honey_inv.png",
-	on_use = minetest.item_eat(4),
+minetest.register_craftitem(":mobs:jar_of_honey", {
+	description = S("Jar of Honey"),
+	inventory_image = "mobs_jar_of_honey.png",
+	on_use = minetest.item_eat(2),
 	groups = {food_honey = 1, food_sugar = 1, flammable = 1},
 })
 
@@ -86,20 +84,19 @@ minetest.register_node(":mobs:beehive", {
 
 		local meta = minetest.get_meta(pos)
 
-		meta:set_string("formspec", "size[8,6]"
-			..default.gui_bg..default.gui_bg_img..default.gui_slots
-			.. "image[3,0.8;0.8,0.8;mobs_bee_inv.png]"
-			.. "list[current_name;beehive;4,0.5;1,1;]"
-			.. "list[current_player;main;0,2.35;8,4;]"
-			.. "listring[]")
+		meta:set_string("formspec", "size[8,6]" ..
+			default.gui_bg..default.gui_bg_img..default.gui_slots ..
+			"image[2,0.8;0.8,0.8;mobs_bee_inv.png]" ..
+			"list[current_name;beehive;3,0.5;1,1;]" ..
+			"list[current_player;main;0,2.35;8,4;]" ..
+			"listring[]" ..
+            "label[4.2,0.7;Put in a jar, to fill it with honey.]")
 
 		meta:get_inventory():set_size("beehive", 1)
 	end,
 
 	after_place_node = function(pos, placer, itemstack)
-
 		if placer and placer:is_player() then
-
 			minetest.set_node(pos, {name = "mobs:beehive", param2 = 1})
 
 			if math.random(1, 4) == 1 then
@@ -109,27 +106,26 @@ minetest.register_node(":mobs:beehive", {
 	end,
 
 	on_punch = function(pos, node, puncher)
-
 		-- yep, bee's don't like having their home punched by players
 		puncher:set_hp(puncher:get_hp() - 4)
 	end,
 
 	allow_metadata_inventory_put = function(pos, listname, index, stack, player)
-
-		if listname == "beehive" then
-			return 0
+        if listname == "beehive" and
+        stack:get_name() == "vessels:glass_jar" and
+        minetest.get_meta(pos):get_inventory():is_empty("beehive") then
+            return 1
+        else
+            return 0
 		end
-
-		return stack:get_count()
 	end,
 
-	can_dig = function(pos,player)
-
-		local meta = minetest.get_meta(pos)
-
-		-- only dig beehive if no honey inside
-		return meta:get_inventory():is_empty("beehive")
-	end,
+    on_destruct = function(pos)
+        local drop = minetest.get_meta(pos):get_inventory():get_stack("beehive", 1):to_string()
+        if drop ~= "" then
+            minetest.add_item(pos, drop)
+        end
+    end
 
 })
 
@@ -196,10 +192,10 @@ minetest.register_abm({
 		local meta = minetest.get_meta(pos)
 		if not meta then return end -- for older beehives
 		local inv = meta:get_inventory()
-		local honey = inv:get_stack("beehive", 1):get_count()
+        local item_in_inv = inv:get_stack("beehive", 1):to_string()
 
-		-- is hive full?
-		if honey > 11 then
+		-- does hive contain an empty jar?
+		if item_in_inv == "" or item_in_inv == "mobs:jar_of_honey" then
 			return
 		end
 
@@ -209,7 +205,7 @@ minetest.register_abm({
 			{x = pos.x + 4, y = pos.y + 3, z = pos.z + 4},
 			"group:flower") > 3 then
 
-			inv:add_item("beehive", "mobs:honey")
+            inv:set_stack("beehive", 1, "mobs:jar_of_honey")
 		end
 	end
 })
