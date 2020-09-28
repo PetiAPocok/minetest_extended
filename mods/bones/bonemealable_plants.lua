@@ -4,7 +4,6 @@ bones:add_crop({
     {"farming:beetroot_", 5},
     {"farming:blueberry_", 4},
     {"farming:carrot_", 4},
-    {"farming:chili_", 8},
     {"farming:cocoa_", 6},
     {"farming:corn_", 8},
     {"farming:cucumber_", 4},
@@ -19,6 +18,7 @@ bones:add_crop({
     {"farming:potato_", 5},
     {"farming:raspberry_", 4},
     {"farming:rice_", 8},
+    {"farming:soybean_", 5},
     {"farming:strawberry_", 4},
     {"farming:tomato_", 8}
 })
