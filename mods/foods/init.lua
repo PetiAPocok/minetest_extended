@@ -1,4 +1,9 @@
-dofile(minetest.get_modpath("foods") .. "/misc.lua")
+local mp = minetest.get_modpath("foods")
+dofile(mp .. "/jams.lua")
+dofile(mp .. "/jellies.lua")
+dofile(mp .. "/milkshakes.lua")
+dofile(mp .. "/misc.lua")
+dofile(mp .. "/pies.lua")
 
 -- Bandit burger
 minetest.register_craftitem("foods:bandit_burger", {
@@ -129,37 +134,6 @@ minetest.register_craft({
 	recipe = "foods:bread_dough"
 })
 
--- Blueberry Pie
-minetest.register_craftitem("foods:blueberry_pie_dough", {
-	description = "Blueberry Pie Dough",
-	inventory_image = "foods_blueberry_pie_dough.png",
-    on_use = minetest.item_eat(-1)
- })
-
-minetest.register_craft({
-    type = "shapeless",
-    output = "foods:blueberry_pie_dough",
-    recipe = {"farming:blueberry", "farming:blueberry", "foods:flour", "mobs:egg", "foods:sugar", "mobs:bucket_milk", "mobs:butter"},
-	replacements = {
-		{"mobs:bucket_milk", "bucket:bucket_empty"},
-        {"foods:flour", "default:paper"}
-
-	}
-})
-
-minetest.register_craftitem("foods:blueberry_pie", {
-    description = "Blueberry Pie",
-    inventory_image = "foods_blueberry_pie.png",
-    on_use = minetest.item_eat(7),
-})
-
-minetest.register_craft({
-	type = "cooking",
-	cooktime = 18,
-	output = "foods:blueberry_pie",
-	recipe = "foods:blueberry_pie_dough"
-})
-
 -- Burger
 minetest.register_craftitem("foods:burger", {
     description = "Burger",
@@ -198,6 +172,21 @@ minetest.register_craft({
     type = "shapeless",
     output = "foods:buttered_bread_with_honey 5",
     recipe = {"foods:bread", "mobs:butter", "mobs:honey"}
+})
+
+-- Caramel
+minetest.register_craftitem("foods:caramel", {
+    description = "Caramel",
+    inventory_image = "foods_caramel.png",
+    on_use = minetest.item_eat(2),
+})
+
+minetest.register_craft({
+    output = "foods:caramel",
+    recipe = {
+        {"farming:cocoa", "farming:cocoa", "farming:cocoa"},
+        {"farming:cocoa", "farming:cocoa", "farming:cocoa"}
+    }
 })
 
 -- Carrot Cake
@@ -361,127 +350,6 @@ minetest.register_craft({
 	recipe = {"farming:garlic", "foods:bread"}
 })
 
--- Jelly
-minetest.register_craftitem("foods:jelly_ananas", {
-	description = "Ananas Jelly",
-	inventory_image = "foods_jelly_ananas.png",
-	on_use = minetest.item_eat(4),
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "foods:jelly_ananas",
-	recipe = {"foods:jam_ananas", "bones:gelatin_powder"},
-    replacements = {
-		{"foods:jam_ananas", "vessels:glass_jar"}
-	}
-})
-
-minetest.register_craftitem("foods:jelly_blueberry", {
-	description = "Blueberry Jelly",
-	inventory_image = "foods_jelly_blueberry.png",
-	on_use = minetest.item_eat(4),
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "foods:jelly_blueberry",
-	recipe = {"foods:jam_blueberry", "bones:gelatin_powder"},
-    replacements = {
-		{"foods:jam_blueberry", "vessels:glass_jar"}
-	}
-})
-
-minetest.register_craftitem("foods:jelly_grape", {
-	description = "Grape Jelly",
-	inventory_image = "foods_jelly_grape.png",
-	on_use = minetest.item_eat(4),
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "foods:jelly_grape",
-	recipe = {"foods:jam_grape", "bones:gelatin_powder"},
-    replacements = {
-		{"foods:jam_grape", "vessels:glass_jar"}
-	}
-})
-
-minetest.register_craftitem("foods:jelly_huckleberry", {
-	description = "Huckleberry Jelly",
-	inventory_image = "foods_jelly_huckleberry.png",
-	on_use = minetest.item_eat(4),
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "foods:jelly_huckleberry",
-	recipe = {"foods:jam_huckleberry", "bones:gelatin_powder"},
-    replacements = {
-		{"foods:jam_huckleberry", "vessels:glass_jar"}
-	}
-})
-
-minetest.register_craftitem("foods:jelly_raspberry", {
-	description = "Raspberry Jelly",
-	inventory_image = "foods_jelly_raspberry.png",
-	on_use = minetest.item_eat(4),
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "foods:jelly_raspberry",
-	recipe = {"foods:jam_raspberry", "bones:gelatin_powder"},
-    replacements = {
-		{"foods:jam_raspberry", "vessels:glass_jar"}
-	}
-})
-
-minetest.register_craftitem("foods:jelly_strawberry", {
-	description = "Strawberry Jelly",
-	inventory_image = "foods_jelly_strawberry.png",
-	on_use = minetest.item_eat(4),
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "foods:jelly_strawberry",
-	recipe = {"foods:jam_strawberry", "bones:gelatin_powder"},
-    replacements = {
-		{"foods:jam_strawberry", "vessels:glass_jar"}
-	}
-})
-
--- Huckleberry Pie
-minetest.register_craftitem("foods:huckleberry_pie_dough", {
-	description = "Huckleberry Pie Dough",
-	inventory_image = "foods_huckleberry_pie_dough.png",
-    on_use = minetest.item_eat(-1)
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "foods:huckleberry_pie_dough",
-    recipe = {"farming:huckleberry", "farming:huckleberry", "foods:flour", "mobs:egg", "foods:sugar", "mobs:bucket_milk", "mobs:butter"},
-	replacements = {
-		{"mobs:bucket_milk", "bucket:bucket_empty"},
-        {"foods:flour", "default:paper"}
-	}
-})
-
-minetest.register_craftitem("foods:huckleberry_pie", {
-    description = "Huckleberry Pie",
-    inventory_image = "foods_huckleberry_pie.png",
-    on_use = minetest.item_eat(7)
-})
-
-minetest.register_craft({
-	type = "cooking",
-	cooktime = 18,
-	output = "foods:huckleberry_pie",
-	recipe = "foods:huckleberry_pie_dough"
-})
-
 --Jammed sandwiches
 minetest.register_craftitem("foods:jam_ananas_sandwich", {
     description = "Ananas Jam Sandwich",
@@ -599,67 +467,6 @@ minetest.register_craft({
 	recipe = "foods:meatloaf_unbaked"
 })
 
--- Milk Shakes
-minetest.register_craftitem("foods:milkshake_blueberry", {
-	description = "Blueberry Milkshake",
-	inventory_image = "foods_milkshake_blueberry.png",
-	on_use = minetest.item_eat(4, "vessels:glass_jar"),
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "foods:milkshake_blueberry 3",
-	recipe = {"foods:jam_blueberry", "mobs:bucket_milk", "vessels:glass_jar", "vessels:glass_jar"},
-    replacements = {
-		{"mobs:bucket_milk", "bucket:bucket_empty"}
-	}
-})
-
-minetest.register_craftitem("foods:cocoa_drink", {
-    description = "Cocoa Drink",
-    inventory_image = "foods_cocoa_drink.png",
-    on_use = minetest.item_eat(2, "vessels:glass_jar"),
-})
-
-minetest.register_craft({
-    type = "shapeless",
-    output = "foods:cocoa_drink 3",
-    recipe = {"mobs:bucket_milk", "vessels:glass_jar", "vessels:glass_jar", "vessels:glass_jar", "foods:chocolate"},
-    replacements = {
-        {"mobs:bucket_milk", "bucket:bucket_empty"}
-    }
-})
-
-minetest.register_craftitem("foods:milkshake_raspberry", {
-	description = "Raspberry Milkshake",
-	inventory_image = "foods_milkshake_raspberry.png",
-	on_use = minetest.item_eat(2, "vessels:glass_jar"),
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "foods:milkshake_raspberry 3",
-	recipe = {"foods:jam_raspberry", "mobs:bucket_milk", "vessels:glass_jar", "vessels:glass_jar"},
-    replacements = {
-		{"mobs:bucket_milk", "bucket:bucket_empty"}
-	}
-})
-
-minetest.register_craftitem("foods:milkshake_strawberry", {
-	description = "Strawberry Milkshake",
-	inventory_image = "foods_milkshake_strawberry.png",
-	on_use = minetest.item_eat(2, "vessels:glass_jar"),
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "foods:milkshake_strawberry 3",
-	recipe = {"foods:jam_strawberry", "mobs:bucket_milk", "vessels:glass_jar", "vessels:glass_jar"},
-    replacements = {
-		{"mobs:bucket_milk", "bucket:bucket_empty"}
-	}
-})
-
 --Muffins
 minetest.register_craftitem("foods:muffin_blueberry_dough", {
 	description = "Blueberry Muffin Dough",
@@ -689,38 +496,6 @@ minetest.register_craft({
 	output = "foods:muffin_blueberry",
 	recipe = "foods:muffin_blueberry_dough"
 })
-
--- Huckleberry Pie
-minetest.register_craftitem("foods:huckleberry_pie_dough", {
-	description = "Huckleberry Pie Dough",
-	inventory_image = "foods_huckleberry_pie_dough.png",
-    on_use = minetest.item_eat(-1)
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "foods:huckleberry_pie_dough",
-    recipe = {"farming:huckleberry", "farming:huckleberry", "foods:flour",
-    "mobs:egg", "foods:sugar", "mobs:bucket_milk", "mobs:butter"},
-	replacements = {
-		{"mobs:bucket_milk", "bucket:bucket_empty"},
-        {"foods:flour", "default:paper"}
-	}
-})
-
-minetest.register_craftitem("foods:huckleberry_pie", {
-    description = "Huckleberry Pie",
-    inventory_image = "foods_huckleberry_pie.png",
-    on_use = minetest.item_eat(7)
-})
-
-minetest.register_craft({
-	type = "cooking",
-	cooktime = 18,
-	output = "foods:huckleberry_pie",
-	recipe = "foods:huckleberry_pie_dough"
-})
-
 
 -- Peas mashed
 minetest.register_craftitem("foods:peas_mashed_uncooked", {
@@ -833,37 +608,6 @@ minetest.register_craft({
 		{"foods:potato_mashed_pot", "foods:pot"}
 	}
 
-})
-
--- Raspberry Pie
-minetest.register_craftitem("foods:raspberry_pie_dough", {
-    description = "Raspberry Pie Dough",
-    inventory_image = "foods_raspberry_pie_dough.png",
-    on_use = minetest.item_eat(-1)
-})
-
-minetest.register_craft({
-    type = "shapeless",
-    output = "foods:raspberry_pie_dough",
-    recipe = {"farming:raspberry", "farming:raspberry", "foods:flour",
-    "mobs:egg", "foods:sugar", "mobs:bucket_milk", "mobs:butter"},
-	replacements = {
-		{"mobs:bucket_milk", "bucket:bucket_empty"},
-        {"foods:flour", "default:paper"}
-	}
-})
-
-minetest.register_craftitem("foods:raspberry_pie", {
-	description = "Raspberry Pie",
-	inventory_image = "foods_raspberry_pie.png",
-	on_use = minetest.item_eat(7),
-})
-
-minetest.register_craft({
-	type = "cooking",
-	cooktime = 18,
-	output = "foods:raspberry_pie",
-	recipe = "foods:raspberry_pie_dough"
 })
 
 -- Rice cooked
