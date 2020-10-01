@@ -189,22 +189,6 @@ doors.register( "door_dungeon2", {
 	}
 } )
 
-doors.register( "door_steelpanel1", {
-	tiles = { { name = "doors_door_steelpanel.png", backface_culling = true } },
-	description = "Steel Colonial Door",
-	inventory_image = "doors_item_steelpanel1.png",
-	protected = true,
-	groups = { cracky = 1, level = 2 },
-	sounds = default.node_sound_metal_defaults( ),
-	sound_open = "doors_steel_door_open",
-	sound_close = "doors_steel_door_close",
-	recipe = {
-		{ "default:steel_ingot", "default:steel_ingot", "default:steel_rod" },
-		{ "default:steel_ingot", "default:steel_ingot", "default:steel_rod" },
-		{ "default:steel_ingot", "default:steel_ingot", "default:steel_rod" },
-	}
-} )
-
 doors.register( "door_steelglass1", {
 	tiles = { { name = "doors_door_steelglass1.png", backface_culling = true } },
 	description = "Steel Single-Lite Door",
