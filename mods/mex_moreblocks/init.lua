@@ -13,6 +13,13 @@ minetest.register_craft({
     }
 })
 
+minetest.register_node("mex_moreblocks:andesite", {
+    description = "Andesite",
+    tiles = {"mex_moreblocks_andesite.png"},
+    groups = {cracky=2},
+    sounds = default.node_sound_stone_defaults(),
+})
+
 minetest.register_node("mex_moreblocks:basalt_cobble", {
     description = "Basalt Cobble",
     tiles = {"mex_moreblocks_basalt_cobble.png"},
@@ -168,6 +175,20 @@ stairs.register_stair_and_slab("chalk", "mex_moreblocks:chalk",
     "Chalk Slab",
     default.node_sound_stone_defaults()
 )
+
+minetest.register_node("mex_moreblocks:diorite", {
+    description = "Diorite",
+    tiles = {"mex_moreblocks_diorite.png"},
+    groups = {cracky=2},
+    sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("mex_moreblocks:granite", {
+    description = "Granite",
+    tiles = {"mex_moreblocks_granite.png"},
+    groups = {cracky=2},
+    sounds = default.node_sound_stone_defaults(),
+})
 
 minetest.register_node("mex_moreblocks:marble", {
     description = "Marble",
