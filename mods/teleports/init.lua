@@ -23,6 +23,10 @@ local function save_obelisks()
     mod_storage:set_int("obelisk_counter", obelisk_counter)
 end
 
+minetest.register_on_shutdown(function()
+    save_obelisks()
+end)
+
 local function get_formspec(pos)
     local meta = minetest.get_meta(pos)
     local formspec_obelisks_string = ""
@@ -131,6 +135,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
             obelisk_data = string.gsub(obelisk_data, "return ", safe_string .. ":")
 
             obelisks[meta:get_int("_id")] = obelisk_data
+            save_obelisks()
         end
 
         if fields.other_obelisks then
