@@ -11,6 +11,7 @@ minetest.register_node("mex_moreblocks:gong", {
        },
     inventory_image = 'mex_moreblocks_gong.png',
     wield_image = 'mex_moreblocks_gong.png',
+    paramtype2 = "facedir",
     groups = {oddly_breakable_by_hand = 1},
 
     on_punch = function (pos, node, puncher)

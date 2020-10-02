@@ -8,7 +8,7 @@ minetest.register_craftitem("foods:pie_apple_dough", {
 minetest.register_craft({
     type = "shapeless",
     output = "foods:pie_apple_dough",
-    recipe = {"farming:apple", "farming:apple", "foods:flour", "mobs:egg", "foods:sugar", "mobs:bucket_milk", "mobs:butter"},
+    recipe = {"default:apple", "default:apple", "foods:flour", "mobs:egg", "foods:sugar", "mobs:bucket_milk", "mobs:butter"},
 	replacements = {
 		{"mobs:bucket_milk", "bucket:bucket_empty"},
         {"foods:flour", "default:paper"}
