@@ -23,11 +23,16 @@ local l_skins = {
 		.. ")^(turtle6.png^[colorize:" .. l_colors[6] .. ")^turtle7.png"}
 }
 local l_anims = {
-	speed_normal = 24,	speed_run = 24,
-	stand_start = 1,	stand_end = 50,
-	walk_start = 60,	walk_end = 90,
-	run_start = 60,		run_end = 90,
-	hide_start = 95,	hide_end = 100
+	speed_normal = 24,
+	speed_run = 24,
+	stand_start = 1,
+	stand_end = 50,
+	walk_start = 60,
+	walk_end = 90,
+	run_start = 60,
+	run_end = 90,
+	hide_start = 95,
+	hide_end = 100
 }
 local l_model = "mobf_turtle.x"
 local l_spawn_chance = 30000

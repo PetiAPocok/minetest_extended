@@ -14,18 +14,22 @@ local l_spawn_in = {
 local l_spawn_near = {
 	"default:sand","default:dirt","group:seaplants","group:seacoral"
 }
-local l_spawn_chance	= 10000
-local l_cc_hand			= 25
-local l_cc_net			= 80
-local l_water_level		= minetest.settings:get("water_level") - 1
+local l_spawn_chance = 10000
+local l_cc_hand = 25
+local l_cc_net = 80
+local l_water_level = minetest.settings:get("water_level") - 1
 local l_anims = {
-	speed_normal = 24,		speed_run = 24,
-	stand_start = 1,		stand_end = 80,
-	walk_start = 81,		walk_end = 155,
-	run_start = 81,			run_end = 155
+	speed_normal = 24,
+	speed_run = 24,
+	stand_start = 1,
+	stand_end = 80,
+	walk_start = 81,
+	walk_end = 155,
+	run_start = 81,
+	run_end = 155
 }
 local l_visual = "mesh"
-local l_visual_size = {x=.75, y=.75}
+local l_visual_size = {x = .75, y = .75}
 local l_clown_mesh = "animal_clownfish.b3d"
 local l_trop_mesh = "fish_blue_white.b3d"
 local l_clown_textures = {
@@ -40,7 +44,7 @@ local l_trop_textures = {
 
 if SPRITE_VERSION then
 	l_visual = "upright_sprite"
-	l_visual_size = {x=.5, y=.5}
+	l_visual_size = {x = .5, y = .5}
 	l_clown_mesh = nil
 	l_trop_mesh = nil
 	l_clown_textures = {{"animal_clownfish_clownfish_item.png"}}
@@ -61,7 +65,7 @@ mobs:register_mob("mobs_fish:clownfish", {
 	textures = l_clown_textures,
 	visual_size = l_visual_size,
 	makes_footstep_sound = false,
-	stepheight = 0.1,
+	stepheight = 0,
 	fly = true,
 	fly_in = "default:water_source",
 	fall_speed = 0,
@@ -71,7 +75,8 @@ mobs:register_mob("mobs_fish:clownfish", {
 	light_damage = 0,
 	animation = l_anims,
 	on_rightclick = function(self, clicker)
-		mobs:capture_mob(self, clicker, l_cc_hand, l_cc_net, 0, true, nil)
+		mobs:capture_mob(self, clicker, l_cc_hand, l_cc_net, 0, true,
+				"mobs_fish:clownfish")
 	end
 })
 
@@ -103,7 +108,7 @@ mobs:register_mob("mobs_fish:tropical", {
 	textures = l_trop_textures,
 	visual_size = l_visual_size,
 	makes_footstep_sound = false,
-	stepheight = 0.1,
+	stepheight = 0,
 	fly = true,
 	fly_in = "default:water_source",
 	fall_speed = 0,
@@ -113,7 +118,8 @@ mobs:register_mob("mobs_fish:tropical", {
 	light_damage = 0,
 	animation = l_anims,
 	on_rightclick = function(self, clicker)
-		mobs:capture_mob(self, clicker, l_cc_hand, l_cc_net, 0, true, nil)
+		mobs:capture_mob(self, clicker, l_cc_hand, l_cc_net, 0, true,
+				"mobs_fish:tropical")
 	end
 })
 

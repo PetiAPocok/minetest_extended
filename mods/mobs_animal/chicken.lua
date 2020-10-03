@@ -55,7 +55,10 @@ stepheight = 0.6,
 		run_end = 110,
 		run_speed = 24,
 	},
-	follow = {"farming:seed_wheat", "farming:seed_cotton"},
+	follow = {
+		"farming:seed_wheat", "farming:seed_cotton", "farming:seed_barley",
+		"farming:seed_oat", "farming:seed_rye"
+	},
 	view_range = 5,
 
 	on_rightclick = function(self, clicker)
@@ -97,6 +100,8 @@ if minetest.get_modpath("ethereal") then
 	spawn_on = {"ethereal:bamboo_dirt", "ethereal:prairie_dirt"}
 end
 
+
+if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "mobs_animal:chicken",
 	nodes = spawn_on,
@@ -108,6 +113,7 @@ mobs:spawn({
 	max_height = 200,
 	day_toggle = true,
 })
+end
 
 
 mobs:register_egg("mobs_animal:chicken", S("Chicken"), "mobs_chicken_inv.png", 0)

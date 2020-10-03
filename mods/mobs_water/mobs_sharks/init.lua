@@ -29,10 +29,14 @@ local l_skins = {
 	}
 }
 local l_anims = {
-	speed_normal = 24,	speed_run = 24,
-	stand_start = 1,	stand_end = 80,
-	walk_start = 80,	walk_end = 160,
-	run_start = 80,		run_end = 160
+	speed_normal = 24,
+	speed_run = 24,
+	stand_start = 1,
+	stand_end = 80,
+	walk_start = 80,
+	walk_end = 160,
+	run_start = 80,
+	run_end = 160
 }
 local l_model = "mob_shark.b3d"
 local l_egg_texture = "mob_shark_shark_item.png"
@@ -83,7 +87,7 @@ if ENABLE_SHARK_LARGE then
 		light_damage = 0,
 		animation = l_anims,
 		jump = false,
-		stepheight = 0.1,
+		stepheight = 0,
 		drops = {
 			{name = "mobs:meat_raw", chance = 1, min = 1, max = 3},
 		},
@@ -130,7 +134,7 @@ if ENABLE_SHARK_MEDIUM then
 		light_damage = 0,
 		animation = l_anims,
 		jump = false,
-		stepheight = 0.1,
+		stepheight = 0,
 		drops = {
 			{name = "mobs:meat_raw", chance = 1, min = 1, max = 3},
 		},
@@ -177,7 +181,7 @@ if ENABLE_SHARK_SMALL then
 		light_damage = 0,
 		animation = l_anims,
 		jump = false,
-		stepheight = 0.1,
+		stepheight = 0,
 		drops = {
 			{name = "mobs:meat_raw", chance = 1, min = 1, max = 3},
 		},

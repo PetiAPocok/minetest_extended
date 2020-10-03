@@ -58,7 +58,10 @@ mobs:register_mob("mobs_animal:cow", {
 		die_speed = 10,
 		die_loop = false,
 	},
-	follow = {"farming:wheat", "default:grass_1"},
+	follow = {
+		"farming:wheat", "default:grass_1", "farming:barley",
+		"farming:oat", "farming:rye"
+	},
 	view_range = 8,
 	replace_rate = 10,
 	replace_what = {
@@ -132,6 +135,7 @@ mobs:register_mob("mobs_animal:cow", {
 })
 
 
+if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "mobs_animal:cow",
 	nodes = {"default:dirt_with_grass", "ethereal:green_dirt"},
@@ -143,6 +147,7 @@ mobs:spawn({
 	max_height = 200,
 	day_toggle = true,
 })
+end
 
 
 mobs:register_egg("mobs_animal:cow", S("Cow"), "mobs_cow_inv.png")

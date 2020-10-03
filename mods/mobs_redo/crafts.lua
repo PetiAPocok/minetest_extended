@@ -57,14 +57,32 @@ if minetest.get_modpath("farming") then
 	minetest.register_craft({
 		output = "mobs:lasso",
 		recipe = {
-			{"", "farming:string", "farming:string"},
-			{"", "farming:string", "farming:string"},
-			{"farming:string", "", ""}
+			{"farming:string", "", "farming:string"},
+			{"", "default:diamond", ""},
+			{"farming:string", "", "farming:string"}
 		}
 	})
 end
 
 minetest.register_alias("mobs:magic_lasso", "mobs:lasso")
+
+-- net
+minetest.register_tool("mobs:net", {
+	description = S("Net (right-click animal to put in inventory)"),
+	inventory_image = "mobs_net.png",
+	groups = {flammable = 2}
+})
+
+if minetest.get_modpath("farming") then
+	minetest.register_craft({
+		output = "mobs:net",
+		recipe = {
+			{"group:stick", "", "group:stick"},
+			{"group:stick", "", "group:stick"},
+			{"farming:string", "group:stick", "farming:string"}
+		}
+	})
+end
 
 -- shears (right click to shear animal)
 minetest.register_tool("mobs:shears", {
@@ -113,6 +131,59 @@ minetest.register_craft({
 	}
 })
 
+
+-- make sure we can register fences
+if default.register_fence then
+
+-- mob fence (looks like normal fence but collision is 2 high)
+default.register_fence("mobs:fence_wood", {
+	description = S("Mob Fence"),
+	texture = "default_wood.png",
+	material = "default:fence_wood",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults(),
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.5, 0.5, 1.9, 0.5},
+		}
+	}
+})
+
+-- mob fence top (has enlarged collisionbox to stop mobs getting over)
+minetest.register_node("mobs:fence_top", {
+	description = S("Mob Fence Top"),
+	drawtype = "nodebox",
+	tiles = {"default_wood.png"},
+	paramtype = "light",
+	is_ground_content = false,
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults(),
+	node_box = {
+		type = "fixed",
+		fixed = {-0.2, -0.5, -0.2, 0.2, 0, 0.2}
+	},
+	collision_box = {
+		type = "fixed",
+		fixed = {-0.4, -1.5, -0.4, 0.4, 0, 0.4}
+	},
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.4, -1.5, -0.4, 0.4, 0, 0.4}
+	}
+})
+
+minetest.register_craft({
+	output = "mobs:fence_top 12",
+	recipe = {
+		{"group:wood", "group:wood", "group:wood"},
+		{"", "default:fence_wood", ""}
+	}
+})
+
+end
+
+
 -- items that can be used as fuel
 minetest.register_craft({
 	type = "fuel",
@@ -143,6 +214,19 @@ minetest.register_craft({
 	recipe = "mobs:saddle",
 	burntime = 7
 })
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "mobs:fence_wood",
+	burntime = 7
+})
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "mobs:fence_top",
+	burntime = 2
+})
+
 
 -- this tool spawns same mob and adds owner, protected, nametag info
 -- then removes original entity, this is used for fixing any issues.
@@ -247,3 +331,25 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 		tex_obj = nil
 	end
 end)
+
+
+-- Meat Block (thanks to painterlypack.net for allowing me to use these textures)
+minetest.register_node("mobs:meatblock", {
+	description = S("Meat Block"),
+	tiles = {"mobs_meat_top.png", "mobs_meat_bottom.png", "mobs_meat_side.png"},
+	paramtype2 = "facedir",
+	groups = {choppy = 1, oddly_breakable_by_hand = 1, flammable = 2},
+	sounds = default.node_sound_leaves_defaults(),
+	on_place = minetest.rotate_node,
+	on_use = minetest.item_eat(20),
+})
+
+minetest.register_craft({
+	output = "mobs:meatblock",
+	type = "shapeless",
+	recipe = {
+		"group:food_meat", "group:food_meat", "group:food_meat",
+		"group:food_meat", "group:food_meat", "group:food_meat",
+		"group:food_meat", "group:food_meat", "group:food_meat"
+	}
+})
