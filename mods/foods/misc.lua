@@ -40,6 +40,26 @@ minetest.register_craft({
     recipe = {"farming:wheat", "farming:wheat", "farming:wheat", "default:paper"}
 })
 
+-- Honey
+minetest.register_craftitem("foods:jar_of_honey", {
+	description = "Jar of Honey",
+	inventory_image = "foods_jar_of_honey.png"
+})
+
+minetest.register_craftitem("foods:wax", {
+	description = "Wax",
+	inventory_image = "foods_wax.png"
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "foods:jar_of_honey",
+    recipe = {"mobs:honey", "vessels:glass_jar"},
+    replacements = {
+        {"mobs:honey", "foods:wax"}
+    }
+})
+
 -- Minced meat
 minetest.register_craftitem("foods:minced_meat", {
     description = "Minced Meat",

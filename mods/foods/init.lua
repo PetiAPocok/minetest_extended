@@ -171,7 +171,7 @@ minetest.register_craftitem("foods:buttered_bread_with_honey", {
 minetest.register_craft({
     type = "shapeless",
     output = "foods:buttered_bread_with_honey 5",
-    recipe = {"foods:bread", "mobs:butter", "mobs:jar_of_honey"}
+    recipe = {"foods:bread", "mobs:butter", "foods:jar_of_honey"}
 })
 
 -- Caramel
