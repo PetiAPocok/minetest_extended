@@ -6,7 +6,7 @@ minetest.register_node("mex_moreblocks:gong", {
     selection_box = {
            type = "fixed",
            fixed = {
-               {-0.1, -0.5, -0.5, 0.1, 0.4, 0.5},
+               {-0.5, -0.5, -0.1, 0.5, 0.4, 0.1},
            },
        },
     inventory_image = 'mex_moreblocks_gong.png',
