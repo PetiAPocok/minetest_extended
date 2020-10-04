@@ -43,7 +43,8 @@ minetest.register_craft({
 -- Honey
 minetest.register_craftitem("foods:jar_of_honey", {
 	description = "Jar of Honey",
-	inventory_image = "foods_jar_of_honey.png"
+	inventory_image = "foods_jar_of_honey.png",
+    on_use = minetest.item_eat(-1)
 })
 
 minetest.register_craftitem("foods:wax", {

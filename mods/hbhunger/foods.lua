@@ -29,6 +29,7 @@ hbhunger.register_food('foods:jam_grape', -1, "vessels:glass_jar")
 hbhunger.register_food('foods:jam_raspberry', -1, "vessels:glass_jar")
 hbhunger.register_food('foods:jam_strawberry', -1, "vessels:glass_jar")
 hbhunger.register_food('foods:jam_huckleberry', -1, "vessels:glass_jar")
+hbhunger.register_food('foods:jar_of_honey', -1, "vessels:glass_jar")
 hbhunger.register_food('foods:peanut_butter', -1, "vessels:glass_jar")
 
 hbhunger.register_food('foods:bandit_burger', 7)
