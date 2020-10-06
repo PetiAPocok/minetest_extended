@@ -114,6 +114,10 @@ minetest.register_craftitem("void_bags:bag", {
 
         local inv = minetest.create_detached_inventory(invname, {
             allow_put = function(inv, listname, index, stack, player)
+                if stack:get_name() == "void_bags:bag" then
+                    return 0
+                end
+                
                 if allow_bag_input then
                     if minetest.get_item_group(stack:get_name(), "bag_bag") > 0 then
                         return 0
