@@ -15,3 +15,5 @@ minetest.override_item("farming:soybean_5", {
 		}
 	}
 })
+
+minetest.registered_items["farming:soybean"].groups.sackable = 1

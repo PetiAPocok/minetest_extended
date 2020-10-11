@@ -28,6 +28,4 @@ minetest.register_craft({
 	}
 })
 
-minetest.override_item("farming:bean", {
-    groups = { sackable = 1 }
-})
+minetest.registered_items["farming:bean"].groups.sackable = 1

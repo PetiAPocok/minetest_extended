@@ -188,3 +188,9 @@ minetest.register_craftitem("farming:bag_of_rice", {
 	description = "Bag of Rice",
 	inventory_image = "farming_bag_of_rice.png"
 })
+
+-- Bag of soybeans
+minetest.register_craftitem("farming:bag_of_soybean", {
+    description = "Bag of Soybeans",
+    inventory_image = "farming_bag_of_soybean.png"
+})

@@ -17,9 +17,7 @@ minetest.register_craft({
 	recipe = {"farming:peas"}
 })
 
-minetest.override_item("farming:peas", {
-    groups = { sackable = 1 }
-})
+minetest.registered_items["farming:peas"].groups.sackable = 1
 
 -- make pea eatable
 minetest.override_item("farming:peas", {
