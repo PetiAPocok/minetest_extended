@@ -46,7 +46,8 @@ end)
 minetest.register_globalstep(function(dtime)
     if timer > 0.2 then
         for k,v in pairs(players) do
-            if minetest.get_player_by_name(k):get_wielded_item():get_definition().name == "default:torch" then
+            local wielded_item = minetest.get_player_by_name(k):get_wielded_item():get_definition().name
+            if wielded_item == "default:torch" or wielded_item == "mex_moreblocks:candle" then
                 v["current_pos"] = vector.round(minetest.get_player_by_name(k):get_pos())
                 v["current_pos"]["y"] = v["current_pos"]["y"] + 1
 
