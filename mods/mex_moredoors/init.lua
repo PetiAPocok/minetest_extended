@@ -1,300 +1,331 @@
-doors.register( "door_woodpanel1", {
+doors.register("door_acacia_1", {
 	-- Colonial Style (6 panel)
-	tiles = { { name = "doors_door_woodpanel1.png", backface_culling = true } },
-	description = "Wooden Colonial Door",
-	inventory_image = "doors_item_woodpanel1.png",
+	tiles = { { name = "doors_door_acacia_1.png", backface_culling = true } },
+	description = "Acacia Wooden Door",
+	inventory_image = "doors_item_acacia_1.png",
 	groups = { choppy = 2, oddly_breakable_by_hand = 2, flammable = 2 },
 	recipe = {
-		{ "group:wood", "group:wood", "default:stick" },
-		{ "group:wood", "group:wood", "default:stick" },
-		{ "group:wood", "group:wood", "default:stick" },
+		{"default:acacia_wood", "default:acacia_wood"},
+		{"default:acacia_wood", "default:acacia_wood"},
+		{"default:acacia_wood", "default:acacia_wood"},
 	}
-} )
+})
 
-doors.register( "door_woodglass1", {
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_acacia_1",
+	burntime = 14,
+})
+
+doors.register("door_acacia_2", {
 	-- Cambridge Style (2 panel)
-	tiles = { { name = "doors_door_woodglass1.png", backface_culling = true } },
-	description = "Wooden Single-Lite Door",
-	inventory_image = "doors_item_woodglass1.png",
+	tiles = { { name = "doors_door_acacia_2.png", backface_culling = true } },
+	description = "Acacia Single-Lite Door",
+	inventory_image = "doors_item_acacia_2.png",
 	groups = { choppy = 2, oddly_breakable_by_hand = 2, flammable = 2 },
 	recipe = {
-		{ "default:glass", "default:glass", "default:stick" },
-		{ "group:wood", "group:wood", "" },
-		{ "group:wood", "group:wood", "" },
+		{"default:glass", "default:glass"},
+		{"default:acacia_wood", "default:acacia_wood"},
+		{"default:acacia_wood", "default:acacia_wood"},
 	}
-} )
+})
 
-doors.register( "door_woodglass2", {
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_acacia_2",
+	burntime = 14,
+})
+
+doors.register("door_acacia_3", {
 	-- Atherton Style (4 panel)
-	tiles = { { name = "doors_door_woodglass2.png", backface_culling = true } },
-	description = "Wooden Double-Lite Door",
-	inventory_image = "doors_item_woodglass2.png",
+	tiles = { { name = "doors_door_acacia_3.png", backface_culling = true } },
+	description = "Acacia Double-Lite Door",
+	inventory_image = "doors_item_acacia_3.png",
 	groups = { choppy = 2, oddly_breakable_by_hand = 2, flammable = 2 },
 	recipe = {
-		{ "default:glass", "default:glass", "default:stick" },
-		{ "group:wood", "group:wood", "default:stick" },
-		{ "group:wood", "group:wood", "" },
+		{"default:glass", "default:acacia_wood"},
+		{"default:acacia_wood", "default:acacia_wood"},
+		{"default:acacia_wood", "default:acacia_wood"},
 	}
-} )
+})
 
-doors.register( "door_french", {
-	tiles = { { name = "doors_door_french.png", backface_culling = true } },
-	description = "French Door",
-	inventory_image = "doors_item_french.png",
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_acacia_3",
+	burntime = 14,
+})
+
+doors.register("door_acacia_4", {
+	tiles = { { name = "doors_door_acacia_4.png", backface_culling = true } },
+	description = "Acacia Glass Door",
+	inventory_image = "doors_item_acacia_4.png",
 	groups = { choppy = 2, oddly_breakable_by_hand = 2, flammable = 2 },
 	recipe = {
-		{ "default:glass", "group:wood", "default:stick" },
-		{ "default:glass", "group:wood", "default:stick" },
-		{ "default:glass", "group:wood", "default:stick" },
+		{"default:glass", "default:glass"},
+		{"default:acacia_wood", "default:acacia_wood"},
+		{"default:glass", "default:glass"},
 	}
-} )
+})
 
-doors.register( "door_cottage2", {
-	tiles = { { name = "doors_door_cottage2.png", backface_culling = true } },
-	description = "Cottage Exterior Door",
-	inventory_image = "doors_item_cottage2.png",
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_acacia_1",
+	burntime = 14,
+})
+
+doors.register("door_aspen_1", {
+    tiles = {{ name = "doors_door_aspen_1.png", backface_culling = true }},
+	description = "Aspen Wooden Door",
+	inventory_image = "doors_item_aspen_1.png",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+    recipe = {
+        {"default:aspen_wood", "default:aspen_wood"},
+        {"default:aspen_wood", "default:aspen_wood"},
+        {"default:aspen_wood", "default:aspen_wood"},
+    }
+})
+
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_aspen_1",
+	burntime = 14,
+})
+
+doors.register("door_aspen_2", {
+	tiles = { { name = "doors_door_aspen_2.png", backface_culling = true } },
+	description = "Aspen Single-Lite Door",
+	inventory_image = "doors_item_aspen_2.png",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	recipe = {
+		{"default:glass", "default:glass"},
+		{"default:aspen_wood", "default:aspen_wood"},
+        {"default:aspen_wood", "default:aspen_wood"},
+	}
+})
+
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_aspen_2",
+	burntime = 14,
+})
+
+doors.register("door_aspen_3", {
+	tiles = { { name = "doors_door_aspen_3.png", backface_culling = true } },
+	description = "Aspen Double-Lite Door",
+	inventory_image = "doors_item_aspen_3.png",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	recipe = {
+        {"default:glass", "default:aspen_wood"},
+		{"default:aspen_wood", "default:aspen_wood"},
+		{"default:aspen_wood", "default:aspen_wood"},
+	}
+})
+
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_aspen_3",
+	burntime = 14,
+})
+
+doors.register("door_aspen_4", {
+	tiles = { { name = "doors_door_aspen_4.png", backface_culling = true } },
+	description = "Aspen Decorated Door 1",
+	inventory_image = "doors_item_aspen_4.png",
 	groups = { choppy = 2, oddly_breakable_by_hand = 2, flammable = 2 },
 	recipe = {
-		{ "default:glass", "default:glass" },
-		{ "default:stick", "default:stick" },
-		{ "group:wood", "group:wood" },
+		{"default:aspen_wood", "default:aspen_wood"},
+        {"default:aspen_wood", "default:gold_lump"},
+		{"default:aspen_wood", "default:aspen_wood"},
 	}
-} )
+})
 
-doors.register( "door_castle1", {
-	tiles = { { name = "doors_door_castle1.png", backface_culling = true } },
-	description = "Castle Interior Door",
-	inventory_image = "doors_item_castle1.png",
-	groups = { choppy = 2, oddly_breakable_by_hand = 2, flammable = 2 },
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_aspen_4",
+	burntime = 14,
+})
+
+doors.register("door_aspen_5", {
+    tiles = {{ name = "doors_door_aspen_5.png", backface_culling = true }},
+	description = "Aspen Moon Door",
+	inventory_image = "doors_item_aspen_5.png",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+    recipe = {
+        {"default:aspen_wood", "dye:dark_grey"},
+        {"default:aspen_wood", "default:aspen_wood"},
+		{"default:aspen_wood", "default:aspen_wood"},
+    }
+})
+
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_aspen_5",
+	burntime = 14,
+})
+
+doors.register("door_aspen_6", {
+	tiles = { { name = "doors_door_aspen_6.png", backface_culling = true } },
+	description = "Aspen Decorated Door 2",
+	inventory_image = "doors_item_aspen_6.png",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	recipe = {
-		{ "default:stick", "group:wood", "group:wood" },
-		{ "", "group:wood", "group:wood" },
-		{ "default:stick", "group:wood", "group:wood" },
+        {"default:aspen_wood", "dye:dark_grey"},
+        {"default:aspen_wood", "default:gold_lump"},
+		{"default:aspen_wood", "default:aspen_wood"},
 	}
-} )
+})
 
-doors.register( "door_mansion1", {
-	tiles = { { name = "doors_door_mansion1.png", backface_culling = true } },
-	description = "Mansion Interior Door",
-	inventory_image = "doors_item_mansion1.png",
-	groups = { choppy = 2, oddly_breakable_by_hand = 2, flammable = 2 },
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_aspen_6",
+	burntime = 14,
+})
+
+doors.register("door_aspen_7", {
+	tiles = { { name = "doors_door_aspen_7.png", backface_culling = true } },
+	description = "Aspen Windowed Door",
+	inventory_image = "doors_item_aspen_7.png",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 	recipe = {
-		{ "group:wood", "group:wood", "dye:white" },
-		{ "group:wood", "group:wood", "dye:yellow" },
-		{ "group:wood", "group:wood", "dye:white" },
+        {"default:glass", "dye:dark_grey"},
+        {"default:aspen_wood", "default:aspen_wood"},
+		{"default:aspen_wood", "default:aspen_wood"},
 	}
-} )
+})
 
-doors.register( "door_mansion2", {
-	tiles = { { name = "doors_door_mansion2.png", backface_culling = true } },
-	description = "Mansion Exterior Door ",
-	inventory_image = "doors_item_mansion2.png",
-	groups = { choppy = 2, oddly_breakable_by_hand = 2, flammable = 2 },
-	recipe = {
-		{ "group:wood", "group:wood", "dye:black" },
-		{ "group:wood", "group:wood", "dye:yellow" },
-		{ "group:wood", "group:wood", "dye:black" },
-	}
-} )
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_aspen_7",
+	burntime = 14,
+})
 
-doors.register( "door_steelglass1", {
-	tiles = { { name = "doors_door_steelglass1.png", backface_culling = true } },
-	description = "Steel Single-Lite Door",
-	inventory_image = "doors_item_steelglass1.png",
-	protected = true,
-	groups = { cracky = 1, level = 2 },
-	sounds = default.node_sound_metal_defaults( ),
-	sound_open = "doors_steel_door_open",
-	sound_close = "doors_steel_door_close",
-	recipe = {
-		{ "default:glass", "default:glass", "default:steel_rod" },
-		{ "default:steel_ingot", "default:steel_ingot", "" },
-		{ "default:steel_ingot", "default:steel_ingot", "" },
-	}
-} )
---
-doors.register( "door_steelglass2", {
-	tiles = { { name = "doors_door_steelglass2.png", backface_culling = true } },
-	description = "Steel Double-Lite Door",
-	inventory_image = "doors_item_steelglass2.png",
-	protected = true,
-	groups = { cracky = 1, level = 2 },
-	sounds = default.node_sound_metal_defaults( ),
-	sound_open = "doors_steel_door_open",
-	sound_close = "doors_steel_door_close",
-	recipe = {
-		{ "default:glass", "default:glass", "default:steel_rod" },
-		{ "default:steel_ingot", "default:steel_ingot", "default:steel_rod" },
-		{ "default:steel_ingot", "default:steel_ingot", "" },
-	}
-} )
---
--- minetest.register_craft( {
--- 	type = "fuel",
--- 	recipe = "doors:door_barn1",
--- 	burntime = 14,
--- } )
---
--- minetest.register_craft( {
--- 	type = "fuel",
--- 	recipe = "doors:door_barn2",
--- 	burntime = 16,
--- } )
---
--- minetest.register_craft( {
--- 	type = "fuel",
--- 	recipe = "doors:door_castle1",
--- 	burntime = 8,
--- } )
---
--- minetest.register_craft( {
--- 	type = "fuel",
--- 	recipe = "doors:door_castle2",
--- 	burntime = 12,
--- } )
+minetest.override_item("doors:door_steel", {
+    tiles = {{name = "doors_door_steel_new.png", backface_culling = true}},
+    inventory_image = "doors_item_steel_new.png",
+})
 
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
-
-doors.register("old3_locked", {
-    tiles = {{ name = "mydoors_old3.png", backface_culling = true }},
-	description = "Old Door 3 Locked",
-	inventory_image = "mydoors_old3_inv.png",
-    protected = true,
-	groups = {choppy=2,cracky=2,door=1},
+doors.register("door_jungle_1", {
+    tiles = {{ name = "doors_door_jungle_1.png", backface_culling = true }},
+	description = "Jungle Door 1",
+	inventory_image = "doors_item_jungle_1.png",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
     recipe = {
-        {"default:glass", "my_door_wood:wood_grey", ""},
-		{"my_door_wood:wood_grey", "my_door_wood:wood_grey", "default:steel_ingot"},
-		{"my_door_wood:wood_grey", "my_door_wood:wood_grey", ""}
+        {"default:junglewood", "default:junglewood"},
+        {"default:junglewood", "default:junglewood"},
+        {"default:junglewood", "default:junglewood"},
     }
 })
 
-doors.register("old1_locked", {
-    tiles = {{ name = "mydoors_old1.png", backface_culling = true }},
-	description = "Old Door 1 Locked",
-	inventory_image = "mydoors_old1_inv.png",
-    protected = true,
-	groups = {choppy=2,cracky=2,door=1},
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_jungle_1",
+	burntime = 14,
+})
+
+doors.register("door_jungle_2", {
+    tiles = { { name = "doors_door_jungle_2.png", backface_culling = true } },
+    description = "Jungle Door 2",
+    inventory_image = "doors_item_jungle_2.png",
+    groups = { choppy = 2, oddly_breakable_by_hand = 2, flammable = 2 },
     recipe = {
-        {"default:glass", "my_door_wood:wood_yellow", ""},
-        {"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", "default:steel_ingot"},
-        {"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", ""}
+        {"default:junglewood", "default:steel_ingot"},
+        {"default:junglewood", "default:junglewood"},
+        {"default:junglewood", "default:junglewood"},
     }
 })
 
-doors.register("castle1_locked", {
-    tiles = {{ name = "mydoors_door1.png", backface_culling = true }},
-	description = "Castle Door 1 Locked",
-	inventory_image = "mydoors_door1_inv.png",
-    protected = true,
-	groups = {choppy=2,cracky=2,door=1},
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_jungle_2",
+	burntime = 14,
+})
+
+doors.register("door_jungle_3", {
+    tiles = {{ name = "doors_door_jungle_3.png", backface_culling = true }},
+	description = "Jungle Door 3",
+	inventory_image = "doors_item_jungle_3.png",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
     recipe = {
-        {"default:glass", "my_door_wood:wood_yellow", ""},
-        {"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", "default:steel_ingot"},
-        {"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", ""}
+        {"default:steel_ingot", "default:junglewood"},
+        {"default:junglewood", "default:junglewood"},
+        {"default:junglewood", "default:junglewood"},
     }
 })
 
-doors.register("cottage1_locked", {
-    tiles = {{ name = "mycdoors_door1.png", backface_culling = true }},
-	description = "Cottage Door 1 Locked",
-	inventory_image = "mycdoors_door1_inv.png",
-    protected = true,
-	groups = {choppy=2,cracky=2,door=1},
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_jungle_3",
+	burntime = 14,
+})
+
+doors.register("door_jungle_4", {
+    tiles = {{ name = "doors_door_jungle_4.png", backface_culling = true }},
+	description = "Jungle Door 4",
+	inventory_image = "doors_item_jungle_4.png",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
     recipe = {
-        {"default:glass", "my_door_wood:wood_yellow", ""},
-        {"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", "default:steel_ingot"},
-        {"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", ""}
+        {"default:glass", "default:junglewood"},
+        {"default:junglewood", "default:junglewood"},
+        {"default:junglewood", "default:junglewood"},
     }
 })
 
-doors.register("misc2_locked", {
-    tiles = {{ name = "mymdoors_door2.png", backface_culling = true }},
-	description = "Misc Door 2 Locked",
-	inventory_image = "mymdoors_door2_inv.png",
-    protected = true,
-	groups = {choppy=2,cracky=2,door=1},
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_jungle_4",
+	burntime = 14,
+})
+
+doors.register("door_jungle_5", {
+    tiles = {{ name = "doors_door_jungle_5.png", backface_culling = true }},
+	description = "Jungle Door 5",
+	inventory_image = "doors_item_jungle_5.png",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
     recipe = {
-        {"default:glass", "my_door_wood:wood_yellow", ""},
-        {"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", "default:steel_ingot"},
-        {"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", ""}
+        {"default:junglewood", "dye:red"},
+        {"default:junglewood", "default:junglewood"},
+        {"default:junglewood", "default:junglewood"},
     }
 })
 
-doors.register("castle8_locked", {
-    tiles = {{ name = "mydoors_door8.png", backface_culling = true }},
-	description = "Castle Door 8 Locked",
-	inventory_image = "mydoors_door8_inv.png",
-    protected = true,
-	groups = {choppy=2,cracky=2,door=1},
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_jungle_5",
+	burntime = 14,
+})
+
+doors.register("door_jungle_6", {
+    tiles = {{ name = "doors_door_jungle_6.png", backface_culling = true }},
+	description = "Jungle Door 6",
+	inventory_image = "doors_item_jungle_6.png",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
     recipe = {
-        {"default:glass", "my_door_wood:wood_yellow", ""},
-        {"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", "default:steel_ingot"},
-        {"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", ""}
+        {"default:steel_ingot", "dye:red"},
+        {"default:junglewood", "default:junglewood"},
+        {"default:junglewood", "default:junglewood"},
     }
 })
 
-doors.register("castle13_locked", {
-    tiles = {{ name = "mydoors_door13.png", backface_culling = true }},
-	description = "Castle Door 13 Locked",
-	inventory_image = "mydoors_door13_inv.png",
-    protected = true,
-	groups = {choppy=2,cracky=2,door=1},
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_jungle_6",
+	burntime = 14,
+})
+
+doors.register("door_pine", {
+    tiles = {{name = "doors_door_pine.png", backface_culling = true }},
+	description = "Pine Door",
+	inventory_image = "doors_item_pine.png",
+    groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
     recipe = {
-        {"default:glass", "my_door_wood:wood_yellow", ""},
-        {"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", "default:steel_ingot"},
-        {"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", ""}
+        {"default:glass", "dye:grey"},
+        {"default:pine_wood", "default:pine_wood"},
+        {"default:pine_wood", "default:pine_wood"},
     }
 })
 
-doors.register("castle7_locked", {
-    tiles = {{ name = "mydoors_door7.png", backface_culling = true }},
-	description = "Castle Door 7 Locked",
-	inventory_image = "mydoors_door7_inv.png",
-    protected = true,
-	groups = {choppy=2,cracky=2,door=1},
-    recipe = {
-        {"default:glass", "my_door_wood:wood_yellow", ""},
-        {"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", "default:steel_ingot"},
-        {"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", ""}
-    }
-})
-
-doors.register("fancy4_locked", {
-    tiles = {{ name = "myfdoors_door4.png", backface_culling = true }},
-	description = "Fancy Door 4 Locked",
-	inventory_image = "myfdoors_door4_inv.png",
-    protected = true,
-	groups = {choppy=2,cracky=2,door=1},
-    recipe = {
-        {"default:glass", "my_door_wood:wood_yellow", ""},
-        {"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", "default:steel_ingot"},
-        {"my_door_wood:wood_yellow", "my_door_wood:wood_yellow", ""}
-    }
+minetest.register_craft( {
+	type = "fuel",
+	recipe = "doors:door_pine",
+	burntime = 14,
 })

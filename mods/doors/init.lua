@@ -459,16 +459,16 @@ doors.register("door_wood", {
 		inventory_image = "doors_item_wood.png",
 		groups = {node = 1, choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		recipe = {
-			{"group:wood", "group:wood"},
-			{"group:wood", "group:wood"},
-			{"group:wood", "group:wood"},
+			{"default:wood", "default:wood"},
+			{"default:wood", "default:wood"},
+			{"default:wood", "default:wood"},
 		}
 })
 
 doors.register("door_steel", {
-		tiles = {{name = "doors_door_steel.png", backface_culling = true}},
+		tiles = {{name = "doors_door_steel_new.png", backface_culling = true}},
 		description = S("Steel Door"),
-		inventory_image = "doors_item_steel.png",
+		inventory_image = "doors_item_steel_new.png",
 		protected = true,
 		groups = {node = 1, cracky = 1, level = 2},
 		sounds = default.node_sound_metal_defaults(),
@@ -709,9 +709,8 @@ doors.register_trapdoor("doors:trapdoor_steel", {
 minetest.register_craft({
 	output = "doors:trapdoor 2",
 	recipe = {
-		{"group:wood", "group:wood", "group:wood"},
-		{"group:wood", "group:wood", "group:wood"},
-		{"", "", ""},
+		{"default:wood", "default:wood", "default:wood"},
+		{"default:wood", "default:wood", "default:wood"},
 	}
 })
 
