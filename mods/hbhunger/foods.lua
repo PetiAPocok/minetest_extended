@@ -83,6 +83,7 @@ hbhunger.register_food('foods:rizibizi', 7, 'foods:bowl')
 hbhunger.register_food('foods:rice_cooked', 5, 'foods:bowl')
 hbhunger.register_food('foods:strawberry_cake_dough', 5, "", 1)
 hbhunger.register_food('foods:strawberry_cake', 7)
+hbhunger.register_food('foods:tofu', 2)
 hbhunger.register_food('foods:tomato_juice', 1, 'vessels:glass_bottle')
 
 hbhunger.register_food('fishing:clownfish', 1, "", 1 )

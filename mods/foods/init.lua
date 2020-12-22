@@ -738,3 +738,20 @@ minetest.register_craft({
 	output = "foods:strawberry_cake",
 	recipe = "foods:strawberry_cake_dough"
 })
+
+-- Tofu
+minetest.register_craftitem("foods:tofu", {
+	description = "Tofu",
+	inventory_image = "foods_tofu.png",
+	on_use = minetest.item_eat(2),
+})
+
+minetest.register_craft({
+	type = "cooking",
+	cooktime = 18,
+	output = "foods:tofu",
+	recipe = "farming:bag_of_soybean",
+    replacements = {
+        {"farming:bag_of_soybean", "farming:bag"}
+	}
+})
