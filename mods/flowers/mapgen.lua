@@ -164,7 +164,6 @@ function flowers.register_decorations()
 	register_flower(73133,   "dandelion_white")
 	register_flower(42,      "tulip_black")
     register_flower(7133,    "delphinium")
-    register_flower(7134,    "thistle")
     register_flower(7135,    "lazarus")
     register_flower(7136,    "mannagrass")
 

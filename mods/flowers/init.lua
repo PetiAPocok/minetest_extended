@@ -115,12 +115,6 @@ flowers.datas = {
         {color_cyan = 1}
     },
     {
-        "thistle",
-        "Thistle",
-        {-0.15, -0.5, -0.15, 0.15, 0.2, 0.15},
-        {color_magenta = 1}
-    },
-    {
         "lazarus",
         "Lazarus Bell",
         {-0.15, -0.5, -0.15, 0.15, 0.2, 0.15},
