@@ -1,20 +1,36 @@
 --------------------------------------------------------------------------------------
-Szója bab (a chili helyére)
-    extraktálják az olajat, elég sok szója bab kell egy adag olajhoz
-    gyertyát csinálni belőle, ehhet hidrogenálni kell az olajat, ezt mindenféle adalékanyagokkal teszik és hővel.
-    Tofut lehet csinálni még belőle és "húst"
+Tofu szójababból
 
-cukorból karamell craft?
+minecraft szerű vine
+
+A mossy_cobbelstone kuka, helyette lehetne moss mint növény és az nőhetne rá mindenre...
+
+Nether
+    Layers?
+    mobs:
+        tortured spirit
+            ectoplasm as loot?
+        demon
+            bat wing as loot?
+        skeleton
+            bones as loot
+
+Varázslatok nézzék a pvp-t!!!!
+
+Új érc: Vidore
+
+Leereszthető kötél
+    az adott blokk alatt max 10 blokkig vizsgálja, hogy rakódhat-e még le?
+        lerak = true
+        for 1->10
+            if !air or !kötél
+                lerak = false
+
+2x2x2 blokkot foglaló, 1 blokkot fúró rúna
+    max 50 bokk mélységre fúr
+    Mi hajtja
 
 japan style panel, sliding door
-
-Gyertya, gyertyatartóban
-    x x x
-    x x x
-    x x x
-    Világít, kézben is, lerakható
-
-A méz az gyűljön a kaptárba és ha beraksz egy jar-t akkor másszon át jar-ba.
 
 Nagy, többszemélyes hajó
     Nincs ilyen mod
@@ -25,19 +41,18 @@ Nagy, többszemélyes hajó
     boat bottle boat
     boat mese_chrystal boat
 
-    kijön a hajó az üvegből, meg visszamegy bele.
+    kijön a hajó az üvegből, meg visszamegy bele, liek starbound
 
 A cápa neked veti magát a parton...
 A halak kimásznak a vízből...
     Írtam bug report-ot
-
-
 
 bútorok                    KELL
     Szekrény               KELL
         egy blokk
         kevesebb hely
         ajtós / fiókos változat
+        Wooden shelf-nek növény hangja van ha ütöd
 
     A könyves és üveges polc-ot leegyszerűsíteni polcra.
 
@@ -54,14 +69,11 @@ Ore detector
 
 Chalk-ból kréta, meg blackboard...
 
-A mossy_cobbelstone kuka, helyette lehetne moss mint növény és az nőhetne rá mindenre...
 
 colored glass               KELL
     Gondokat okoz az áttetszőséges irrlicit probléma miatt
 
-nether?
 
-A crafting guide-ba kategorizálni a cuccokat
 
 petróleum lámpa
 
@@ -81,10 +93,11 @@ terrárium + akvárium
     egérnek, gekkónak, halaknak, gekkó
 
 A sötétben terjeszkedjen a gomba
+    ÁLLÍTÓLAG terjeszkedik...
 
 Az industrial furnace van hogy lustálkodik
 
-Mapgen ore normalizálása
+Mapgen normalizálása
     iron -64 tól legyen
     gold, mese −128-tól
     diamond, mese block −256 (a lava is ott van)
@@ -94,6 +107,8 @@ Mapgen ore normalizálása
     izgalmasabb dungeon-ok
 
     npc falu
+
+    A lootos ládákban written bookok random storykkal
 
 A karakterek keze amikor látszódik, az aktuális skin szerint nézzen ki
 
@@ -181,7 +196,6 @@ interdimensional chest
 
 A korall az mire jó?
     Többnyire dekor
-    Lakhatna benne kagyló...?
 
 Plusz fegyverek mod
     katana!!!!
@@ -198,12 +212,8 @@ Plusz fegyverek mod
         eldobhatod, vissza hívhatod
         exkluzívan csak az akármi dobja... Vagy gyémánt kelljen bele.
 
-    Lőfegyverek
-        van puskapor...
-        Puska
-        pisztoly
-        ágyú
-            tolhatod, ugrani nem lehet vele
+    ágyú
+        leraktad, amelyik irányba néz arra lő. Magasság állítható.
 
 Új csákány törés hang
 
@@ -213,7 +223,7 @@ carpets
 
     Babushka carpet!
 
-Világító tengeti növények
+Világító tengeri növények
     tengeri ugorka?
 
 Új kaják
@@ -224,7 +234,7 @@ Világító tengeti növények
     vegetable salad
     ice cream
     apple jam?
-    alma + karamell
+    alma + karamell már csak be kell rakni, txtúra meg van
     huckleberry milkshake
     kakaós csiga
 
@@ -257,37 +267,35 @@ mobok:
     feri (mob)?
     bill (enemy)
     agavblagba (Rick and Morty) (enemy)
+    goat (mob)
+        goat milk
+            goat cheese
     új mob: gekkó
         mint a patkány
 
-    vizi állatok?
-        delfin lovaglás?
-            ronda a delfin... És a kódja is szar.
-        polip lovaglás?
+    delfin lovaglás?
+        ronda a delfin... És a kódja is szar.
+    polip lovaglás?
 
     világító ló ami bogarakat szarik
 
     Új mob: Demon
+        pokolba
         Dob: démon [csont? / vér? / fog? / szem?]
         Shadow orb-ot lő
 
         ring of darkness-t lehet csinálni a demon part-ból, shadow aurát ad és + sebzést a demon orbnak...
             Darkling minion?
 
-    npc-k
+npc-k
 
-    A kelp-nek fura a neve, egy egész kelp szál az 1 block
+A kelp-nek fura a neve, egy egész kelp szál az 1 block
 
 ------------------------ Textúrára vár -------------------------
 
 mex_moreblocks
     polc
-    gránit (Effy)
-    andezit (Effy)
-    diorit (Effy)
     pala cserép
-
-apple pie dough (Szandi)
 
 New paintings
 

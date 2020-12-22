@@ -26,3 +26,9 @@ craftguide.register_craft({
 	result = "farming:bag_of_rice",
 	items  = {"farming:rice 50", "farming:bag"}
 })
+
+craftguide.register_craft({
+	type   = "bagging",
+	result = "farming:bag_of_soybeans",
+	items  = {"farming:soybean 50", "farming:bag"}
+})

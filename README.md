@@ -115,12 +115,13 @@ Made for and tested on Minetest 5.3.0.
 - Created void_bags. Used [inventorybags] (https://github.com/cx384/inventorybags) as base.
 - Created hungry mana.
 - Created teleports.
-- Added bakedclay ([notabug](https://notabug.org/tenplus1/bakedclay))
+- Added bakedclay ([NotABug](https://notabug.org/tenplus1/bakedclay))
 - Added cement mod (modified) ([gitlab](https://gitlab.com/4w/cement))
 - Created mex_moreblocks from a bunch of mods. See license.txt
 - Created orb of digging.
-- Added Beacon (modified) ([notabug](https://notabug.org/SpaghettiToastBook/beacons))
+- Added Beacon (modified) ([NotABug](https://notabug.org/SpaghettiToastBook/beacons))
 - Created mex_moredoors from a bunch of mods. See license.txt
+- Added Nether ([Github](https://github.com/minetest-mods/nether))
 
 ## Licensing
 
