@@ -188,6 +188,19 @@ minetest.register_craft({
 	recipe = "foods:sugar"
 })
 
+-- Caramel apple
+minetest.register_craftitem("foods:caramel_apple", {
+    description = "Caramel Apple",
+    inventory_image = "foods_caramel_apple.png",
+    on_use = minetest.item_eat(3),
+})
+
+minetest.register_craft({
+    type = "shapeless",
+    output = "foods:caramel_apple",
+    recipe = {"foods:caramel", "default:apple"}
+})
+
 -- Carrot Cake
 minetest.register_craftitem("foods:carrot_cake_dough", {
 	description = "Carrot Cake Dough",
