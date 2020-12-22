@@ -23,6 +23,7 @@ hbhunger.register_food('farming:tomato', 1)
 
 hbhunger.register_food('foods:salt', -1)
 hbhunger.register_food('foods:sugar',-1)
+hbhunger.register_food('foods:caramel',-1)
 hbhunger.register_food('foods:jam_ananas', -1, "vessels:glass_jar")
 hbhunger.register_food('foods:jam_blueberry', -1, "vessels:glass_jar")
 hbhunger.register_food('foods:jam_grape', -1, "vessels:glass_jar")

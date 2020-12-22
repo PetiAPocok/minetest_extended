@@ -178,15 +178,14 @@ minetest.register_craft({
 minetest.register_craftitem("foods:caramel", {
     description = "Caramel",
     inventory_image = "foods_caramel.png",
-    on_use = minetest.item_eat(2),
+    on_use = minetest.item_eat(-1),
 })
 
 minetest.register_craft({
-    output = "foods:caramel",
-    recipe = {
-        {"farming:cocoa", "farming:cocoa", "farming:cocoa"},
-        {"farming:cocoa", "farming:cocoa", "farming:cocoa"}
-    }
+	type = "cooking",
+	cooktime = 18,
+	output = "foods:caramel",
+	recipe = "foods:sugar"
 })
 
 -- Carrot Cake
