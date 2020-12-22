@@ -118,7 +118,7 @@ flowers.datas = {
         "lazarus",
         "Lazarus Bell",
         {-0.15, -0.5, -0.15, 0.15, 0.2, 0.15},
-        {color_pink = 1}
+        {color_magenta = 1}
     },
     {
         "mannagrass",
