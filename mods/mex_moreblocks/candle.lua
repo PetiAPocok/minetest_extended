@@ -9,6 +9,7 @@ minetest.register_node("mex_moreblocks:candle", {
     paramtype = "light",
     light_source = 12,
     sunlight_propagates = true,
+    walkable = false,
     selection_box = {
        type = "fixed",
        fixed = {
