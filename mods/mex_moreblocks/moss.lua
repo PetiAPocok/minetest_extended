@@ -12,6 +12,7 @@ minetest.register_node("mex_moreblocks:moss", {
     wield_image = "mex_moreblocks_moss.png",
     inventory_image = "mex_moreblocks_moss.png",
     use_texture_alpha = true,
+    walkable = false,
     paramtype = "light",
     paramtype2 = "wallmounted",
     groups = {snappy = 3},
