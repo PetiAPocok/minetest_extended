@@ -467,5 +467,6 @@ dofile(minetest.get_modpath("mex_moreblocks").."/lantern.lua")
 dofile(minetest.get_modpath("mex_moreblocks").."/gong.lua")
 dofile(minetest.get_modpath("mex_moreblocks").."/moss.lua")
 dofile(minetest.get_modpath("mex_moreblocks").."/rope.lua")
+dofile(minetest.get_modpath("mex_moreblocks").."/vine.lua")
 
 dofile(minetest.get_modpath("mex_moreblocks").."/mapgen.lua")
