@@ -465,6 +465,7 @@ minetest.register_craft({
 dofile(minetest.get_modpath("mex_moreblocks").."/candle.lua")
 dofile(minetest.get_modpath("mex_moreblocks").."/lantern.lua")
 dofile(minetest.get_modpath("mex_moreblocks").."/gong.lua")
-
+dofile(minetest.get_modpath("mex_moreblocks").."/moss.lua")
+dofile(minetest.get_modpath("mex_moreblocks").."/rope.lua")
 
 dofile(minetest.get_modpath("mex_moreblocks").."/mapgen.lua")

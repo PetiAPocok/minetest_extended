@@ -123,7 +123,6 @@ minetest.register_biome({
 	node_stone  = "nether:native_mapgen", -- nether:native_mapgen is used here to prevent the native mapgen from placing ores and decorations.
 	node_filler = "nether:native_mapgen", -- The lua on_generate will transform nether:rack_native into nether:rack then decorate and add ores.
 	node_dungeon = "nether:brick",
-	--node_dungeon_alt = "default:mossycobble",
 	node_dungeon_stair = "stairs:stair_nether_brick",
 	-- Setting node_cave_liquid to "air" avoids the need to filter lava and water out of the mapchunk and
 	-- surrounding shell (overdraw nodes beyond the mapchunk).

@@ -1,12 +1,13 @@
 --------------------------------------------------------------------------------------
-Tofu szójababból
+kaja sebez 1 alatt.
+
 
 minecraft szerű vine
 
 A mossy_cobbelstone kuka, helyette lehetne moss mint növény és az nőhetne rá mindenre...
 
 Nether
-    Layers?
+    bugyrok?
     mobs:
         tortured spirit
             ectoplasm as loot?
@@ -15,9 +16,9 @@ Nether
         skeleton
             bones as loot
 
-Varázslatok nézzék a pvp-t!!!!
+    Új érc: Vidore
 
-Új érc: Vidore
+Varázslatok nézzék a pvp-t!!!!
 
 Leereszthető kötél
     az adott blokk alatt max 10 blokkig vizsgálja, hogy rakódhat-e még le?

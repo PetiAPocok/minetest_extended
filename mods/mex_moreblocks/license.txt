@@ -16,5 +16,7 @@ From: gloopblocks(https://gitlab.com/VanessaE/gloopblocks) by VanessaE (code: LG
     basalt
     pumice
 
-gong texture, code by PetiAPocok (LGPL 3.0, CC BY 3.0) sound by Dianakc (CC BY 3.0)
+gong texture, code by PetiAPocok (LGPL 3.0, CC BY 3.0), sound by Dianakc (CC BY 3.0)
 candle texture, code by PetiAPocok (LGPL 3.0, CC BY 3.0)
+moss texture by Maizegod (CC BY 3.0), code by PetiAPocok (LGPL 3.0)
+rope texture, code by PetiAPocok (LGPL 3.0, CC BY 3.0)

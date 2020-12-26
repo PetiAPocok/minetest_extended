@@ -77,7 +77,6 @@ local c_dirt = minetest.get_content_id("default:dirt")
 local c_sand = minetest.get_content_id("default:sand")
 
 local c_cobble = minetest.get_content_id("default:cobble")
-local c_mossycobble = minetest.get_content_id("default:mossycobble")
 local c_stair_cobble = minetest.get_content_id("stairs:stair_cobble")
 
 local c_lava_source = minetest.get_content_id("default:lava_source")
@@ -158,7 +157,6 @@ minetest.register_on_generated(function(minp, maxp, seed)
 				-- Dungeons are preserved so we don't need
 				-- to check for cavern in the shell
 				elseif id == c_cobble or -- Dungeons (preserved) to netherbrick
-						id == c_mossycobble or
 						id == c_stair_cobble then
 					data[vi] = c_netherbrick
 				end

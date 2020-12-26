@@ -22,7 +22,6 @@ default:stone
 default:cobble
 default:stonebrick
 default:stone_block
-default:mossycobble
 
 default:desert_stone
 default:desert_cobble
@@ -272,14 +271,6 @@ minetest.register_node("default:stone_block", {
 	tiles = {"default_stone_block.png"},
 	is_ground_content = false,
 	groups = {cracky = 2, stone = 1},
-	sounds = default.node_sound_stone_defaults(),
-})
-
-minetest.register_node("default:mossycobble", {
-	description = S("Mossy Cobblestone"),
-	tiles = {"default_mossycobble.png"},
-	is_ground_content = false,
-	groups = {cracky = 3, stone = 1},
 	sounds = default.node_sound_stone_defaults(),
 })
 
