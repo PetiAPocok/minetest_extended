@@ -361,6 +361,39 @@ minetest.register_craft({
 })
 
 
+minetest.register_node("paintings:petiapocok_bob", {
+    description = "Painting: PetiAPocok - Bob",
+    drawtype = "nodebox",
+    tiles = {"paintings_petiapocok_bob.png"},
+    inventory_image = "paintings_petiapocok_bob.png",
+    wield_image = "paintings_petiapocok_bob.png",
+    paramtype = "light",
+    paramtype2 = "wallmounted",
+    sunlight_propagates = true,
+    walkable = false,
+    node_box = {
+        type = "wallmounted",
+        wall_top    = {-0.5, 0.4375, -0.5, 0.5, 0.5, 0.5},
+        wall_bottom = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5},
+        wall_side   = {-0.5, -0.5, -0.5, -0.4375, 0.5, 0.5},
+    },
+    groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3},
+    sounds = default.node_sound_wood_defaults(),
+    on_construct = function(pos)
+        minetest.get_meta(pos):set_string("infotext", minetest.registered_nodes[minetest.get_node(pos).name].description)
+    end
+})
+
+minetest.register_craft({
+    output = "paintings:petiapocok_bob",
+    recipe = {
+        {"dye:blue", "dye:blue", "dye:cyan"},
+        {"dye:blue", "paintings:canvas", "dye:dark_green"},
+        {"dye:blue", "dye:cyan", "dye:dark_green"},
+    }
+})
+
+
 minetest.register_node("paintings:petiapocok_dali_laba", {
     description = "Painting: PetiAPocok - Dali Lába",
     drawtype = "nodebox",
