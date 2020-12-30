@@ -48,14 +48,13 @@ mobs:register_mob("mobs_nether:skeleton", {
 	},
 })
 
-if not mobs.custom_spawn_monster then
 mobs:spawn({
-	name = "mobs_monster:skeleton",
+	name = "mobs_nether:skeleton",
     nodes = {"nether:rack"},
-	chance = 7000,
-	active_object_count = 2,
-	min_height = 0,
+	chance = 100,
+	active_object_count = 10,
+    max_heigh = -5000,
+	min_height = -32000,
 })
-end
 
 mobs:register_egg("mobs_nether:skeleton", "Skeleton", "default_silver_sand.png", 1)

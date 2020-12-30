@@ -50,7 +50,7 @@ mobs:spawn({
 	nodes = {"group:flower"},
 	min_light = 14,
 	interval = 60,
-	chance = 7000,
+	chance = 1000,
 	min_height = 3,
 	max_height = 200,
 	day_toggle = true,
