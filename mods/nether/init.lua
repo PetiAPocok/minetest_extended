@@ -122,7 +122,6 @@ if nether.NETHER_REALM_ENABLED then
 		dofile(nether.path .. "/mapgen_nobiomes.lua")
 	end
 end
-dofile(nether.path .. "/portal_examples.lua")
 
 
 -- Portals are ignited by right-clicking with a mese crystal fragment
@@ -140,11 +139,6 @@ if nether.NETHER_REALM_ENABLED then
 		frame_node_name     = "default:obsidian",
 		wormhole_node_color = 0, -- 0 is magenta
 		title = S("Nether Portal"),
-		book_of_portals_pagetext = S([[Construction requires 14 blocks of obsidian, which we found deep underground where water had solidified molten rock. The finished frame is four blocks wide, five blocks high, and stands vertically, like a doorway.
-
-This opens to a truly hellish place, though for small mercies the air there is still breathable. There is an intriguing dimensional mismatch happening between this realm and ours, as after opening the second portal into it we observed that 10 strides taken in the Nether appear to be an equivalent of @1 in the natural world.
-
-The expedition parties have found no diamonds or gold, and after an experienced search party failed to return from the trail of a missing expedition party, I must conclude this is a dangerous place.]], 10 * nether.FASTTRAVEL_FACTOR),
 
 		is_within_realm = function(pos) -- return true if pos is inside the Nether
 			return pos.y < nether.DEPTH_CEILING
