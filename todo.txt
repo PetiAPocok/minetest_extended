@@ -1,10 +1,7 @@
 --------------------------------------------------------------------------------------
-kaja sebez 1 alatt.
+MAKE MOBS!!!!!
 
-
-minecraft szerű vine
-
-A mossy_cobbelstone kuka, helyette lehetne moss mint növény és az nőhetne rá mindenre...
+Polipoid a vízbe.
 
 Nether
     bugyrok?
@@ -13,25 +10,19 @@ Nether
             ectoplasm as loot?
         demon
             bat wing as loot?
-        skeleton
-            bones as loot
 
     Új érc: Vidore
 
 Varázslatok nézzék a pvp-t!!!!
 
-Leereszthető kötél
-    az adott blokk alatt max 10 blokkig vizsgálja, hogy rakódhat-e még le?
-        lerak = true
-        for 1->10
-            if !air or !kötél
-                lerak = false
-
 2x2x2 blokkot foglaló, 1 blokkot fúró rúna
     max 50 bokk mélységre fúr
-    Mi hajtja
+    Mi hajtja?
 
-japan style panel, sliding door
+japan mod
+    paper panel
+    sliding paper door
+    katana
 
 Nagy, többszemélyes hajó
     Nincs ilyen mod
@@ -73,10 +64,6 @@ Chalk-ból kréta, meg blackboard...
 
 colored glass               KELL
     Gondokat okoz az áttetszőséges irrlicit probléma miatt
-
-
-
-petróleum lámpa
 
 handcar emelkedőn rángat
     két utassal nincs tesztelve...
