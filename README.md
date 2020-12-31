@@ -121,7 +121,10 @@ Made for and tested on Minetest 5.3.0.
 - Created orb of digging.
 - Added Beacon (modified) ([NotABug](https://notabug.org/SpaghettiToastBook/beacons))
 - Created mex_moredoors from a bunch of mods. See license.txt
-- Added Nether ([Github](https://github.com/minetest-mods/nether))
+- Added Nether (modified)([Github](https://github.com/minetest-mods/nether))
+- Created mobs_nether.
+- Added tsm_pyramids ([repo](https://repo.or.cz/minetest_pyramids/tsm_pyramids.git))
+
 
 ## Licensing
 
