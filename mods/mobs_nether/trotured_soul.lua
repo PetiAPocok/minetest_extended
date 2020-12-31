@@ -21,8 +21,6 @@ mobs:register_mob("mobs_nether:tortured_soul", {
 	makes_footstep_sound = true,
 	sounds = {
 		random = "mobs_nether_tortured_soul_random",
-        hurt = "mobs_nether_tortured_soul_hurt",
-        death = "mobs_nether_tortured_soul_death",
 	},
 	walk_velocity = 1.5,
 	run_velocity = 1.5,
