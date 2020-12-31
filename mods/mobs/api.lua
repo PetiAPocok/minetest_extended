@@ -3510,6 +3510,7 @@ minetest.register_entity(name, setmetatable({
 	on_replace = def.on_replace,
 	reach = def.reach,
 	texture_list = def.textures,
+    use_texture_alpha = def.use_texture_alpha or false,
 	texture_mods = def.texture_mods or "",
 	child_texture = def.child_texture,
 	docile_by_day = def.docile_by_day,

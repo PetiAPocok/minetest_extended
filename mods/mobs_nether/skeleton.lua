@@ -23,7 +23,7 @@ mobs:register_mob("mobs_nether:skeleton", {
         death = "mobs_nether_skeleton_death",
 	},
 	walk_velocity = 1.5,
-	run_velocity = 4,
+	run_velocity = 2.5,
 	view_range = 8, --15
 	jump = true,
 	floats = 0,
