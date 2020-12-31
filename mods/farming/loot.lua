@@ -19,7 +19,7 @@ if minetest.global_exists("dungeon_loot") then
         {name = "farming:seed_hemp", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_lettuce", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_onion", chance = 0.4, count = {1, 4}},
-        {name = "farming:seed_pea", chance = 0.4, count = {1, 4}},
+        {name = "farming:seed_peas", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_potato", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_raspberry", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_rice", chance = 0.4, count = {1, 4}},
