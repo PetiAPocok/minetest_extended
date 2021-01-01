@@ -124,7 +124,7 @@ Made for and tested on Minetest 5.3.0.
 - Added Nether (modified)([Github](https://github.com/minetest-mods/nether))
 - Created mobs_nether.
 - Added tsm_pyramids ([repo](https://repo.or.cz/minetest_pyramids/tsm_pyramids.git))
-
+- Created mese_miner.
 
 ## Licensing
 
