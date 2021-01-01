@@ -21,11 +21,14 @@ minetest.register_node("mex_moreblocks:rope", {
             pos.y = pos.y - 1
             local length = 10
             local placed = false
+            local blocked = false
 
-            while length > 0 and not placed do
+            while length > 0 and not placed and not blocked do
                 if minetest.get_node(pos).name == "air" then
                     minetest.set_node(pos, {name = "mex_moreblocks:rope"})
                     placed = true
+                else
+                    blocked = true
                 end
                 pos.y = pos.y - 1
                 length = length - 1
