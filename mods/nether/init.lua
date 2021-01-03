@@ -54,13 +54,11 @@ nether.useBiomes      = minetest.get_mapgen_setting("mg_name") ~= "v6" and minet
 nether.DEPTH_CEILING              =  -5000 -- The y location of the Nether's celing
 nether.DEPTH_FLOOR                = -11000 -- The y location of the Nether's floor
 nether.FASTTRAVEL_FACTOR          =      8 -- 10 could be better value for Minetest, since there's no sprint, but ex-Minecraft players will be mathing for 8
-nether.PORTAL_BOOK_LOOT_WEIGHTING =    0.9 -- Likelyhood of finding the Book of Portals (guide) in dungeon chests. Set to 0 to disable.
 nether.NETHER_REALM_ENABLED       =   true -- Setting to false disables the Nether and Nether portal
 
 
 -- Override default settings with values from the .conf file, if any are present.
 nether.FASTTRAVEL_FACTOR          = tonumber(minetest.settings:get("nether_fasttravel_factor") or nether.FASTTRAVEL_FACTOR)
-nether.PORTAL_BOOK_LOOT_WEIGHTING = tonumber(minetest.settings:get("nether_portalBook_loot_weighting") or nether.PORTAL_BOOK_LOOT_WEIGHTING)
 nether.NETHER_REALM_ENABLED       = minetest.settings:get_bool("nether_realm_enabled", nether.NETHER_REALM_ENABLED)
 nether.DEPTH_CEILING              = tonumber(minetest.settings:get("nether_depth_ymax") or nether.DEPTH_CEILING)
 nether.DEPTH_FLOOR                = tonumber(minetest.settings:get("nether_depth_ymin") or nether.DEPTH_FLOOR)
