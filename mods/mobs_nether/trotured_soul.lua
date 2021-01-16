@@ -53,6 +53,7 @@ mobs:spawn({
     nodes = {"nether:rack"},
 	chance = 100,
 	active_object_count = 10,
+    max_light = 5,
     max_heigh = -5000,
 	min_height = -32000,
 })
