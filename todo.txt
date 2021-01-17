@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------------
 Nether
     bugyrok?
-    Új érc: Vidore
+    Soul gem?
     mobs:
         demon
             bat wing as loot?
@@ -10,34 +10,29 @@ Nether
 
 
 
-2x2x2 blokkot foglaló, 1 blokkot fúró rúna
-    nem csak azt szedi ami tényleg alata van, random talál jóságokat.
-    max 30 bokk mélységre fúr
-    4x4-es output
-    1x1-es input
-        mese chrystal hajtja
-
-    függőleges és vízszintes fúró
-
-
-
 Mapgen
     Elhagyatott házak
-
-    izgalmasabb dungeon-ok
-        Székek, asztalok, festmények bele.
+        Csinálni sajátot
+            word edit-el schematic-okat lerakni?
 
     npc falu
+        Csinálni sajátot
+            word edit-el schematic-okat lerakni?
+
+    icy biome-ba iglu
 
     A lootos ládákban written bookok random storykkal
+
+    Terület finder szarja le a fákat, füveket, virágokat.
+    World edit-nek nincs ilyenje? nincs...
+
+
+
+
 
 
 ------------------------------------------1.2--------------------------------------------
 Repülő szigetek.
-
-MAKE MOBS!!!!!
-
-Polipoid a vízbe.
 
 Varázslatok nézzék a pvp-t!!!!
 
@@ -120,6 +115,8 @@ accesories mod
 Minions
     depends on: 3d_armor
     Ha nálad van a toteme akkor követ és harcol veled
+    vidore-ból készül a totem
+    Kell a vadonban találni / csinálni totem engraving table-t és azal lehet spiritet bele rakni a totembe (adsz a talenak 42 vidore-t)
     Wolf spirit, Darkling, Nyúl, Macska
 
 The poisoning foods not damaging till the given time
@@ -282,7 +279,9 @@ mobok:
         ring of darkness-t lehet csinálni a demon part-ból, shadow aurát ad és + sebzést a demon orbnak...
             Darkling minion?
 
-npc-k
+    npc-k
+
+    Polipoid a vízbe.
 
 A kelp-nek fura a neve, egy egész kelp szál az 1 block
 
