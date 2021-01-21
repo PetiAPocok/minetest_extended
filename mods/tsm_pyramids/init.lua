@@ -49,7 +49,7 @@ local chest_stuff = {
 }
 
 if minetest.get_modpath("farming") then
-	table.insert(chest_stuff.desert_sandstone, {name="flood_sand:bread", max = 3})
+	table.insert(chest_stuff.desert_sandstone, {name="food:bread", max = 3})
 	table.insert(chest_stuff.sandstone, {name="foods:bread", max = 4})
 	table.insert(chest_stuff.normal, {name="farming:cotton", max = 32})
 	table.insert(chest_stuff.desert_sandstone, {name="farming:seed_cotton", max = 3})
