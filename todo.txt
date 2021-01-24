@@ -1,4 +1,6 @@
 --------------------------------------------------------------------------------------
+Polished andesite!
+
 Nether
     bugyrok?
     Soul gem?
@@ -29,9 +31,22 @@ Mapgen
 
 
 
+    új screenshot
+    legyen rajta asztal rajta alchemy genyó,
+    falon festmény,
+    ablakon kinézve egy vegyes farm (elkerítve),
+    melletta állatok karámban
 
 
 ------------------------------------------1.2--------------------------------------------
+
+totem holder to summon the spirit around it
+
+spirit tether to level it up?
+    feed with mese
+
+Szörny horda idéző?
+
 Repülő szigetek.
 
 Varázslatok nézzék a pvp-t!!!!
@@ -135,6 +150,10 @@ legyen hajtány
 orb of wind
     Move the enemy back
     if I set or add to its velocity then it gets overwritten by its own movement pattern...
+
+orb of Meteor
+    summon a meteor from the sky above the pointed thing
+
 
 potions
     water walking effect?
