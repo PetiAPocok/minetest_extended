@@ -39,3 +39,12 @@ minetest.register_node("mex_moreblocks:rope", {
         return itemstack
     end,
 })
+
+minetest.register_craft({
+	output = "mex_moreblocks:rope",
+	recipe = {
+        {"farming:string", "farming:string"},
+		{"farming:string", "farming:string"},
+		{"farming:string", "farming:string"},
+	},
+})
