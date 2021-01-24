@@ -171,17 +171,22 @@ minetest.register_tool("teleports:teleport_stone", {
         local players_mana = hbmana.get(name)
         local destination_pos = minetest.deserialize(itemstack:get_meta():get_string("_obelisk_pos"))
 
-        if destination_pos ~= nil and destination_pos.x ~= nil and players_mana >= 50 then
-            hbmana.set(name, players_mana - 50)
-            destination_pos.x = destination_pos.x - 1
-            minetest.sound_play("teleports_teleport", {pos = player:get_pos(), gain = 2}, true)
-            player:set_pos(destination_pos)
+        if destination_pos ~= nil and destination_pos.x ~= nil then
+            if players_mana >= 50 then
+                hbmana.set(name, players_mana - 50)
+                destination_pos.x = destination_pos.x - 1
+                minetest.sound_play("teleports_teleport", {pos = player:get_pos(), gain = 2}, true)
+                player:set_pos(destination_pos)
+            end
+        else
+            minetest.chat_send_player(name, "Teleport stone has not return point. Set an obelisk as one.")
         end
     end,
 
     on_place = function(itemstack, placer, pointed_thing) -- Right click
         if minetest.get_node(pointed_thing.under).name == "teleports:obelisk" then
             itemstack:get_meta():set_string("_obelisk_pos", minetest.serialize(pointed_thing.under))
+            minetest.chat_send_player(placer:get_player_name(), "Obelisk set as return point.")
             return itemstack
         end
     end
