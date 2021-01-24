@@ -24,18 +24,31 @@ minetest.register_node("mex_moreblocks:rope", {
             local blocked = false
 
             while length > 0 and not placed and not blocked do
-                if minetest.get_node(pos).name == "air" then
+                local node_name = minetest.get_node(pos).name
+
+                if node_name == "air" then
                     minetest.set_node(pos, {name = "mex_moreblocks:rope"})
+
+                    if not minetest.is_creative_enabled(placer:get_player_name()) then
+                        itemstack:take_item()
+                    end
+
                     placed = true
-                else
+                elseif node_name ~= "mex_moreblocks:rope" then
                     blocked = true
                 end
+
                 pos.y = pos.y - 1
                 length = length - 1
             end
         else
             minetest.set_node(pointed_thing.above, {name = "mex_moreblocks:rope"})
+            
+            if not minetest.is_creative_enabled(placer:get_player_name()) then
+                itemstack:take_item()
+            end
         end
+
         return itemstack
     end,
 })
