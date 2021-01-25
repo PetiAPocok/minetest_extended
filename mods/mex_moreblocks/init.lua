@@ -376,6 +376,14 @@ minetest.register_node("mex_moreblocks:slate_brick", {
     sounds = default.node_sound_stone_defaults()
 })
 
+minetest.register_craft({
+    output = "mex_moreblocks:slate_brick 4",
+    recipe = {
+        {"mex_moreblocks:slate","mex_moreblocks:slate"},
+        {"mex_moreblocks:slate","mex_moreblocks:slate"},
+    }
+})
+
 stairs.register_stair_and_slab("slate_brick", "mex_moreblocks:slate_brick",
     {cracky=2},
     {"mex_moreblocks_slate_brick.png"},
@@ -392,10 +400,10 @@ minetest.register_node("mex_moreblocks:slate_tile", {
 })
 
 minetest.register_craft({
-    output = "mex_moreblocks:slate_tile 4",
+    output = "mex_moreblocks:slate_tile 2",
     recipe = {
-        {"mex_moreblocks:slate","mex_moreblocks:slate"},
-        {"mex_moreblocks:slate","mex_moreblocks:slate"},
+        {"mex_moreblocks:slate"},
+        {"mex_moreblocks:slate"},
     }
 })
 
