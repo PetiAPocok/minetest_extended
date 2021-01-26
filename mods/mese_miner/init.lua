@@ -17,7 +17,7 @@ minetest.register_node("mese_miner:miner", {
         },
     },
     paramtype2 = "facedir",
-    groups = {oddly_breakable_by_hand = 1},
+    groups = {oddly_breakable_by_hand = 3},
 
     on_construct = function(pos)
         local has_something_in_output = false
