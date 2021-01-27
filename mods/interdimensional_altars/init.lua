@@ -75,7 +75,7 @@ minetest.register_node("interdimensional_altars:altar", {
 minetest.register_craft({
 	output = "interdimensional_altars:altar",
 	recipe = {
-        {"", "void_bags:void_bag", ""},
+        {"", "void_bags:bag", ""},
 		{"", "default:obsidian", ""},
 		{"default:obsidian", "default:obsidian", "default:obsidian"}
 	}
