@@ -453,7 +453,6 @@ minetest.register_node("alchemy:alchemy_set", {
         local temp = {}
 
         default.get_inventory_drops(pos, "component", temp)
-        default.get_inventory_drops(pos, "output", temp)
         default.get_inventory_drops(pos, "bottle", temp)
 
         for i,v in ipairs(temp) do
