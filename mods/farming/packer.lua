@@ -130,7 +130,6 @@ minetest.register_node("farming:packer", {
         local temp = {}
 
         default.get_inventory_drops(pos, "input", temp)
-        default.get_inventory_drops(pos, "output", temp)
         default.get_inventory_drops(pos, "bags", temp)
 
         for i,v in ipairs(temp) do
