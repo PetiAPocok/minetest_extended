@@ -46,9 +46,9 @@ minetest.register_tool("orb_of_digging:orb_of_digging", {
             }, "orb_of_digging:digging_ball")
 
             obj:setvelocity({
-                x = dir.x * 15,
-                y = dir.y * 15,
-                z = dir.z * 15
+                x = dir.x * 3,
+                y = dir.y * 3,
+                z = dir.z * 3
             })
 
             obj:get_luaentity()._owner = name
@@ -113,7 +113,7 @@ minetest.register_entity("orb_of_digging:digging_ball", {
             texture = "orb_of_digging_particle.png",
         })
 
-        if self._timer > 1 then
+        if self._timer > 5 then
             self.object:remove()
         end
 
