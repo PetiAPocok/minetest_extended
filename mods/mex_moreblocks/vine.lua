@@ -15,7 +15,7 @@ minetest.register_node("mex_moreblocks:vine", {
     walkable = false,
     paramtype = "light",
     paramtype2 = "wallmounted",
-    groups = {snappy = 3},
+    groups = {snappy = 3, attached_node=1},
 })
 
 function table_contains(table, element)
