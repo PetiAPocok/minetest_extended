@@ -9,7 +9,6 @@ minetest.register_tool("orb_of_nature:orb_of_nature", {
             hbmana.set(name, players_mana - 5)
 
             if pointed_thing.type == "object" then
-
                 if pointed_thing.ref:is_player() then
                     effects_hud.add_effect(pointed_thing.ref:get_player_name(), "poison", 3)
                 elseif pointed_thing.ref then
@@ -19,7 +18,11 @@ minetest.register_tool("orb_of_nature:orb_of_nature", {
                     }, nil)
                 end
             elseif pointed_thing.type == "node" then
-                bones:on_use(pointed_thing.under, 1)
+                if minetest.get_node(pointed_thing.under).name == "default:dirt" then
+                    minetest.set_node(pointed_thing.under, {name="default:dirt_with_grass"})
+                else
+                    bones:on_use(pointed_thing.under, 1)
+                end
             else
                 local pos = player:get_pos()
                 local random_insect = math.random(1, 100)
