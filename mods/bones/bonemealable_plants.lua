@@ -13,7 +13,7 @@ bones:add_crop({
     {"farming:huckleberry_", 5},
     {"farming:lettuce_", 4},
     {"farming:onion_", 5},
-    {"farming:pea_", 5},
+    {"farming:peas_", 5},
     {"farming:peanut_", 4},
     {"farming:potato_", 5},
     {"farming:raspberry_", 4},
