@@ -42,3 +42,12 @@ minetest.register_craft({
 	output = "farming:potato_baked",
 	recipe = "farming:potato"
 })
+
+minetest.override_item("farming:potato_5", {
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.35, -0.5, -0.35, 0.35, 0.0, 0.35},
+        },
+    },
+})

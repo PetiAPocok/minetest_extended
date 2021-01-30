@@ -23,3 +23,12 @@ minetest.registered_items["farming:peas"].groups.sackable = 1
 minetest.override_item("farming:peas", {
     on_use = minetest.item_eat(0.5),
 })
+
+minetest.override_item("farming:peas_5", {
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.4, -0.5, -0.4, 0.4, 0.5, 0.4},
+        },
+    },
+})

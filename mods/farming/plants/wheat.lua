@@ -32,3 +32,12 @@ minetest.register_craft({
 		{"farming:straw"},
 	}
 })
+
+minetest.override_item("farming:wheat_8", {
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+        },
+    },
+})

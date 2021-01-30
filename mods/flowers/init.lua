@@ -254,7 +254,7 @@ minetest.register_node("flowers:puffball", {
 	on_use = minetest.item_eat(1),
 	selection_box = {
 		type = "fixed",
-		fixed = {-3 / 16, -0.5, -3 / 16, 3 / 16, -2 / 16, 3 / 16},
+		fixed = {-0.3, -0.5, -0.3, 0.3, 0.4, 0.3},
 	}
 })
 
@@ -273,7 +273,7 @@ minetest.register_node("flowers:shaggy_inkcap", {
 	on_use = minetest.item_eat(1),
 	selection_box = {
 		type = "fixed",
-		fixed = {-3 / 16, -0.5, -3 / 16, 3 / 16, -2 / 16, 3 / 16},
+		fixed = {-0.25, -0.5, -0.25, 0.25, 0.3, 0.25},
 	}
 })
 

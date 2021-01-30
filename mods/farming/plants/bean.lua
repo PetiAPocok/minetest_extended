@@ -29,3 +29,13 @@ minetest.register_craft({
 })
 
 minetest.registered_items["farming:bean"].groups.sackable = 1
+
+
+minetest.override_item("farming:bean_6", {
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.3, -0.5, -0.3, 0.3, 1.0, 0.3},
+        },
+    },
+})

@@ -17,3 +17,12 @@ minetest.override_item("farming:soybean_5", {
 })
 
 minetest.registered_items["farming:soybean"].groups.sackable = 1
+
+minetest.override_item("farming:soybean_5", {
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.2, -0.5, -0.2, 0.2, 0.3, 0.2},
+        },
+    },
+})

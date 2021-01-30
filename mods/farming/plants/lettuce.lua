@@ -29,3 +29,12 @@ minetest.register_craft({
 minetest.override_item("farming:lettuce", {
     on_use = minetest.item_eat(2),
 })
+
+minetest.override_item("farming:lettuce_4", {
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.4, -0.5, -0.4, 0.4, 0.2, 0.4},
+        },
+    },
+})
