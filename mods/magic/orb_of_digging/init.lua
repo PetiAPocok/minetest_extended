@@ -87,7 +87,10 @@ minetest.register_entity("orb_of_digging:digging_ball", {
         node_name == "default:dirt_with_dry_grass" or
         node_name == "default:gravel" or
         node_name == "default:silver_sand" or
-        node_name == "default:sand" then
+        node_name == "default:sand" or
+        node_name == "default:snowblock" or
+        node_name == "default:cave_ice"
+        then
             minetest.dig_node(pos)
         end
 
