@@ -20,6 +20,21 @@ minetest.register_node("mex_moreblocks:andesite", {
     sounds = default.node_sound_stone_defaults(),
 })
 
+minetest.register_node("mex_moreblocks:andesite_block", {
+    description = "Andesite Block",
+    tiles = {"mex_moreblocks_andesite_block.png"},
+    groups = {cracky=2},
+    sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+    output = "mex_moreblocks:andesite_block 4",
+    recipe = {
+        {"default:andesite","default:andesite"},
+        {"default:andesite","farming:andesite"},
+    }
+})
+
 minetest.register_node("mex_moreblocks:basalt_cobble", {
     description = "Basalt Cobble",
     tiles = {"mex_moreblocks_basalt_cobble.png"},
@@ -183,11 +198,41 @@ minetest.register_node("mex_moreblocks:diorite", {
     sounds = default.node_sound_stone_defaults(),
 })
 
+minetest.register_node("mex_moreblocks:diorite_block", {
+    description = "Diorite Block",
+    tiles = {"mex_moreblocks_diorite_block.png"},
+    groups = {cracky=2},
+    sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+    output = "mex_moreblocks:diorite_block 4",
+    recipe = {
+        {"default:diorite","default:diorite"},
+        {"default:diorite","farming:diorite"},
+    }
+})
+
 minetest.register_node("mex_moreblocks:granite", {
     description = "Granite",
     tiles = {"mex_moreblocks_granite.png"},
     groups = {cracky=2},
     sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("mex_moreblocks:granite_block", {
+    description = "Granite Block",
+    tiles = {"mex_moreblocks_granite_block.png"},
+    groups = {cracky=2},
+    sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+    output = "mex_moreblocks:granite_block 4",
+    recipe = {
+        {"default:granite","default:granite"},
+        {"default:granite","farming:granite"},
+    }
 })
 
 minetest.register_node("mex_moreblocks:marble", {
