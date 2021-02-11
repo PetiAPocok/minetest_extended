@@ -150,6 +150,7 @@ function frame.register(name)
                 }
             else
                 minetest.log("warning", "Frames: Node without tiles: " .. dump(name))
+                return
             end
 		end
 	end
