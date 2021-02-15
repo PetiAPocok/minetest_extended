@@ -6,10 +6,11 @@ The extended default game bundled in the Minetest engine.
 
 This game mod is made to be an upgraded version of the original game, extended with many functions, packed into one complete game mode to be as easy to install as possible.
 
-You can grow plants to make foods to keep you alive.  
-Below 10 Satiation you won't be able to run. ("Special" key (default: E))
-Below 10 Satiation you will start to lose health till you die.
-
+You can grow plants and keep livestock to make foods and save you from starvation.    
+Below 10 satiation you will start to lose health till you die and you won't be able to run. ("Special" key (default: E))  
+You can brew potions to improve your stats or to give you temporary buffs.  
+Craft magic items to make your life easier.  
+Explore the Underworld and the Floating Islands.  
 
 ## Installation
 
@@ -125,6 +126,10 @@ Made for and tested on Minetest 5.3.0.
 - Created mobs_nether.
 - Added tsm_pyramids ([repo](https://repo.or.cz/minetest_pyramids/tsm_pyramids.git))
 - Created mese_miner.
+- Created interdimensional_altars.
+- Created recycler.
+- Created floating_islands.
+- Added mobs_npc (modified)([NotABug](https://notabug.org/TenPlus1/mobs_npc))
 
 ## Licensing
 

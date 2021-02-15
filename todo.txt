@@ -1,5 +1,38 @@
 --------------------------------------------------------------------------------------
-Polished andesite!
+Mapgen
+    Repülő szigetek
+        npc falu
+            A kis házak ajtaja rossz helyen van.
+                szerintem az javíthatatlan
+
+    A lootos ládákban written bookok random storykkal
+        hogy kell a pokolba eljutni
+        hogy kell állatot tame-lni
+        mag szerzés és farmolás
+        repülő szigetek
+        NPC-k hogy működnek
+
+    Trader-nek több áru
+        exotic seeds, ami nem a sima erdős fűből és a sima földből esik.
+        exotic sapling-ok, ami nem sima almafa, nyár vagy fenyő, hanem akácia vagy jungle.
+
+
+
+Új ágyak
+    Legyen NPC ágy ami spawnol 1 NPC-t. Megjegyzi(?). Ha ő meghalt spawnol újat.
+
+    Az NPC ágy percenként megszámolja x sugarú körben az NPC ágyakat és az NPC-ket,
+    ha kevesebb az NPC mint ágy, akkor lerak egy NPC-t.
+
+    hinta ágy cölöpök között
+
+
+------------------------------------------1.2--------------------------------------------
+
+hőlégballon
+    fireorb a craftba
+    mana kell az emelkedéshez
+    LASSAN ereszkedik
 
 Nether
     bugyrok?
@@ -8,37 +41,30 @@ Nether
         demon
             bat wing as loot?
 
-        Csontváznak új random hang
+Varázslatok, íjak, csúzli nézzék a pvp-t!!!!
+    Nézik?
+
+világító gombák
+    elhagyatott házakban?
+    barlangok?
+    boszorkány lak?
+
+festmény: halálfejen egy haláll fejen
+
+TARDIS
+    Nem is TARDIS. D Gray Man szerű Noah's Ark
+        Mozgatható entity ami kinéz valahogy
+        jobbkattal bele lehet szálni
+        {x = 42 000, y = 42 000, z = 42 000}-nél lenne a belseje.
+        szobákat csináli bele, meg szoba kezelőt 
+        Körbevenni "dimensional wall"-al
+            nem lehet kiütni
 
 
+Kezdő felszerelés?
+    Kő csákány, kard, néhány kenyér?
 
-Mapgen
-    Elhagyatott házak
-        Csinálni sajátot
-            word edit-el schematic-okat lerakni?
-
-    npc falu
-        Csinálni sajátot
-            word edit-el schematic-okat lerakni?
-
-    icy biome-ba iglu
-
-    A lootos ládákban written bookok random storykkal
-
-    Terület finder szarja le a fákat, füveket, virágokat.
-    World edit-nek nincs ilyenje? nincs...
-
-
-
-
-    új screenshot
-    legyen rajta asztal rajta alchemy genyó,
-    falon festmény,
-    ablakon kinézve egy vegyes farm (elkerítve),
-    melletta állatok karámban
-
-
-------------------------------------------1.2--------------------------------------------
+Bal kéz használat?
 
 totem holder to summon the spirit around it
 
@@ -47,9 +73,6 @@ spirit tether to level it up?
 
 Szörny horda idéző?
 
-Repülő szigetek.
-
-Varázslatok nézzék a pvp-t!!!!
 
 japan mod
     paper panel
@@ -200,11 +223,6 @@ mesecon mob detector a mobok érzékelésére?
 
 a stone monster az mitől stone?
 
-interdimensional chest
-    register a deatached inventory and write it mod storage
-    all the interdimensional chests are connected to the same storage
-    craft?
-
 A korall az mire jó?
     Többnyire dekor
 
@@ -299,6 +317,9 @@ mobok:
             Darkling minion?
 
     npc-k
+        trade
+        quest-s?
+            bring some stick?
 
     Polipoid a vízbe.
 
