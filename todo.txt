@@ -5,6 +5,8 @@ Mapgen
             A kis házak ajtaja rossz helyen van.
                 szerintem az javíthatatlan
 
+            A modellekben kicserélni az ágyakat
+
     A lootos ládákban written bookok random storykkal
         hogy kell a pokolba eljutni
         hogy kell állatot tame-lni
@@ -18,16 +20,12 @@ Mapgen
 
 
 
-Új ágyak
-    Legyen NPC ágy ami spawnol 1 NPC-t. Megjegyzi(?). Ha ő meghalt spawnol újat.
-
-    Az NPC ágy percenként megszámolja x sugarú körben az NPC ágyakat és az NPC-ket,
-    ha kevesebb az NPC mint ágy, akkor lerak egy NPC-t.
-
-    hinta ágy cölöpök között
-
 
 ------------------------------------------1.2--------------------------------------------
+
+Új ágyak
+    nyugágy cölöpök között
+    emeletes ágy
 
 hőlégballon
     fireorb a craftba
@@ -56,7 +54,7 @@ TARDIS
         Mozgatható entity ami kinéz valahogy
         jobbkattal bele lehet szálni
         {x = 42 000, y = 42 000, z = 42 000}-nél lenne a belseje.
-        szobákat csináli bele, meg szoba kezelőt 
+        szobákat csináli bele, meg szoba kezelőt
         Körbevenni "dimensional wall"-al
             nem lehet kiütni
 
