@@ -13,7 +13,7 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 if mg_name ~= "singlenode" then
     minetest.register_on_generated(function(minp, maxp, seed)
         if minp.y >= island_height then
-            if math.random(1, 4) == 2 then
+            if math.random(1, 400) == 42 then
                 local pos = table.copy(minp)
 
                 for i = 1, 7 do
@@ -58,12 +58,16 @@ if mg_name ~= "singlenode" then
                         --Small houses
                         if i == 1 and j == 17 or i == 7 and j == 17 then
                             pos.x = pos.x - 1
-                            minetest.place_schematic(pos, village_house_small_schematic_path, "0", nil, true)
+                            minetest.place_schematic(pos, village_house_small_schematic_path, "180", nil, true)
+                            local replaceable_node_pos = minetest.find_node_near(pos, 10, "mex_morebeds:npc_bed")
+                            minetest.set_node(replaceable_node_pos, {name = "mex_morebeds:npc_bed", param2 = 0})
                             pos.x = pos.x + 1
                         elseif i == 1 and j == 8 or i == 7 and j == 8 then
                             pos.x = pos.x - 1
-                           minetest.place_schematic(pos, village_house_small_schematic_path, "180", nil, true)
-                           pos.x = pos.x + 1
+                            minetest.place_schematic(pos, village_house_small_schematic_path, "0", nil, true)
+                            local replaceable_node_pos = minetest.find_node_near(pos, 10, "mex_morebeds:npc_bed")
+                            minetest.set_node(replaceable_node_pos, {name = "mex_morebeds:npc_bed", param2 = 2})
+                            pos.x = pos.x + 1
                         end
 
                         --Farms
@@ -87,16 +91,22 @@ if mg_name ~= "singlenode" then
                         --Kitchen
                         if i == 17 and j == 1 then
                             pos.z = pos.z - 3
-                            minetest.place_schematic(pos, village_kitchen_schematic_path, "180", nil, true)
+                            minetest.place_schematic(pos, village_kitchen_schematic_path, "0", nil, true)
 
-                            local replaceable_node_pos = minetest.find_node_near(pos, 10, "default:steelblock")
+                            replaceable_node_pos = minetest.find_node_near(pos, 20, "default:steelblock")
                             minetest.set_node(replaceable_node_pos, {name = "default:furnace", param2 = 2})
 
-                            local replaceable_node_pos = minetest.find_node_near(pos, 10, "default:goldblock")
+                            replaceable_node_pos = minetest.find_node_near(pos, 20, "default:goldblock")
                             minetest.set_node(replaceable_node_pos, {name = "alchemy:alchemy_set", param2 = 2})
 
-                            local replaceable_node_pos = minetest.find_node_near(pos, 10, "default:tinblock")
+                            replaceable_node_pos = minetest.find_node_near(pos, 20, "default:tinblock")
                             minetest.set_node(replaceable_node_pos, {name = "farming:packer"})
+
+                            replaceable_node_pos = minetest.find_node_near(pos, 20, "doors:door_aspen_6_a")
+                            replaceable_node_pos.z = replaceable_node_pos.z - 1
+                            if minetest.get_node(replaceable_node_pos).name == "doors:door_aspen_6_c" then
+                                minetest.set_node(replaceable_node_pos, {name = "doors:door_aspen_6_b", param2 = 1})
+                            end
 
                             pos.z = pos.z + 3
                         end
