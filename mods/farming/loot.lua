@@ -58,7 +58,6 @@ end
 
 -- Grows in jungle
 table.insert(minetest.registered_items["default:junglegrass"].drop.items, { rarity = 20, items = {"farming:seed_ananas"} })
-table.insert(minetest.registered_items["default:junglegrass"].drop.items, { rarity = 20, items = {"farming:seed_chili"} })
 table.insert(minetest.registered_items["default:junglegrass"].drop.items, { rarity = 20, items = {"farming:seed_cotton"} })
 table.insert(minetest.registered_items["default:junglegrass"].drop.items, { rarity = 20, items = {"farming:seed_cocoa"} })
 table.insert(minetest.registered_items["default:junglegrass"].drop.items, { rarity = 20, items = {"farming:seed_rice"} })
