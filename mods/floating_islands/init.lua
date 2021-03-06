@@ -2,22 +2,6 @@ local mod_path = minetest.get_modpath(minetest.get_current_modname())
 
 floating_islands = {}
 
--- Biome finder
-if false then
-    local timer = 0
-    minetest.register_globalstep(function(dtime)
-        timer = timer + dtime
-        if timer > 2 then
-            timer = 0.
-            local pos = minetest.get_player_by_name("singleplayer"):get_pos()
-            -- minetest.log(dump(pos))
-            minetest.log(dump(minetest.get_biome_name(minetest.get_biome_data(pos).biome)))
-        end
-
-    end)
-
-end
-
 floating_islands.rectangular_layer = function(pos, width, length, node)
     local width_floor = -math.floor(width / 2)
     local width_ceil = math.floor(width / 2)
