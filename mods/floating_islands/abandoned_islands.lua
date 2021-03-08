@@ -4,7 +4,7 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 
 if mg_name ~= "singlenode" then
     minetest.register_on_generated(function(minp, maxp, seed)
-        if minp.y >= island_height then
+        if minp.y >= island_height and maxp.y < 10000 then
             if math.random(1, 250) == 42 then
                 local pos = table.copy(minp)
                 local layer_size = 3
