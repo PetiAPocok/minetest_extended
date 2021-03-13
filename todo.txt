@@ -1,31 +1,43 @@
 --------------------------------------------------------------------------------------
 Mapgen
-    Repülő szigetek
-        npc falu
-            A kis házak ajtaja rossz helyen van.
-                szerintem az javíthatatlan
-
-            A modellekben kicserélni az ágyakat
-
     A lootos ládákban written bookok random storykkal
-        hogy kell a pokolba eljutni
-        hogy kell állatot tame-lni
-        mag szerzés és farmolás
-        repülő szigetek
-        NPC-k hogy működnek
 
-    Trader-nek több áru
-        exotic seeds, ami nem a sima erdős fűből és a sima földből esik.
-        exotic sapling-ok, ami nem sima almafa, nyár vagy fenyő, hanem akácia vagy jungle.
-
-
-
+        nedves szőnyeg fejezetek
 
 ------------------------------------------1.2--------------------------------------------
+singsing chair(constatine)
+    uses mana till you use it
+    you can fly around fast to discover the terrain(fly, fast, noclip), but yo can't interact with anyting
+
+Minigame altars:
+    Swap the things to get =>3 next to eachother
+    Sudoku
+    Thalos-os tetris
+    move the parts of the labyrnth so the mouse can escape
+    Mese block hajtja a játékgépeket. Nincs craft-ja. Csak található.
+    A játékgépek lehetnének a dungeon-okba, village szigetre kocsma és abba bele
+    Memória játék.
+    Fentről esnek a dolgok a "gyémántot" elkapni a tnt-t kikerülni.
+    Nunrun klón
+    jetpack joyride klón
+    doodle jump klón
+    Parkour map
+        kiteleportál 30000 kívül és ott "generál" egy map-ot.
+        Tetején item frame-be jutalom.
+        Ha leesel, alul méz és vissza teleportál haza.
+        (Kiütöd a loot-ot, leugrassz haza jutsz.)
+        A mappot törli?
+        A mini game block megsemmisíti önmagát?
+        Közelség érzékelő tntvel mint akadály?
+
+Betegségek, fertőzések. Szörnyektől kapod, lassabb lleszel, az élet &mana regenerációd is, gyorsabban fogy a kaja.
+
+Eső, hó, villám?
 
 Új ágyak
     nyugágy cölöpök között
     emeletes ágy
+    francia ágy
 
 hőlégballon
     fireorb a craftba
@@ -49,18 +61,23 @@ világító gombák
 
 festmény: halálfejen egy haláll fejen
 
-TARDIS
-    Nem is TARDIS. D Gray Man szerű Noah's Ark
-        Mozgatható entity ami kinéz valahogy
-        jobbkattal bele lehet szálni
-        {x = 42 000, y = 42 000, z = 42 000}-nél lenne a belseje.
-        szobákat csináli bele, meg szoba kezelőt
-        Körbevenni "dimensional wall"-al
-            nem lehet kiütni
-
-
-Kezdő felszerelés?
-    Kő csákány, kard, néhány kenyér?
+The Chariot of Mex
+    TARDIS/D Gray Man szerű Noah's Ark
+    Egy 3x3x3 blokkos node.
+    Jobbkattal beszállsz
+    {x = 42 000, y = 42 000, z = 42 000}-nél lenne a belseje.
+        Körbevenni "dimensional wall"-al amit nem lehet kiütni
+    szobákat csináli bele, meg szoba kezelőt
+    Vezérlő szoba
+        Kiengeded a féket és a node entity-vé alakul.
+            (Ha mindig entyty lenne eltűnne egy idő után, vagy "clearobjects full"-nál)
+            Megoldható?
+        Beülsz a székbe és az entity-ből nézel ki.
+            Megoldható?
+        Gyorsan mozog az entity. Shift-tel kurva gyorsan.
+        Koordináta kijelzés és megadás
+    Vidore az üzemanyaga
+    Az Underworld-be lenne leparkolva
 
 Bal kéz használat?
 
@@ -254,6 +271,8 @@ Világító tengeri növények
     tengeri ugorka?
 
 Új kaják
+    krumpliból vodka
+    kaktusz lé
     pörkölt földimogyoró
 
     Kész ételek (körett + sült hús)                                                                 KELL
@@ -288,6 +307,7 @@ horgászat
 
 
 mobok:
+    medve
     körömgomba szörny? ("Heló! Ásóka vagyok!") https://www.youtube.com/watch?v=GF3ygD7LuiM
     urbán papa (mob)
     thaitus (monster)
@@ -313,11 +333,6 @@ mobok:
 
         ring of darkness-t lehet csinálni a demon part-ból, shadow aurát ad és + sebzést a demon orbnak...
             Darkling minion?
-
-    npc-k
-        trade
-        quest-s?
-            bring some stick?
 
     Polipoid a vízbe.
 
