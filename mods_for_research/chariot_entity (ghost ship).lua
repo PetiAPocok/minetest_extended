@@ -49,12 +49,15 @@ minetest.register_entity("mex_chariot:chariot_entity", {
             })
         end
 
+        --Workaround for entity removal
         if mex_chariot_ms:get_string("brake") == "Pulled" then
             self.object:remove()
         end
     end,
 
     on_punch = function(self, puncher, time_from_last_punch, tool_capabilities, dir, damage)
+        minetest.log(dump(self._driver))
+        minetest.log(dump(puncher:get_player_name()))
         if self._driver == puncher:get_player_name() then
             puncher:set_detach()
             player_api.player_attached[puncher:get_player_name()] = nil

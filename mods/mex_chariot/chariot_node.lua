@@ -51,7 +51,15 @@ minetest.register_node("mex_chariot:chariot_node", {
     end,
 
     on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
-        clicker:set_pos({x=13, y=20002, z=12})
+        if mex_chariot_ms:get_string("lock") == "Unlocked" then
+
+        else
+            minetest.chat_send_player(clicker:get_player_name(), "private chariot")
+        end
+
+        if mex_chariot_ms:get_string("brake") == "Pulled" then
+            clicker:set_pos({x=13, y=20002, z=12})
+        end
     end,
 })
 
