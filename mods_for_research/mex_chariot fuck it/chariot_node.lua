@@ -28,22 +28,28 @@ minetest.register_node("mex_chariot:chariot_node", {
             minetest.place_schematic({x=0, y=20000, z=0}, schematic_path, "0", nil, true)
 
             local generator_positions = {
-                {x=0, y=20003, z=11},
-                {x=4, y=20003, z=7},
-                {x=4, y=20003, z=15},
+                {x=0, y=20002, z=5},
+                {x=0, y=20002, z=9},
             }
             for i,v in ipairs(generator_positions) do
                 minetest.set_node(v, {name = "mex_chariot:generator"})
             end
 
             local lamp_positions = {
-                {x=1, y=20005, z=11},
-                {x=4, y=20005, z=8},
-                {x=4, y=20005, z=14},
-                {x=7, y=20005, z=11},
-                {x=13, y=20005, z=11},
-                {x=13, y=20005, z=3},
+                {x=7, y=20004, z=1},
+                {x=1, y=20004, z=7},
+                {x=13, y=20004, z=7},
+                {x=7, y=20004, z=13},
+                {x=10, y=20005, z=4},
+                {x=4, y=20005, z=4},
+                {x=4, y=20005, z=10},
+                {x=10, y=20005, z=10},
+                {x=9, y=20006, z=7},
+                {x=7, y=20006, z=5},
+                {x=5, y=20006, z=7},
+                {x=7, y=20006, z=9},
             }
+
             for i,v in ipairs(lamp_positions) do
                 minetest.set_node(v, {name = "mesecons_lightstone:lightstone_white_on"})
             end
@@ -51,15 +57,38 @@ minetest.register_node("mex_chariot:chariot_node", {
     end,
 
     on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
-        if mex_chariot_ms:get_string("lock") == "Unlocked" then
-
-        else
-            minetest.chat_send_player(clicker:get_player_name(), "private chariot")
-        end
-
         if mex_chariot_ms:get_string("brake") == "Pulled" then
-            clicker:set_pos({x=13, y=20002, z=12})
+            if mex_chariot_ms:get_string("lock") == "Locked" then
+                if clicker:get_player_name() == mex_chariot_ms:get_string("owner") or
+                   itemstack:get_name() == "mex_chariot:key" then
+                       clicker:set_pos({x=1, y=20001, z=7})
+                else
+                    minetest.chat_send_player(clicker:get_player_name(), "Locked chariot. Use key to enter.")
+                end
+            else
+                clicker:set_pos({x=1, y=20001, z=7})
+            end
+        else
+            minetest.chat_send_player(clicker:get_player_name(), "Chariot in motion. Pull break.")
         end
+    end,
+
+    on_timer = function(pos, elapsed)
+        local particle_pos = table.copy(pos)
+        particle_pos.x = particle_pos.x + math.random(-3, 3)
+        particle_pos.y = particle_pos.y + math.random(-3, 3)
+        particle_pos.z = particle_pos.z + math.random(-3, 3)
+
+        minetest.add_particle({
+            pos = particle_pos,
+            velocity = {x=0, y=4, z=0},
+            acceleration = {x=0, y=0, z=0},
+            expirationtime = 5,
+            size = 5,
+            texture = "orb_of_shadow_particle.png",
+            glow = 3
+        })
+        return true -- for repeat
     end,
 })
 

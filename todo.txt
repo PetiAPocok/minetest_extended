@@ -1,10 +1,16 @@
 --------------------------------------------------------------------------------------
+Nagy, többszemélyes szellem hajó
+
+    vigyen le manát az evezés
+
+
+------------------------------------------1.2--------------------------------------------
+
 Mapgen
     A lootos ládákban written bookok random storykkal
 
         nedves szőnyeg fejezetek
 
-------------------------------------------1.2--------------------------------------------
 singsing chair(constatine)
     uses mana till you use it
     you can fly around fast to discover the terrain(fly, fast, noclip), but yo can't interact with anyting
@@ -61,24 +67,6 @@ világító gombák
 
 festmény: halálfejen egy haláll fejen
 
-The Chariot of Mex
-    TARDIS/D Gray Man szerű Noah's Ark
-    Egy 3x3x3 blokkos node.
-    Jobbkattal beszállsz
-    {x = 42 000, y = 42 000, z = 42 000}-nél lenne a belseje.
-        Körbevenni "dimensional wall"-al amit nem lehet kiütni
-    szobákat csináli bele, meg szoba kezelőt
-    Vezérlő szoba
-        Kiengeded a féket és a node entity-vé alakul.
-            (Ha mindig entyty lenne eltűnne egy idő után, vagy "clearobjects full"-nál)
-            Megoldható?
-        Beülsz a székbe és az entity-ből nézel ki.
-            Megoldható?
-        Gyorsan mozog az entity. Shift-tel kurva gyorsan.
-        Koordináta kijelzés és megadás
-    Vidore az üzemanyaga
-    Az Underworld-be lenne leparkolva
-
 Bal kéz használat?
 
 totem holder to summon the spirit around it
@@ -94,17 +82,6 @@ japan mod
     sliding paper door
     katana
 
-Nagy, többszemélyes hajó
-    Nincs ilyen mod
-    inv_image: Ship in a bottle
-    vigyen le kaját az evezés
-
-    x x x
-    boat bottle boat
-    boat mese_chrystal boat
-
-    kijön a hajó az üvegből, meg visszamegy bele, liek starbound
-
 A cápa neked veti magát a parton...
 A halak kimásznak a vízből...
     Írtam bug report-ot
@@ -113,10 +90,10 @@ bútorok                    KELL
     Szekrény               KELL
         egy blokk
         kevesebb hely
-        ajtós / fiókos változat
-        Wooden shelf-nek növény hangja van ha ütöd
-
-    A könyves és üveges polc-ot leegyszerűsíteni polcra.
+        ajtós
+    Wooden shelf
+        ronda
+        növény hangja van ha ütöd
 
 Magic hangok?
 

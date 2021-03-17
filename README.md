@@ -132,6 +132,7 @@ Made for and tested on Minetest 5.3.0.
 - Added mobs_npc (modified)([NotABug](https://notabug.org/TenPlus1/mobs_npc))
 - Created mex_morebeds.
 - Created mex_tales.
+- Created mex_chariot.
 
 ## Licensing
 
