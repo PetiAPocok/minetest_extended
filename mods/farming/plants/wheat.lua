@@ -13,7 +13,7 @@ farming.register_plant("farming:wheat", {
 
 minetest.register_craft({
     type = "shapeless",
-    output = "farming:seed_wheat",
+    output = "farming:seed_wheat 5",
     recipe = {"farming:wheat"},
 })
 
