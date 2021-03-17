@@ -286,9 +286,9 @@ minetest.register_node("mex_moreblocks:lamp", {
 minetest.register_craft({
     output = "mex_moreblocks:lamp",
     recipe = {
-        {"group:stick","default:glass","group:stick"},
-        {"default:glass","default:torch","default:glass"},
-        {"group:stick","default:glass","group:stick"},
+        {"group:stick","xpanes:pane_flat","group:stick"},
+        {"xpanes:pane_flat","default:torch","xpanes:pane_flat"},
+        {"group:stick","xpanes:pane_flat","group:stick"},
     }
 })
 
