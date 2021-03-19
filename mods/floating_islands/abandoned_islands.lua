@@ -31,6 +31,14 @@ if mg_name ~= "singlenode" then
                 pos.z = pos.z - 1
                 --minetest.place_schematic(pos, schematic, rotation, replacements, force_placement, flags)
                 minetest.place_schematic(pos, schematic_path, "0", nil, true)
+
+                pos.x = pos.x + 5
+                pos.y = pos.y + 2
+                pos.z = pos.z + 6
+
+                if math.random(1, 50) == 42 then
+                    minetest.set_node(pos, {name = "frame:ghost_ship_ship_in_bottle", param2 = 4})
+                end
             end
         end
     end)
