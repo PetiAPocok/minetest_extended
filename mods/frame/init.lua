@@ -217,13 +217,12 @@ minetest.register_craft({
 local items_to_frame = {}
 
 for _, node in pairs(minetest.registered_items) do
-    if (minetest.get_item_group(node.name, "not_in_creative_inventory") == 0 and
-    node.drawtype ~= "airlike" and
+    if minetest.get_item_group(node.name, "not_in_creative_inventory") == 0 and
+    ((node.drawtype ~= "airlike" and
     node.drawtype ~= "nodebox" and
     node.drawtype ~= "mesh") or
-    ((node.drawtype == "nodebox" or
-    node.drawtype == "mesh") and
-    node.inventory_image ~= "") then
+    node.inventory_image ~= "") and
+    string.match(node.name, "mesecons") == nil then
         table.insert(items_to_frame, node.name)
     end
 end
