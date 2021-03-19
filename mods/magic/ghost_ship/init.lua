@@ -29,6 +29,7 @@ minetest.register_entity("ghost_ship:ship", {
     mesh = "ghost_ship.obj",
     textures = {"ghost_ship_surface.png"},
     use_texture_alpha = true,
+    immortal = true,
     _owner = "",
     _passengers = {},
     _mana_timer = 0,
@@ -107,18 +108,29 @@ minetest.register_entity("ghost_ship:ship", {
             if player then
                 local ctrl = player:get_player_control()
                 local mana = 0
+                local mana_giver_id = 1
 
                 for i,v in ipairs(self._passengers) do
                     mana = mana + hbmana.get(v)
                 end
 
-                if (ctrl.up or ctrl.down) and mana >= 1 then
+                if (ctrl.up or ctrl.down) and mana >= 4 then
                     if self._mana_timer > 0.2 then
                         local mana_to_substract = 2
                         if ctrl.aux1 then
                             mana_to_substract = mana_to_substract + 2
                         end
-                        -- hbmana.set(self._driver, mana - mana_to_substract)
+
+                        if mana_giver_id > #self._passengers then
+                            mana_giver_id = 1
+                        end
+
+                        if hbmana.get(self._passengers[mana_giver_id]) >= 4 then
+                            hbmana.set(self._passengers[mana_giver_id], mana - mana_to_substract)
+                        else
+                            mana_giver_id = mana_giver_id + 1
+                        end
+
                         self._mana_timer = 0
                     end
 
@@ -132,11 +144,10 @@ minetest.register_entity("ghost_ship:ship", {
                         self._speed = self._speed - 0.5
                     end
                 else
-
                     if self._speed > 0.05 then
-                        self._speed = self._speed - 0.1
+                        self._speed = self._speed - 0.5
                     elseif self._speed < -0.05 then
-                        self._speed = self._speed + 0.1
+                        self._speed = self._speed + 0.5
                     else
                         self._speed = 0
                     end
@@ -151,9 +162,9 @@ minetest.register_entity("ghost_ship:ship", {
                 end
 
                 if ctrl.jump then
-                    elevation = 1
+                    elevation = 2
                 elseif ctrl.sneak then
-                    elevation = -1
+                    elevation = -2
                 else
                     elevation = 0
                 end
