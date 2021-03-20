@@ -8,7 +8,7 @@ farming.register_plant("farming:blueberry", {
 
 -- Override drop
 minetest.override_item("farming:blueberry_4", {
-    drop = "farming:blueberry 25"
+    drop = "farming:blueberry 15"
 })
 
 minetest.register_craft({
