@@ -47,7 +47,7 @@ minetest.register_node("gems_emerald:block", {
 })
 
 minetest.register_craft({
-	output = "emerald:block",
+	output = "gems_emerald:block",
 	recipe = {
 		{"gems_emerald:emerald", "gems_emerald:emerald"},
 		{"gems_emerald:emerald", "gems_emerald:emerald"}
