@@ -39,7 +39,6 @@ for i=1,5 do
     table.insert(minetest.registered_items["default:grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_blueberry"} })
     table.insert(minetest.registered_items["default:grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_carrot"} })
     table.insert(minetest.registered_items["default:grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_cucumber"} })
-    table.insert(minetest.registered_items["default:grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_grape"} })
     table.insert(minetest.registered_items["default:grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_lettuce"} })
     table.insert(minetest.registered_items["default:grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_strawberry"} })
     table.insert(minetest.registered_items["default:grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_soybean"} })
@@ -67,6 +66,7 @@ for i=1,3 do
     table.insert(minetest.registered_items["default:marram_grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_bean"} })
     table.insert(minetest.registered_items["default:marram_grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_hemp"} })
     table.insert(minetest.registered_items["default:marram_grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_huckleberry"} })
+    table.insert(minetest.registered_items["default:marram_grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_grape"} })
 end
 
 -- Grows in warm pine forests
