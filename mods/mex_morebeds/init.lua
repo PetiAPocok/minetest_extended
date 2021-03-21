@@ -103,7 +103,7 @@ minetest.register_node("mex_morebeds:aspen_bed", {
         },
     },
     paramtype2 = "facedir",
-    groups = {oddly_breakable_by_hand = 1},
+    groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 
     on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
         beds.on_rightclick(pos, clicker)
@@ -139,7 +139,7 @@ minetest.register_node("mex_morebeds:jungle_bed", {
         },
     },
     paramtype2 = "facedir",
-    groups = {oddly_breakable_by_hand = 1},
+    groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
 
     on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
         beds.on_rightclick(pos, clicker)
@@ -152,5 +152,39 @@ minetest.register_craft({
     recipe = {
         {"wool:black","wool:black","wool:black"},
         {"default:junglewood","default:junglewood","default:junglewood"},
+    }
+})
+
+minetest.register_node("mex_morebeds:hammock", {
+    description = "Hammock",
+    drawtype = "mesh",
+    mesh = "mex_morebeds_hammock.obj",
+    tiles = {"mex_morebeds_hammock.png"},
+    selection_box = {
+       type = "fixed",
+       fixed = {
+           {-1.5, -0.5, -0.5, 1.5, 0.4, 0.5},
+       },
+   },
+    collision_box = {
+        type = "fixed",
+        fixed = {
+            {-1.5, -0.5, -0.5, 1.5, 0.4, 0.5},
+        },
+    },
+    paramtype2 = "facedir",
+    groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, wood = 1},
+
+    on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+        beds.on_rightclick(pos, clicker)
+        return itemstack
+    end,
+})
+
+minetest.register_craft({
+    output = "mex_morebeds:hammock",
+    recipe = {
+        {"default:reed","wool:white","default:reed"},
+        {"default:reed","","default:reed"},
     }
 })
