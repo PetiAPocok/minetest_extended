@@ -90,37 +90,6 @@ minetest.register_craft({
 	recipe = "foods:pie_huckleberry_dough"
 })
 
--- Huckleberry Pie
-minetest.register_craftitem("foods:pie_huckleberry_dough", {
-	description = "Huckleberry Pie Dough",
-	inventory_image = "foods_pie_huckleberry_dough.png",
-    on_use = minetest.item_eat(-1)
-})
-
-minetest.register_craft({
-	type = "shapeless",
-	output = "foods:pie_huckleberry_dough",
-    recipe = {"farming:huckleberry", "farming:huckleberry", "foods:flour",
-    "mobs:egg", "foods:sugar", "mobs:bucket_milk", "mobs:butter"},
-	replacements = {
-		{"mobs:bucket_milk", "bucket:bucket_empty"},
-        {"foods:flour", "default:paper"}
-	}
-})
-
-minetest.register_craftitem("foods:pie_huckleberry", {
-    description = "Huckleberry Pie",
-    inventory_image = "foods_pie_huckleberry.png",
-    on_use = minetest.item_eat(7)
-})
-
-minetest.register_craft({
-	type = "cooking",
-	cooktime = 18,
-	output = "foods:pie_huckleberry",
-	recipe = "foods:pie_huckleberry_dough"
-})
-
 -- Raspberry Pie
 minetest.register_craftitem("foods:pie_raspberry_dough", {
     description = "Raspberry Pie Dough",
