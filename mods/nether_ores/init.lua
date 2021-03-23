@@ -31,8 +31,8 @@ minetest.register_ore({
 	ore = "nether_ores:vidore_ore",
 	wherein = "nether:rack",
 	clust_scarcity = 15*15*15,
-	clust_num_ores = 30,
-	clust_size = 4,
+	clust_num_ores = 5,
+	clust_size = 3,
 	y_min = -10000,
 	y_max = -5000,
 })
