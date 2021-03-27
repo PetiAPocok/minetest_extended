@@ -4,6 +4,11 @@
 
 ------------------------------------------1.2--------------------------------------------
 
+Huge something
+    Find the blueprint which tells you how to build the builder block?
+    Find the builder block?
+    Builder block that eats resources, if full then the huge something emerges
+
 Mapgen
     A lootos ládákban written bookok random storykkal
         Mucsism as religion

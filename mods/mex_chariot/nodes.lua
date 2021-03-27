@@ -111,41 +111,67 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 
                         generator_inv:remove_item("input", "nether_ores:vidore_lump 4")
 
-                        local new_pos = minetest.deserialize(mex_chariot_ms:get_string("destination_pos"))
-                        local dist_to_move = {
-                            x = new_pos.x - chariot_pos.x,
-                            y = new_pos.y - chariot_pos.y,
-                            z = new_pos.z - chariot_pos.z
-                        }
-                        local pos1 = table.copy(chariot_pos)
-                        local pos2 = {}
-                        pos2.x = pos1.x + 10
-                        pos2.y = pos1.y + 9
-                        pos2.z = pos1.z + 10
-                        for key, value in pairs(dist_to_move) do
-                            worldedit.move(pos1, pos2, key, value)
-                            pos1[key] = pos1[key] + value
-                            pos2[key] = pos2[key] + value
-                        end
-
-                        mex_chariot_ms:set_string("chariot_pos", minetest.serialize(new_pos))
-
-                        local objects_to_teleport = minetest.get_objects_inside_radius({
-                            x = chariot_pos.x + 5,
-                            y = chariot_pos.y + 3,
-                            z = chariot_pos.z + 5
-                        }, 6)
-
-                        new_pos.x = new_pos.x + 4
-                        new_pos.y = new_pos.y + 3
-                        new_pos.z = new_pos.z + 4
-
-                        for k,v in pairs(objects_to_teleport) do
-                            v:set_pos(new_pos)
-                        end
-
                         minetest.close_formspec(player_name, "chariot_navigation")
-                        mex_chariot_ms:set_string("driver", "")
+                        minetest.add_particlespawner({
+                            amount = 5000,
+                            time = 5,
+                            minpos = {
+                                x = chariot_pos.x - 1,
+                                y = chariot_pos.y - 2,
+                                z = chariot_pos.z - 1
+                            },
+                            maxpos = {
+                                x = chariot_pos.x + 10,
+                                y = chariot_pos.y + 5,
+                                z = chariot_pos.z + 10
+                            },
+                            minvel = {x=0, y=3, z=0},
+                            maxvel = {x=0, y=5, z=0},
+                            minacc = {x=0, y=0, z=0},
+                            maxacc = {x=0, y=0, z=0},
+                            minexptime = 1,
+                            maxexptime = 2,
+                            minsize = 1,
+                            maxsize = 5,
+                            texture = "orb_of_shadow_particle.png",
+                            glow = 3
+                        })
+                        minetest.after(3, function()
+                            local new_pos = minetest.deserialize(mex_chariot_ms:get_string("destination_pos"))
+                            local dist_to_move = {
+                                x = new_pos.x - chariot_pos.x,
+                                y = new_pos.y - chariot_pos.y,
+                                z = new_pos.z - chariot_pos.z
+                            }
+                            local pos1 = table.copy(chariot_pos)
+                            local pos2 = {}
+                            pos2.x = pos1.x + 10
+                            pos2.y = pos1.y + 9
+                            pos2.z = pos1.z + 10
+                            for key, value in pairs(dist_to_move) do
+                                worldedit.move(pos1, pos2, key, value)
+                                pos1[key] = pos1[key] + value
+                                pos2[key] = pos2[key] + value
+                            end
+
+                            mex_chariot_ms:set_string("chariot_pos", minetest.serialize(new_pos))
+
+                            local objects_to_teleport = minetest.get_objects_inside_radius({
+                                x = chariot_pos.x + 5,
+                                y = chariot_pos.y + 3,
+                                z = chariot_pos.z + 5
+                            }, 6)
+
+                            new_pos.x = new_pos.x + 4
+                            new_pos.y = new_pos.y + 3
+                            new_pos.z = new_pos.z + 4
+
+                            for k,v in pairs(objects_to_teleport) do
+                                v:set_pos(new_pos)
+                            end
+
+                            mex_chariot_ms:set_string("driver", "")
+                        end)
                     else
                         minetest.chat_send_player(player_name, "Missing destination.")
                     end
