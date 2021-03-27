@@ -14,4 +14,4 @@ minetest.register_on_leaveplayer(function(player)
 end)
 
 dofile(mp .. "/nodes.lua")
-dofile(mp .. "/chariot_node.lua")
+dofile(mp .. "/chariot.lua")

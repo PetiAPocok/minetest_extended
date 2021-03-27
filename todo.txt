@@ -1,14 +1,17 @@
 --------------------------------------------------------------------------------------
-Nagy, többszemélyes szellem hajó
 
-    vigyen le manát az evezés
 
 
 ------------------------------------------1.2--------------------------------------------
 
 Mapgen
     A lootos ládákban written bookok random storykkal
-
+        Mucsism as religion
+            the art of lieing and dumbfolding
+            eating enigmas
+            the unknowing of time
+            the loveing of sacks
+        The adventures of the mad plastic man
         nedves szőnyeg fejezetek
 
 singsing chair(constatine)
@@ -16,12 +19,14 @@ singsing chair(constatine)
     you can fly around fast to discover the terrain(fly, fast, noclip), but yo can't interact with anyting
 
 Minigame altars:
+    Mese block hajtja a játékgépeket. Nincs craft-ja.
+    Csak található.
+        dungeon-okba, village szigetre kocsma és abba bele
+        gold lump-ot ad
     Swap the things to get =>3 next to eachother
     Sudoku
     Thalos-os tetris
     move the parts of the labyrnth so the mouse can escape
-    Mese block hajtja a játékgépeket. Nincs craft-ja. Csak található.
-    A játékgépek lehetnének a dungeon-okba, village szigetre kocsma és abba bele
     Memória játék.
     Fentről esnek a dolgok a "gyémántot" elkapni a tnt-t kikerülni.
     Nunrun klón
@@ -41,7 +46,6 @@ Betegségek, fertőzések. Szörnyektől kapod, lassabb lleszel, az élet &mana 
 Eső, hó, villám?
 
 Új ágyak
-    nyugágy cölöpök között
     emeletes ágy
     francia ágy
 
@@ -69,13 +73,7 @@ festmény: halálfejen egy haláll fejen
 
 Bal kéz használat?
 
-totem holder to summon the spirit around it
-
-spirit tether to level it up?
-    feed with mese
-
 Szörny horda idéző?
-
 
 japan mod
     paper panel
@@ -149,6 +147,11 @@ Minions
     Kell a vadonban találni / csinálni totem engraving table-t és azal lehet spiritet bele rakni a totembe (adsz a talenak 42 vidore-t)
     Wolf spirit, Darkling, Nyúl, Macska
 
+    totem holder to summon the spirit around it
+
+    spirit tether to level it up?
+        feed with mese
+
 The poisoning foods not damaging till the given time
     de miért...?
 
@@ -157,8 +160,8 @@ mobs pathfinnding, ha a fejeden áll ne csak pörögjön
 mozdony
     szenet/fát eszik
     on_step ha a bármylik mozdony melletti entity vagon akkor increase its velocity
-A minecart belülről ne legyen üthető
-legyen hajtány
+    A minecart belülről ne legyen üthető
+    legyen hajtány
     2 személyes (ha ketten vannak rajta gyorsabban megy)
     vigyen le kaját
 
