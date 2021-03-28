@@ -270,6 +270,9 @@ minetest.register_node("mex_chariot:node", {
     tiles = {"mex_chariot_node.png"},
     groups = {not_in_creative_inventory = 1},
     diggable = false,
+    on_blast = function(pos, intensity)
+        -- Do nothing
+    end
 })
 
 minetest.register_node("mex_chariot:light", {
@@ -280,6 +283,9 @@ minetest.register_node("mex_chariot:light", {
     paramtype = "light",
     sunlight_propagates = true,
     light_source = minetest.LIGHT_MAX,
+    on_blast = function(pos, intensity)
+        -- Do nothing
+    end
 })
 
 minetest.register_node("mex_chariot:control_center", {
@@ -311,6 +317,10 @@ minetest.register_node("mex_chariot:control_center", {
             end
         end
     end,
+
+    on_blast = function(pos, intensity)
+        -- Do nothing
+    end
 })
 
 
@@ -358,6 +368,10 @@ minetest.register_node("mex_chariot:generator", {
             return 0
         end
     end,
+
+    on_blast = function(pos, intensity)
+        -- Do nothing
+    end
 })
 
 
@@ -400,6 +414,10 @@ minetest.register_node("mex_chariot:octadrive", {
             return 0
         end
     end,
+
+    on_blast = function(pos, intensity)
+        -- Do nothing
+    end
 })
 
 
