@@ -9,7 +9,7 @@ mobs:register_mob("mobs_nether:tortured_soul", {
 	hp_min = 4,
 	hp_max = 20,
 	armor = 100,
-	collisionbox = {-0.6, 0, -0.6, 0.6, 2.3, 0.6},
+	collisionbox = {-0.6, 0, -0.6, 0.6, 1.6, 0.6},
 	visual = "mesh",
 	mesh = "mobs_nether_tortured_soul.obj",
     visual_size = {x = 1, y = 1},
