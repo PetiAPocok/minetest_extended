@@ -41,9 +41,9 @@ minetest.register_node("mex_moreblocks:rope", {
                 pos.y = pos.y - 1
                 length = length - 1
             end
-        else
+        elseif minetest.get_node(pointed_thing.above).name == "air" then
             minetest.set_node(pointed_thing.above, {name = "mex_moreblocks:rope"})
-            
+
             if not minetest.is_creative_enabled(placer:get_player_name()) then
                 itemstack:take_item()
             end
