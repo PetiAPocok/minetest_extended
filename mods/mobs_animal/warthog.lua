@@ -72,6 +72,7 @@ if minetest.get_modpath("ethereal") then
 	spawn_by = {"flowers:mushroom_brown", "flowers:mushroom_red"}
 end
 
+if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "mobs_animal:pumba",
 	nodes = spawn_on,
@@ -83,7 +84,7 @@ mobs:spawn({
 	max_height = 200,
 	day_toggle = true,
 })
-
+end
 
 mobs:register_egg("mobs_animal:pumba", S("Warthog"), "mobs_pumba_inv.png")
 

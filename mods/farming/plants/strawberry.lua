@@ -21,3 +21,13 @@ minetest.register_craft({
 minetest.override_item("farming:strawberry", {
     on_use = minetest.item_eat(1),
 })
+
+
+minetest.override_item("farming:strawberry_4", {
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.4, -0.5, -0.4, 0.4, 0.0, 0.4},
+        },
+    },
+})

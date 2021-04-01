@@ -68,7 +68,7 @@ stepheight = 0.6,
 	end,
 })
 
-if minetest.get_modpath("ethereal") then
+if minetest.get_modpath("ethereal") and not mobs.custom_spawn_animal then
 
 	mobs:spawn({
 		name = "mobs_animal:panda",

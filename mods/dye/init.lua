@@ -103,6 +103,7 @@ local dye_recipes = {
 	{"white", "red", "pink"},
 	{"white", "dark_grey", "grey"},
 	{"white", "dark_green", "green"},
+    {"white", "orange", "yellow"},
 }
 
 for _, mix in pairs(dye_recipes) do

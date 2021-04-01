@@ -10,8 +10,8 @@ farming.register_plant("farming:hemp", {
 minetest.override_item("farming:hemp_8", {
 	drop = {
 		items = {
-			{ items = {"farming:seed_hemp"} },
-            { items = {"farming:hemp 5"} }
+			{ items = {"farming:seed_hemp 5"} },
+            { items = {"farming:hemp 15"} }
 		}
 	}
 })
@@ -20,4 +20,13 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "farming:string",
 	recipe = {"farming:hemp 5"}
+})
+
+minetest.override_item("farming:hemp_8", {
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.35, -0.5, -0.35, 0.35, 0.5, 0.35},
+        },
+    },
 })

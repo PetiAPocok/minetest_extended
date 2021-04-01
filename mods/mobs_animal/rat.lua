@@ -67,6 +67,7 @@ local function rat_spawn(self, pos)
 	self.health = 100
 end
 
+if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "mobs_animal:rat",
 	nodes = {"default:stone"},
@@ -77,6 +78,7 @@ mobs:spawn({
 	max_height = 0,
 --	on_spawn = rat_spawn,
 })
+end
 
 
 mobs:register_egg("mobs_animal:rat", S("Rat"), "mobs_rat_inv.png")

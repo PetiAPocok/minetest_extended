@@ -17,6 +17,13 @@ minetest.register_craft({
 	recipe = {"farming:rice"}
 })
 
-minetest.override_item("farming:rice", {
-    groups = { sackable = 1 }
+minetest.registered_items["farming:rice"].groups.sackable = 1
+
+minetest.override_item("farming:rice_8", {
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.4, -0.5, -0.4, 0.4, 0.5, 0.4},
+        },
+    },
 })

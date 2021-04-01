@@ -168,7 +168,6 @@ sofar (CC0 1.0):
 
 Neuromancer (CC BY-SA 3.0):
   default_cobble.png, based on texture by Brane praefect
-  default_mossycobble.png, based on texture by Brane praefect
   default_furnace_*.png
 
 Gambit (CC BY-SA 3.0):

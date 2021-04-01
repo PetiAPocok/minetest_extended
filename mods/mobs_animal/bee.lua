@@ -23,9 +23,7 @@ mobs:register_mob("mobs_animal:bee", {
 	},
 	walk_velocity = 1,
 	jump = true,
-	drops = {
-		{name = "mobs:honey", chance = 2, min = 1, max = 2},
-	},
+	drops = {},
 	water_damage = 1,
 	lava_damage = 2,
 	light_damage = 0,
@@ -46,16 +44,18 @@ mobs:register_mob("mobs_animal:bee", {
 --	end,
 })
 
+if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "mobs_animal:bee",
 	nodes = {"group:flower"},
 	min_light = 14,
 	interval = 60,
-	chance = 7000,
+	chance = 1000,
 	min_height = 3,
 	max_height = 200,
 	day_toggle = true,
 })
+end
 
 mobs:register_egg("mobs_animal:bee", S("Bee"), "mobs_bee_inv.png")
 
@@ -123,13 +123,12 @@ minetest.register_node(":mobs:beehive", {
 		return stack:get_count()
 	end,
 
-	can_dig = function(pos,player)
-
-		local meta = minetest.get_meta(pos)
-
-		-- only dig beehive if no honey inside
-		return meta:get_inventory():is_empty("beehive")
-	end,
+    on_destruct = function(pos)
+        local drop = minetest.get_meta(pos):get_inventory():get_stack("beehive", 1):to_string()
+        if drop ~= "" then
+            minetest.add_item(pos, drop)
+        end
+    end
 
 })
 

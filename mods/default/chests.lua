@@ -99,12 +99,17 @@ function default.chest.register_chest(prefixed_name, d)
 			meta:set_string("owner", placer:get_player_name() or "")
 			meta:set_string("infotext", S("Locked Chest (owned by @1)", meta:get_string("owner")))
 		end
-		def.can_dig = function(pos,player)
-			local meta = minetest.get_meta(pos);
-			local inv = meta:get_inventory()
-			return inv:is_empty("main") and
-					default.can_interact_with_node(player, pos)
-		end
+        def.on_destruct = function(pos)
+            local drop = ""
+            local temp = {}
+
+            default.get_inventory_drops(pos, "main", temp)
+
+            for i,v in ipairs(temp) do
+                drop = v.name .. " " .. v.count
+                minetest.add_item(pos, drop)
+            end
+        end
 		def.allow_metadata_inventory_move = function(pos, from_list, from_index,
 				to_list, to_index, count, player)
 			if not default.can_interact_with_node(player, pos) then
@@ -194,11 +199,17 @@ function default.chest.register_chest(prefixed_name, d)
 			local inv = meta:get_inventory()
 			inv:set_size("main", 8*4)
 		end
-		def.can_dig = function(pos,player)
-			local meta = minetest.get_meta(pos);
-			local inv = meta:get_inventory()
-			return inv:is_empty("main")
-		end
+        def.on_destruct = function(pos)
+            local drop = ""
+            local temp = {}
+
+            default.get_inventory_drops(pos, "main", temp)
+
+            for i,v in ipairs(temp) do
+                drop = v.name .. " " .. v.count
+                minetest.add_item(pos, drop)
+            end
+        end
 		def.on_rightclick = function(pos, node, clicker)
 			minetest.sound_play(def.sound_open, {gain = 0.3, pos = pos,
 					max_hear_distance = 10}, true)

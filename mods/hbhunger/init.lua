@@ -226,16 +226,18 @@ minetest.register_globalstep(function(dtime)
             if h > hl and hp > 0 and player:get_breath() > 0 then
                 player:set_hp(hp + 1)
             -- or damage player by 1 hp if satiation is below 1
-            elseif h < 1 and hp - 1 >= 0 then
+        elseif h < 0.05 and hp - 1 >= 0 then
                 player:set_hp(hp - 1)
             end
 
             -- lower satiation by 1 point after xx seconds
             if timer1 > hbhunger.hunger_tick then
-                if h > 0 then
+                if h - 1 >= 0 then
                     hbhunger.players[name].hunger = h - 1
-                    timer1 = 0
+                elseif h - 0.2 >= 0 then
+                    hbhunger.players[name].hunger = h - 0.2
                 end
+                timer1 = 0
             end
 
             -- Determine if the player is walking
@@ -259,7 +261,7 @@ minetest.register_on_placenode(function(pos, oldnode, player, ext)
 end)
 
 minetest.register_on_dignode(function(pos, oldnode, player, ext)
-    if player then
+    if player and player:is_player() then
         take_hunger(player:get_player_name(), hbhunger.exhaust_dig)
     end
 end)

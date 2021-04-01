@@ -255,7 +255,7 @@ if minetest.get_modpath("doors") then
 	})
 
 	minetest.register_craft({
-		output = "xpanes:trapdoor_steel_bar",
+		output = "xpanes:trapdoor_steel_bar 2",
 		recipe = {
 			{"xpanes:bar_flat", "xpanes:bar_flat"},
 			{"xpanes:bar_flat", "xpanes:bar_flat"},

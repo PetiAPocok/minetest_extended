@@ -1,0 +1,6 @@
+Most of the code comes from cx384's inventorybags (https://github.com/cx384/inventorybags) (GNU GPLv3)
+What PetiAPocok rearranged and modified (GNU GPLv3)
+
+Textures: PetiAPocok (CC BY-SA 3.0)
+
+Sound: outroelison (CC0 1.0) (http://www.freesound.org/people/outroelison/sounds/150950/) (split)

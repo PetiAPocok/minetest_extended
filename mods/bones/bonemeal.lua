@@ -48,15 +48,26 @@ local saplings = {
 }
 
 -- helper tables ( "" denotes a blank item )
-local green_grass = {
-	"default:grass_2", "default:grass_3", "default:grass_4",
-	"default:grass_5", "", ""
+local dry_grass = {
+    "default:dry_grass_1", "default:dry_grass_2", "default:dry_grass_3", "default:dry_grass_4", "default:dry_grass_5", ""
 }
 
-local dry_grass = {
-	"default:dry_grass_2", "default:dry_grass_3", "default:dry_grass_4",
-	"default:dry_grass_5", "", ""
+local fern = {
+	"default:fern_1", "default:fern_2", "default:fern_3", "", "", ""
 }
+
+local green_grass = {
+	"default:grass_1", "default:grass_2", "default:grass_3", "default:grass_4", "default:grass_5", ""
+}
+
+local marram_grass = {
+	"default:marram_grass_1", "default:marram_grass_2", "default:marram_grass_3", "", "", ""
+}
+
+local mushrooms = {
+	"flowers:mushroom_red", "flowers:mushroom_brown", "flowers:puffball", "flowers:shaggy_inkcap", "", ""
+}
+
 
 -- add all in-game flowers except waterlily
 local flowers = {}
@@ -68,21 +79,16 @@ for node, def in pairs(minetest.registered_nodes) do
 	end
 end
 
--- add additional bakedclay flowers if enabled
-if minetest.get_modpath("bakedclay") then
-	flowers[#flowers + 1] = "bakedclay:delphinium"
-	flowers[#flowers + 1] = "bakedclay:thistle"
-	flowers[#flowers + 1] = "bakedclay:lazarus"
-	flowers[#flowers + 1] = "bakedclay:mannagrass"
-	flowers[#flowers + 1] = ""
-end
-
 -- default biomes deco
 local deco = {
-	{"default:dirt_with_dry_grass", dry_grass, flowers},
-	{"default:sand", {}, {"default:dry_shrub", "", "", ""} },
-	{"default:desert_sand", {}, {"default:dry_shrub", "", "", ""} },
-	{"default:silver_sand", {}, {"default:dry_shrub", "", "", ""} },
+    {"default:dirt_with_coniferous_litter", fern, mushrooms},
+    {"default:dirt_with_dry_grass", dry_grass, {}},
+    {"default:dirt_with_rainforest_litter", {"default:junglegrass","","",""}, {}},
+    {"default:dirt_with_snow", {}, {}},
+    {"default:desert_sand", {}, {"default:dry_shrub", "", "", ""}},
+    {"default:dry_dirt_with_dry_grass", dry_grass, {}},
+	{"default:sand", marram_grass, {}},
+	{"default:silver_sand", {}, {"default:dry_shrub", "", "", ""}},
 }
 
 

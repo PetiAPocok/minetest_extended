@@ -1,4 +1,4 @@
-minetest.register_craftitem("orb_of_fire:orb_of_fire", {
+minetest.register_tool("orb_of_fire:orb_of_fire", {
     description = "Orb of Fire\nMana: 15",
     inventory_image = "orb_of_fire_orb.png",
     on_use = function(itemstack, player, pointed_thing)
@@ -79,16 +79,26 @@ minetest.register_entity("orb_of_fire:fire_ball", {
                 z = pos.z - 1
             }
 
-            if minetest.get_node(node_above_pos).name == "air" then
-                minetest.place_node(node_above_pos, {name="fire:basic_flame"})
+            if minetest.get_node(pos).name == "default:basic_flame" then
+                --Do nothing!
+            elseif minetest.get_node(pos).name == "default:ice" or minetest.get_node(pos).name == "default:snowblock" then
+                minetest.set_node(pos, {name="default:water_source"})
+            elseif minetest.get_node(pos).name == "default:snow" or
+            minetest.get_node(pos).name == "default:water_source" or
+            minetest.get_node(pos).name == "default:water_flowing" or
+            minetest.get_node(pos).name == "default:river_water_source" or
+            minetest.get_node(pos).name == "default:river_water_flowing" then
+                minetest.set_node(pos, {name="air"})
+            elseif minetest.get_node(node_above_pos).name == "air" then
+                minetest.set_node(node_above_pos, {name="fire:basic_flame"})
             elseif minetest.get_node(node_next_to_pos_1).name == "air" then
-                minetest.place_node(node_next_to_pos_1, {name="fire:basic_flame"})
+                minetest.set_node(node_next_to_pos_1, {name="fire:basic_flame"})
             elseif minetest.get_node(node_next_to_pos_2).name == "air" then
-                minetest.place_node(node_next_to_pos_2, {name="fire:basic_flame"})
+                minetest.set_node(node_next_to_pos_2, {name="fire:basic_flame"})
             elseif minetest.get_node(node_next_to_pos_3).name == "air" then
-                minetest.place_node(node_next_to_pos_3, {name="fire:basic_flame"})
+                minetest.set_node(node_next_to_pos_3, {name="fire:basic_flame"})
             elseif minetest.get_node(node_next_to_pos_4).name == "air" then
-                minetest.place_node(node_next_to_pos_4, {name="fire:basic_flame"})
+                minetest.set_node(node_next_to_pos_4, {name="fire:basic_flame"})
             end
 
             self.object:remove()

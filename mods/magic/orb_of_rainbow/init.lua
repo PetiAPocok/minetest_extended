@@ -1,4 +1,4 @@
-minetest.register_craftitem("orb_of_rainbow:orb_of_rainbow", {
+minetest.register_tool("orb_of_rainbow:orb_of_rainbow", {
     description = "Orb of Rainbow\nMana: 70",
     inventory_image = "orb_of_rainbow_orb.png",
     on_use = function(itemstack, player, pointed_thing)
@@ -58,10 +58,12 @@ minetest.register_entity("orb_of_rainbow:ray_of_rainbow", {
     -- use_texture_alpha = true,
     collisionbox = {-0.1,-0.1,-0.1,0.1,0.1,0.1},
     pointable = false,
-    _timer = 0,
+    _ttl = 0,
+    _tta = 0,
     _owner = "",
     on_step = function(self, dtime)
-        self._timer = self._timer + dtime
+        self._ttl = self._ttl + dtime
+        self._tta = self._tta + dtime
         local pos = self.object:get_pos()
         local node = minetest.get_node(pos)
 
@@ -69,7 +71,7 @@ minetest.register_entity("orb_of_rainbow:ray_of_rainbow", {
             self.object:remove()
         end
 
-        if self._timer > 0.2 then
+        if self._tta > 0.5 then
             local objs = minetest.get_objects_inside_radius({x=pos.x,y=pos.y,z=pos.z}, 1.5)
             for k, obj in pairs(objs) do
                 if obj:get_luaentity() ~= nil then
@@ -85,10 +87,11 @@ minetest.register_entity("orb_of_rainbow:ray_of_rainbow", {
                         damage_groups = {fleshy = 5},
                     }, nil)
                 end
+                self._tta = 0
             end
         end
 
-        if self._timer > 5 then
+        if self._ttl > 5 then
             self.object:remove()
         end
     end

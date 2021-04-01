@@ -39,7 +39,7 @@ local brush_on_use = function(itemstack, placer)
 	assert(pointed_thing.type == "node")
 	worldedit.pos1[name] = pointed_thing.under
 	worldedit.pos2[name] = nil
-	worldedit.mark_region(name)
+	worldedit.marker_update(name)
 
 	-- this isn't really clean...
 	local player_notify_old = worldedit.player_notify
@@ -101,7 +101,7 @@ worldedit.register_command("brush", {
 		else
 			local cmddef = worldedit.registered_commands[cmd]
 			if cmddef == nil or cmddef.require_pos ~= 1 then
-				worldedit.player_notify(name, "Invalid command for brush use: //" .. cmd)
+				worldedit.player_notify(name, "//" .. cmd .. " cannot be used with brushes")
 				return
 			end
 
@@ -109,7 +109,7 @@ worldedit.register_command("brush", {
 			local ok, err = cmddef.parse(params)
 			if not ok then
 				err = err or "invalid usage"
-				worldedit.player_notify(name, "Brush command: " .. err)
+				worldedit.player_notify(name, "Error with brush command: " .. err)
 				return
 			end
 

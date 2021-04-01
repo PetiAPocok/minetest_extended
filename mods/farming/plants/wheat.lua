@@ -13,7 +13,7 @@ farming.register_plant("farming:wheat", {
 
 minetest.register_craft({
     type = "shapeless",
-    output = "farming:seed_wheat",
+    output = "farming:seed_wheat 5",
     recipe = {"farming:wheat"},
 })
 
@@ -31,4 +31,13 @@ minetest.register_craft({
 	recipe = {
 		{"farming:straw"},
 	}
+})
+
+minetest.override_item("farming:wheat_8", {
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+        },
+    },
 })

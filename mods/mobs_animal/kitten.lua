@@ -112,6 +112,7 @@ if minetest.get_modpath("ethereal") then
 	spawn_on = "ethereal:grove_dirt"
 end
 
+if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "mobs_animal:kitten",
 	nodes = {spawn_on},
@@ -123,6 +124,7 @@ mobs:spawn({
 	max_height = 50,
 	day_toggle = true,
 })
+end
 
 
 mobs:register_egg("mobs_animal:kitten", S("Kitten"), "mobs_kitten_inv.png", 0)

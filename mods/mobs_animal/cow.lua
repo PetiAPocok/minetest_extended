@@ -58,7 +58,10 @@ mobs:register_mob("mobs_animal:cow", {
 		die_speed = 10,
 		die_loop = false,
 	},
-	follow = {"farming:wheat", "default:grass_1"},
+	follow = {
+		"farming:wheat", "default:grass_1", "farming:barley",
+		"farming:oat", "farming:rye"
+	},
 	view_range = 8,
 	replace_rate = 10,
 	replace_what = {
@@ -132,6 +135,7 @@ mobs:register_mob("mobs_animal:cow", {
 })
 
 
+if not mobs.custom_spawn_animal then
 mobs:spawn({
 	name = "mobs_animal:cow",
 	nodes = {"default:dirt_with_grass", "ethereal:green_dirt"},
@@ -143,6 +147,7 @@ mobs:spawn({
 	max_height = 200,
 	day_toggle = true,
 })
+end
 
 
 mobs:register_egg("mobs_animal:cow", S("Cow"), "mobs_cow_inv.png")
@@ -160,19 +165,19 @@ minetest.register_craftitem(":mobs:bucket_milk", {
 })
 
 -- glass of milk
-minetest.register_craftitem(":mobs:glass_milk", {
-	description = S("Glass of Milk"),
-	inventory_image = "mobs_glass_milk.png",
-	on_use = minetest.item_eat(2, "vessels:drinking_glass"),
+minetest.register_craftitem(":mobs:jar_milk", {
+	description = S("Jar of Milk"),
+	inventory_image = "mobs_jar_milk.png",
+	on_use = minetest.item_eat(2, "vessels:glass_jar"),
 	groups = {food_milk_glass = 1, flammable = 3, vessel = 1, drink = 1},
 })
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "mobs:glass_milk 4",
+	output = "mobs:jar_milk 4",
 	recipe = {
-		"vessels:drinking_glass", "vessels:drinking_glass",
-		"vessels:drinking_glass", "vessels:drinking_glass",
+		"vessels:glass_jar", "vessels:glass_jar",
+		"vessels:glass_jar", "vessels:glass_jar",
 		"mobs:bucket_milk"
 	},
 	replacements = { {"mobs:bucket_milk", "bucket:bucket_empty"} }
@@ -182,11 +187,11 @@ minetest.register_craft({
 	type = "shapeless",
 	output = "mobs:bucket_milk",
 	recipe = {
-		"mobs:glass_milk", "mobs:glass_milk",
-		"mobs:glass_milk", "mobs:glass_milk",
+		"mobs:jar_milk", "mobs:jar_milk",
+		"mobs:jar_milk", "mobs:jar_milk",
 		"bucket:bucket_empty"
 	},
-	replacements = { {"mobs:glass_milk", "vessels:drinking_glass 4"} }
+	replacements = { {"mobs:jar_milk", "vessels:glass_jar"} }
 })
 
 

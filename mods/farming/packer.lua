@@ -64,7 +64,9 @@ minetest.register_node("farming:packer", {
         return 0
     end,
 
-    allow_metadata_inventory_move = 0,
+    allow_metadata_inventory_move = function()
+        return 0
+    end,
 
     allow_metadata_inventory_take = function(pos, listname, index, stack, player)
     	if minetest.is_protected(pos, player:get_player_name()) then
@@ -128,7 +130,6 @@ minetest.register_node("farming:packer", {
         local temp = {}
 
         default.get_inventory_drops(pos, "input", temp)
-        default.get_inventory_drops(pos, "output", temp)
         default.get_inventory_drops(pos, "bags", temp)
 
         for i,v in ipairs(temp) do
@@ -147,6 +148,22 @@ minetest.register_craft({
 	}
 })
 
+-- Bag
+minetest.register_craftitem("farming:bag", {
+	description = "Bag\n(Use it with packer to bag 50 of the small produces)",
+	inventory_image = "farming_bag.png"
+})
+
+minetest.register_craft({
+    output = "farming:bag",
+    recipe = {
+        {"farming:string", "", "farming:string"},
+        {"farming:string", "", "farming:string"},
+        {"farming:string", "farming:string", "farming:string"}
+    }
+})
+
+
 -- Bag of beans
 minetest.register_craftitem("farming:bag_of_bean", {
     description = "Bag of Beans",
@@ -160,13 +177,19 @@ minetest.register_craftitem("farming:bag_of_peanut", {
 })
 
 -- Bag of peas
-minetest.register_craftitem("farming:bag_of_pea", {
+minetest.register_craftitem("farming:bag_of_peas", {
 	description = "Bag of Peas",
-	inventory_image = "farming_bag_of_pea.png"
+	inventory_image = "farming_bag_of_peas.png"
 })
 
 -- Bag of rice
 minetest.register_craftitem("farming:bag_of_rice", {
 	description = "Bag of Rice",
 	inventory_image = "farming_bag_of_rice.png"
+})
+
+-- Bag of soybeans
+minetest.register_craftitem("farming:bag_of_soybean", {
+    description = "Bag of Soybeans",
+    inventory_image = "farming_bag_of_soybean.png"
 })

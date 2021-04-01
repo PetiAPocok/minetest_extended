@@ -1,5 +1,0 @@
-default
-mobs_animal
-mobs
-farming
-3d_armor

@@ -573,17 +573,6 @@ my_register_stair_and_slab(
 )
 
 my_register_stair_and_slab(
-	"mossycobble",
-	"default:mossycobble",
-	{cracky = 3},
-	{"default_mossycobble.png"},
-	"Mossy Cobblestone Stair",
-	"Mossy Cobblestone Slab",
-	default.node_sound_stone_defaults(),
-	true
-)
-
-my_register_stair_and_slab(
 	"stonebrick",
 	"default:stonebrick",
 	{cracky = 2},
@@ -1001,10 +990,6 @@ S("Cobblestone Stair")
 S("Inner Cobblestone Stair")
 S("Outer Cobblestone Stair")
 S("Cobblestone Slab")
-S("Mossy Cobblestone Stair")
-S("Inner Mossy Cobblestone Stair")
-S("Outer Mossy Cobblestone Stair")
-S("Mossy Cobblestone Slab")
 S("Stone Brick Stair")
 S("Inner Stone Brick Stair")
 S("Outer Stone Brick Stair")

@@ -34,7 +34,7 @@ minetest.register_ore({
 	clust_scarcity = 40*40*40,
 	clust_num_ores = 27,
 	clust_size = 6,
-	y_min = -31000,
+	y_min = -1000,
 	y_max = -64,
 })
 
@@ -47,7 +47,7 @@ minetest.register_node("gems_emerald:block", {
 })
 
 minetest.register_craft({
-	output = "emerald:block",
+	output = "gems_emerald:block",
 	recipe = {
 		{"gems_emerald:emerald", "gems_emerald:emerald"},
 		{"gems_emerald:emerald", "gems_emerald:emerald"}

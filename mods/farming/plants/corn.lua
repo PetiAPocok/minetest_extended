@@ -22,7 +22,7 @@ minetest.override_item("farming:corn_8", {
 
 minetest.register_craft({
     type = "shapeless",
-    output = "farming:seed_corn",
+    output = "farming:seed_corn 10",
     recipe = {"farming:corn"}
 })
 
@@ -37,4 +37,13 @@ minetest.register_craft({
 	cooktime = 14,
 	output = "farming:corn_boiled",
 	recipe = "farming:corn"
+})
+
+minetest.override_item("farming:corn_8", {
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.25, -0.5, -0.25, 0.25, 1.0, 0.25},
+        },
+    },
 })

@@ -11,7 +11,6 @@ if minetest.global_exists("dungeon_loot") then
         {name = "farming:seed_beetroot", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_blueberry", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_carrot", chance = 0.4, count = {1, 4}},
-        {name = "farming:seed_chili", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_cocoa", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_corn", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_cucumber", chance = 0.4, count = {1, 4}},
@@ -20,10 +19,11 @@ if minetest.global_exists("dungeon_loot") then
         {name = "farming:seed_hemp", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_lettuce", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_onion", chance = 0.4, count = {1, 4}},
-        {name = "farming:seed_pea", chance = 0.4, count = {1, 4}},
+        {name = "farming:seed_peas", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_potato", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_raspberry", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_rice", chance = 0.4, count = {1, 4}},
+        {name = "farming:seed_soybean", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_strawberry", chance = 0.4, count = {1, 4}},
         {name = "farming:seed_tomato", chance = 0.4, count = {1, 4}}
 	})
@@ -39,9 +39,9 @@ for i=1,5 do
     table.insert(minetest.registered_items["default:grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_blueberry"} })
     table.insert(minetest.registered_items["default:grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_carrot"} })
     table.insert(minetest.registered_items["default:grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_cucumber"} })
-    table.insert(minetest.registered_items["default:grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_grape"} })
     table.insert(minetest.registered_items["default:grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_lettuce"} })
     table.insert(minetest.registered_items["default:grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_strawberry"} })
+    table.insert(minetest.registered_items["default:grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_soybean"} })
     table.insert(minetest.registered_items["default:grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_tomato"} })
     table.insert(minetest.registered_items["default:grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_wheat"} })
 end
@@ -57,7 +57,6 @@ end
 
 -- Grows in jungle
 table.insert(minetest.registered_items["default:junglegrass"].drop.items, { rarity = 20, items = {"farming:seed_ananas"} })
-table.insert(minetest.registered_items["default:junglegrass"].drop.items, { rarity = 20, items = {"farming:seed_chili"} })
 table.insert(minetest.registered_items["default:junglegrass"].drop.items, { rarity = 20, items = {"farming:seed_cotton"} })
 table.insert(minetest.registered_items["default:junglegrass"].drop.items, { rarity = 20, items = {"farming:seed_cocoa"} })
 table.insert(minetest.registered_items["default:junglegrass"].drop.items, { rarity = 20, items = {"farming:seed_rice"} })
@@ -67,11 +66,12 @@ for i=1,3 do
     table.insert(minetest.registered_items["default:marram_grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_bean"} })
     table.insert(minetest.registered_items["default:marram_grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_hemp"} })
     table.insert(minetest.registered_items["default:marram_grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_huckleberry"} })
+    table.insert(minetest.registered_items["default:marram_grass_" .. i].drop.items, { rarity = 20, items = {"farming:seed_grape"} })
 end
 
 -- Grows in warm pine forests
 for i=1,3 do
     table.insert(minetest.registered_items["default:fern_" .. i].drop.items, { rarity = 20, items = {"farming:seed_beetroot"} })
-    table.insert(minetest.registered_items["default:fern_" .. i].drop.items, { rarity = 20, items = {"farming:seed_pea"} })
+    table.insert(minetest.registered_items["default:fern_" .. i].drop.items, { rarity = 20, items = {"farming:seed_peas"} })
     table.insert(minetest.registered_items["default:fern_" .. i].drop.items, { rarity = 20, items = {"farming:seed_raspberry"} })
 end
