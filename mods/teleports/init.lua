@@ -136,6 +136,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 
             obelisks[meta:get_int("_id")] = obelisk_data
             save_obelisks()
+            minetest.show_formspec(name, "teleport:menu", get_formspec(obelisk_pos))
         end
 
         if fields.other_obelisks then

@@ -164,7 +164,7 @@ minetest.register_node("mex_moreblocks:chalk", {
     tiles = {"mex_moreblocks_chalk.png"},
     is_ground_content = true,
     drop = "mex_moreblocks:chalk_powder 4",
-    groups = {crumbly=2,cracky=2},
+    groups = {crumbly=2,cracky=1},
     sounds = default.node_sound_stone_defaults()
 })
 

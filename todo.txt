@@ -2,7 +2,12 @@
 
 
 
+
+
 ------------------------------------------1.2--------------------------------------------
+
+
+Peanut bokor az így néz ki?
 
 Huge something
     Find the blueprint which tells you how to build the builder block?
@@ -17,7 +22,8 @@ Mapgen
             the unknowing of time
             the loveing of sacks
         The adventures of the mad plastic man
-        nedves szőnyeg fejezetek
+        random könyv magyarul
+        random könyv oroszul
 
 singsing chair(constatine)
     uses mana till you use it
@@ -104,6 +110,25 @@ Ruhák
     pulóverek, pólók, gatyák
     bőr csizma, bőr mellény
 
+accesories mod
+    4 gyűrű, 2 fülbevaló, 8 zseb, 1 nyaklánc, 2 karkötő, 1 totem, 1 szárny
+
+    térkép
+        mutatná a koordinátáidat.
+
+    óra
+        zsebbe
+        magic hajtja...
+        x réz x
+        réz mese crystal réz
+        x réz x
+
+    szárny
+        attached entity?
+        entity that follows you
+        you can fly with it like in terraria
+        demon (from what), angel (from feather), butterfly (from butterfly?)
+
 Ore detector
     x topaz x
     topaz gold_ingot topaz
@@ -116,12 +141,6 @@ colored glass               KELL
 
 handcar emelkedőn rángat
     két utassal nincs tesztelve...
-
-óra
-    magic hajtja...
-    x réz x
-    réz mese crystal réz
-    x réz x
 
 nagy térkép? kézzel fogható. Megrajzolt
 
@@ -138,12 +157,6 @@ A karakterek keze amikor látszódik, az aktuális skin szerint nézzen ki
 
 chisel
     sok sok dekoratív blokk
-
-több hely 3d_armor-nak
-
-accesories mod
-    depends on: 3d_armor, gems
-    adds rings, necklaces, amulets (at your belt)
 
 Minions
     depends on: 3d_armor
@@ -171,8 +184,8 @@ mozdony
     vigyen le kaját
 
 orb of wind
-    Move the enemy back
-    if I set or add to its velocity then it gets overwritten by its own movement pattern...
+    Move the enemy back A LOT
+    if I set or add to its velocity then it gets overwritten by its own movement function...
 
 orb of Meteor
     summon a meteor from the sky above the pointed thing
@@ -268,6 +281,10 @@ Világító tengeri növények
     alma + karamell már csak be kell rakni, txtúra meg van
     huckleberry milkshake
     kakaós csiga
+    Fazékba gyümölcsök, cukor => cefre
+        Lepárolni => pálinka.
+    Hordó
+        Bor
 
 horgászat
     more bait                   ???
@@ -320,6 +337,11 @@ mobok:
             Darkling minion?
 
     Polipoid a vízbe.
+    Madarak
+    Madár raj
+        csak átvonul néha az égen
+        ha meglövöd, dob húst
+
 
 A kelp-nek fura a neve, egy egész kelp szál az 1 block
 
