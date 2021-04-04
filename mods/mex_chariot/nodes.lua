@@ -368,13 +368,15 @@ local function get_generator_formspec()
 	return "size[8,8]"..
         "label[2.8,0;Chariot Generator]"..
         "list[context;input;3,1;2,2;]"..
+        "list[current_player;main;0,3.85;8,1;]" ..
+		"list[current_player;main;0,5.08;8,3;8]" ..
         "image[3,1;1,1;nether_ores_vidore_lump.png^[opacity:128]"..
         "image[3,2;1,1;nether_ores_vidore_lump.png^[opacity:128]"..
         "image[4,1;1,1;nether_ores_vidore_lump.png^[opacity:128]"..
         "image[4,2;1,1;nether_ores_vidore_lump.png^[opacity:128]"..
-        "list[current_player;main;0,4;8,4;]"..
         "listring[current_player;main]"..
-        "listring[context;input]"
+        "listring[context;input]"..
+        default.get_hotbar_bg(0,3.85)
 end
 
 
@@ -419,9 +421,11 @@ local function get_octadrive_formspec()
 	return "size[8,7]"..
         "label[2.9,0;Chariot Octadrive]"..
         "list[context;slot;3.5,1.2;2,2;]"..
-        "list[current_player;main;0,3;8,4;]"..
+        "list[current_player;main;0,2.85;8,1;]" ..
+		"list[current_player;main;0,4.08;8,3;8]" ..
         "listring[current_player;main]"..
-        "listring[context;slot]"
+        "listring[context;slot]"..
+        default.get_hotbar_bg(0,2.85)
 end
 
 

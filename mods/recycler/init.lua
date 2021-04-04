@@ -13,13 +13,13 @@ minetest.register_node("recycler:recycler", {
         meta:set_string("formspec", "size[8,9]"..
             "list[context;input;1,1;3,3;]"..
             "list[context;output;5,2;1,1;]"..
-    		"list[current_player;main;0,5.15;8,1;]"..
-    		"list[current_player;main;0,6.25;8,3;8]"..
+    		"list[current_player;main;0,4.85;8,1;]"..
+    		"list[current_player;main;0,6.08;8,3;8]"..
     		"listring[context;output]"..
     		"listring[current_player;main]"..
     		"listring[context;input]"..
     		"listring[current_player;main]"..
-    		default.get_hotbar_bg(0, 5.15)
+    		default.get_hotbar_bg(0, 4.85)
         )
         local inv = meta:get_inventory()
         inv:set_size("input", 3*3)

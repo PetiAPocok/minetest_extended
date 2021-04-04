@@ -27,12 +27,14 @@ minetest.register_node("mese_miner:miner", {
         "image[1,2;1,1;mese_miner_fuel_bg.png]"..
         "list[context;fuel;1,2;1,1;]"..
         "list[context;output;3,1;4,4;]"..
-        "list[current_player;main;0,6;8,4;]"..
+        "list[current_player;main;0,5.85;8,1;]" ..
+		"list[current_player;main;0,7.08;8,3;8]" ..
         "listring[current_player;main]"..
         "listring[context;fuel]"..
         "listring[current_player;main]"..
         "listring[context;output]"..
-        "listring[current_player;main]")
+        "listring[current_player;main]"..
+        default.get_hotbar_bg(0, 5.85))
         local inv = meta:get_inventory()
         inv:set_size("fuel", 1*1)
         inv:set_size("output", 4*4)

@@ -354,14 +354,16 @@ minetest.register_node("alchemy:alchemy_set", {
         "list[context;component;1,1;1,1;]"..
         "list[context;bottle;1,3;1,1;]"..
         "list[context;output;3,2;1,1;]"..
-        "list[current_player;main;0,5;8,4;]"..
+        "list[current_player;main;0,4.85;8,1;]"..
+        "list[current_player;main;0,6.08;8,3;8]"..
         "listring[current_player;main]"..
         "listring[context;component]"..
         "listring[current_player;main]"..
         "listring[context;bottle]"..
         "listring[current_player;main]"..
         "listring[context;output]"..
-        "listring[current_player;main]")
+        "listring[current_player;main]"..
+        default.get_hotbar_bg(0, 4.85))
         local inv = meta:get_inventory()
         inv:set_size("component", 1*1)
         inv:set_size("bottle", 1*1)
