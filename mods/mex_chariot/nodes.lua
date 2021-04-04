@@ -145,9 +145,9 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
                             }
                             local pos1 = table.copy(chariot_pos)
                             local pos2 = {}
-                            pos2.x = pos1.x + 10
-                            pos2.y = pos1.y + 9
-                            pos2.z = pos1.z + 10
+                            pos2.x = pos1.x + 8
+                            pos2.y = pos1.y + 7
+                            pos2.z = pos1.z + 8
                             for key, value in pairs(dist_to_move) do
                                 worldedit.move(pos1, pos2, key, value)
                                 pos1[key] = pos1[key] + value
@@ -233,7 +233,18 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
             elseif fields.get_from_octainer then
                 if octadrive_inv:contains_item("slot", "mex_chariot:octainer") then
                     local octainer_stack = octadrive_inv:get_stack("slot", 1)
-                    mex_chariot_ms:set_string("destination_pos", chariot_pos)
+                    local octainer_coordinates = octainer_stack:get_description()
+                    local destination_pos = {}
+
+                    octainer_coordinates = string.match(octainer_coordinates, "%(.+")
+                    destination_pos.x = tonumber(string.match(octainer_coordinates, "%d+"))
+                    octainer_coordinates = string.match(octainer_coordinates, "%s.+")
+                    destination_pos.y = tonumber(string.match(octainer_coordinates, "%d+"))
+                    octainer_coordinates = string.sub (octainer_coordinates, 2)
+                    octainer_coordinates = string.match(octainer_coordinates, "%s.+")
+                    destination_pos.z = tonumber(string.sub(octainer_coordinates, 2, #octainer_coordinates - 1))
+
+                    mex_chariot_ms:set_string("destination_pos", minetest.serialize(destination_pos))
 
                     if player:get_inventory():room_for_item("main", octainer_stack) then
                         player:get_inventory():add_item("main", octainer_stack)
@@ -244,6 +255,8 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
                     octadrive_inv:remove_item("slot", octainer_stack)
 
                     minetest.show_formspec(player_name, "chariot_navigation", get_control_center_formspec())
+                else
+                    minetest.chat_send_player(player_name, "No octainer in the octadrive to read.")
                 end
             elseif fields.engrave then
                 if octadrive_inv:contains_item("slot", "default:obsidian") or octadrive_inv:contains_item("slot", "mex_chariot:octainer") then
