@@ -301,7 +301,36 @@ minetest.register_node("mex_chariot:init_node", {
         minetest.set_node(minetest.find_node_near(pos, 10, "mex_chariot:octadrive"), {name = "mex_chariot:octadrive"})
 
         mex_chariot_ms:set_string("chariot_pos", minetest.serialize(pos))
-    end
+    end,
+
+    on_punch = function(pos, node, puncher, pointed_thing)
+        local schematic_path = minetest.get_modpath("mex_chariot") .. "/schematics/chariot.mts"
+        for i=-7,6 do
+            for j=-5,4 do
+                for k=-7,6 do
+                    pos.x = pos.x + i
+                    pos.y = pos.y + j
+                    pos.z = pos.z + k
+                    minetest.set_node(pos, {name = "air"})
+                    pos.x = pos.x - i
+                    pos.y = pos.y - j
+                    pos.z = pos.z - k
+                end
+            end
+        end
+
+        pos.x = pos.x - 5
+        pos.y = pos.y - 5
+        pos.z = pos.z - 5
+
+        minetest.place_schematic(pos, schematic_path, "0", nil, true)
+
+        minetest.set_node(minetest.find_node_near(pos, 10, "mex_chariot:generator"), {name = "mex_chariot:generator"})
+
+        minetest.set_node(minetest.find_node_near(pos, 10, "mex_chariot:octadrive"), {name = "mex_chariot:octadrive"})
+
+        mex_chariot_ms:set_string("chariot_pos", minetest.serialize(pos))
+    end,
 })
 
 
