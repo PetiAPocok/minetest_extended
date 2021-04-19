@@ -1,0 +1,5 @@
+playerlist - Nem lehet a játékba sok aux gomb így kaka - https://github.com/EliasFleckenstein03/playerlist
+mobs_dolphin - Ronda - https://github.com/crustyserve/mobs_dolphin
+my_sliding_doors - A japános papíros ajtók, falak, kellenének belőle. - https://github.com/minetest-mods/mydoors
+    egy blokk szélesek legyenek
+    az ajtó nyitott állapotba húzza össze magát néhány pixelre

@@ -134,6 +134,8 @@ Made for and tested on Minetest 5.3.0.
 - Created mex_tales.
 - Created ghost_ship.
 - Created mex_chariot.
+### 1.3
+- Created weather.
 
 ## Licensing
 

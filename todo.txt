@@ -1,39 +1,19 @@
---------------------------------------------------------------------------------------
-
-
-
-
-
 ------------------------------------------1.2--------------------------------------------
 
-
-Peanut bokor az így néz ki?
-
-Huge something
-    Find the blueprint which tells you how to build the builder block?
-    Find the builder block?
-    Builder block that eats resources, if full then the huge something emerges
-
-Mapgen
-    A lootos ládákban written bookok random storykkal
-        Mucsism as religion
-            the art of lieing and dumbfolding
-            eating enigmas
-            the unknowing of time
-            the loveing of sacks
-        The adventures of the mad plastic man
-        random könyv magyarul
-        random könyv oroszul
-
-singsing chair(constatine)
-    uses mana till you use it
-    you can fly around fast to discover the terrain(fly, fast, noclip), but yo can't interact with anyting
-
 Minigame altars:
-    Mese block hajtja a játékgépeket. Nincs craft-ja.
-    Csak található.
+    Arcade machine style <= blee
+    PSP style?
+    TV álványon combo?
+
+    One kind of gaming altar, but a lot of gaming disks.
+    Mese block hajtja a játékgépet. (50 meccs)
+    Nincs craft-ja. Csak található.
         dungeon-okba, village szigetre kocsma és abba bele
-        gold lump-ot ad
+    gold lump-ot ad a győzelem
+                        mese block energia számláló
+    játék slot          mese block slot
+                játék
+
     Swap the things to get =>3 next to eachother
     Sudoku
     Thalos-os tetris
@@ -51,10 +31,84 @@ Minigame altars:
         A mappot törli?
         A mini game block megsemmisíti önmagát?
         Közelség érzékelő tntvel mint akadály?
+    aknakereső a laptop mod-ból
+
+
+accesories mod
+    4 gyűrű, 2 fülbevaló, 8 zseb, 1 nyaklánc, 2 karkötő, 1 totem, 1 szárny
+
+    zseb    fülbevaló                 nyaklánc                      fülbevaló   zseb
+    zseb    karkötő         totem                   szárny          karkötő     zseb
+    zseb    gyűrű                                                   gyűrű       zseb
+    zseb    gyűrű                                                   gyűrű       zseb
+
+    lantern
+        zsebbe
+
+
+    mélység mérő
+        zsebbe
+        mutatná y-t
+        x glass x
+        x mese_crystal_fragment x
+
+    iránytű
+        zsebbe
+        mutatná x, z-t
+        x glass x
+        x iron x
+
+    óra
+        zsebbe
+        magic hajtja...
+        x réz x
+        réz mese crystal réz
+        x réz x
+
+
+
+    szárny
+        attached entity?
+        entity that follows you?
+        you can fly with it like in terraria
+        demon (from what), angel (from feather), butterfly (from butterfly?)
+        feather feather feather
+        feather mese_crystal feather
+        feather x feather
+
+    Ore detector
+        zsebbe
+        x topaz x
+        topaz gold_ingot topaz
+        x topaz x
+
+
+------------------------------------------1.3--------------------------------------------
+
+player kilövő akármi...
+
+Huge something
+    Find the blueprint which tells you how to build the builder block?
+    Find the builder block?
+    Builder block that eats resources, if full then the huge something emerges
+
+Mapgen
+    A lootos ládákban written bookok random storykkal
+        Mucsism as religion
+            the art of lieing and dumbfolding
+            eating enigmas
+            the unknowing of time
+            the loveing of sacks
+        The adventures of the mad plastic man
+        random könyv magyarul
+            Minetest vers
+        random könyv oroszul
+
+singsing chair(constatine)
+    uses mana till you use it
+    you can fly around fast to discover the terrain(fly, fast, noclip), but yo can't interact with anyting
 
 Betegségek, fertőzések. Szörnyektől kapod, lassabb lleszel, az élet &mana regenerációd is, gyorsabban fogy a kaja.
-
-Eső, hó, villám?
 
 Új ágyak
     emeletes ágy
@@ -103,6 +157,7 @@ bútorok                    KELL
     Wooden shelf
         ronda
         növény hangja van ha ütöd
+        formspec nem szabvány
 
 Magic hangok?
 
@@ -110,29 +165,7 @@ Ruhák
     pulóverek, pólók, gatyák
     bőr csizma, bőr mellény
 
-accesories mod
-    4 gyűrű, 2 fülbevaló, 8 zseb, 1 nyaklánc, 2 karkötő, 1 totem, 1 szárny
 
-    térkép
-        mutatná a koordinátáidat.
-
-    óra
-        zsebbe
-        magic hajtja...
-        x réz x
-        réz mese crystal réz
-        x réz x
-
-    szárny
-        attached entity?
-        entity that follows you
-        you can fly with it like in terraria
-        demon (from what), angel (from feather), butterfly (from butterfly?)
-
-Ore detector
-    x topaz x
-    topaz gold_ingot topaz
-    x topaz x
 
 Chalk-ból kréta, meg blackboard...
 
@@ -190,7 +223,6 @@ orb of wind
 orb of Meteor
     summon a meteor from the sky above the pointed thing
 
-
 potions
     water walking effect?
         detect the block below and make it walakable true
@@ -225,8 +257,6 @@ potions
     slowness effect
         thwowing potion
         orb of ice
-
-
 
 Ládák elnevezése
 
@@ -269,10 +299,11 @@ Világító tengeri növények
     tengeri ugorka?
 
 Új kaják
+    Kiwi?
+
     krumpliból vodka
     kaktusz lé
     pörkölt földimogyoró
-
     Kész ételek (körett + sült hús)                                                                 KELL
     grape milkshake
     vegetable salad

@@ -237,9 +237,9 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
                     local destination_pos = {}
 
                     octainer_coordinates = string.match(octainer_coordinates, "%(.+")
-                    destination_pos.x = tonumber(string.match(octainer_coordinates, "%d+"))
+                    destination_pos.x = tonumber(string.match(octainer_coordinates, "%-*%d+"))
                     octainer_coordinates = string.match(octainer_coordinates, "%s.+")
-                    destination_pos.y = tonumber(string.match(octainer_coordinates, "%d+"))
+                    destination_pos.y = tonumber(string.match(octainer_coordinates, "%-*%d+"))
                     octainer_coordinates = string.sub (octainer_coordinates, 2)
                     octainer_coordinates = string.match(octainer_coordinates, "%s.+")
                     destination_pos.z = tonumber(string.sub(octainer_coordinates, 2, #octainer_coordinates - 1))
@@ -271,6 +271,8 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
                     })
                     octainer_stack:get_meta():set_string("key", "valuje")
                     octadrive_inv:set_stack("slot", 1, octainer_stack)
+                else
+                    minetest.chat_send_player(player_name, "No octainer or obsidian in the octadrive to engrave.")
                 end
             end
         end
