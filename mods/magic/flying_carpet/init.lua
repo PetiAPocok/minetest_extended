@@ -207,13 +207,13 @@ minetest.register_entity("flying_carpet:carpet", {
                         future_pos.y = future_pos.y + 2
 
                         if minetest.get_node(future_pos).name == "air" then
-                            elevation = 1
+                            elevation = 4
                         end
                     elseif ctrl.sneak then
                         future_pos.y = future_pos.y - 0.5
 
                         if minetest.get_node(future_pos).name == "air" then
-                            elevation = -1
+                            elevation = -4
                         end
                     end
                 else
