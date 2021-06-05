@@ -1,3 +1,7 @@
+demon model: TenPlus1
+    texture: ?
+    sounds, code: PetiAPocok (WTFPL)
+
 skeleton model, sounds: ElCeejo - Grave mod (GPLv3)
     random sound, code: PetiAPocok (WTFPL)
 

@@ -19,7 +19,7 @@ mobs:register_mob("mobs_nether:skeleton", {
 	makes_footstep_sound = true,
 	sounds = {
 		random = "mobs_nether_skeleton_random",
-        hurt = "mobs_nether_skeleton_hurt",
+        damage = "mobs_nether_skeleton_damage",
         death = "mobs_nether_skeleton_death",
 	},
 	walk_velocity = 1.5,

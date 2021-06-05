@@ -1,5 +1,34 @@
 ------------------------------------------1.2--------------------------------------------
 
+Demon
+    Drops
+        Eye?
+        skin - for wing
+        clotted blood?
+        bone?
+        teeth?
+
+
+
+
+Mland ápr 1 fejlécre valami minetest-es.
+
+
+Captured space fissure
+    Bal kattal random helyre tp
+        find node below air
+
+    Found at abadoned houses
+
+Portal template
+    found at abandoned houses
+    used to craft portal building block
+
+portal building block
+    You give stuff to the portal building block, and if it's full, it replaces itself with the portal
+    You can put the Captured space fissure in the portal to make it work
+    Then you can set coordinates, players, obelisks to teleport to.
+
 Minigame altars:
     Arcade machine style <= blee
     PSP style?
@@ -50,13 +79,21 @@ accesories mod
         zsebbe
         mutatná y-t
         x glass x
-        x mese_crystal_fragment x
+        x Mese fragment x
+        x Iron ingot x
 
     iránytű
         zsebbe
-        mutatná x, z-t
+        mutatná az égtájat
         x glass x
         x iron x
+
+    Sextant
+        zsebbe
+        mutatná x, z-t
+        x bronz x
+        bronz x glass
+        x bronz x
 
     óra
         zsebbe
@@ -65,16 +102,26 @@ accesories mod
         réz mese crystal réz
         x réz x
 
+        Can be combined to locator
 
 
     szárny
         attached entity?
         entity that follows you?
         you can fly with it like in terraria
-        demon (from what), angel (from feather), butterfly (from butterfly?)
-        feather feather feather
-        feather mese_crystal feather
-        feather x feather
+        bone (from bone) (doubles jump heigth and slows falling), feather (from feather), butterfly (from butterfly?), leather (from leather), demon (from demon skin),
+        Rune of flight
+            Mese shard mese shard mese shard
+            Mese shard feather mese shard
+            Mese shard mese shard mese shard
+
+        thing thing thing
+        thing Rune_of_flight thing
+        thing x thing
+
+        When equipping wing if has wing equiped then uneqip it.
+        (For on inventory)
+
 
     Ore detector
         zsebbe
@@ -82,15 +129,27 @@ accesories mod
         topaz gold_ingot topaz
         x topaz x
 
+    First place medal
+         Makes you faster (not stacking)
+
+    ring of darkness
+    x x x
+    x clotted_blood x
+    x gold_ring x
+    lehet csinálni a demon part-ból, shadow aurát ad és + sebzést a demon orbnak...
+
+Levegő generátor blokk
+    a vizet, lávát, folyóvizet levegőre cseréli 5 mp-nként 5 blokknyira fölötte
+    steel ingot   sapling         steel ingot
+    steel ingot   dirt            steel ingot
+    steel ingot   mese crystal    steel ingot
+
+A repülő szőnyeg ereszkedjen gyorsabban
 
 ------------------------------------------1.3--------------------------------------------
 
-player kilövő akármi...
 
-Huge something
-    Find the blueprint which tells you how to build the builder block?
-    Find the builder block?
-    Builder block that eats resources, if full then the huge something emerges
+player kilövő ágyú...
 
 Mapgen
     A lootos ládákban written bookok random storykkal
@@ -99,14 +158,23 @@ Mapgen
             eating enigmas
             the unknowing of time
             the loveing of sacks
+
         The adventures of the mad plastic man
+
         random könyv magyarul
             Minetest vers
+
         random könyv oroszul
+
+        Mirodalmi spirituális vallási hitkönyv
+
+        Random fantasy dararabok (like: Fidling Piglings ch. 5)
+
+        akph, gege, slow village... Lírai dalszövegek, Skrivó tűzoltója
 
 singsing chair(constatine)
     uses mana till you use it
-    you can fly around fast to discover the terrain(fly, fast, noclip), but yo can't interact with anyting
+    you can fly around fast to discover the terrain(fly, fast, noclip), but you can't interact with anyting
 
 Betegségek, fertőzések. Szörnyektől kapod, lassabb lleszel, az élet &mana regenerációd is, gyorsabban fogy a kaja.
 
@@ -165,7 +233,7 @@ Ruhák
     pulóverek, pólók, gatyák
     bőr csizma, bőr mellény
 
-
+Large area magic that damages enemies
 
 Chalk-ból kréta, meg blackboard...
 
@@ -223,6 +291,9 @@ orb of wind
 orb of Meteor
     summon a meteor from the sky above the pointed thing
 
+Orb of surprise
+    random helyre teleportál téged
+
 potions
     water walking effect?
         detect the block below and make it walakable true
@@ -257,6 +328,11 @@ potions
     slowness effect
         thwowing potion
         orb of ice
+
+    Flying poti
+
+    Falon átmenő poti
+        Ektoplasm
 
 Ládák elnevezése
 
@@ -344,7 +420,9 @@ mobok:
     körömgomba szörny? ("Heló! Ásóka vagyok!") https://www.youtube.com/watch?v=GF3ygD7LuiM
     urbán papa (mob)
     thaitus (monster)
-    feri (mob)?
+    feri (npc)
+    tika (npc)
+      Mondja hogy sajtos, meg párizsi, meg ott a mice
     bill (enemy)
     agavblagba (Rick and Morty) (enemy)
     goat (mob)
@@ -359,13 +437,9 @@ mobok:
 
     világító ló ami bogarakat szarik
 
-    Új mob: Demon
-        pokolba
-        Dob: démon [csont? / vér? / fog? / szem?]
-        Shadow orb-ot lő
-
-        ring of darkness-t lehet csinálni a demon part-ból, shadow aurát ad és + sebzést a demon orbnak...
-            Darkling minion?
+    Csápos szem szörny
+        Ha megeszed a szemét minden féle képeket látsz?
+            chariot a pokolban, repülő szigetek, szárnyak, farm, mobok, npc-k
 
     Polipoid a vízbe.
     Madarak
@@ -373,6 +447,10 @@ mobok:
         csak átvonul néha az égen
         ha meglövöd, dob húst
 
+    Cave goblin
+        Found under -100
+        You can trade food for ores
+        He is small and gray
 
 A kelp-nek fura a neve, egy egész kelp szál az 1 block
 

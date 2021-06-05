@@ -60,7 +60,6 @@ mobs:spawn({
 
 mobs:register_egg("mobs_nether:tortured_soul", "Tortured Soul", "nether_glowstone.png", 1)
 
-
 minetest.register_craftitem("mobs_nether:ectoplasm", {
 	description = "Ectoplasm",
 	inventory_image = "mobs_nether_ectoplasm.png",
