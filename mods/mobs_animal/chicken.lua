@@ -81,7 +81,7 @@ stepheight = 0.6,
 			return
 		end
 
-		local pos = self.object:get_pos()
+		local pos = self.object:get_pos() ; if not pos then return end
 
 		minetest.add_item(pos, "mobs:egg")
 
@@ -138,7 +138,7 @@ mobs:register_arrow("mobs_animal:egg_entity", {
 	end,
 
 	hit_mob = function(self, player)
-		player:punch(minetest.get_player_by_name(self.playername) or self.object, 1.0, {
+		player:punch(self.object, 1.0, {
 			full_punch_interval = 1.0,
 			damage_groups = {fleshy = 1},
 		}, nil)
@@ -146,7 +146,7 @@ mobs:register_arrow("mobs_animal:egg_entity", {
 
 	hit_node = function(self, pos, node)
 
-		if math.random(1, 10) > 1 then
+		if math.random(10) > 1 then
 			return
 		end
 
@@ -160,28 +160,10 @@ mobs:register_arrow("mobs_animal:egg_entity", {
 			return
 		end
 
-		local mob = minetest.add_entity(pos, "mobs_animal:chicken")
-		local ent2 = mob:get_luaentity()
+		local staticdata = minetest.serialize(
+			{child = true, tamed = true, owner = self.playername})
 
-		mob:set_properties({
-			textures = ent2.child_texture[1],
-			visual_size = {
-				x = ent2.base_size.x / 2,
-				y = ent2.base_size.y / 2
-			},
-			collisionbox = {
-				ent2.base_colbox[1] / 2,
-				ent2.base_colbox[2] / 2,
-				ent2.base_colbox[3] / 2,
-				ent2.base_colbox[4] / 2,
-				ent2.base_colbox[5] / 2,
-				ent2.base_colbox[6] / 2
-			},
-		})
-
-		ent2.child = true
-		ent2.tamed = true
-		ent2.owner = self.playername
+		minetest.add_entity(pos, "mobs_animal:chicken", staticdata)
 	end
 })
 
@@ -213,14 +195,15 @@ local mobs_shoot_egg = function (item, player, pointed_thing)
 
 	ent.velocity = egg_VELOCITY -- needed for api internal timing
 	ent.switch = 1 -- needed so that egg doesn't despawn straight away
+	ent._is_arrow = true -- tell advanced mob protection this is an arrow
 
-	obj:setvelocity({
+	obj:set_velocity({
 		x = dir.x * egg_VELOCITY,
 		y = dir.y * egg_VELOCITY,
 		z = dir.z * egg_VELOCITY
 	})
 
-	obj:setacceleration({
+	obj:set_acceleration({
 		x = dir.x * -3,
 		y = -egg_GRAVITY,
 		z = dir.z * -3
@@ -228,6 +211,7 @@ local mobs_shoot_egg = function (item, player, pointed_thing)
 
 	-- pass player name to egg for chick ownership
 	local ent2 = obj:get_luaentity()
+
 	ent2.playername = player:get_player_name()
 
 	item:take_item()
@@ -302,7 +286,7 @@ minetest.register_craft({
 minetest.register_craftitem(":mobs:chicken_feather", {
 	description = S("Feather"),
 	inventory_image = "mobs_chicken_feather.png",
-	groups = {flammable = 2},
+	groups = {flammable = 2, feather = 1},
 })
 
 minetest.register_craft({

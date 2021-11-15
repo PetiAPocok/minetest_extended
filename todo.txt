@@ -4,63 +4,9 @@ Demon
     Drops
         Eye?
         skin - for wing
-        clotted blood?
+        clotted blood - for ring of darkness
         bone?
         teeth?
-
-
-
-
-Mland ápr 1 fejlécre valami minetest-es.
-
-
-Captured space fissure
-    Bal kattal random helyre tp
-        find node below air
-
-    Found at abadoned houses
-
-Portal template
-    found at abandoned houses
-    used to craft portal building block
-
-portal building block
-    You give stuff to the portal building block, and if it's full, it replaces itself with the portal
-    You can put the Captured space fissure in the portal to make it work
-    Then you can set coordinates, players, obelisks to teleport to.
-
-Minigame altars:
-    Arcade machine style <= blee
-    PSP style?
-    TV álványon combo?
-
-    One kind of gaming altar, but a lot of gaming disks.
-    Mese block hajtja a játékgépet. (50 meccs)
-    Nincs craft-ja. Csak található.
-        dungeon-okba, village szigetre kocsma és abba bele
-    gold lump-ot ad a győzelem
-                        mese block energia számláló
-    játék slot          mese block slot
-                játék
-
-    Swap the things to get =>3 next to eachother
-    Sudoku
-    Thalos-os tetris
-    move the parts of the labyrnth so the mouse can escape
-    Memória játék.
-    Fentről esnek a dolgok a "gyémántot" elkapni a tnt-t kikerülni.
-    Nunrun klón
-    jetpack joyride klón
-    doodle jump klón
-    Parkour map
-        kiteleportál 30000 kívül és ott "generál" egy map-ot.
-        Tetején item frame-be jutalom.
-        Ha leesel, alul méz és vissza teleportál haza.
-        (Kiütöd a loot-ot, leugrassz haza jutsz.)
-        A mappot törli?
-        A mini game block megsemmisíti önmagát?
-        Közelség érzékelő tntvel mint akadály?
-    aknakereső a laptop mod-ból
 
 
 accesories mod
@@ -130,6 +76,7 @@ accesories mod
         x topaz x
 
     First place medal
+        zsebbe
          Makes you faster (not stacking)
 
     ring of darkness
@@ -144,10 +91,70 @@ Levegő generátor blokk
     steel ingot   dirt            steel ingot
     steel ingot   mese crystal    steel ingot
 
-A repülő szőnyeg ereszkedjen gyorsabban
-
 ------------------------------------------1.3--------------------------------------------
+Fun Altars:
+    Arcade machine style
+        Repülő szigeteken
 
+    One kind of gaming altar, but a lot of gaming disks.
+        Find in loot chests
+    Mese block hajtja a játékgépet. (20 meccs)
+    Nincs craft-ja. Csak található.
+        dungeon-okba, village szigetre kocsma és abba bele
+    gold lump-ot ad a győzelem
+                        mese block energia számláló
+    játék slot          mese block slot
+                játék
+
+    Memória játék.
+    Thalos-os tetris
+    Swap the things to get =>3 next to eachother
+    Sudoku
+    move the parts of the labyrnth so the mouse can escape
+    Fentről esnek a dolgok a "gyémántot" elkapni a tnt-t kikerülni.
+    Nunrun klón
+    jetpack joyride klón
+    doodle jump klón
+    aknakereső
+    Lent vagy, Fentről jönnek a gedvák és lövöd őket, meg mégy jobbra-balra
+
+
+
+Captured space fissure
+    Bal kattal random helyre tp
+        find node below air
+
+    Found at abadoned houses
+
+Portal template
+    found at abandoned houses
+    used to craft portal building block
+
+portal building block
+    You give stuff to the portal building block, and if it's full, it replaces itself with the portal
+    You can put the Captured space fissure in the portal to make it work
+    Then you can set coordinates, players, obelisks to teleport to.
+
+magic storing accessory
+    Increases max mana
+
+Ocean biome?
+
+More fish, animals
+
+Water plants
+
+Plant that hurts you
+
+Self reparing tools
+
+Egyszer használatos teleport token
+    kiteleportál 30000 kívül és ott "generál" egy Parkour map-ot.
+    Tetején item frame-be jutalom.
+    Ha leesel, alul méz és vissza teleportál haza.
+    (Kiütöd a loot-ot, leugrassz haza jutsz.)
+    A mappot törli?
+    Közelség érzékelő tntvel mint akadály?
 
 player kilövő ágyú...
 
@@ -176,7 +183,7 @@ singsing chair(constatine)
     uses mana till you use it
     you can fly around fast to discover the terrain(fly, fast, noclip), but you can't interact with anyting
 
-Betegségek, fertőzések. Szörnyektől kapod, lassabb lleszel, az élet &mana regenerációd is, gyorsabban fogy a kaja.
+Betegségek, fertőzések. Szörnyektől kapod, lassabb leszel, az élet & mana regenerációd is, gyorsabban fogy a kaja.
 
 Új ágyak
     emeletes ágy
@@ -293,6 +300,13 @@ orb of Meteor
 
 Orb of surprise
     random helyre teleportál téged
+
+Vabajack
+    Staff of madness
+    Madness fura nyelven...
+    Shoots some orb projectile.
+    It changes entities to random ones.
+    It changes block to random ones.
 
 potions
     water walking effect?

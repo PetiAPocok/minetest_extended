@@ -52,7 +52,10 @@ stepheight = 1.1,
 		stoodup_start = 0,
 		stoodup_end = 0,
 	},
-	follow = {"mobs_animal:rat", "fishing:tuna", "fishing:salmon", "fishing:clownfish", "mobs_fish:clownfish", "mobs_fish:tropical"},
+	follow = {
+		"mobs_animal:rat", "group:food_fish_raw",
+		"mobs_fish:tropical", "xocean:fish_edible"
+	},
 	view_range = 8,
 
 	on_rightclick = function(self, clicker)
@@ -153,7 +156,8 @@ minetest.register_craftitem(":mobs:hairball", {
 		local newpos = {x = pos.x + dir.x, y = pos.y + dir.y + 1.5, z = pos.z + dir.z}
 		local item = hairball_items[math.random(1, #hairball_items)]
 
-		if item ~= "" then
+		if item ~= ""
+		and minetest.registered_items[item] then
 			minetest.add_item(newpos, {name = item})
 		end
 

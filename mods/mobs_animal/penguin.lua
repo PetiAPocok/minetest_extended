@@ -46,7 +46,7 @@ stepheight = 0.6,
 	fly_in = {"default:water_source", "default:water_flowing"},
 	floats = 0,
 	follow = {
-		"ethereal:fish_raw", "mobs_fish:clownfish", "mobs_fish:tropical",
+		"group:food_fish_raw", "mobs_fish:clownfish", "mobs_fish:tropical",
 		"mobs_fish:clownfish_set", "mobs_fish:tropical_set", "xocean:fish_edible"
 	},
 	view_range = 5,

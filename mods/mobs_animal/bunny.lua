@@ -161,7 +161,7 @@ minetest.register_craft({
 minetest.register_craftitem(":mobs:rabbit_hide", {
 	description = S("Rabbit Hide"),
 	inventory_image = "mobs_rabbit_hide.png",
-	groups = {flammable = 2},
+	groups = {flammable = 2, pelt = 1},
 })
 
 minetest.register_craft({
@@ -172,9 +172,9 @@ minetest.register_craft({
 
 minetest.register_craft({
 	output = "mobs:leather",
-	type = "shapeless",
+--	type = "shapeless",
 	recipe = {
-		"mobs:rabbit_hide", "mobs:rabbit_hide",
-		"mobs:rabbit_hide", "mobs:rabbit_hide"
+		{"mobs:rabbit_hide", "mobs:rabbit_hide"},
+		{"mobs:rabbit_hide", "mobs:rabbit_hide"}
 	}
 })

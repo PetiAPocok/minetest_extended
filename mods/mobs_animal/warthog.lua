@@ -33,7 +33,7 @@ mobs:register_mob("mobs_animal:pumba", {
 	jump = true,
 	jump_height = 6,
 	pushable = true,
-	follow = {"default:apple", "farming:potato", "farming:carrot"},
+	follow = {"default:apple", "farming:potato"},
 	view_range = 10,
 	drops = {
 		{name = "mobs:pork_raw", chance = 1, min = 1, max = 3},
@@ -50,6 +50,12 @@ mobs:register_mob("mobs_animal:pumba", {
 		walk_end = 100,
 		punch_start = 70,
 		punch_end = 100,
+
+		die_start = 1, -- we dont have a specific death animation so we will
+		die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
+		die_speed = 1, -- have mob rotate when dying.
+		die_loop = false,
+		die_rotate = true,
 	},
 	on_rightclick = function(self, clicker)
 

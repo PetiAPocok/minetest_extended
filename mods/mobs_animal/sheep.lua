@@ -64,6 +64,12 @@ for _, col in ipairs(all_colours) do
 			stand_end = 80,
 			walk_start = 81,
 			walk_end = 100,
+
+			die_start = 1, -- we dont have a specific death animation so we will
+			die_end = 2, --   re-use 2 standing frames at a speed of 1 fps and
+			die_speed = 1, -- have mob rotate when dying.
+			die_loop = false,
+			die_rotate = true,
 		},
 		follow = {
 			"farming:wheat", "default:grass_1", "farming:barley",
@@ -97,7 +103,7 @@ for _, col in ipairs(all_colours) do
 			--are we feeding?
 			if mobs:feed_tame(self, clicker, 8, true, true) then
 
-				--if fed 7x grass or wheat then sheep regrows wool
+				--if fed 7 times then sheep regrows wool
 				if self.food and self.food > 6 then
 
 					self.gotten = false

@@ -92,12 +92,12 @@ minetest.register_craftitem(":mobs:rat_cooked", {
 	description = S("Cooked Rat"),
 	inventory_image = "mobs_cooked_rat.png",
 	on_use = minetest.item_eat(3),
-	groups = {food_rat = 1, flammable = 2},
+	groups = {food_rat = 1, flammable = 2}
 })
 
 minetest.register_craft({
 	type = "cooking",
 	output = "mobs:rat_cooked",
 	recipe = "mobs_animal:rat",
-	cooktime = 5,
+	cooktime = 5
 })

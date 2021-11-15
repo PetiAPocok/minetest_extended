@@ -23,7 +23,9 @@ mobs:register_mob("mobs_animal:bee", {
 	},
 	walk_velocity = 1,
 	jump = true,
-	drops = {},
+	drops = {
+		{name = "mobs:honey", chance = 2, min = 1, max = 2},
+	},
 	water_damage = 1,
 	lava_damage = 2,
 	light_damage = 0,
@@ -51,6 +53,7 @@ mobs:spawn({
 	min_light = 14,
 	interval = 60,
 	chance = 1000,
+	chance = 7000,
 	min_height = 3,
 	max_height = 200,
 	day_toggle = true,
@@ -128,7 +131,15 @@ minetest.register_node(":mobs:beehive", {
         if drop ~= "" then
             minetest.add_item(pos, drop)
         end
-    end
+    end,
+    
+	can_dig = function(pos,player)
+
+		local meta = minetest.get_meta(pos)
+
+		-- only dig beehive if no honey inside
+		return meta:get_inventory():is_empty("beehive")
+	end,
 
 })
 

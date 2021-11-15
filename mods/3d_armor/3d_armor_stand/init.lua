@@ -1,5 +1,5 @@
 -- support for i18n
-local S = armor_i18n.gettext
+local S = minetest.get_translator(minetest.get_current_modname())
 
 local armor_stand_formspec = "size[8,7]" ..
 	default.gui_bg ..
@@ -153,6 +153,7 @@ minetest.register_node("3d_armor_stand:armor_stand", {
 	drawtype = "mesh",
 	mesh = "3d_armor_stand.obj",
 	tiles = {"3d_armor_stand.png"},
+	use_texture_alpha = "clip",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = false,
@@ -221,6 +222,7 @@ minetest.register_node("3d_armor_stand:locked_armor_stand", {
 	drawtype = "mesh",
 	mesh = "3d_armor_stand.obj",
 	tiles = {"3d_armor_stand_locked.png"},
+	use_texture_alpha = "clip",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = false,

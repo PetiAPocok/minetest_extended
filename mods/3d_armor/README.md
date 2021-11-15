@@ -1,5 +1,7 @@
 Modpack - 3d Armor [0.4.13]
 ===========================
+![3d_armor screenshot](https://github.com/minetest-mods/3d_armor/blob/master/screenshot.png)
+
 
 ![](https://github.com/minetest-mods/3d_armor/workflows/luacheck/badge.svg)
 ![](https://github.com/minetest-mods/3d_armor/workflows/integration-test/badge.svg)
@@ -48,6 +50,8 @@ Armor can be configured by adding a file called armor.conf in 3d_armor mod or wo
 see armor.conf.example for all available options.
 
 For mod installation instructions, please visit: http://wiki.minetest.com/wiki/Installing_Mods
+
+[API Reference](https://minetest-mods.github.io/3d_armor/reference/)
 
 [mod] Visible Wielded Items [wieldview]
 ---------------------------------------

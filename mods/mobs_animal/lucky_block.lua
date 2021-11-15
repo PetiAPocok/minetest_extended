@@ -12,7 +12,7 @@ if minetest.get_modpath("lucky_block") then
 		{"spw", "mobs:chicken", 5},
 		{"dro", {"mobs:egg"}, 5},
 		{"spw", "mobs:cow", 5},
-		{"dro", {"mobs:bucket_milk"}, 8},
+		{"dro", {"mobs:bucket_milk", "bucket:bucket_water"}, 8},
 		{"spw", "mobs:kitten", 2},
 		{"exp"},
 		{"dro", {"mobs:hairball"}, 3},

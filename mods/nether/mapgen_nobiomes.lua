@@ -2,6 +2,12 @@
 
   Nether mod for minetest
 
+  "mapgen_nobiomes.lua" is the legacy version of the mapgen, only used
+    in older versions of Minetest or in v6 worlds.
+  "mapgen.lua" is the modern biomes-based Nether mapgen, which
+    requires Minetest v5.1 or greater
+
+
   Copyright (C) 2013 PilzAdam
 
   Permission to use, copy, modify, and/or distribute this software for
@@ -77,6 +83,7 @@ local c_dirt = minetest.get_content_id("default:dirt")
 local c_sand = minetest.get_content_id("default:sand")
 
 local c_cobble = minetest.get_content_id("default:cobble")
+local c_mossycobble = minetest.get_content_id("default:mossycobble")
 local c_stair_cobble = minetest.get_content_id("stairs:stair_cobble")
 
 local c_lava_source = minetest.get_content_id("default:lava_source")
@@ -157,6 +164,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 				-- Dungeons are preserved so we don't need
 				-- to check for cavern in the shell
 				elseif id == c_cobble or -- Dungeons (preserved) to netherbrick
+						id == c_mossycobble or
 						id == c_stair_cobble then
 					data[vi] = c_netherbrick
 				end
@@ -188,8 +196,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 
 	vm:set_data(data)
 
-	-- avoid generating decorations on the underside of the bottom of the nether
-	if minp.y > NETHER_FLOOR and maxp.y < NETHER_CEILING then minetest.generate_decorations(vm) end
+	minetest.generate_decorations(vm)
 
 	vm:set_lighting({day = 0, night = 0}, minp, maxp)
 	vm:calc_lighting()
@@ -209,7 +216,7 @@ function nether.find_nether_ground_y(target_x, target_z, start_y, player_name)
 	local maxp = {x = maxp_schem.x, y = 0, z = maxp_schem.z}
 
 	for y = start_y, math.max(NETHER_FLOOR + BLEND, start_y - 4096), -1 do
-		local nval_cave = nobj_cave_point:get3d({x = target_x, y = y, z = target_z})
+		local nval_cave = nobj_cave_point:get_3d({x = target_x, y = y, z = target_z})
 
 		if nval_cave > TCAVE then -- Cavern
 			air = air + 1

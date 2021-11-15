@@ -13,9 +13,9 @@ local function on_rightclick(pos, dir, check_name, replace, replace_dir, params)
 	minetest.swap_node(pos, {name = replace, param2 = p2})
 
 	if (minetest.get_meta(pos):get_int("right") ~= 0) == (params[1] ~= 3) then
-		minetest.sound_play("doors_door_close", {pos = pos, gain = 0.3, max_hear_distance = 10})
+		minetest.sound_play("doors_door_close", { pos = pos, gain = 0.3, max_hear_distance = 10 }, true)
 	else
-		minetest.sound_play("doors_door_open", {pos = pos, gain = 0.3, max_hear_distance = 10})
+		minetest.sound_play("doors_door_open", { pos = pos, gain = 0.3, max_hear_distance = 10 }, true)
 	end
 end
 
@@ -91,16 +91,17 @@ meseconify_door("doors:door_jungle_4")
 meseconify_door("doors:door_jungle_5")
 meseconify_door("doors:door_jungle_6")
 meseconify_door("doors:door_pine")
+meseconify_door("xpanes:door_steel_bar")
 
 -- Trapdoor
 local function trapdoor_switch(pos, node)
 	local state = minetest.get_meta(pos):get_int("state")
 
 	if state == 1 then
-		minetest.sound_play("doors_door_close", {pos = pos, gain = 0.3, max_hear_distance = 10})
+		minetest.sound_play("doors_door_close", { pos = pos, gain = 0.3, max_hear_distance = 10 }, true)
 		minetest.set_node(pos, {name="doors:trapdoor", param2 = node.param2})
 	else
-		minetest.sound_play("doors_door_open", {pos = pos, gain = 0.3, max_hear_distance = 10})
+		minetest.sound_play("doors_door_open", { pos = pos, gain = 0.3, max_hear_distance = 10 }, true)
 		minetest.set_node(pos, {name="doors:trapdoor_open", param2 = node.param2})
 	end
 
@@ -128,6 +129,12 @@ if doors and doors.get then
 	minetest.override_item("doors:trapdoor_open", override)
 	minetest.override_item("doors:trapdoor_steel", override)
 	minetest.override_item("doors:trapdoor_steel_open", override)
+
+	if minetest.registered_items["xpanes:trapdoor_steel_bar"] then
+		minetest.override_item("xpanes:trapdoor_steel_bar", override)
+		minetest.override_item("xpanes:trapdoor_steel_bar_open", override)
+	end
+
 else
 	if minetest.registered_nodes["doors:trapdoor"] then
 		minetest.override_item("doors:trapdoor", {

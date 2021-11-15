@@ -110,7 +110,7 @@ Made for and tested on Minetest 5.3.0.
 - Renamed and redo Backpacks mod as Void Bags
 - Added Hangglider (modified texture)([NotABug](https://notabug.org/Piezo_/minetest-hangglider))
 - Added Mobs Water ([NotABug](https://notabug.org/TenPlus1/mobs_water))
-- Added Mobs Horse ([NotABug](https://notabug.org/TenPlus1/mob_horse))
+- Added Mobs Horse ([NotABug](https://notabug.org/TenPlus1/mobs_horse))
 - Created slingshot.
 - Created Flying carpet. Used the Minetest Game's boats as template.
 - Created void_bags. Used [inventorybags] (https://github.com/cx384/inventorybags) as base.

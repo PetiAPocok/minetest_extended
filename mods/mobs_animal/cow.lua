@@ -200,7 +200,7 @@ minetest.register_craftitem(":mobs:butter", {
 	description = S("Butter"),
 	inventory_image = "mobs_butter.png",
 	on_use = minetest.item_eat(1),
-	groups = {food_butter = 1, flammable = 2},
+	groups = {food_butter = 1, flammable = 2}
 })
 
 if minetest.get_modpath("farming") and farming and farming.mod then
@@ -240,16 +240,16 @@ minetest.register_node(":mobs:cheeseblock", {
 	description = S("Cheese Block"),
 	tiles = {"mobs_cheeseblock.png"},
 	is_ground_content = false,
-	groups = {crumbly = 3},
+	groups = {oddly_breakable_by_hand = 3},
 	sounds = default.node_sound_dirt_defaults()
 })
 
 minetest.register_craft({
 	output = "mobs:cheeseblock",
 	recipe = {
-		{"mobs:cheese", "mobs:cheese", "mobs:cheese"},
-		{"mobs:cheese", "mobs:cheese", "mobs:cheese"},
-		{"mobs:cheese", "mobs:cheese", "mobs:cheese"},
+		{"group:food_cheese", "group:food_cheese", "group:food_cheese"},
+		{"group:food_cheese", "group:food_cheese", "group:food_cheese"},
+		{"group:food_cheese", "group:food_cheese", "group:food_cheese"},
 	}
 })
 

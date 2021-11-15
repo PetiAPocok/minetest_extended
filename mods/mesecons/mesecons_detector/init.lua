@@ -103,7 +103,16 @@ minetest.register_craft({
 	output = 'mesecons_detector:object_detector_off',
 	recipe = {
 		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
-		{"default:steel_ingot", "bones:bone", "default:steel_ingot"},
+		{"default:steel_ingot", "mesecons_luacontroller:luacontroller0000", "default:steel_ingot"},
+		{"default:steel_ingot", "group:mesecon_conductor_craftable", "default:steel_ingot"},
+	}
+})
+
+minetest.register_craft({
+	output = 'mesecons_detector:object_detector_off',
+	recipe = {
+		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
+		{"default:steel_ingot", "mesecons_microcontroller:microcontroller0000", "default:steel_ingot"},
 		{"default:steel_ingot", "group:mesecon_conductor_craftable", "default:steel_ingot"},
 	}
 })
@@ -230,7 +239,7 @@ local node_detector_digiline = {
 }
 
 local function after_place_node_detector(pos, placer)
-	local placer_pos = placer:getpos()
+	local placer_pos = placer:get_pos()
 	if not placer_pos then
 		return
 	end
@@ -286,7 +295,16 @@ minetest.register_craft({
 	output = 'mesecons_detector:node_detector_off',
 	recipe = {
 		{"default:steel_ingot", "group:mesecon_conductor_craftable", "default:steel_ingot"},
-		{"default:steel_ingot", "default:stone", "default:steel_ingot"},
+		{"default:steel_ingot", "mesecons_luacontroller:luacontroller0000", "default:steel_ingot"},
+		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
+	}
+})
+
+minetest.register_craft({
+	output = 'mesecons_detector:node_detector_off',
+	recipe = {
+		{"default:steel_ingot", "group:mesecon_conductor_craftable", "default:steel_ingot"},
+		{"default:steel_ingot", "mesecons_microcontroller:microcontroller0000", "default:steel_ingot"},
 		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
 	}
 })

@@ -1,4 +1,4 @@
-#Mod: mob_horse
+#Mod: mobs_horse
 
 Horse = 馬
 Horse shoes fitted - = 馬蹄鐵 -

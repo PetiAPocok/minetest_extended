@@ -41,4 +41,4 @@ end
 dofile(path .. "lucky_block.lua")
 
 
-print (S("[MOD] Mobs Redo Animals loaded"))
+print ("[MOD] Mobs Redo Animals loaded")

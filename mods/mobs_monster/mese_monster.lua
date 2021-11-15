@@ -12,6 +12,9 @@ mobs:register_mob("mobs_monster:mese_monster", {
 	shoot_interval = 0.5,
 	arrow = "mobs_monster:mese_arrow",
 	shoot_offset = 2,
+--arrow_override = function(self)
+--	self.velocity = 20
+--end,
 	hp_min = 10,
 	hp_max = 25,
 	armor = 80,
@@ -100,4 +103,14 @@ mobs:register_arrow("mobs_monster:mese_arrow", {
 
 	hit_node = function(self, pos, node)
 	end
+})
+
+-- 9x mese crystal fragments = 1x mese crystal
+minetest.register_craft({
+	output = "default:mese_crystal",
+	recipe = {
+		{"default:mese_crystal_fragment", "default:mese_crystal_fragment", "default:mese_crystal_fragment"},
+		{"default:mese_crystal_fragment", "default:mese_crystal_fragment", "default:mese_crystal_fragment"},
+		{"default:mese_crystal_fragment", "default:mese_crystal_fragment", "default:mese_crystal_fragment"},
+	}
 })
